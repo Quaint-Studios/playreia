@@ -13,15 +13,17 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
+	/*
 	import '@fontsource/poppins/100.css';
 	import '@fontsource/poppins/200.css';
-	import '@fontsource/poppins/300.css';
+	import '@fontsource/poppins/300.css'; */
 	import '@fontsource/poppins/400.css';
-	import '@fontsource/poppins/500.css';
+	/*import '@fontsource/poppins/500.css';
 	import '@fontsource/poppins/600.css';
 	import '@fontsource/poppins/700.css';
 	import '@fontsource/poppins/800.css';
-	import '@fontsource/poppins/900.css';
+	import '@fontsource/poppins/900.css'; */
+	/*
 	import '@fontsource/poppins/100-italic.css';
 	import '@fontsource/poppins/200-italic.css';
 	import '@fontsource/poppins/300-italic.css';
@@ -31,6 +33,7 @@
 	import '@fontsource/poppins/700-italic.css';
 	import '@fontsource/poppins/800-italic.css';
 	import '@fontsource/poppins/900-italic.css';
+  */
 
 	// Site data
 	const title = 'Reia';
@@ -42,7 +45,11 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar background="bg-transparent" slotLead="place-content-start" slotDefault="place-self-center">
+		<AppBar
+			background="bg-transparent"
+			slotLead="place-content-start"
+			slotDefault="place-self-center"
+		>
 			<svelte:fragment slot="lead">
 				<button class="lg:hidden btn btn-sm lg:mr-[63px] w-[127.883px] lg:w-auto justify-start">
 					<span>

@@ -41,6 +41,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.3",
+    "@fontsource/metropolis": "^5.0.7",
     "@fontsource/poppins": "^5.0.8",
     "svelte-material-icons": "^3.0.5"
   }
