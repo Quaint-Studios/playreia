@@ -42,9 +42,9 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar background="bg-transparent">
+		<AppBar background="bg-transparent" slotLead="place-content-start" slotDefault="place-self-center">
 			<svelte:fragment slot="lead">
-				<button class="lg:hidden btn btn-sm mr-[63px]">
+				<button class="lg:hidden btn btn-sm lg:mr-[63px] w-[127.883px] lg:w-auto justify-start">
 					<span>
 						<Menu width="32" height="32" />
 					</span>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<svelte:fragment slot="trail">
-				<a href="#languages"><Language width="24" height="24" /></a>
+				<a href="#languages" class="hidden lg:inline-block"><Language width="24" height="24" /></a>
 				<a href="#play-now" class="btn bg-primary-400">Play Now</a>
 				<!-- Should create a modal giving download options -->
 			</svelte:fragment>
