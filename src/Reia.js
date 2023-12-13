@@ -92,7 +92,7 @@ export const Reia = {
 		'--color-surface-200': '213 227 247', // #d5e3f7
 		'--color-surface-300': '187 210 241', // #bbd2f1
 		'--color-surface-400': '136 176 231', // #88b0e7
-		'--color-surface-500': '85 142 221', // #558EDD
+		'--color-surface-500': '85 142 221', // #008EDD
 		'--color-surface-600': '77 128 199', // #4d80c7
 		'--color-surface-700': '64 107 166', // #406ba6
 		'--color-surface-800': '51 85 133', // #335585
