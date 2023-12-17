@@ -10,6 +10,57 @@
 	import HeroPlatformTab from './HeroPlatformTab.svelte';
 
 	const chipFlex = '';
+
+  /**
+   * @typedef {{
+      show: boolean;
+      showTab(data?: boolean): void;
+      hideTab(): void;
+      replay(): Promise<void>;
+    }} TabDataType
+  */
+
+  /**
+   * @type {{ Desktop?: TabDataType, Console?: TabDataType, Mobile?: TabDataType }}
+   */
+  const tabData = {}
+
+  let currentTab = "Desktop"
+  const platformTabs = {
+    clicked(/** @type {String} */ selection) {
+      console.log("I HAVE BEEN CLEEEEKED")
+      for(let [key, value] of Object.entries(tabData)) {
+        if(key != selection) {
+          value.hideTab()
+        }
+      }
+
+      switch(selection) {
+        case "Desktop":
+        case "Console":
+        case "Mobile":
+          currentTab = selection
+          tabData[selection]?.showTab()
+          console.log(selection)
+          break;
+      }
+    },
+    clickNext(/** @type {String} */ selection) {
+      const choices = ["Desktop", "Console", "Mobile"]
+
+      const found = choices.findIndex((elem) => elem == selection)
+
+      if(found == -1) {
+        return;
+      }
+
+      if(found == choices.length - 1) {
+        platformTabs.clicked(choices[0])
+      } else {
+        platformTabs.clicked(choices[found + 1])
+      }
+    }
+  }
 </script>
 
 <div id="hero-section">
@@ -19,11 +70,11 @@
 				<a href="/download">Released on all platforms - Play now!</a>
 			</div>
       <div class="relative font-bold text-lg flex flex-row gap-10">
-        <HeroPlatformTab name="Desktop" />
-        <HeroPlatformTab name="Console" />
-        <HeroPlatformTab name="Mobile" />
+        <HeroPlatformTab value="Desktop" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Desktop} starter={true} />
+        <HeroPlatformTab value="Console" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Console} />
+        <HeroPlatformTab value="Mobile" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Mobile} />
       </div>
-			<div id="hero-chips" class="show-desktop scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75">
+			<div id="hero-chips" class:show-desktop={currentTab == "Desktop"} class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75">
 				<div id="desktop-chips" class="chip-flex">
 					<WindowsChip />
 					<MacChip />
