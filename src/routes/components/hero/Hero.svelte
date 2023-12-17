@@ -11,7 +11,7 @@
 
 	const chipFlex = '';
 
-  /**
+	/**
    * @typedef {{
       show: boolean;
       showTab(data?: boolean): void;
@@ -20,47 +20,45 @@
     }} TabDataType
   */
 
-  /**
-   * @type {{ Desktop?: TabDataType, Console?: TabDataType, Mobile?: TabDataType }}
-   */
-  const tabData = {}
+	/**
+	 * @type {{ Desktop?: TabDataType, Console?: TabDataType, Mobile?: TabDataType }}
+	 */
+	const tabData = {};
 
-  let currentTab = "Desktop"
-  const platformTabs = {
-    clicked(/** @type {String} */ selection) {
-      console.log("I HAVE BEEN CLEEEEKED")
-      for(let [key, value] of Object.entries(tabData)) {
-        if(key != selection) {
-          value.hideTab()
-        }
-      }
+	let currentTab = 'Desktop';
+	const platformTabs = {
+		clicked(/** @type {String} */ selection) {
+			for (let [key, value] of Object.entries(tabData)) {
+				if (key != selection) {
+					value.hideTab();
+				}
+			}
 
-      switch(selection) {
-        case "Desktop":
-        case "Console":
-        case "Mobile":
-          currentTab = selection
-          tabData[selection]?.showTab()
-          console.log(selection)
-          break;
-      }
-    },
-    clickNext(/** @type {String} */ selection) {
-      const choices = ["Desktop", "Console", "Mobile"]
+			switch (selection) {
+				case 'Desktop':
+				case 'Console':
+				case 'Mobile':
+					currentTab = selection;
+					tabData[selection]?.showTab();
+					break;
+			}
+		},
+		clickNext(/** @type {String} */ selection) {
+			const choices = ['Desktop', 'Console', 'Mobile'];
 
-      const found = choices.findIndex((elem) => elem == selection)
+			const found = choices.findIndex((elem) => elem == selection);
 
-      if(found == -1) {
-        return;
-      }
+			if (found == -1) {
+				return;
+			}
 
-      if(found == choices.length - 1) {
-        platformTabs.clicked(choices[0])
-      } else {
-        platformTabs.clicked(choices[found + 1])
-      }
-    }
-  }
+			if (found == choices.length - 1) {
+				platformTabs.clicked(choices[0]);
+			} else {
+				platformTabs.clicked(choices[found + 1]);
+			}
+		}
+	};
 </script>
 
 <div id="hero-section">
@@ -69,12 +67,32 @@
 			<div class="text-lg font-bold mb-4">
 				<a href="/download">Released on all platforms - Play now!</a>
 			</div>
-      <div class="relative font-bold text-lg flex flex-row gap-10">
-        <HeroPlatformTab value="Desktop" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Desktop} starter={true} />
-        <HeroPlatformTab value="Console" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Console} />
-        <HeroPlatformTab value="Mobile" onClick={platformTabs.clicked} onNext={platformTabs.clickNext} bind:tabData={tabData.Mobile} />
-      </div>
-			<div id="hero-chips" class:show-desktop={currentTab == "Desktop"} class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75">
+			<div class="relative font-bold text-lg flex flex-row gap-10">
+				<HeroPlatformTab
+					value="Desktop"
+					onClick={platformTabs.clicked}
+					onNext={platformTabs.clickNext}
+					bind:tabData={tabData.Desktop}
+					starter={true}
+				/>
+				<HeroPlatformTab
+					value="Console"
+					onClick={platformTabs.clicked}
+					onNext={platformTabs.clickNext}
+					bind:tabData={tabData.Console}
+				/>
+				<HeroPlatformTab
+					value="Mobile"
+					onClick={platformTabs.clicked}
+					onNext={platformTabs.clickNext}
+					bind:tabData={tabData.Mobile}
+				/>
+			</div>
+			<div
+				id="hero-chips"
+				class:show-desktop={currentTab == 'Desktop'}
+				class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75"
+			>
 				<div id="desktop-chips" class="chip-flex">
 					<WindowsChip />
 					<MacChip />
@@ -108,9 +126,9 @@
 	#hero-content {
 	}
 
-  #hero-content div.show-desktop #desktop-chips.chip-flex {
-    display: flex;
-  }
+	#hero-content div.show-desktop #desktop-chips.chip-flex {
+		display: flex;
+	}
 
 	#hero-content div .chip-flex {
 		display: none;

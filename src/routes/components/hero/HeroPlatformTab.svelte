@@ -1,30 +1,28 @@
 <script>
 	import { onMount, tick } from 'svelte';
 	import { slide } from 'svelte/transition';
-  import  { quadIn } from 'svelte/easing';
+	import { quadIn } from 'svelte/easing';
 
 	/**
 	 * @type {String}
 	 */
 	export let value;
-  export let onClick = (/** @type {string} */ _value) => {};
-  export let onNext = (/** @type {string}*/ _value) => {};
-
-  
+	export let onClick = (/** @type {string} */ _value) => {};
+	export let onNext = (/** @type {string}*/ _value) => {};
 
 	function progress(node, { duration = 8000, easing = quadIn }) {
-    return {
+		return {
 			duration: duration,
 			css: (/** @type {number} */ t) => {
-        const eased = easing(t)
-        return `width: ${100 * t}%`;
-      }
+				const eased = easing(t);
+				return `width: ${100 * t}%`;
+			}
 		};
 	}
 
-  export let starter = false;
+	export let starter = false;
 
-  /**
+	/**
    * @typedef {{
       show: boolean;
       showTab(data?: boolean): void;
@@ -33,46 +31,42 @@
     }} TabDataType
   */
 
-
-  /**
-   * @type {TabDataType}
-   */
+	/**
+	 * @type {TabDataType}
+	 */
 	export const tabData = {
-    show: false,
-    showTab(data = false) {
-      console.log(`${value} shown | ${data} | ${tabData.show}`)
-      if(tabData.show) {
-        console.log("testy")
-        tabData.replay();
-        return;
-      }
-      tabData.show = true;
-    },
-    hideTab() {
-      console.log(`${value} hidden`)
-      tabData.show = false;
-    },
+		show: false,
+		showTab(data = false) {
+			if (tabData.show) {
+				tabData.replay();
+				return;
+			}
+			tabData.show = true;
+		},
+		hideTab() {
+			tabData.show = false;
+		},
 		async replay() {
-      console.log(`${value} replay`)
 			tabData.show = false;
 			await tick();
 			tabData.show = true;
 		}
 	};
-  
-  onMount(() => {
-    if(starter) {
-      starter = false;
-      tabData.showTab();
-    }
-  });
+
+	onMount(() => {
+		if (starter) {
+			starter = false;
+			tabData.showTab();
+		}
+	});
 </script>
 
 <button class="relative" on:click={() => onClick(value)}>
 	<p>{value}</p>
 	{#if tabData.show}
 		<span class="hero-platform-tab-selected"></span>
-		<span in:progress on:introend={() => onNext(value)} class="hero-platform-tab-progress w-0"></span>
+		<span in:progress on:introend={() => onNext(value)} class="hero-platform-tab-progress w-0"
+		></span>
 	{/if}
 </button>
 
