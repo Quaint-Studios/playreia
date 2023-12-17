@@ -30,7 +30,6 @@
 
 <button class="relative" on:click={() => (countdown = 15)} on:transitionend>
 	<p>{name}</p>
-  ${}
 	<span class="hero-platform-tab-selected"></span>
 	<span in:slide class="hero-platform-tab-progress w-[{countdown}]"></span>
 </button>
