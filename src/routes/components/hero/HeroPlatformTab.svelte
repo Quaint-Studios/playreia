@@ -1,16 +1,20 @@
 <script>
 	import { onMount, tick } from 'svelte';
-	import { slide } from 'svelte/transition';
+	import { fade, slide } from 'svelte/transition';
 	import { quadIn } from 'svelte/easing';
 
+	/** @typedef {"Desktop" | "Console" | "Mobile"} Tabs */
 	/**
-	 * @type {String}
+	 * @type {Tabs}
 	 */
 	export let value;
-	export let onClick = (/** @type {string} */ _value) => {};
-	export let onNext = (/** @type {string}*/ _value) => {};
+	export let onClick = (/** @type {Tabs} */ _value) => {};
+	export let onNext = (/** @type {Tabs} */ _value) => {};
 
-	function progress(node, { duration = 8000, easing = quadIn }) {
+	/**
+	 * @param {HTMLSpanElement} _node
+	 */
+	function progress(_node, { duration = 4000, easing = quadIn }) {
 		return {
 			duration: duration,
 			css: (/** @type {number} */ t) => {
@@ -64,8 +68,8 @@
 <button class="relative" on:click={() => onClick(value)}>
 	<p>{value}</p>
 	{#if tabData.show}
-		<span class="hero-platform-tab-selected"></span>
-		<span in:progress on:introend={() => onNext(value)} class="hero-platform-tab-progress w-0"
+		<span class="hero-platform-tab-selected" />
+		<span in:progress={{}} on:introend={() => onNext(value)} class="hero-platform-tab-progress w-0"
 		></span>
 	{/if}
 </button>

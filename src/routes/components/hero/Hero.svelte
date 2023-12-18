@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import AppStoreChip from '../platforms/AppStoreChip.svelte';
 	import LinuxChip from '../platforms/LinuxChip.svelte';
 	import MacChip from '../platforms/MacChip.svelte';
@@ -8,9 +9,11 @@
 	import WindowsChip from '../platforms/WindowsChip.svelte';
 	import XboxChip from '../platforms/XboxChip.svelte';
 	import HeroPlatformTab from './HeroPlatformTab.svelte';
+	import { platform } from '@floating-ui/dom';
 
 	const chipFlex = '';
 
+  /** @typedef {"Desktop" | "Console" | "Mobile"} Tabs */
 	/**
    * @typedef {{
       show: boolean;
@@ -25,9 +28,30 @@
 	 */
 	const tabData = {};
 
+  /** @type {Tabs | "Transitioning"} */
 	let currentTab = 'Desktop';
+  /**
+   * @param selection
+   * @returns {Tabs}
+   */
+	function getNextTab(/** @type Tabs */ selection) {
+    /** @type {Array<Tabs>} */
+		const choices = ['Desktop', 'Console', 'Mobile'];
+
+		const found = choices.findIndex((elem) => elem == selection);
+
+		if (found == -1) {
+			return "Desktop";
+		}
+
+		if (found == choices.length - 1) {
+			return choices[0]
+		} else {
+			return choices[found + 1];
+		}
+	}
 	const platformTabs = {
-		clicked(/** @type {String} */ selection) {
+		clicked(/** @type {Tabs} */ selection) {
 			for (let [key, value] of Object.entries(tabData)) {
 				if (key != selection) {
 					value.hideTab();
@@ -38,75 +62,88 @@
 				case 'Desktop':
 				case 'Console':
 				case 'Mobile':
-					currentTab = selection;
+					if (selection != currentTab && currentTab != "Transitioning") currentTab = 'Transitioning';
+          else if(currentTab == "Transitioning") currentTab = selection;
 					tabData[selection]?.showTab();
 					break;
 			}
 		},
-		clickNext(/** @type {String} */ selection) {
-			const choices = ['Desktop', 'Console', 'Mobile'];
-
-			const found = choices.findIndex((elem) => elem == selection);
-
-			if (found == -1) {
-				return;
-			}
-
-			if (found == choices.length - 1) {
-				platformTabs.clicked(choices[0]);
-			} else {
-				platformTabs.clicked(choices[found + 1]);
-			}
-		}
+		clickNext(/** @type Tabs */ selection) {
+      platformTabs.clicked(getNextTab(selection));
+    }
 	};
+
+	function finalNext(/** @type {Tabs} */ selection) {
+		currentTab = getNextTab(selection);
+	}
 </script>
 
 <div id="hero-section">
 	<div id="hero-content">
 		<div class="flex flex-col gap-1 items-center">
 			<div class="text-lg font-bold mb-4">
-				<a href="/download">Released on all platforms - Play now!</a>
+				<a href="/download">Coming soon to all platforms - Play now!</a>
 			</div>
 			<div class="relative font-bold text-lg flex flex-row gap-10">
 				<HeroPlatformTab
 					value="Desktop"
 					onClick={platformTabs.clicked}
-					onNext={platformTabs.clickNext}
+          onNext={platformTabs.clickNext}
 					bind:tabData={tabData.Desktop}
 					starter={true}
 				/>
 				<HeroPlatformTab
 					value="Console"
 					onClick={platformTabs.clicked}
-					onNext={platformTabs.clickNext}
+          onNext={platformTabs.clickNext}
 					bind:tabData={tabData.Console}
 				/>
 				<HeroPlatformTab
 					value="Mobile"
 					onClick={platformTabs.clicked}
-					onNext={platformTabs.clickNext}
+          onNext={platformTabs.clickNext}
 					bind:tabData={tabData.Mobile}
 				/>
 			</div>
-			<div
-				id="hero-chips"
-				class:show-desktop={currentTab == 'Desktop'}
-				class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75"
-			>
-				<div id="desktop-chips" class="chip-flex">
-					<WindowsChip />
-					<MacChip />
-					<LinuxChip />
-				</div>
-				<div id="console-chips" class="chip-flex">
-					<XboxChip />
-					<PsChip />
-					<SwitchChip />
-				</div>
-				<div id="mobile-chips" class="chip-flex">
-					<AppStoreChip />
-					<PlayStoreChip />
-				</div>
+			<div id="hero-chips" class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75">
+				{#if currentTab == 'Desktop'}
+					<div
+						id="desktop-chips"
+						class="chip-flex"
+						in:fade
+						out:fade
+						on:outroend={() => finalNext('Desktop')}
+					>
+						<WindowsChip />
+						<MacChip />
+						<LinuxChip />
+					</div>
+				{/if}
+				{#if currentTab == 'Console'}
+					<div
+						id="console-chips"
+						class="chip-flex"
+						in:fade
+						out:fade
+						on:outroend={() => finalNext('Console')}
+					>
+						<XboxChip />
+						<PsChip />
+						<SwitchChip />
+					</div>
+				{/if}
+				{#if currentTab == 'Mobile'}
+					<div
+						id="mobile-chips"
+						class="chip-flex"
+						in:fade
+						out:fade
+						on:outroend={() => finalNext('Mobile')}
+					>
+						<AppStoreChip />
+						<PlayStoreChip />
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -126,12 +163,8 @@
 	#hero-content {
 	}
 
-	#hero-content div.show-desktop #desktop-chips.chip-flex {
-		display: flex;
-	}
-
 	#hero-content div .chip-flex {
-		display: none;
+		display: flex;
 	}
 
 	.chip-flex {
