@@ -1,4 +1,7 @@
 <script>
+  import { assets } from '$app/paths';
+import { page } from '$app/stores';
+
 	/** @type {string} */
 	export let title;
 	export let description =
@@ -20,5 +23,20 @@
 	<meta name="revisit-after" content="3 days" />
 	<meta name="author" content="Quaint Studios" />
 	<slot name="structured" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="websiste" />
+  <meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${$page.url.origin}/meta_logo.png`} />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={`${$page.url.origin}${$page.url.pathname}`} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={`${$page.url.origin}/meta_logo.png`} />
+
 	<slot />
 </svelte:head>
