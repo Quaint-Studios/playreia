@@ -139,7 +139,7 @@
 </div>
 
 <style>
-	#hero-content div .chip-flex {
+	#hero-wrapper div .chip-flex {
 		display: flex;
 	}
 
