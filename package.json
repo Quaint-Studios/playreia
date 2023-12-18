@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "postbuild": "npx svelte-sitemap --domain https://playreia.com --ignore '**/admin/**'"
+    "postbuild": "npx svelte-sitemap --domain https://playreia.com --change-freq daily --reset-time --ignore '**/admin/**'"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
