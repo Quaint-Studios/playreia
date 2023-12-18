@@ -3,7 +3,7 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 
 	// Assets
-	import Menu from 'svelte-material-icons/menu.svelte';
+	import Menu from 'svelte-material-icons/Menu.svelte';
 	import Language from 'svelte-material-icons/Web.svelte';
 
 	// Floating UI for Popups
