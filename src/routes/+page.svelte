@@ -1,7 +1,7 @@
 <script>
 	import LoremIpsum from './components/filler/LoremIpsum.svelte';
 	import Hero from './components/hero/Hero.svelte';
-	import Meta from './meta.svelte';
+	import Meta from './components/head/meta.svelte';
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
