@@ -27,6 +27,7 @@
 
 	/** @type {Tabs | "Transitioning"} */
 	let currentTab = 'Desktop';
+	let transitioning = false;
 	/**
 	 * @param selection
 	 * @returns {Tabs}
@@ -59,9 +60,9 @@
 				case 'Desktop':
 				case 'Console':
 				case 'Mobile':
-					if (selection != currentTab && currentTab != 'Transitioning')
-						currentTab = 'Transitioning';
-					else if (currentTab == 'Transitioning') currentTab = selection;
+					if (currentTab != selection && transitioning == false) transitioning = true;
+					else if (transitioning) transitioning = false;
+					currentTab = selection;
 					tabData[selection]?.showTab();
 					break;
 			}
@@ -72,7 +73,9 @@
 	};
 
 	function finalNext(/** @type {Tabs} */ selection) {
-		currentTab = getNextTab(selection);
+		if(transitioning) {
+      transitioning = false;
+		}
 	}
 </script>
 
@@ -98,7 +101,7 @@
 	/>
 </div>
 <div id="hero-chips" class="scale-[0.475] sm:scale-[0.6] md:scale-[0.70] lg:scale-75">
-	{#if currentTab == 'Desktop'}
+	{#if currentTab == 'Desktop' && !transitioning}
 		<div
 			id="desktop-chips"
 			class="chip-flex"
@@ -111,7 +114,7 @@
 			<LinuxChip />
 		</div>
 	{/if}
-	{#if currentTab == 'Console'}
+	{#if currentTab == 'Console' && !transitioning}
 		<div
 			id="console-chips"
 			class="chip-flex"
@@ -124,7 +127,7 @@
 			<SwitchChip />
 		</div>
 	{/if}
-	{#if currentTab == 'Mobile'}
+	{#if currentTab == 'Mobile' && !transitioning}
 		<div
 			id="mobile-chips"
 			class="chip-flex"
