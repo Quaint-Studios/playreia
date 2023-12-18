@@ -2,7 +2,7 @@
 	import Meta from '../components/head/meta.svelte';
 </script>
 
-<Meta title="Reia - Explore endless worlds and embark on a magical adventure!">
+<Meta>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",

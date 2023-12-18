@@ -1,19 +1,21 @@
 <script>
-  import { assets } from '$app/paths';
-import { page } from '$app/stores';
+	import { assets } from '$app/paths';
+	import { page } from '$app/stores';
 
-  const site = "https://playreia.com";
+  export let titlePrefix = "Reia - ";
+	export let title = 'Explore endless magical worlds!';
+  let _title = `${titlePrefix}${title}`;
 
-	/** @type {string} */
-	export let title;
 	export let description =
 		"Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play.";
+	export let meta_logo = '/meta_logo.png';
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<!-- <link rel="canonical" href="https://playreia.com" /> -->
-	<meta name="title" content={title} />
+	<link rel="canonical" href="https://www.playreia.com" />
+
+	<title>{_title}</title>
+	<meta name="title" content={_title} />
 	<meta name="description" content={description} />
 	<meta
 		name="keywords"
@@ -26,19 +28,19 @@ import { page } from '$app/stores';
 	<meta name="author" content="Quaint Studios" />
 	<slot name="structured" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="websiste" />
-  <meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={`${site}/meta_logo.png`} />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="websiste" />
+	<meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
+	<meta property="og:title" content={_title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={`${$page.url.origin}${meta_logo}`} />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={`${$page.url.origin}${$page.url.pathname}`} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
-  <meta property="twitter:image" content={`${site}/meta_logo.png`} />
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={`${$page.url.origin}${$page.url.pathname}`} />
+	<meta property="twitter:title" content={_title} />
+	<meta property="twitter:description" content={description} />
+	<meta property="twitter:image" content={`${$page.url.origin}${meta_logo}`} />
 
 	<slot />
 </svelte:head>
