@@ -147,6 +147,6 @@
 	}
 
 	.chip-flex {
-		@apply mt-auto w-full max-w-[100vw] mb-1 grid grid-flow-col justify-center gap-10;
+		@apply mt-auto w-full max-w-full flex justify-center gap-10;
 	}
 </style>
