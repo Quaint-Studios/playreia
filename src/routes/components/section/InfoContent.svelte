@@ -1,10 +1,12 @@
 <script>
-  export const title = "Content";
+	export const title = 'Content';
 </script>
 
 <div class="info-content">
-  <h2 class="title">{title}</h2>
-  <slot />
+	<h2 class="title">{title}</h2>
+	<div class="content">
+		<slot />
+	</div>
 </div>
 
 <style>

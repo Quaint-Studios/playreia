@@ -1,26 +1,44 @@
 <script>
-	const default_news_img = '$lib/img/news/default-img-news.jpg';
+	import defaultNewsImg from '$lib/assets/img/news/default-img-news.jpg?enhanced';
 	const default_news_alt = 'Default News Image';
 	const default_news_title = 'Default News Image Title';
-
-	export const title = 'Content';
 	/**
 	 * @type {Array<NewsItem>}
 	 */
 	export let items = [];
+
+	/**
+	 *
+	 * @param item {NewsItem}
+	 * @param index {"image" | "imageAlt" | "imageTitle"}
+	 * @param fill {string}
+	 * @returns {string}
+	 */
+	function getOrFill(item, index, fill) {
+		return Object.hasOwn(item, index) && item[index] != undefined ? item[index] ?? fill : fill;
+	}
 </script>
 
 <div class="info-news">
 	{#each items as item}
 		<div class="item">
 			<a href={item.url}>
-				<h2 class="title">{title}</h2>
-				<enhanced:img
-					class="item-image"
-					src={item.image ?? default_news_img}
-					alt={item.imageAlt ?? default_news_alt}
-					title={item.imageTitle ?? default_news_title}
-				/>
+				<h2 class="item-title">{item.title}</h2>
+				{#if Object.hasOwn(item, 'image') && item.image != undefined}
+					<img
+            class="item-image"
+						src={item.image}
+						alt={getOrFill(item, 'imageAlt', default_news_alt)}
+						title={getOrFill(item, 'imageTitle', default_news_title)}
+					/>
+				{:else}
+					<enhanced:img
+						class="item-image"
+						src={defaultNewsImg}
+						alt={getOrFill(item, 'imageAlt', default_news_alt)}
+						title={getOrFill(item, 'imageTitle', default_news_title)}
+					/>
+				{/if}
 			</a>
 			<h3>{item.preview}</h3>
 		</div>
@@ -29,13 +47,21 @@
 
 <style>
 	/* Content */
-	.info-news .title {
-		@apply text-primary-700 text-2xl md:text-3xl font-bold uppercase;
+  .info-news {
+    @apply inline-grid grid-cols-3 auto-cols-max gap-10 justify-self-center;
+  }
+
+  .info-news .item {
+    
+  }
+
+	.info-news .item-title {
+		@apply text-primary-700 text-xl md:text-2xl font-bold uppercase;
 	}
-	:global(.dark) .info-content .title {
+	:global(.dark) .info-content .item-title {
 	}
 
 	.item-image {
-		@apply object-cover w-2 h-1;
+		@apply object-cover w-64 min-w-[16rem] h-40 min-h-[10rem] rounded-[12px];
 	}
 </style>

@@ -62,6 +62,6 @@
 	}
 
 	.info-section .content {
-		@apply text-on-secondary-token;
+		@apply text-on-secondary-token flex justify-center items-center;
 	}
 </style>
