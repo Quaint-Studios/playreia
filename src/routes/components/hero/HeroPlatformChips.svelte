@@ -10,18 +10,8 @@
 	import XboxChip from '../platforms/XboxChip.svelte';
 	import HeroPlatformTab from './HeroPlatformTab.svelte';
 
-	/** @typedef {"Desktop" | "Console" | "Mobile"} Tabs */
 	/**
- * @typedef {{
-    show: boolean;
-    showTab(data?: boolean): void;
-    hideTab(): void;
-    replay(): Promise<void>;
-  }} TabDataType
-*/
-
-	/**
-	 * @type {{ Desktop?: TabDataType, Console?: TabDataType, Mobile?: TabDataType }}
+	 * @type {TabData}
 	 */
 	const tabData = {};
 
@@ -73,8 +63,8 @@
 	};
 
 	function finalNext(/** @type {Tabs} */ selection) {
-		if(transitioning) {
-      transitioning = false;
+		if (transitioning) {
+			transitioning = false;
 		}
 	}
 </script>

@@ -3,7 +3,6 @@
 	import { fade, slide } from 'svelte/transition';
 	import { quadIn } from 'svelte/easing';
 
-	/** @typedef {"Desktop" | "Console" | "Mobile"} Tabs */
 	/**
 	 * @type {Tabs}
 	 */
@@ -25,15 +24,6 @@
 	}
 
 	export let starter = false;
-
-	/**
-   * @typedef {{
-      show: boolean;
-      showTab(data?: boolean): void;
-      hideTab(): void;
-      replay(): Promise<void>;
-    }} TabDataType
-  */
 
 	/**
 	 * @type {TabDataType}

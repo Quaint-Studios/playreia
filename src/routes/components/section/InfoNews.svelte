@@ -1,16 +1,7 @@
 <script>
-	/**
-	 * @typedef {{
-	 * 'title': string,
-	 * 'image': string?,
-	 * 'imageAlt': string?,
-	 * 'imageTitle': string?,
-	 * 'url': string,
-	 * 'preview': string
-	 * }} NewsItem
-	 */
-
-	export const default_news_img = '$lib/img/news/default-img-news.jpg';
+	const default_news_img = '$lib/img/news/default-img-news.jpg';
+	const default_news_alt = 'Default News Image';
+	const default_news_title = 'Default News Image Title';
 
 	export const title = 'Content';
 	/**
@@ -27,8 +18,8 @@
 				<enhanced:img
 					class="item-image"
 					src={item.image ?? default_news_img}
-					alt={item.imageAlt}
-					title={item.imageTitle}
+					alt={item.imageAlt ?? default_news_alt}
+					title={item.imageTitle ?? default_news_title}
 				/>
 			</a>
 			<h3>{item.preview}</h3>
