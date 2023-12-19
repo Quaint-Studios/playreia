@@ -1,6 +1,4 @@
 <script>
-	import { preview } from 'vite';
-
 	/**
 	 * @typedef {{
 	 * 'title': string,
@@ -11,6 +9,8 @@
 	 * 'preview': string
 	 * }} NewsItem
 	 */
+
+	export const default_news_img = '$lib/img/news/default-img-news.jpg';
 
 	export const title = 'Content';
 	/**
@@ -24,7 +24,12 @@
 		<div class="item">
 			<a href={item.url}>
 				<h2 class="title">{title}</h2>
-				<enhanced:img class="item-image" src={item.image} alt={item.imageAlt} title={item.imageTitle} />
+				<enhanced:img
+					class="item-image"
+					src={item.image ?? default_news_img}
+					alt={item.imageAlt}
+					title={item.imageTitle}
+				/>
 			</a>
 			<h3>{item.preview}</h3>
 		</div>
@@ -39,7 +44,7 @@
 	:global(.dark) .info-content .title {
 	}
 
-  .item-image {
-    @apply object-cover w-3, h-1;
-  }
+	.item-image {
+		@apply object-cover w-2 h-1;
+	}
 </style>
