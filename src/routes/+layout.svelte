@@ -58,8 +58,8 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="actions">
-		<button class="hidden lg:inline-block"><Language width="24" height="24" /></button>
-		<button class="btn bg-primary-400">Play Now</button>
+		<button aria-label="Language" class="hidden lg:inline-block"><Language width="24" height="24" /></button>
+		<button aria-label="Play Now" class="btn bg-primary-400">Play Now</button>
 	</svelte:fragment>
 </AppBar>
 <!-- Page Route Content -->

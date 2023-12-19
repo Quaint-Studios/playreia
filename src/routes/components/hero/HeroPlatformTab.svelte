@@ -55,7 +55,7 @@
 	});
 </script>
 
-<button class="relative" on:click={() => onClick(value)}>
+<button aria-label={`${value} Platform`} class="relative" on:click={() => onClick(value)}>
 	<p>{value}</p>
 	{#if tabData.show}
 		<span class="hero-platform-tab-selected" />
