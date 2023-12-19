@@ -13,26 +13,24 @@
 			url: '/news/version-1-0-0-0',
 			preview: 'Test',
 
-			image: '/meta_logo.png',
-			imageAlt: 'News Alt',
-			imageTitle: 'News Alt Title'
+			imageAlt: 'v1.0.0.0',
+			imageTitle: 'Version 1.0.0.0'
 		},
 		{
 			title: 'Version 1.0.0.1',
 			url: '/news/version-1-0-0-1',
 			preview: 'Test',
 
-			image: '/test-news-img.jpg',
 			imageAlt: 'v1.0.0.1',
-			imageTitle: 'News Alt Title'
+			imageTitle: 'Version 1.0.0.1'
 		},
 		{
 			title: 'Version 1.0.0.2',
 			url: '/news/version-1-0-0-2',
 			preview: 'Test',
 
-			imageAlt: 'News Alt',
-			imageTitle: 'News Alt Title'
+			imageAlt: 'v1.0.0.2',
+			imageTitle: 'Version 1.0.0.2'
 		}
 	];
 </script>
