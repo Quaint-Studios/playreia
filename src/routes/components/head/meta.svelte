@@ -23,7 +23,7 @@
 	/>
 	<meta name="robots" content="index, follow" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="English" />
+	<meta name="language" content="en-us" />
 	<meta name="revisit-after" content="3 days" />
 	<meta name="author" content="Quaint Studios" />
 	<slot name="structured" />
