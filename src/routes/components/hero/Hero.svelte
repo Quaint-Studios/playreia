@@ -20,6 +20,7 @@
 		@apply relative w-full h-4/5 min-h-[740px] flex justify-center items-end bg-cover bg-center bg-no-repeat;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
 			url('/rsc/img/hero_1.jpg?enhanced');
+		@apply text-on-primary-token relative w-full h-4/5 min-h-[740px] flex justify-center items-end bg-cover bg-center bg-no-repeat;
 	}
 
 	#hero-wrapper {

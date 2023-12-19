@@ -34,7 +34,7 @@
 	}
 
 	#appbar {
-		@apply fixed top-0 flex w-full h-[86px] px-[16px] my-[16px] items-center z-[11];
+		@apply text-on-primary-token fixed top-0 flex w-full h-[86px] px-[16px] my-[16px] items-center z-[11];
 	}
 
 	#appbar #brand {
