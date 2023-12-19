@@ -1,4 +1,4 @@
-robots.txt Reia welcomes you, robots
+# robots.txt Reia welcomes you, robots
 User-agent: *
 Disallow: 
 Disallow: /admin/
