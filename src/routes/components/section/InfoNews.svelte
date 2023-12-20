@@ -19,14 +19,14 @@
 	}
 </script>
 
-<div class="info-news">
+<div class="info-news grid-flow-row-dense lg:grid-flow-col-dense">
 	{#each items as item}
 		<div class="item">
 			<a href={item.url}>
 				<h2 class="item-title">{item.title}</h2>
 				{#if Object.hasOwn(item, 'image') && item.image != undefined}
 					<img
-            class="item-image"
+						class="item-image"
 						src={item.image}
 						alt={getOrFill(item, 'imageAlt', default_news_alt)}
 						title={getOrFill(item, 'imageTitle', default_news_title)}
@@ -47,13 +47,9 @@
 
 <style>
 	/* Content */
-  .info-news {
-    @apply inline-grid grid-cols-3 auto-cols-max gap-10 justify-self-center;
-  }
-
-  .info-news .item {
-    
-  }
+	.info-news {
+		@apply inline-grid auto-cols-max gap-10 justify-self-center;
+	}
 
 	.info-news .item-title {
 		@apply text-primary-700 text-xl md:text-2xl font-bold uppercase;
