@@ -15,7 +15,7 @@
 		<div class="decoration-flex">
 			<Minus /><Minus /><Minus /><CircleMedium /><Rhombus />
 		</div>
-		<h1>{title}</h1>
+		<h2>{title}</h2>
 		<div class="decoration-flex">
 			<Rhombus /><CircleMedium /><Minus /><Minus /><Minus />
 		</div>
@@ -35,7 +35,7 @@
 	.info-section .decoration .decoration-flex {
 		@apply flex gap-0 items-center justify-center;
 	}
-	.info-section .decoration h1 {
+	.info-section .decoration h2 {
 		@apply text-4xl md:text-5xl font-black;
 	}
 
