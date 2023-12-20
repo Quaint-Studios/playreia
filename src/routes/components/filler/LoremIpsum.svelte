@@ -3,7 +3,8 @@
 	Enjoy an wide-range of gameplay experiences that will continue to grow in an open-source
 	environment.
 </h2>
-<h4 class="m-10">
+<h3 class="h4 mx-10">Website still in development...</h3>
+<h4 class="mt-2 m-10">
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 	labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed risus ultricies tristique
 	nulla. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Etiam non quam lacus
