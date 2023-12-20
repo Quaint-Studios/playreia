@@ -88,21 +88,21 @@ export async function GET() {
 			xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
-      ${pageData
-				.map(
-					(elem) => `
-        <url>
-          <loc>${website}${elem.page}</loc>
-          <changefreq>${elem.freq}</changefreq>
-          <priority>${elem.priority.toLocaleString('en-US', {
-						minimumFractionDigits: 1,
-						maximumFractionDigits: 1
-					})}</priority>
-          <lastmod>${date}</lastmod>
-        </url>
-      `
-				)
-				.join('')}
+  ${pageData
+		.map(
+			(elem) => `
+  <url>
+    <loc>${website}${elem.page}</loc>
+    <changefreq>${elem.freq}</changefreq>
+    <priority>${elem.priority.toLocaleString('en-US', {
+			minimumFractionDigits: 1,
+			maximumFractionDigits: 1
+		})}</priority>
+    <lastmod>${date}</lastmod>
+  </url>
+  `
+		)
+		.join('')}
 		</urlset>`.trim(),
 		{
 			headers: {

@@ -1,2 +1,2 @@
 export const name = 'Reia';
-export const website = 'https://wwww.playreia.com';
+export const website = 'https://www.playreia.com';
