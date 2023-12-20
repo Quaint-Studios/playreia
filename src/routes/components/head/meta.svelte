@@ -2,17 +2,20 @@
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
 
-  export let titlePrefix = "Reia - ";
+	export let titlePrefix = 'Reia - ';
 	export let title = 'Explore endless magical worlds!';
-  let _title = `${titlePrefix}${title}`;
+	let _title = `${titlePrefix}${title}`;
 
 	export let description =
 		"Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play.";
 	export let meta_logo = '/meta_logo.png';
+	export let canonical = true;
 </script>
 
 <svelte:head>
-	<link rel="canonical" href="https://www.playreia.com" />
+	{#if canonical}
+		<link rel="canonical" href={`https://www.playreia.com${$page.url.pathname}`} />
+	{/if}
 
 	<title>{_title}</title>
 	<meta name="title" content={_title} />
