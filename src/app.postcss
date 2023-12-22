@@ -5,11 +5,19 @@
 
 html,
 body {
-	@apply h-full text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg;
+	@apply min-h-full text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg;
 }
 
 /* Reia theme */
 @font-face {
 	font-family: 'Poppins';
 	font-display: auto;
+}
+
+.dark a:hover {
+	@apply text-secondary-800;
+}
+
+.dark a:active {
+	@apply text-secondary-900;
 }
