@@ -1,12 +1,11 @@
 <script>
 	import { socials } from '$lib/info';
-	import { description } from '../components/articles/_layout.svelte';
 	import Meta from '../components/head/meta.svelte';
 </script>
 
-<div class="mt-20">
-	<h1 class="h1">Download the game from the Following Sources</h1>
-	<h2>GitHub</h2>
+<div class="mt-36 mx-10">
+	<h1 class="h1 text-center">Download the game from the Following Sources</h1>
+	<h2 class="h2">GitHub</h2>
 	<p>You can download the game via <a href={socials.github}>GitHub</a>.</p>
 
 	<h3>Steam</h3>
@@ -27,3 +26,21 @@
     }
 	</script>
 </Meta>
+
+<style>
+  a {
+    @apply underline;
+  }
+
+	h1 {
+		@apply h1 font-bold mt-6;
+	}
+
+	h2 {
+		@apply h2 font-bold  mt-6;
+	}
+
+	h3 {
+		@apply h3 font-medium  mt-6;
+	}
+</style>

@@ -4,9 +4,9 @@
 	import InfoSection from './components/section/InfoSection.svelte';
 	import InfoNews from './components/section/InfoNews.svelte';
 
-  import AboutReia from './components/articles/AboutReia.svx';
+	import AboutReia from './components/articles/AboutReia.svx';
 
-  let info;
+	let info;
 
 	/** @type {Array<NewsItem>} */
 	let newsItems = [
@@ -37,17 +37,14 @@
 	];
 </script>
 
-<div class="w-full h-full">
-	<Hero />
-	<InfoSection title="News">
-		<InfoNews slot="content" items={newsItems} />
-	</InfoSection>
-	<InfoSection title="Explore"></InfoSection>
-	<AboutReia />
-</div>
+<Hero />
+<InfoSection title="News">
+	<InfoNews slot="content" items={newsItems} />
+</InfoSection>
+<InfoSection title="Explore"></InfoSection>
+<AboutReia />
 
-<Meta
->
+<Meta>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",

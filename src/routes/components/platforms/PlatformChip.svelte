@@ -22,12 +22,12 @@
 
 		font-family: 'Metropolis', sans-serif;
 	}
-  :global(.minorLabel) {
+  .platformChip :global(.minorLabel) {
     font-size: medium;
     line-height: normal;
     font-weight: 400;
   }
-  :global(.majorLabel) {
+  .platformChip :global(.majorLabel) {
     font-size: larger;
     font-weight: bold;
   }
