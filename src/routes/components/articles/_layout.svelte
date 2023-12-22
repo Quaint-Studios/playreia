@@ -7,7 +7,7 @@
 	export let date;
 </script>
 
-<article>
+<article class="mx-10 md:mx-14">
 	<h1>{title}</h1>
 	<h2>{subTitle}</h2>
 
@@ -19,7 +19,7 @@
 
 <style>
 	article {
-		@apply mx-10 md:mx-14 text-secondary-400;
+		@apply text-secondary-400;
 	}
 
 	article h1 {
