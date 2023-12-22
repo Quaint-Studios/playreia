@@ -36,6 +36,7 @@
 	import AppBar from './components/appbar/AppBar.svelte';
 	import NavBrand from './components/appbar/NavBrand.svelte';
 	import NavBrandTag from './components/appbar/NavBrandTag.svelte';
+	import Footer from '$lib/components/Layout/Footer.svelte';
 
 	// Site data
 	const navItemClass = 'uppercase ml-6';
@@ -58,12 +59,15 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="actions">
-		<button aria-label="Language" class="hidden lg:inline-block"><Language width="24" height="24" /></button>
+		<button aria-label="Language" class="hidden lg:inline-block">
+			<Language width="24" height="24" />
+		</button>
 		<button aria-label="Play Now" class="btn bg-primary-500">Play Now</button>
 	</svelte:fragment>
 </AppBar>
 <!-- Page Route Content -->
 <slot />
+<Footer />
 
 <style>
 </style>
