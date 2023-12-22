@@ -88,3 +88,5 @@ Coming soon.
 One of the primary focuses for this project is behind its open-source nature. Listening to feedback from the community is a priority. With GitHub as our repository provider, there are several tools to gather feedback. Users can talk directly to the developers. Bugs can be reported immediately and the progress on them is transparent. Features can be requested and voted on. The community also has the power to create updates themselves and propose a review and implementation of it; speeding up development time.
 
 At the heart of Reia pulses a spirit of collaboration. Embrace the open-source philosophy, contribute to the game's ever-evolving landscape. Tinker with the code, propose new features, and join a passionate community shaping its future. Whether you're a seasoned programmer or a budding creator, Reia celebrates your unique vision, inviting you to contribute to its success.
+
+Feel free to contribute to the project on <a href="https://github.com/Quaint-Studios/Reia">GitHub</a>.
