@@ -6,6 +6,8 @@
 	import InfoContent from './components/section/InfoContent.svelte';
 	import InfoNews from './components/section/InfoNews.svelte';
 
+  import AboutReia from './components/articles/AboutReia.svx';
+
 	/** @type {Array<NewsItem>} */
 	let newsItems = [
 		{
@@ -41,7 +43,7 @@
 		<InfoNews slot="content" items={newsItems} />
 	</InfoSection>
 	<InfoSection title="Explore"></InfoSection>
-	<LoremIpsum />
+	<AboutReia />
 </div>
 
 <Meta>
