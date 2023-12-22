@@ -13,6 +13,7 @@
 
 	<slot />
 
+  <p class="author">by {author}</p>
 	<p class="date">Last updated: {date}</p>
 </article>
 
@@ -29,8 +30,8 @@
 		@apply h3 text-center font-medium mb-10;
 	}
 
-	article .date {
-		@apply text-sm font-bold text-right;
+	article .date, article .author {
+		@apply text-sm font-bold text-right m-0;
 	}
 
 	article :global(p) {
