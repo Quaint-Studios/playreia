@@ -51,4 +51,16 @@
 
 		border-color: rgba(255, 255, 255, 0.5) !important;
 	}
+
+  article :global(a) {
+    @apply font-medium underline;
+  }
+
+  article :global(a):hover {
+    @apply text-secondary-800;
+  }
+
+  article :global(a):active {
+    @apply text-secondary-900;
+  }
 </style>
