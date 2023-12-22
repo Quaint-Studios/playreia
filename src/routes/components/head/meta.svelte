@@ -14,7 +14,7 @@
 
 	export let author = 'Quaint Studios';
 
-	export let meta_logo = '/meta_logo.png';
+	export let reia_logo_meta = '/reia_logo_meta.png';
 	export let canonical = true;
 </script>
 
@@ -39,14 +39,14 @@
 	<meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="og:title" content={_title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content={`${$page.url.origin}${meta_logo}`} />
+	<meta property="og:image" content={`${$page.url.origin}${reia_logo_meta}`} />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="twitter:title" content={_title} />
 	<meta property="twitter:description" content={description} />
-	<meta property="twitter:image" content={`${$page.url.origin}${meta_logo}`} />
+	<meta property="twitter:image" content={`${$page.url.origin}${reia_logo_meta}`} />
 
 	<slot />
 </svelte:head>
