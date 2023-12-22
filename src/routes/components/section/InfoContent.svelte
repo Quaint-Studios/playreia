@@ -3,7 +3,7 @@
 </script>
 
 <div class="info-content">
-	<h2 class="title">{title}</h2>
+	<h3 class="title">{title}</h3>
 	<div class="content">
 		<slot />
 	</div>

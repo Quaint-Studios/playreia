@@ -23,7 +23,7 @@
 	{#each items as item}
 		<div class="item">
 			<a href={item.url}>
-				<h2 class="item-title">{item.title}</h2>
+				<h3 class="item-title">{item.title}</h3>
 				{#if Object.hasOwn(item, 'image') && item.image != undefined}
 					<img
 						class="item-image"
@@ -40,7 +40,7 @@
 					/>
 				{/if}
 			</a>
-			<h3>{item.preview}</h3>
+			<h4>{item.preview}</h4>
 		</div>
 	{/each}
 </div>
