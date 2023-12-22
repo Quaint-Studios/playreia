@@ -63,10 +63,6 @@ For each island that you have, you can also build a stall. The stalls can be ded
 
 From your island you can also automate expeditions for your spirits to venture on. These expeditions are to claim land on the surface. The gameplay here is centered around using the proper spirit element to gain an advantage. As well as proper gear. Each zone will be centered around a specific element type and will have certain enemies. So it's easy to plan accordingly. You'll also be able to dictate what level ranges to stop at. The speed of the expedition is the same as an actual fight in that zone. You'll see the progress of the clear in real-time. And it can be cancelled at anytime. But the progress will slowly go down unless it's fully cleared. Zones can sometimes have enemies that reappear. That's where planning to have a team that handles that specifically comes in. The reward can be a boost to your resource generation. But the difficulty scales the more land you explore. Planning out recovery, such as when their health gets low, and difficulty levels is crucial to keep the ball rolling. If your spirit dies... you lose all zones adjacent to that zone.
 
-
-FILLER:
-You can explore the story. And if you want, you can go back and replay different outcomes, still getting the rewards for them but with a different cosmetic look as a result. You can also focus purely on combat and leveling up. Or you can ignore all of that and play the economy to get rich. Players can also customize their own player islands to manage resources they farm, hire NPCs to run their shops, and sell their goods to other player islands. This is how the economy works. Additionally to this, you can have automated battles that expands your resource farming territory slowly. But it can also cause you to lose land. There's no delay on when you can fight, but you do need to recover and plan it out. The better your build, the faster you complete tasks. But the harder the task, the better the reward.
-
 ### The Art Direction of the Project
 
 #### A game where vibrant hues and soft environments is a focus in visuals.
