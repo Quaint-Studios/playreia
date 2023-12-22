@@ -23,7 +23,7 @@
 	}
 
 	article h1 {
-		@apply h1 text-center font-bold my-5;
+		@apply h1 text-center font-bold mb-5 mt-24;
 	}
 
 	article h2 {
