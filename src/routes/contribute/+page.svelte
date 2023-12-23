@@ -25,7 +25,10 @@
 	</p>
 </div>
 
-<Meta title="Contribute to the project!">
+<Meta
+	title="Contribute Code, Art, and more to the project!"
+	description="If you like the story or even the fantasy RPG & action adventure aspect of Reia, our GitHub has everything to contribute code, art, or funding to the project!"
+>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",
