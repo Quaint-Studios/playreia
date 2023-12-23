@@ -1,7 +1,7 @@
 ---
 layout: article
 
-title: 'Reia: Explore Endless Worlds and Embark on a Magical Adventure of a Lifetime'
+title: 'Reia | Explore Endless Worlds and Embark on a Magical Adventure of a Lifetime'
 subTitle: "A game that's action, adventure, and RPG. Enjoy an wide-range of gameplay experiences that will continue to grow in an open-source environment."
 description: "Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play."
 tags: []
@@ -25,7 +25,7 @@ If focusing on the story is your choice then go for it. A story could give you e
 
 There are three types of stories in Reia: **Main Story**, **Quests**, and **Mini-Quests**. The main story focuses on Reia herself. Each section of the main story is a requirement for a large chunk of quests. The major difference between the main story and quests is that the main story is linear and the quests can be done in whatever order you want. Mini-quests are like quests but are short. Obvious, right? But quests can also be extremely long or short as well. Let's get into more detail about each type of story.
 
-**Main Story:** When completing a section of the main story you'll, as mentioned before, unlock access to new quests. This is a standard prerequisite. The main story can also enable to you unlock new Spirits and abilities too. In Reia, you spend most of your time repairing the realm and making it better than it was before the invasion. Collecting Spirits to unlock new abilities is one of the rewards you get access to from completing the main story. You'll still have to complete the Spirit's secondary story to be able to use them. But the prerequisite will require the main story to start the secondary story.
+**Main Story:** When completing a section of the main story you'll, as mentioned before, unlock access to new quests. This is a standard prerequisite. The main story can also enable to you unlock new Spirits and abilities too. In Reia, you spend most of your time repairing the realm and making it better than it was before the invasion. Collecting Spirits to unlock new abilities is one of the rewards you get access to from completing the main story. You'll still have to complete the Spirit's quest to be able to use them. But the prerequisite will require the main story to start the quest.
 
 **Quests:** A quest focuses more on telling _your_ story. While you play the role as one of the voices of Reia, you have the ability to make your own choices. And with each choice, there's a consequence. One of the key features of Reia though is that with those consequences, you're not locked out of certain rewards forever. You can revisit the past and replay the story with different outcomes, gaining unique rewards for doing so with a slight drawback. These drawbacks are usually cosmetic. But whenever you do future quests, your past choices will influence them.
 
