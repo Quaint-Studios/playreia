@@ -22,7 +22,7 @@
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://playreia.com"
+      "url": "https://www.playreia.com"
     }
 	</script>
 </Meta>

@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: 
 Disallow: /admin/
-Sitemap: https://playreia.com/sitemap.xml
+Sitemap: https://www.playreia.com/sitemap.xml

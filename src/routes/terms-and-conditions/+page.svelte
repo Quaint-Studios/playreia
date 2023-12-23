@@ -3,7 +3,7 @@
 </script>
 
 <div>
-	<p>TERMS AND CONDITIONS</p>
+	<h1>TERMS AND CONDITIONS</h1>
 	<p>Last updated January 01, 2024</p>
 	<p>AGREEMENT TO OUR LEGAL TERMS</p>
 	<p>We are Quaint Studios, doing business as Quaint Studios ("Company," "we," "us," "our").</p>
@@ -1038,13 +1038,16 @@
 	<p>legal@playreia.com</p>
 </div>
 
-<Meta>
+<Meta
+	title="Terms and Conditions"
+	description="The following terms and conditions cover the entire agreement between you and Reia for your use of our services. They contain certain conditions and restrictions."
+>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://playreia.com"
+      "url": "https://www.playreia.com"
     }
 	</script>
 </Meta>

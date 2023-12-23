@@ -79,7 +79,7 @@
 		</p>
 		<p>
 			<strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is
-			by visiting <a href="https://playreia.com/data-request">https://playreia.com/data-request</a>,
+			by visiting <a href="https://www.playreia.com/data-request">https://www.playreia.com/data-request</a>,
 			or by contacting us. We will consider and act upon any request in accordance with applicable
 			data protection laws.
 		</p>
@@ -1048,9 +1048,9 @@
 	</ul>
 	<p>
 		To exercise these rights, you can contact us by visiting<a
-			href="https://playreia.com/data-request"
+			href="https://www.playreia.com/data-request"
 		>
-			https://playreia.com/data-request</a
+			https://www.playreia.com/data-request</a
 		>, by email at ccpa@playreia.com, or by referring to the contact details at the bottom of this
 		document. If you have a complaint about how we handle your data, we would like to hear from you.
 	</p>
@@ -1076,7 +1076,7 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://playreia.com/data-request"> https://playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
 	</p>
 	<p>
 		If we decline to take action regarding your request and you wish to appeal our decision, please
@@ -1106,7 +1106,7 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://playreia.com/data-request"> https://playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
 	</p>
 	<p>
 		If we decline to take action regarding your request and you wish to appeal our decision, please
@@ -1134,7 +1134,7 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://playreia.com/data-request"> https://playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
 	</p>
 	<p>Virginia Residents</p>
 	<p>Under the Virginia Consumer Data Protection Act (VCDPA):</p>
@@ -1171,9 +1171,9 @@
 	<p>Exercise your rights provided under the Virginia VCDPA</p>
 	<p>
 		You may contact us by email at privacy@playreia.com or visit<a
-			href="https://playreia.com/data-request"
+			href="https://www.playreia.com/data-request"
 		>
-			https://playreia.com/data-request</a
+			https://www.playreia.com/data-request</a
 		>.
 	</p>
 	<p>
@@ -1264,20 +1264,23 @@
 		Based on the applicable laws of your country, you may have the right to request access to the
 		personal information we collect from you, change that information, or delete it. To request to
 		review, update, or delete your personal information, please visit:<a
-			href="https://playreia.com/data-request"
+			href="https://www.playreia.com/data-request"
 		>
-			https://playreia.com/data-request</a
+			https://www.playreia.com/data-request</a
 		>.
 	</p>
 </div>
 
-<Meta>
+<Meta
+  title="Privacy Policy"
+  description="This Privacy Policy is intended to help you understand Reia's privacy practices and provide information about the choices you have regarding the ways in which information collected by Reia is used and disclosed."
+>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://playreia.com"
+      "url": "https://www.playreia.com"
     }
 	</script>
 </Meta>
