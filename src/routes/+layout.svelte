@@ -33,10 +33,10 @@
 	import '@fontsource/poppins/900-italic.css';
   */
 
-	import AppBar from './components/appbar/AppBar.svelte';
-	import NavBrand from './components/appbar/NavBrand.svelte';
-	import NavBrandTag from './components/appbar/NavBrandTag.svelte';
-	import Footer from '$lib/components/Layout/Footer.svelte';
+	import AppBar from '$lib/components/appbar/AppBar.svelte';
+	import NavBrand from '$lib/components/appbar/NavBrand.svelte';
+	import NavBrandTag from '$lib/components/appbar/NavBrandTag.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
 
 	// Site data
 	const navItemClass = 'uppercase ml-6';

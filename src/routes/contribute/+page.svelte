@@ -1,5 +1,5 @@
 <script>
-	import Meta from '../components/head/meta.svelte';
+	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
 <div class="mt-40 mb-20 mx-10">
@@ -19,9 +19,9 @@
 		Another way you can contribute to this project is through funding. And if there's something
 		specific that we are already working on and you'd like us to give it some more focus, you can
 		emphasize that by voicing your concern. Currently we're deciding the best platform to accept
-		funding long-term.
-
-    Currently we're thinking of <a href="https://opencollective.com/reia">Open Collective</a>. But that may change depending on some factors; fees being one of them.
+		funding long-term. Currently we're thinking of <a href="https://opencollective.com/reia"
+			>Open Collective</a
+		>. But that may change depending on some factors; fees being one of them.
 	</p>
 </div>
 
@@ -37,7 +37,7 @@
 </Meta>
 
 <style>
-  h2 {
-    @apply mt-8;
-  }
+	h2 {
+		@apply mt-8;
+	}
 </style>

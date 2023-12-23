@@ -1,6 +1,6 @@
 <script>
 	import { socials } from '$lib/info';
-	import Meta from '../components/head/meta.svelte';
+	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
 <div class="mt-36 mx-10">

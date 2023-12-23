@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Meta from './components/head/meta.svelte';
+	import Meta from '$lib/components/head/meta.svelte';
 
 	const emojis = {
 		// TODO add the rest!

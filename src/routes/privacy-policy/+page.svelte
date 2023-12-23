@@ -1,5 +1,5 @@
 <script>
-	import Meta from '../components/head/meta.svelte';
+	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
 <Meta>

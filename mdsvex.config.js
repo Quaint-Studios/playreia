@@ -4,7 +4,7 @@ const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 
   layout: {
-    article: './src/routes/components/articles/_layout.svelte'
+    article: './src/libs/components/articles/_layout.svelte'
   },
 
 	smartypants: {

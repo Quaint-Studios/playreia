@@ -1,10 +1,10 @@
 <script>
-	import Hero from './components/hero/Hero.svelte';
-	import Meta from './components/head/meta.svelte';
-	import InfoSection from './components/section/InfoSection.svelte';
-	import InfoNews from './components/section/InfoNews.svelte';
+	import Hero from '$lib/components/hero/Hero.svelte';
+	import Meta from '$lib/components/head/meta.svelte';
+	import InfoSection from '$lib/components/section/InfoSection.svelte';
+	import InfoNews from '$lib/components/section/InfoNews.svelte';
 
-	import AboutReia from './components/articles/AboutReia.svx';
+	import AboutReia from '$lib/components/articles/AboutReia.svx';
 
 	let info;
 
