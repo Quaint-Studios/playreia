@@ -36,6 +36,10 @@
 			</ul>
 		</div>
 	</div>
+  <div class="legal-info">
+    <div>Copyright © 2023 Quaint Studios</div>
+    <div><a href="/terms-and-conditions">Terms & Conditions</a> | <a href="/privacy-policy">Privacy Policy</a></div>
+  </div>
 </footer>
 
 <style>
@@ -50,4 +54,8 @@
 	footer .info {
 		@apply w-full flex gap-16 justify-center items-start bg-primary-600 p-16 pt-10;
 	}
+
+  footer .legal-info {
+    @apply w-full flex justify-between items-center bg-primary-600 py-5 px-16;
+  }
 </style>
