@@ -31,13 +31,15 @@ export async function GET() {
 	 * page: string,
 	 * freq: Freq,
 	 * priority: number
+   * lastmod?: string
 	 * }}
 	 */
 	const pageData = [
 		{
 			page: '',
 			freq: freq.daily,
-			priority: 1.0
+			priority: 1.0,
+      lastmod: '2023-12-23'
 		},
 		{
 			page: '/news',
@@ -57,7 +59,8 @@ export async function GET() {
 		{
 			page: '/press-kit',
 			freq: freq.daily,
-			priority: 0.7
+			priority: 0.7,
+      lastmod: '2023-12-23'
 		},
 		{
 			page: '/about',
@@ -67,15 +70,35 @@ export async function GET() {
 		{
 			page: '/contribute',
 			freq: freq.daily,
-			priority: 0.7
+			priority: 0.7,
+      lastmod: '2023-12-23'
 		},
 		{
 			page: '/download',
 			freq: freq.daily,
-			priority: 1.0
+			priority: 1.0,
+      lastmod: '2023-12-23'
+		},
+		{
+			page: '/cookies',
+			freq: freq.weekly,
+			priority: 0.3,
+      lastmod: '2023-12-23'
+		},
+		{
+			page: '/privacy-policy',
+			freq: freq.weekly,
+			priority: 0.3,
+      lastmod: '2023-12-23'
+		},
+		{
+			page: '/terms-and-conditions',
+			freq: freq.weekly,
+			priority: 0.3,
+      lastmod: '2023-12-23'
 		}
 	];
-	const date = '2023-12-20';
+	const date = '2023-12-22';
 
 	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
