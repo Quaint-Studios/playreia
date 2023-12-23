@@ -56,6 +56,6 @@
 	}
 
   footer .legal-info {
-    @apply w-full flex justify-between items-center bg-primary-600 py-5 px-16;
+    @apply w-full flex justify-between items-center bg-primary-600 py-5 px-16 border-t-[1px] border-[rgba(0,0,0,0.2)];
   }
 </style>
