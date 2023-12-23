@@ -117,7 +117,7 @@ export async function GET() {
 			minimumFractionDigits: 1,
 			maximumFractionDigits: 1
 		})}</priority>
-    <lastmod>${date}</lastmod>
+    <lastmod>${elem.lastmod != undefined ? elem.lastmod : date}</lastmod>
   </url>
   `).join('').trim()}
 		</urlset>`.trim(),
