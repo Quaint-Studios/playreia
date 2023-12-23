@@ -38,7 +38,7 @@
 	</div>
   <div class="legal-info">
     <div>Copyright © 2023 Quaint Studios</div>
-    <div><a href="/terms-and-conditions">Terms & Conditions</a> | <a href="/privacy-policy">Privacy Policy</a></div>
+    <div><a href="/terms-and-conditions">Terms & Conditions</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/cookies">Cookies</a></div>
   </div>
 </footer>
 

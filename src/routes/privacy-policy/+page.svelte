@@ -2,262 +2,218 @@
 	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
-<div>
-	<p>PRIVACY POLICY</p>
-	<p>Last updated January 01, 2024</p>
-	<p>
-		This privacy notice for Quaint Studios (doing business as Quaint Studios) ("we," "us," or
-		"our"), describes how and why we might collect, store, use, and/or share ("process") your
-		information when you use our services ("Services"), such as when you:
+<div class="text-secondary-400 pt-36 px-10 md:px-16">
+	<h1>PRIVACY POLICY</h1>
+	<p class="subtitle"><strong>Last updated January 01, 2024</strong></p>
+
+	<p class="section">
+		This privacy notice for Quaint Studios (doing business as Quaint Studios) ("<strong>we</strong
+		>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we might collect,
+		store, use, and/or share ("<strong>process</strong>") your information when you use our services
+		("<strong>Services</strong>"), such as when you:
 	</p>
-	<ul>
+	<ul class="list-tab">
 		<li>
 			<p>
 				Download and use our mobile application (Reia), or any other application of ours that links
 				to this privacy notice
 			</p>
 		</li>
-	</ul>
-	<ul>
 		<li><p>Engage with us in other related ways, including any sales, marketing, or events</p></li>
 	</ul>
 	<p>
-		Questions or concerns? Reading this privacy notice will help you understand your privacy rights
-		and choices. If you do not agree with our policies and practices, please do not use our
-		Services. If you still have any questions or concerns, please contact us at
-		privacy@playreia.com.
+		<strong>Questions or concerns?</strong> Reading this privacy notice will help you understand your
+		privacy rights and choices. If you do not agree with our policies and practices, please do not use
+		our Services. If you still have any questions or concerns, please contact us at privacy@playreia.com.
 	</p>
-	<p>SUMMARY OF KEY POINTS</p>
-	<p>
-		This summary provides key points from our privacy notice, but you can find out more details
-		about any of these topics by clicking the link following each key point or by using our <a
-			href="#TODO"
-			>table of contents</a
-		> below to find the section you are looking for.
+	<h2>SUMMARY OF KEY POINTS</h2>
+	<div class="sections">
+		<p class="mb-5">
+			<strong
+				><em>
+					This summary provides key points from our privacy notice, but you can find out more
+					details about any of these topics by clicking the link following each key point or by
+					using our <a href="#toc">table of contents</a> below to find the section you are looking for.
+				</em></strong
+			>
+		</p>
+		<p>
+			<strong>What personal information do we process?</strong> When you visit, use, or navigate our
+			Services, we may process personal information depending on how you interact with us and the
+			Services, the choices you make, and the products and features you use. Learn more about
+			<a href="#personalinfo">personal information you disclose to us</a>.
+		</p>
+		<p>
+			<strong>Do we process any sensitive personal information?</strong> We do not process sensitive
+			personal information.
+		</p>
+		<p>
+			<strong>Do we receive any information from third parties?</strong> We do not receive any information
+			from third parties.
+		</p>
+		<p>
+			<strong>How do we process your information?</strong> We process your information to provide,
+			improve, and administer our Services, communicate with you, for security and fraud prevention,
+			and to comply with law. We may also process your information for other purposes with your
+			consent. We process your information only when we have a valid legal reason to do so. Learn
+			more about <a href="#infouse">how we process your information</a>.
+		</p>
+		<p>
+			<strong>In what situations and with which parties do we share personal information?</strong>
+			We may share information in specific situations and with specific third parties. Learn more about
+			<a href="#whoshare">when and with whom we share your personal information</a>.
+		</p>
+		<p>
+			<strong>How do we keep your information safe?</strong> We have organizational and technical
+			processes and procedures in place to protect your personal information. However, no electronic
+			transmission over the internet or information storage technology can be guaranteed to be 100%
+			secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized
+			third parties will not be able to defeat our security and improperly collect, access, steal,
+			or modify your information. Learn more about
+			<a href="#infosafe">how we keep your information safe</a>.
+		</p>
+		<p>
+			<strong>What are your rights?</strong> Depending on where you are located geographically, the
+			applicable privacy law may mean you have certain rights regarding your personal information.
+			Learn more about <a href="#privacyrights">your privacy rights</a>.
+		</p>
+		<p>
+			<strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is
+			by visiting <a href="https://playreia.com/data-request">https://playreia.com/data-request</a>,
+			or by contacting us. We will consider and act upon any request in accordance with applicable
+			data protection laws.
+		</p>
+		<p>
+			Want to learn more about what we do with any information we collect? <a href="#toc"
+				>Review the privacy notice in full</a
+			>.
+		</p>
+	</div>
+	<h2 id="toc">TABLE OF CONTENTS</h2>
+
+	<div class="anchor-list">
+		<p>
+			<a href="#infocollect">1. WHAT INFORMATION DO WE COLLECT?</a>
+		</p>
+		<p>
+			<a href="#infouse">2. HOW DO WE PROCESS YOUR INFORMATION?</a>
+		</p>
+		<p>
+			<a href="#legalbases"
+				>3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</a
+			>
+		</p>
+		<p>
+			<a href="#whoshare">4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a>
+		</p>
+		<p>
+			<a href="#cookies">5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a>
+		</p>
+		<p>
+			<a href="#sociallogins">6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a>
+		</p>
+		<p>
+			<a href="#inforetain">7. HOW LONG DO WE KEEP YOUR INFORMATION?</a>
+		</p>
+		<p>
+			<a href="#infosafe">8. HOW DO WE KEEP YOUR INFORMATION SAFE?</a>
+		</p>
+		<p>
+			<a href="#privacyrights">9. WHAT ARE YOUR PRIVACY RIGHTS?</a>
+		</p>
+		<p>
+			<a href="#DNT">10. CONTROLS FOR DO-NOT-TRACK FEATURES</a>
+		</p>
+		<p>
+			<a href="#uslaws">11. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a>
+		</p>
+		<p>
+			<a href="#otherlaws">12. DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?</a>
+		</p>
+		<p>
+			<a href="#policyupdates">13. DO WE MAKE UPDATES TO THIS NOTICE?</a>
+		</p>
+		<p>
+			<a href="#contact">14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>
+		</p>
+		<p>
+			<a href="#request">15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a>
+		</p>
+	</div>
+
+	<h2>1. WHAT INFORMATION DO WE COLLECT?</h2>
+	<h3>Personal information you disclose to us</h3>
+	<p class="subtitle-2">
+		<em><strong>In Short:</strong> We collect personal information that you provide to us.</em>
 	</p>
-	<p>
-		What personal information do we process? When you visit, use, or navigate our Services, we may
-		process personal information depending on how you interact with us and the Services, the choices
-		you make, and the products and features you use. Learn more about <a
-			href="#TODO"
-			>personal information you disclose to us</a
-		>.
-	</p>
-	<p>
-		Do we process any sensitive personal information? We do not process sensitive personal
-		information.
-	</p>
-	<p>
-		Do we receive any information from third parties? We do not receive any information from third
-		parties.
-	</p>
-	<p>
-		How do we process your information? We process your information to provide, improve, and
-		administer our Services, communicate with you, for security and fraud prevention, and to comply
-		with law. We may also process your information for other purposes with your consent. We process
-		your information only when we have a valid legal reason to do so. Learn more about <a
-			href="#TODO"
-			>how we process your information</a
-		>.
-	</p>
-	<p>
-		In what situations and with which parties do we share personal information? We may share
-		information in specific situations and with specific third parties. Learn more about <a
-			href="#TODO"
-			>when and with whom we share your personal information</a
-		>.
-	</p>
-	<p>
-		How do we keep your information safe? We have organizational and technical processes and
-		procedures in place to protect your personal information. However, no electronic transmission
-		over the internet or information storage technology can be guaranteed to be 100% secure, so we
-		cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties
-		will not be able to defeat our security and improperly collect, access, steal, or modify your
-		information. Learn more about <a
-			href="#TODO"
-			>how we keep your information safe</a
-		>.
-	</p>
-	<p>
-		What are your rights? Depending on where you are located geographically, the applicable privacy
-		law may mean you have certain rights regarding your personal information. Learn more about <a
-			href="#TODO"
-			>your privacy rights</a
-		>.
-	</p>
-	<p>
-		How do you exercise your rights? The easiest way to exercise your rights is by visiting<a
-			href="https://playreia.com/data-request"
-		>
-			https://playreia.com/data-request</a
-		>, or by contacting us. We will consider and act upon any request in accordance with applicable
-		data protection laws.
-	</p>
-	<p>
-		Want to learn more about what we do with any information we collect? <a
-			href="#TODO"
-			>Review the privacy notice in full</a
-		>.
-	</p>
-	<p>TABLE OF CONTENTS</p>
-	<p>
-		<a
-			href="#TODO"
-			>1. WHAT INFORMATION DO WE COLLECT?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>2. HOW DO WE PROCESS YOUR INFORMATION?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>7. HOW LONG DO WE KEEP YOUR INFORMATION?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>8. HOW DO WE KEEP YOUR INFORMATION SAFE?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>9. WHAT ARE YOUR PRIVACY RIGHTS?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>10. CONTROLS FOR DO-NOT-TRACK FEATURES</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>11. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>12. DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>13. DO WE MAKE UPDATES TO THIS NOTICE?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a
-		>
-	</p>
-	<p>
-		<a
-			href="#TODO"
-			>15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a
-		>
-	</p>
-	<p>1. WHAT INFORMATION DO WE COLLECT?</p>
-	<p>Personal information you disclose to us</p>
-	<p>In Short: We collect personal information that you provide to us.</p>
-	<p>
-		We collect personal information that you voluntarily provide to us when you register on the
-		Services, express an interest in obtaining information about us or our products and Services,
-		when you participate in activities on the Services, or otherwise when you contact us.
-	</p>
-	<p>
-		Personal Information Provided by You. The personal information that we collect depends on the
-		context of your interactions with us and the Services, the choices you make, and the products
-		and features you use. The personal information we collect may include the following:
-	</p>
-	<ul><li><p>usernames</p></li></ul>
-	<ul><li><p>passwords</p></li></ul>
-	<ul><li><p>contact preferences</p></li></ul>
-	<ul><li><p>debit/credit card numbers</p></li></ul>
-	<ul><li><p>billing addresses</p></li></ul>
-	<ul><li><p>mailing addresses</p></li></ul>
-	<ul><li><p>email addresses</p></li></ul>
-	<ul><li><p>phone numbers</p></li></ul>
-	<ul><li><p>names</p></li></ul>
-	<p>Sensitive Information. We do not process sensitive information.</p>
-	<p>
-		Payment Data. We may collect data necessary to process your payment if you make purchases, such
-		as your payment instrument number, and the security code associated with your payment
-		instrument. All payment data is stored by PayPal, Stripe and Steam. You may find their privacy
-		notice link(s) here:<a href="https://www.paypal.com/us/legalhub/privacy-full">
-			https://www.paypal.com/us/legalhub/privacy-full</a
-		>,<a href="https://stripe.com/privacy"> https://stripe.com/privacy</a> and<a
-			href="https://store.steampowered.com/privacy_agreement/"
-		>
-			https://store.steampowered.com/privacy_agreement/</a
-		>.
-	</p>
-	<p>
-		Social Media Login Data. We may provide you with the option to register with us using your
-		existing social media account details, like your Facebook, Twitter, or other social media
-		account. If you choose to register in this way, we will collect the information described in the
-		section called "<a
-			href="#TODO"
-			>HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a
-		>" below.
-	</p>
-	<p>
-		Application Data. If you use our application(s), we also may collect the following information
-		if you choose to provide us with access or permission:
-	</p>
-	<ul>
+	<div class="sections">
+		<p>
+			We collect personal information that you voluntarily provide to us when you register on the
+			Services, express an interest in obtaining information about us or our products and Services,
+			when you participate in activities on the Services, or otherwise when you contact us.
+		</p>
+		<p>
+			Personal Information Provided by You. The personal information that we collect depends on the
+			context of your interactions with us and the Services, the choices you make, and the products
+			and features you use. The personal information we collect may include the following:
+		</p>
+	</div>
+	<ul class="list-tab">
+		<li><p>usernames</p></li>
+		<li><p>passwords</p></li>
+		<li><p>contact preferences</p></li>
+		<li><p>debit/credit card numbers</p></li>
+		<li><p>billing addresses</p></li>
+		<li><p>mailing addresses</p></li>
+		<li><p>email addresses</p></li>
+		<li><p>phone numbers</p></li>
+		<li><p>names</p></li>
+	</ul>
+	<div class="sections">
+		<p><strong>Sensitive Information.</strong> We do not process sensitive information.</p>
+		<p>
+			<strong>Payment Data.</strong> We may collect data necessary to process your payment if you
+			make purchases, such as your payment instrument number, and the security code associated with
+			your payment instrument. All payment data is stored by PayPal, Stripe and Steam. You may find
+			their privacy notice link(s) here:
+			<a href="https://www.paypal.com/us/legalhub/privacy-full"
+				>https://www.paypal.com/us/legalhub/privacy-full</a
+			>, <a href="https://stripe.com/privacy"> https://stripe.com/privacy</a> and
+			<a href="https://store.steampowered.com/privacy_agreement/"
+				>https://store.steampowered.com/privacy_agreement/</a
+			>.
+		</p>
+		<p>
+			<strong>Social Media Login Data.</strong> We may provide you with the option to register with
+			us using your existing social media account details, like your Facebook, Twitter, or other
+			social media account. If you choose to register in this way, we will collect the information
+			described in the section called "<a href="#sociallogins"
+				>HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a
+			>" below.
+		</p>
+		<p>
+			<strong>Application Data.</strong> If you use our application(s), we also may collect the following
+			information if you choose to provide us with access or permission:
+		</p>
+	</div>
+	<ul class="list-tab">
 		<li>
 			<p>
-				Mobile Device Data. We automatically collect device information (such as your mobile device
-				ID, model, and manufacturer), operating system, version information and system configuration
-				information, device and application identification numbers, browser type and version,
-				hardware model Internet service provider and/or mobile carrier, and Internet Protocol (IP)
-				address (or proxy server). If you are using our application(s), we may also collect
-				information about the phone network associated with your mobile device, your mobile device’s
-				operating system or platform, the type of mobile device you use, your mobile device’s unique
-				device ID, and information about the features of our application(s) you accessed.
+				<em>Mobile Device Data.</em> We automatically collect device information (such as your mobile
+				device ID, model, and manufacturer), operating system, version information and system configuration
+				information, device and application identification numbers, browser type and version, hardware
+				model Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or
+				proxy server). If you are using our application(s), we may also collect information about the
+				phone network associated with your mobile device, your mobile device’s operating system or platform,
+				the type of mobile device you use, your mobile device’s unique device ID, and information about
+				the features of our application(s) you accessed.
 			</p>
 		</li>
-	</ul>
-	<ul>
 		<li>
 			<p>
-				Push Notifications. We may request to send you push notifications regarding your account or
-				certain features of the application(s). If you wish to opt out from receiving these types of
-				communications, you may turn them off in your device's settings.
+				<em>Push Notifications.</em> We may request to send you push notifications regarding your account
+				or certain features of the application(s). If you wish to opt out from receiving these types
+				of communications, you may turn them off in your device's settings.
 			</p>
 		</li>
 	</ul>
@@ -404,10 +360,7 @@
 				To send you marketing and promotional communications. We may process the personal
 				information you send to us for our marketing purposes, if this is in accordance with your
 				marketing preferences. You can opt out of our marketing emails at any time. For more
-				information, see "<a
-					href="#TODO"
-					>WHAT ARE YOUR PRIVACY RIGHTS?</a
-				>" below.
+				information, see "<a href="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</a>" below.
 			</p>
 		</li>
 	</ul>
@@ -473,10 +426,7 @@
 			<p>
 				Consent. We may process your information if you have given us permission (i.e., consent) to
 				use your personal information for a specific purpose. You can withdraw your consent at any
-				time. Learn more about <a
-					href="#TODO"
-					>withdrawing your consent</a
-				>.
+				time. Learn more about <a href="#withdrawconsent">withdrawing your consent</a>.
 			</p>
 		</li>
 	</ul>
@@ -544,8 +494,7 @@
 	<p>
 		We may process your information if you have given us specific permission (i.e., express consent)
 		to use your personal information for a specific purpose, or in situations where your permission
-		can be inferred (i.e., implied consent). You can <a
-			href="#TODO"
+		can be inferred (i.e., implied consent). You can <a href="#withdrawconsent"
 			>withdraw your consent</a
 		> at any time.
 	</p>
@@ -728,8 +677,7 @@
 		the processing of your personal information; (iv) if applicable, to data portability; and (v)
 		not to be subject to automated decision-making. In certain circumstances, you may also have the
 		right to object to the processing of your personal information. You can make such a request by
-		contacting us by using the contact details provided in the section "<a
-			href="#TODO"
+		contacting us by using the contact details provided in the section "<a href="#contact"
 			>HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a
 		>" below.
 	</p>
@@ -761,8 +709,7 @@
 		Withdrawing your consent: If we are relying on your consent to process your personal
 		information, which may be express and/or implied consent depending on the applicable law, you
 		have the right to withdraw your consent at any time. You can withdraw your consent at any time
-		by contacting us by using the contact details provided in the section "<a
-			href="#TODO"
+		by contacting us by using the contact details provided in the section "<a href="#contact"
 			>HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a
 		>" below.
 	</p>
@@ -774,8 +721,7 @@
 	<p>
 		Opting out of marketing and promotional communications: You can unsubscribe from our marketing
 		and promotional communications at any time by clicking on the unsubscribe link in the emails
-		that we send, or by contacting us using the details provided in the section "<a
-			href="#TODO"
+		that we send, or by contacting us using the details provided in the section "<a href="#contact"
 			>HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a
 		>" below. You will then be removed from the marketing lists. However, we may still communicate
 		with you — for example, to send you service-related messages that are necessary for the
@@ -942,8 +888,7 @@
 	</ul>
 	<p>How do we use and share your personal information?</p>
 	<p>
-		Learn about how we use your personal information in the section, "<a
-			href="#TODO"
+		Learn about how we use your personal information in the section, "<a href="#infouse"
 			>HOW DO WE PROCESS YOUR INFORMATION?</a
 		>"
 	</p>
@@ -951,8 +896,7 @@
 	<p>
 		We may disclose your personal information with our service providers pursuant to a written
 		contract between us and each service provider. Learn more about how we disclose personal
-		information to in the section, "<a
-			href="#TODO"
+		information to in the section, "<a href="#whoshare"
 			>WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a
 		>"
 	</p>
@@ -1284,8 +1228,7 @@
 	<p>
 		At any time, you have the right to request access to or correction of your personal information.
 		You can make such a request by contacting us by using the contact details provided in the
-		section "<a
-			href="#TODO-REVIEW-UDATE-OR-DELETE-THE-DATA"
+		section "<a href="#request"
 			>HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a
 		>"
 	</p>
@@ -1338,3 +1281,63 @@
     }
 	</script>
 </Meta>
+
+<style>
+	h1 {
+		@apply h1 font-bold;
+	}
+	.subtitle {
+		@apply mb-10;
+	}
+
+	h2 {
+		@apply h2 font-bold mt-10 mb-5;
+	}
+
+	h3 {
+		@apply h3 font-bold mt-2 mb-5;
+	}
+
+	.subtitle-2 {
+		@apply text-secondary-400 mb-6;
+	}
+
+	.section {
+		@apply pb-5;
+	}
+
+	.list-tab {
+		@apply pl-10;
+	}
+
+	.list-tab li {
+		@apply pb-5;
+	}
+
+	strong {
+		@apply text-secondary-400;
+	}
+
+	ul {
+	}
+
+	li {
+		list-style: square;
+	}
+
+	.sections p {
+		@apply my-8;
+	}
+
+	.anchor-list p {
+		@apply my-2;
+	}
+
+	.anchor-list {
+		@apply mb-12;
+	}
+
+	a {
+		@apply underline text-primary-100;
+	}
+</style>
