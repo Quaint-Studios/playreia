@@ -2,9 +2,9 @@
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
 
-	export let titlePrefix = 'Reia - ';
-	export let title = 'Explore endless magical worlds!';
-	let _title = `${titlePrefix}${title}`;
+	export let titleSuffix = ' - Reia';
+	export let title = 'Explore Endless Magical Worlds';
+	let _title = `${title}${titleSuffix}`;
 
 	export let description =
 		"Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play.";
