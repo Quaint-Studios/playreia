@@ -6,7 +6,7 @@
 <div class="mt-36 mx-10">
 	<h1 class="h1 text-center">Download the game from the Following Sources</h1>
 	<h2 class="h2">GitHub</h2>
-	<p>You can download the game via <a href={socials.github}>GitHub</a>.</p>
+	<p>You can download the game via <a href={`${socials.github}/releases`}>GitHub releases</a>.</p>
 
 	<h3>Steam</h3>
 	<p>Coming soon.</p>
@@ -16,13 +16,13 @@
 	<p>Coming soon.</p>
 </div>
 
-<Meta title="Download" description="Download the game from GitHub. Coming soon to all platforms!">
+<Meta title="Download and Experience Reia" description="Download the game from GitHub. Coming soon to all platforms!">
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://www.playreia.com"
+      "url": "https://www.playreia.com/download"
     }
 	</script>
 </Meta>

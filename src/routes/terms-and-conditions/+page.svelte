@@ -1047,7 +1047,7 @@
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://www.playreia.com"
+      "url": "https://www.playreia.com/terms-and-conditions"
     }
 	</script>
 </Meta>

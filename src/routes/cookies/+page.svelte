@@ -187,7 +187,7 @@
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": "Reia",
-      "url": "https://www.playreia.com"
+      "url": "https://www.playreia.com/cookies"
     }
 	</script>
 </Meta>

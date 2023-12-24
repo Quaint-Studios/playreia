@@ -1,9 +1,10 @@
 <script>
+	import ContentContainer from '$lib/components/containers/ContentContainer.svelte';
 	import Meta from '$lib/components/head/meta.svelte';
 	import { socials } from '$lib/info';
 </script>
 
-<div class="mt-40 mb-20 mx-10">
+<ContentContainer>
 	<h1 class="h1 text-center font-bold">Contribute Code, Art, and more to the project!</h1>
 	<h2 id="#GitHub" class="h2"># GitHub</h2>
 	<p>
@@ -24,13 +25,13 @@
 			>Open Collective</a
 		>. But that may change depending on some factors; fees being one of them.
 	</p>
-</div>
+</ContentContainer>
 
 <Meta
 	title="Contribute Code, Art, and more to the project!"
 	description="If you like the story or even the fantasy RPG & action adventure aspect of Reia, our GitHub has everything to contribute code, art, or funding to the project!"
 >
-<script type="application/ld+json" slot="structured">
+	<script type="application/ld+json" slot="structured">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -70,7 +71,7 @@
       }
     }]
   }
-  </script>
+	</script>
 </Meta>
 
 <style>

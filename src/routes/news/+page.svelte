@@ -1,6 +1,14 @@
 <script>
-	import Meta from '$lib/components/head/meta.svelte';
+	import ContentContainer from '$lib/components/containers/ContentContainer.svelte';
+import Meta from '$lib/components/head/meta.svelte';
 </script>
+
+<ContentContainer>
+  <h1>Blog and News Posts</h1>
+  <h2>Read about the latest updates to Reia, the team, and all things related here</h2>
+
+  <h3>News page is still under construction. Coming soon!</h3>
+</ContentContainer>
 
 <Meta
 	title="All Blogs and News Posts"

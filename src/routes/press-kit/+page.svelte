@@ -2,9 +2,13 @@
 	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
+<div class="press-kit">
+	<h1>Press-Kit</h1>
+</div>
+
 <Meta
-  title="Press-Kit"
-  description="Enjoy reading, watching, and viewing images about this game based in a fantasy action adventure setting. Reia's press kit gives you all the information and images you'll need about and its development progress."
+	title="Press-Kit"
+	description="Enjoy reading, watching, and viewing images about this game based in a fantasy action adventure setting. Reia's press kit gives you all the information and images you'll need about and its development progress."
 >
 	<script type="application/ld+json" slot="structured">
     {
