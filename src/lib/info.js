@@ -36,6 +36,6 @@ export const socialsLocal = {
   instagram: 'https://instagram.playreia.com',
   twitter: 'https://twitter.playreia.com',
   tiktok: 'https://tiktok.playreia.com',
-  youtube: 'https://youtube.playreia.com'
+  youtube: 'https://youtube.playreia.com',
   open_collective: 'https://opencollective.com/reia'
 }
