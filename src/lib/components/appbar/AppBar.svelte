@@ -45,7 +45,13 @@
 	}
 
 	#appbar #items {
-		@apply gap-6 grow justify-start items-center;
+		@apply gap-5 grow justify-start items-center;
+	}
+
+	@media (min-width: 1050px) {
+		#appbar #items {
+      @apply gap-6;
+		}
 	}
 
 	#appbar #items :global(*) {
