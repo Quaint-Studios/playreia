@@ -1,5 +1,6 @@
 <script>
 	import defaultBlogImg from '$lib/assets/img/blog/default-img-blog.jpg?enhanced';
+	import { hasOwn } from '$lib/utils';
 	const default_blog_alt = 'Default Blog Image';
 	const default_blog_title = 'Default Blog Image Title';
 	/**
@@ -15,7 +16,7 @@
 	 * @returns {string}
 	 */
 	function getOrFill(item, index, fill) {
-		return Object.hasOwn(item, index) && item[index] != undefined ? item[index] ?? fill : fill;
+		return hasOwn(item, index) && item[index] != undefined ? item[index] ?? fill : fill;
 	}
 </script>
 
@@ -24,7 +25,7 @@
 		<div class="item">
 			<a href={item.url}>
 				<h3 class="item-title">{item.title}</h3>
-				{#if Object.hasOwn(item, 'image') && item.image != undefined}
+				{#if hasOwn(item, 'image') && item.image != undefined}
 					<img
 						class="item-image"
 						src={item.image}
