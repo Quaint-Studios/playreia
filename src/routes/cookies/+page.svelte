@@ -1,3 +1,7 @@
+<script>
+	import Meta from '$lib/components/head/meta.svelte';
+</script>
+
 <div>
 	<p>COOKIE POLICY</p>
 	<p>Last updated January 1, 2024</p>
@@ -179,8 +183,8 @@
 </div>
 
 <Meta
-  title="Cookies"
-  description="This Cookies Policy discloses what cookies are, what cookies Reia uses, and how Reia utilizes cookies on in website."
+	title="Cookies"
+	description="This Cookies Policy discloses what cookies are, what cookies Reia uses, and how Reia utilizes cookies on in website."
 >
 	<script type="application/ld+json" slot="structured">
     {
