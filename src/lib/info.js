@@ -10,6 +10,7 @@ export const website = 'https://www.playreia.com';
 *   twitter: string;
 *   tiktok: string;
 *   youtube: string;
+*   open_collective: string;
 *  }} Socials
  */
 
@@ -22,7 +23,8 @@ export const socials = {
   instagram: 'https://instagram.com/playreia',
   twitter: 'https://twitter.com/playreia',
   tiktok: 'https://tiktok.com/@playreia',
-  youtube: 'https://youtube.com/@playreia'
+  youtube: 'https://youtube.com/@playreia',
+  open_collective: 'https://opencollective.com/reia'
 }
 
 /**
@@ -35,4 +37,5 @@ export const socialsLocal = {
   twitter: 'https://twitter.playreia.com',
   tiktok: 'https://tiktok.playreia.com',
   youtube: 'https://youtube.playreia.com'
+  open_collective: 'https://opencollective.com/reia'
 }
