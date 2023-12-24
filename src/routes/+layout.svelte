@@ -50,7 +50,7 @@
 
 	<svelte:fragment slot="items">
 		<a href="/">Home</a>
-		<a href="/news">News</a>
+		<a href="/blog">Blog</a>
 		<a href="/spirits">Spirits</a>
 		<a href="/explore">Explore</a>
 		<a href="/press-kit">Press-Kit</a>

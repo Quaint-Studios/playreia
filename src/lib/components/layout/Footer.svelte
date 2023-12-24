@@ -22,7 +22,7 @@
 			<div class="font-bold">Game Info</div>
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="/news">News</a></li>
+				<li><a href="/blog">Blog</a></li>
 				<li><a href="/spirits">Spirits</a></li>
 				<li><a href="/explore">Explore</a></li>
 			</ul>

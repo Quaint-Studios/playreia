@@ -1,15 +1,15 @@
 <script>
-	import defaultNewsImg from '$lib/assets/img/news/default-img-news.jpg?enhanced';
-	const default_news_alt = 'Default News Image';
-	const default_news_title = 'Default News Image Title';
+	import defaultBlogImg from '$lib/assets/img/blog/default-img-blog.jpg?enhanced';
+	const default_blog_alt = 'Default Blog Image';
+	const default_blog_title = 'Default Blog Image Title';
 	/**
-	 * @type {Array<NewsItem>}
+	 * @type {Array<BlogItem>}
 	 */
 	export let items = [];
 
 	/**
 	 *
-	 * @param item {NewsItem}
+	 * @param item {BlogItem}
 	 * @param index {"image" | "imageAlt" | "imageTitle"}
 	 * @param fill {string}
 	 * @returns {string}
@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class="info-news grid-flow-row-dense lg:grid-flow-col-dense">
+<div class="info-blog grid-flow-row-dense lg:grid-flow-col-dense">
 	{#each items as item}
 		<div class="item">
 			<a href={item.url}>
@@ -28,15 +28,15 @@
 					<img
 						class="item-image"
 						src={item.image}
-						alt={getOrFill(item, 'imageAlt', default_news_alt)}
-						title={getOrFill(item, 'imageTitle', default_news_title)}
+						alt={getOrFill(item, 'imageAlt', default_blog_alt)}
+						title={getOrFill(item, 'imageTitle', default_blog_title)}
 					/>
 				{:else}
 					<enhanced:img
 						class="item-image"
-						src={defaultNewsImg}
-						alt={getOrFill(item, 'imageAlt', default_news_alt)}
-						title={getOrFill(item, 'imageTitle', default_news_title)}
+						src={defaultBlogImg}
+						alt={getOrFill(item, 'imageAlt', default_blog_alt)}
+						title={getOrFill(item, 'imageTitle', default_blog_title)}
 					/>
 				{/if}
 			</a>
@@ -47,11 +47,11 @@
 
 <style>
 	/* Content */
-	.info-news {
+	.info-blog {
 		@apply inline-grid auto-cols-max gap-10 justify-self-center;
 	}
 
-	.info-news .item-title {
+	.info-blog .item-title {
 		@apply text-primary-700 text-xl md:text-2xl font-bold uppercase;
 	}
 	:global(.dark) .info-content .item-title {

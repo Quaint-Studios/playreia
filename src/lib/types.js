@@ -27,5 +27,5 @@
  *  'imageTitle'?: string,
  *  'url': string,
  *  'preview': string
- * }} NewsItem
+ * }} BlogItem
  */

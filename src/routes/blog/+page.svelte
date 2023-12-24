@@ -7,7 +7,7 @@ import Meta from '$lib/components/head/meta.svelte';
   <h1>Blog and News Posts</h1>
   <h2>Read about the latest updates to Reia, the team, and all things related here</h2>
 
-  <h3>News page is still under construction. Coming soon!</h3>
+  <h3>The Blog and News Posts page is still under construction. Coming soon!</h3>
 </ContentContainer>
 
 <Meta
@@ -20,9 +20,9 @@ import Meta from '$lib/components/head/meta.svelte';
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://www.playreia.com/news"
+        "@id": "https://www.playreia.com/blog"
       },
-      "headline": "All News",
+      "headline": "All Blog and News Posts",
       "description": "A compilation of updates about Reia and all things related to the game.",
       "image": "",
       "author": {

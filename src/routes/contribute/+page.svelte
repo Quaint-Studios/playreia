@@ -8,11 +8,9 @@
 	<h1 class="h1 text-center font-bold">Contribute Code, Art, and more to the project!</h1>
 	<h2 id="#GitHub" class="h2"># GitHub</h2>
 	<p>
-		You can contribute via the GitHub repository <a
-			class="btn bg-primary-500 py-1"
-			href={socials.github}>here</a
-		>
-		<br /><br />
+		You can contribute via the GitHub repository <a href={socials.github}>here</a>.
+	</p>
+  <p>
 		There are several tasks you can complete ranging from creating beautiful art, code, music, and more!
 		If you see a way you can move the project forward with us, join in.
 	</p>

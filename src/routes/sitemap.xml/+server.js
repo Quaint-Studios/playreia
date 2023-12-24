@@ -42,7 +42,7 @@ export async function GET() {
       lastmod: '2023-12-23'
 		},
 		{
-			page: '/news',
+			page: '/blog',
 			freq: freq.daily,
 			priority: 0.7
 		},
