@@ -36,7 +36,7 @@
 	<slot name="structured" />
 
 	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="websiste" />
+	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="og:title" content={_title} />
 	<meta property="og:description" content={description} />
