@@ -16,7 +16,10 @@
 	</p>
 </ContentContainer>
 
-<Meta>
+<Meta
+  title="About Us"
+  description="Learn all about Reia, the team, and the development journey. Delve into our process, what we've learned, and what we plan to do!"
+>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org",
