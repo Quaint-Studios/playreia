@@ -3,8 +3,8 @@
 </script>
 
 <div>
-	<p>COOKIE POLICY</p>
-	<p>Last updated January 1, 2024</p>
+	<h1>COOKIE POLICY</h1>
+	<p class="subtitle"><strong>Last updated January 01, 2024</strong></p>
 	<p>
 		This Cookie Policy explains how Quaint Studios ("Company," "we," "us," and "our") uses cookies
 		and similar technologies to recognize you when you visit our website at&nbsp; <a
