@@ -1,8 +1,9 @@
 <script>
+	import ContentContainer from '$lib/components/containers/ContentContainer.svelte';
 	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
-<div>
+<ContentContainer>
 	<h1>COOKIE POLICY</h1>
 	<p class="subtitle"><strong>Last updated January 01, 2024</strong></p>
 	<p>
@@ -180,7 +181,7 @@
 	<p>Quaint Studios</p>
 	<p>__________</p>
 	<p>__________</p>
-</div>
+</ContentContainer>
 
 <Meta
 	title="Cookies"
