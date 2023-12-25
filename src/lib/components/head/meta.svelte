@@ -2,9 +2,10 @@
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
 
-	export let titlePrefix = 'Reia - ';
-	export let title = 'Explore endless magical worlds!';
-	let _title = `${titlePrefix}${title}`;
+  export let titlePrefix = '';
+	export let titleSuffix = ' - Reia';
+	export let title = 'Explore Endless Magical Worlds';
+	let _title = `${titlePrefix}${title}${titleSuffix}`;
 
 	export let description =
 		"Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play.";
@@ -36,7 +37,7 @@
 	<slot name="structured" />
 
 	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="websiste" />
+	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="og:title" content={_title} />
 	<meta property="og:description" content={description} />
