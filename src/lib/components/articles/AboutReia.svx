@@ -1,7 +1,7 @@
 ---
 layout: article
 
-title: 'Reia | An Exciting Game that's Action Adventure and RPG made in Godot'
+title: 'Reia | An Exciting Game that is a Action Adventure and RPG made in Godot'
 subTitle: 'Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.'
 description: 'Reia is an exciting new game with an amazing story, combat, crafting, and your own floating islands. Made in Godot, Reia is an open-source action adventure RPG.'
 tags: []
@@ -41,6 +41,8 @@ These short stories stitch together key events in the lore and can even be somet
 
 Those three types of stories leave you with plenty of content to peruse through. Whether you prefer your stories linear or in your own order, you have two options!
 
+---
+
 ## A Combat-focused Gameplay
 
 ### Ignore the story and stomp out the enemies! Focus on getting stronger.
@@ -65,6 +67,8 @@ PvP and team-based gameplay will also be a focus. While you can own an island, y
 
 If that's not enough, then venture into the Infinite City. A collection of dungeons in an open world environment where the deeper you go the stronger the monsters get. Unlock checkpoints to teleport to them later and to teleport back. But be careful, returning from the Infinite City poses risks. If you've received any rewards from a dungeon, the City will try to claim it back. The loot isn't yours forever unless you can make it out. And the only way you can teleport is by waystones. Teleport tablets or spells do not work in the Infinite City.
 
+---
+
 ## Your Floating Player-Owned Island
 
 ### A truly customizable home of your own. What many players have asked for in a game.
@@ -83,11 +87,15 @@ For each island that you have, you can also build a stall. The stalls can be ded
 
 From your island you can also automate expeditions for your spirits to venture on. These expeditions are to claim land on the surface. The gameplay here is centered around using the proper spirit element to gain an advantage. As well as proper gear. Each zone will be centered around a specific element type and will have certain enemies. So it's easy to plan accordingly. You'll also be able to dictate what level ranges to stop at. The speed of the expedition is the same as an actual fight in that zone. You'll see the progress of the clear in real-time. And it can be cancelled at anytime. But the progress will slowly go down unless it's fully cleared. Zones can sometimes have enemies that reappear. That's where planning to have a team that handles that specifically comes in. The reward can be a boost to your resource gathering. But the difficulty scales the more land you explore. Planning out recovery, such as when their health gets low, and difficulty levels is crucial to keep the ball rolling. If your spirit dies... you lose all zones adjacent to that zone.
 
+---
+
 ## The Art Direction of the Project
 
 ### A game where vibrant hues and soft environments is a focus in visuals.
 
-Reia's environmental approach leans heavily on vibrant colors that burn into your eyes without leaving you in pain. I am the only developer for this project currently and I don't understand the intricacies of color theory and eye-ball theory. So that's all it is, an approach. This project is to provide you with a game to have fun with and to teach myself things outside of my 20 years of experience in programming. Wish me luck! In the future I'll have more to write for this section.
+Reia's environmental approach leans heavily on vibrant colors that burn into your eyes without leaving you in pain. I am the only game developer for this project currently and I don't understand the intricacies of color theory and eye-ball theory. So that's all it is, an approach. Reia is being made to provide you with a game you can have fun with and to teach myself things outside of my 20 years of experience in programming. Migrating from Unity 3D and into Godot head first was truly an experience. It was enjoyable learning Godot's GDScript. Making my own shaders, scripts, and art was all a smooth process. Even learning Figma to design some beautiful and vibrant UI. So I'll say going forward I'll continue to have fun with this project. Creating this website is one of the few things I didn't use Figma to design. But a lot of the visuals and development in Godot has Figma to thank. Well, wish me luck! In the future I'll have more to write for this section.
+
+---
 
 ## Gaming the Economy
 
@@ -95,11 +103,15 @@ Reia's environmental approach leans heavily on vibrant colors that burn into you
 
 Coming soon...
 
+---
+
 ## Creating In-Game Music, Lore, and Cosmetics
 
 ### And you can make real money from them too! Or, if you want to, make them free.
 
 Coming less soon...
+
+---
 
 ## From Code to Community
 
