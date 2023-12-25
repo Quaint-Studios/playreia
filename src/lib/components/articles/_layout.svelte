@@ -9,7 +9,7 @@
 
 <article class="mx-10 md:mx-14">
 	<h1>{title}</h1>
-	<h2>{subTitle}</h2>
+	<h2 class="subtitle">{subTitle}</h2>
 
 	<slot />
 
@@ -26,9 +26,9 @@
 		@apply h1 text-center font-bold mb-5 mt-24;
 	}
 
-	article h2 {
-		@apply h3 text-center font-medium mb-10;
-	}
+  article h2.subtitle {
+    @apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent pt-0 px-0;
+  }
 
 	article .date, article .author {
 		@apply text-sm font-bold text-right m-0;
@@ -38,16 +38,20 @@
 		@apply my-5 indent-4;
 	}
 
-	article :global(h3) {
-		@apply h4 mt-10 font-bold max-w-[70%] bg-[rgba(0,0,0,0.1)] pt-4 px-2;
+	article :global(h2) {
+		@apply h4 mt-16 font-bold max-w-[70%] bg-[rgba(0,0,0,0.2)] pt-4 px-2;
 	}
 
-	article :global(h4) {
-		@apply h6 mb-4 font-medium  max-w-[70%] bg-[rgba(0,0,0,0.1)] pb-4 px-2;
+	article :global(h2 + h3) {
+		@apply max-w-[70%] font-medium bg-[rgba(0,0,0,0.1)] pb-4 px-2;
 	}
+
+  article :global(:not(h2) + h3) {
+    @apply h6 mt-12 mb-4 font-medium bg-[rgba(0,0,0,0.1)] px-4 py-4 max-w-[55%];
+  }
 
 	article :global(hr) {
-		@apply max-w-[70%] mx-auto;
+		@apply max-w-[70%] mx-auto mt-16;
 
 		border-color: rgba(255, 255, 255, 0.5) !important;
 	}
