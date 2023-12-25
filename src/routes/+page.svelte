@@ -13,7 +13,7 @@
 		{
 			title: 'Version 1.0.0.0',
 			url: '/blog/version-1-0-0-0',
-			preview: 'Test',
+			preview: 'This is the beginning! Migrating from Unity to Godot.',
 
 			imageAlt: 'v1.0.0.0',
 			imageTitle: 'Version 1.0.0.0'
@@ -21,7 +21,7 @@
 		{
 			title: 'Version 1.0.0.1',
 			url: '/blog/version-1-0-0-1',
-			preview: 'Test',
+			preview: 'Slowly getting there...',
 
 			imageAlt: 'v1.0.0.1',
 			imageTitle: 'Version 1.0.0.1'
@@ -29,7 +29,7 @@
 		{
 			title: 'Version 1.0.0.2',
 			url: '/blog/version-1-0-0-2',
-			preview: 'Test',
+			preview: 'Items and Inventory system, better lighting, better ui, papa-- oh.',
 
 			imageAlt: 'v1.0.0.2',
 			imageTitle: 'Version 1.0.0.2'
