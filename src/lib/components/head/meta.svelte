@@ -4,7 +4,7 @@
 
 	export let titlePrefix = '';
 	export let titleSuffix = ' - Reia';
-	export let title = 'Explore Endless Magical Worlds';
+	export let title = 'Explore an Endless Magical Adventure';
 	let _title = `${titlePrefix}${title}${titleSuffix}`;
 
 	export let description =
