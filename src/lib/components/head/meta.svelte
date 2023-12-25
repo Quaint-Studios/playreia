@@ -2,7 +2,7 @@
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
 
-  export let titlePrefix = '';
+	export let titlePrefix = '';
 	export let titleSuffix = ' - Reia';
 	export let title = 'Explore Endless Magical Worlds';
 	let _title = `${titlePrefix}${title}${titleSuffix}`;
@@ -29,6 +29,7 @@
 	<meta name="title" content={_title} />
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
+	<meta name="theme-color" content="#284267" />
 	<meta name="robots" content="index, follow" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
