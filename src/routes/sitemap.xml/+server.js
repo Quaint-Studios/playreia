@@ -39,7 +39,7 @@ export async function GET() {
 			page: '',
 			freq: freq.daily,
 			priority: 1.0,
-      lastmod: '2023-12-23'
+      lastmod: '2023-12-25'
 		},
 		{
 			page: '/blog',
@@ -98,7 +98,7 @@ export async function GET() {
       lastmod: '2023-12-23'
 		}
 	];
-	const date = '2023-12-22';
+	const date = '2023-12-25';
 
 	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
