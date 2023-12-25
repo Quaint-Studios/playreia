@@ -30,7 +30,7 @@
 <style>
 	/* Decorations */
 	.info-section .decoration {
-		@apply w-full flex justify-center uppercase items-center gap-3 text-primary-700;
+		@apply w-full flex justify-center uppercase items-center gap-3 text-primary-700 mb-4;
 	}
 	.info-section .decoration .decoration-flex {
 		@apply flex gap-0 items-center justify-center;
