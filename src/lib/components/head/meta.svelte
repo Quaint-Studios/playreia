@@ -31,7 +31,7 @@
 	<meta name="keywords" content={keywords} />
 	<meta name="robots" content="index, follow" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en-us" />
+	<meta name="language" content="en" />
 	<meta name="revisit-after" content="3 days" />
 	<meta name="author" content={author} />
 	<slot name="structured" />

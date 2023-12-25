@@ -20,10 +20,11 @@
 	}
 </script>
 
+
 <div class="info-blog grid-flow-row-dense lg:grid-flow-col-dense">
 	{#each items as item}
 		<div class="item">
-			<a href={item.url}>
+			<div><!-- TODO: <a href={item.url}> -->
 				<h3 class="item-title">{item.title}</h3>
 				{#if hasOwn(item, 'image') && item.image != undefined}
 					<img
@@ -40,13 +41,17 @@
 						title={getOrFill(item, 'imageTitle', default_blog_title)}
 					/>
 				{/if}
-			</a>
+			</div>
 			<h4>{item.preview}</h4>
 		</div>
 	{/each}
 </div>
 
 <style>
+  .item {
+    max-width: 256px;
+  }
+
 	/* Content */
 	.info-blog {
 		@apply inline-grid auto-cols-max gap-10 justify-self-center;
@@ -61,4 +66,8 @@
 	.item-image {
 		@apply object-cover w-64 min-w-[16rem] h-40 min-h-[10rem] rounded-[12px];
 	}
+
+  h4 {
+    @apply font-medium;
+  }
 </style>
