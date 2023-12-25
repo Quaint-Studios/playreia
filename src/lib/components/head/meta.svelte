@@ -22,7 +22,10 @@
 
 <svelte:head>
 	{#if canonical}
-		<link rel="canonical" href={`https://www.playreia.com${$page.url.pathname}`} />
+		<link
+			rel="canonical"
+			href={`https://www.playreia.com${$page.url.pathname == '/' ? '' : $page.url.pathname}`}
+		/>
 	{/if}
 
 	<title>{_title}</title>
