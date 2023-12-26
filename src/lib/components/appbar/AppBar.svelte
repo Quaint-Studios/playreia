@@ -6,6 +6,8 @@
 	let nav_shown = false;
 
 	async function show_nav() {
+    let lastPos = nav_shown ? document.body.style.top : window.scrollY;
+
 		// get width before hiding scrollbar
 		let oldWidth = document.documentElement.clientWidth;
 
@@ -19,6 +21,13 @@
 		// set margin-right value equal to width of the scrollbar
 		let scrollbarWidth = Math.max(0, newWidth - oldWidth);
 		document.body.style.marginRight = `${scrollbarWidth}px`;
+
+    document.body.style.top = nav_shown ? `-${lastPos}px` : '0px';
+    console.log(lastPos, parseFloat(lastPos.toString().replace(/[^\d.]/g,'')))
+    if(!nav_shown) document.body.style.position = 'initial';
+    else document.body.style.position = 'fixed';
+    window.scrollTo(0, parseFloat(lastPos.toString().replace(/[^\d.]/g,'')))
+
 	}
 
   function hide_nav() {
