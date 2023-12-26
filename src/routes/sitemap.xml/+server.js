@@ -39,7 +39,7 @@ export async function GET() {
 			page: '',
 			freq: freq.daily,
 			priority: 1.0,
-      lastmod: '2023-12-25'
+      lastmod: '2023-12-26'
 		},
 		{
 			page: '/blog',
@@ -56,6 +56,11 @@ export async function GET() {
 			freq: freq.daily,
 			priority: 0.7
 		},
+    {
+      page: '/explore/ethereals',
+      freq: freq.daily,
+      priority: 0.7,
+    },
 		{
 			page: '/press-kit',
 			freq: freq.daily,
@@ -71,7 +76,7 @@ export async function GET() {
 			page: '/contribute',
 			freq: freq.daily,
 			priority: 0.7,
-      lastmod: '2023-12-23'
+      lastmod: '2023-12-26'
 		},
 		{
 			page: '/download',
@@ -98,7 +103,7 @@ export async function GET() {
       lastmod: '2023-12-23'
 		}
 	];
-	const date = '2023-12-25';
+	const date = '2023-12-26';
 
 	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
