@@ -1,0 +1,19 @@
+---
+title: Explore the World and Lore of Reia
+sub_title: Learn about the existence of the Ethereals, your story, and the various Cities and Realms of this world.
+author: 'Kristopher Ali (Makosai)'
+date: 'December 26, 2023'
+---
+
+## The Ethereals
+
+### What are the Ethereals?
+
+The Ethereals are the deities of this world.
+
+
+
+## Your Story
+
+## Cities and Realms
+</ContentContainer>
