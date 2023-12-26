@@ -11,7 +11,7 @@
 
 <Meta
 	title="Explore the World and Lore of Reia"
-	description="Learn the existence of The Ethereals, the deities of this world. Find out your story and objective in the game. Explore the cities and realms of this universe!"
+	description="Explore the exciting world of Reia and the lore that comes with it. Learn about the fantastical beings that govern realms and how your story plays a role in it."
 >
 	<script type="application/ld+json" slot="structured">
     {

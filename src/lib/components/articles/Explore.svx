@@ -1,16 +1,27 @@
 ---
+layout: article
+
 title: Explore the World and Lore of Reia
-sub_title: Learn about the existence of the Ethereals, your story, and the various Cities and Realms of this world.
-author: 'Kristopher Ali (Makosai)'
-date: 'December 26, 2023'
+subTitle: Learn about the existence of the Ethereals, your story, and the various Cities and Realms of this world.
+description: Explore the exciting world of Reia and the lore that comes with it. Learn about the fantastical beings that govern realms and how your story plays a role in it.
+author: Kristopher Ali (Makosai)
+date: December 26, 2023
 ---
 
-## The Ethereals
+## The Ethereals <!-- [#ethereals] -->
 
-### What are the Ethereals?
+### What are the Ethereals? <!-- [#ethereal-info] -->
 
-The Ethereals are the deities of this world.
+The Ethereals are the deities of this world. They govern their own realms and occupants, should they have any. Depending on the nature of the Ethereal, they may even go to war with other realms.
 
-## Your Story
+### How were they created? <!-- [#ethereal-creation] -->
 
-## Cities and Realms
+How the Ethereals were created is still a mystery to most. The only information divulged to occupants and younger Ethereals are that they're created through the <a href="/explore/Ethereals#merging">merging</a> or <a href="/explore/Ethereals#ascension">ascension</a> of one of the Ethereals.
+
+## Your Story <!-- [#your-story] -->
+
+We'll write about your story soon.
+
+## Cities and Realms <!-- [#cities-and-realms] -->
+
+The various cities and realms will be written here in the future!
