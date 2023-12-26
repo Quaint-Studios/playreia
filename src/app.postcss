@@ -14,24 +14,6 @@ body {
 	font-display: auto;
 }
 
-html body {
-	overflow-x: hidden;
-	overflow-y: scroll;
-}
-
-body:has(#mobile-items),
-body.nav-open {
-	position: fixed;
-}
-
-	@media (min-width: 1024px) {
-    body {
-      position: initial !important;
-      overflow-y: scroll !important;
-      margin-right: 0px;
-    }
-  }
-
 .dark a:not(.un-a):hover {
 	@apply text-secondary-800;
 }
