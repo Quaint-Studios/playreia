@@ -9,6 +9,7 @@
 
 	export let description =
 		"Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG and also an open-source game. Play offline or online with friends, or login for an MMO experience! Create and explore worlds, manage your own economy and products, and restore Reia's world via the story. Choose the way you want to play.";
+  export let og_description = 'Explore endless worlds and embark on a magical adventure of a lifetime! Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment. '
 
 	export let keywords =
 		'Play, Play the way you want, Story, Story-Focused Game, Story Game, Combat, Combat-Focused ' +
@@ -41,14 +42,14 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="og:title" content={_title} />
-	<meta property="og:description" content={description} />
+	<meta property="og:description" content={og_description} />
 	<meta property="og:image" content={`${$page.url.origin}${reia_logo_meta}`} />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content={`${$page.url.origin}${$page.url.pathname}`} />
 	<meta property="twitter:title" content={_title} />
-	<meta property="twitter:description" content={description} />
+	<meta property="twitter:description" content={og_description} />
 	<meta property="twitter:image" content={`${$page.url.origin}${reia_logo_meta}`} />
 
 	<slot />
