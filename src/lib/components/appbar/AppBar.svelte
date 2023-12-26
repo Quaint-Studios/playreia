@@ -20,6 +20,10 @@
 		let scrollbarWidth = Math.max(0, newWidth - oldWidth);
 		document.body.style.marginRight = `${scrollbarWidth}px`;
 	}
+
+  function hide_nav() {
+    if(nav_shown) show_nav();
+  }
 </script>
 
 <div id="appbar">
@@ -39,14 +43,14 @@
 			class="lg:hidden flex"
 			transition:fade={{ delay: 0, duration: 200, easing: quadInOut }}
 		>
-			<div id="item-holder" on:click={show_nav}>
+			<button aria-label="Exit Nav Drawer" id="item-holder" on:click={show_nav}>
 				<slot name="items" />
-			</div>
-			<div id="actions-holder" on:click={show_nav}>
+			</button>
+			<button arial-label="Other Nav Drawer Exit" id="actions-holder" on:click={show_nav}>
 				<div id="actions-flexer">
 					<slot name="actions" />
 				</div>
-			</div>
+			</button>
 			<div id="footer-holder">
 				<Footer hide_nav={true} />
 			</div>
@@ -54,7 +58,7 @@
 	{/if}
 
 	{#if $$slots['brand']}
-		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]">
+		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]" on:click={hide_nav}>
 			<slot name="brand" />
 		</div>
 	{/if}
@@ -115,12 +119,16 @@
 		@apply w-[100vw] h-[100vh] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
 	}
 
+  #appbar #mobile-items #items-holder :global(a) {
+		@apply w-min;
+	}
+
 	#appbar #mobile-items #items-holder :global(a):hover {
-		@apply text-secondary-500/75;
+		@apply text-secondary-500;
 	}
 
 	#appbar #mobile-items #item-holder {
-		@apply flex flex-col gap-4 uppercase pt-40 px-10 text-xl;
+		@apply flex flex-col justify-start items-start gap-4 uppercase pt-40 px-10 text-xl;
 	}
 
 	#appbar #mobile-items #footer-holder {
@@ -128,7 +136,7 @@
 	}
 
 	#appbar #mobile-items #actions-holder {
-		@apply px-10 h-full py-10 text-2xl;
+		@apply px-10 h-full py-10 text-2xl flex justify-start items-start;
 	}
 
 	#appbar #mobile-items #actions-flexer {
