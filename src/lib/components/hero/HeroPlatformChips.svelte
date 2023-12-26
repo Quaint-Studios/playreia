@@ -99,9 +99,9 @@
 			out:fade
 			on:outroend={() => finalNext('Desktop')}
 		>
-			<WindowsChip />
-			<MacChip />
-			<LinuxChip />
+			<WindowsChip href="/download?windows" />
+			<MacChip href="/download?mac" />
+			<LinuxChip href="/download?linux" />
 		</div>
 	{/if}
 	{#if currentTab == 'Console' && !transitioning}
@@ -112,9 +112,9 @@
 			out:fade
 			on:outroend={() => finalNext('Console')}
 		>
-			<XboxChip />
-			<PsChip />
-			<SwitchChip />
+			<XboxChip href="/download?xbox" />
+			<PsChip href="/download?ps" />
+			<SwitchChip href="/download?switch" />
 		</div>
 	{/if}
 	{#if currentTab == 'Mobile' && !transitioning}
@@ -125,8 +125,8 @@
 			out:fade
 			on:outroend={() => finalNext('Mobile')}
 		>
-			<AppStoreChip />
-			<PlayStoreChip />
+			<AppStoreChip href="/download?appstore" />
+			<PlayStoreChip href="/download?playstore" />
 		</div>
 	{/if}
 </div>

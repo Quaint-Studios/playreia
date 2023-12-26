@@ -1,9 +1,46 @@
+<script>
+	import { fade } from 'svelte/transition';
+	import Footer from '../layout/Footer.svelte';
+	import { quadInOut } from 'svelte/easing';
+
+	let nav_shown = false;
+
+	function show_nav() {
+		nav_shown = !nav_shown;
+	}
+</script>
+
 <div id="appbar">
 	{#if $$slots['hamburger']}
-		<div id="hamburger" class="lg:hidden block">
+		<button
+			aria-label="Navbar Drawer Button"
+			id="hamburger"
+			class="lg:hidden block"
+			on:click={show_nav}
+		>
 			<slot name="hamburger" />
+		</button>
+	{/if}
+	{#if nav_shown}
+		<div
+			id="mobile-items"
+			class="lg:hidden flex"
+			transition:fade={{ delay: 0, duration: 200, easing: quadInOut }}
+		>
+			<div id="item-holder" on:click={show_nav}>
+				<slot name="items" />
+			</div>
+			<div id="actions-holder" on:click={show_nav}>
+				<div id="actions-flexer">
+					<slot name="actions" />
+				</div>
+			</div>
+			<div id="footer-holder">
+				<Footer hide_nav={true} />
+			</div>
 		</div>
 	{/if}
+
 	{#if $$slots['brand']}
 		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]">
 			<slot name="brand" />
@@ -50,7 +87,7 @@
 
 	@media (min-width: 1050px) {
 		#appbar #items {
-      @apply gap-6;
+			@apply gap-6;
 		}
 	}
 
@@ -60,5 +97,29 @@
 
 	#appbar #actions {
 		@apply gap-4 justify-end items-center;
+	}
+
+	#appbar #mobile-items {
+		@apply w-[100vw] h-[100vh] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
+	}
+
+	#appbar #mobile-items #item-holder {
+		@apply flex flex-col gap-4 uppercase pt-40 px-10 text-xl;
+	}
+
+	#appbar #mobile-items #footer-holder {
+		@apply text-sm;
+	}
+
+	#appbar #mobile-items #actions-holder {
+		@apply px-10 h-full py-10 text-2xl;
+	}
+
+	#appbar #mobile-items #actions-flexer {
+		@apply flex flex-row-reverse justify-end items-center gap-6;
+	}
+
+	#appbar #mobile-items #footer-holder :global(footer) {
+		@apply mt-0;
 	}
 </style>

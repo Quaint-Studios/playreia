@@ -1,34 +1,39 @@
 <script>
 	import '@fontsource/metropolis/400.css';
 	import '@fontsource/metropolis/700.css';
+
+	/**
+	 * @type {String | undefined}
+	 */
+	export let href;
 </script>
 
-<div class="platformChip">
+<a {href} class="platformChip un-a">
 	<slot name="icon" />
 	<slot name="label" />
-</div>
+</a>
 
 <style>
 	.platformChip {
-    @apply text-2xl;
-    @apply gap-2;
+		@apply text-2xl;
+		@apply gap-2;
 		padding: 0.75rem 1.75rem;
 		border-radius: 12px;
 		background-color: rgba(0, 0, 0, 0.5);
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-    white-space: nowrap;
+		white-space: nowrap;
 
 		font-family: 'Metropolis', sans-serif;
 	}
-  .platformChip :global(.minorLabel) {
-    font-size: medium;
-    line-height: normal;
-    font-weight: 400;
-  }
-  .platformChip :global(.majorLabel) {
-    font-size: larger;
-    font-weight: bold;
-  }
+	.platformChip :global(.minorLabel) {
+		font-size: medium;
+		line-height: normal;
+		font-weight: 400;
+	}
+	.platformChip :global(.majorLabel) {
+		font-size: larger;
+		font-weight: bold;
+	}
 </style>
