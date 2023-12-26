@@ -1,14 +1,13 @@
 <script>
-	import ContentContainer from '$lib/components/containers/ContentContainer.svelte';
-
-  import Explore from '$lib/components/articles/Explore.svx';
+	import ArticleContainer from '$lib/components/containers/ArticleContainer.svelte';
+	import Explore from '$lib/components/articles/Explore.svx';
 
 	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
-<ContentContainer>
-  <Explore />
-</ContentContainer>
+<ArticleContainer>
+	<Explore />
+</ArticleContainer>
 
 <Meta
 	title="Explore the World and Lore of Reia"
