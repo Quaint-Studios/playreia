@@ -16,7 +16,7 @@ The Ethereals are the deities of this world. They govern their own realms and oc
 
 ### How were they created? <!-- [#ethereal-creation] -->
 
-How the Ethereals were created is still a mystery to most. The only information divulged to occupants and younger Ethereals are that they're created through the <a href="/explore/Ethereals#merging">merging</a> or <a href="/explore/Ethereals#ascension">ascension</a> of one of the Ethereals.
+How the Ethereals were created is still a mystery to most. The only information divulged to occupants and younger Ethereals are that they're created through the <a href="/explore/ethereals#merging">merging</a> or <a href="/explore/ethereals#ascension">ascension</a> of one of the Ethereals.
 
 ## Your Story <!-- [#your-story] -->
 
