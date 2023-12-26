@@ -5,8 +5,20 @@
 
 	let nav_shown = false;
 
-	function show_nav() {
+	async function show_nav() {
+		// get width before hiding scrollbar
+		let oldWidth = document.documentElement.clientWidth;
+
 		nav_shown = !nav_shown;
+    document.body.classList.toggle('nav-open');
+
+		// get new width after hiding scrollbar
+		let newWidth = document.documentElement.clientWidth;
+
+
+		// set margin-right value equal to width of the scrollbar
+		let scrollbarWidth = Math.max(0, newWidth - oldWidth);
+		document.body.style.marginRight = `${scrollbarWidth}px`;
 	}
 </script>
 
@@ -101,6 +113,10 @@
 
 	#appbar #mobile-items {
 		@apply w-[100vw] h-[100vh] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
+	}
+
+	#appbar #mobile-items #items-holder :global(a):hover {
+		@apply text-secondary-500/75;
 	}
 
 	#appbar #mobile-items #item-holder {

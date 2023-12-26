@@ -14,6 +14,17 @@ body {
 	font-display: auto;
 }
 
+body {
+	overflow-x: hidden;
+	overflow-y: scroll !important;
+}
+
+body:has(#mobile-items),
+body.nav-open {
+	overlay: hidden;
+	position: fixed;
+}
+
 .dark a:not(.un-a):hover {
 	@apply text-secondary-800;
 }
