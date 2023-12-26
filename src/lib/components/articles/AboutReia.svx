@@ -1,12 +1,12 @@
 ---
 layout: article
 
-title: 'Reia | An Exciting Game that is a Action Adventure and RPG made in Godot'
-subTitle: 'Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.'
-description: 'Reia is an exciting new game with an amazing story, combat, crafting, and your own floating islands. Made in Godot, Reia is an open-source action adventure RPG.'
+title: Reia | An Exciting Game that is a Action Adventure and RPG made in Godot
+subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.
+description: Reia is an exciting new game with an amazing story, combat, crafting, and your own floating islands. Made in Godot, Reia is an open-source action adventure RPG.
 tags: []
-author: 'Kristopher Ali (Makosai)'
-date: 'December 21, 2023'
+author: Kristopher Ali (Makosai)
+date: December 25, 2023
 ---
 
 ## Play the way you want
