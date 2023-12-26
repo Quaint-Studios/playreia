@@ -6,19 +6,7 @@
 	let nav_shown = false;
 
 	async function show_nav() {
-		// get width before hiding scrollbar
-		let oldWidth = document.documentElement.clientWidth;
-
 		nav_shown = !nav_shown;
-    document.body.classList.toggle('nav-open');
-
-		// get new width after hiding scrollbar
-		let newWidth = document.documentElement.clientWidth;
-
-
-		// set margin-right value equal to width of the scrollbar
-		let scrollbarWidth = Math.max(0, newWidth - oldWidth);
-		document.body.style.marginRight = `${scrollbarWidth}px`;
 	}
 
   function hide_nav() {
@@ -38,15 +26,17 @@
 		</button>
 	{/if}
 	{#if nav_shown}
+    
+
 		<div
 			id="mobile-items"
 			class="lg:hidden flex"
 			transition:fade={{ delay: 0, duration: 200, easing: quadInOut }}
 		>
-			<button aria-label="Exit Nav Drawer" id="item-holder" on:click={show_nav}>
+			<button aria-label="Exit Nav Drawer" id="item-holder" class='cursor-default' on:click={show_nav}>
 				<slot name="items" />
 			</button>
-			<button arial-label="Other Nav Drawer Exit" id="actions-holder" on:click={show_nav}>
+			<button aria-label="Other Nav Drawer Exit" id="actions-holder" class='cursor-default' on:click={show_nav}>
 				<div id="actions-flexer">
 					<slot name="actions" />
 				</div>
@@ -58,7 +48,7 @@
 	{/if}
 
 	{#if $$slots['brand']}
-		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]" on:click={hide_nav}>
+		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset] cursor-default" on:click={hide_nav}>
 			<slot name="brand" />
 		</div>
 	{/if}
