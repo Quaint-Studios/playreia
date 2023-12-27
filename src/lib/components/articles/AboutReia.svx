@@ -3,7 +3,7 @@ layout: article_embed
 
 title: Reia | An Exciting Game that is a Action Adventure and RPG made in Godot
 subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.
-description: Reia is an exciting new game with an amazing story, combat, crafting, and your own floating islands. Made in Godot, Reia is an open-source action adventure RPG.
+description: Reia is a fantasy game that's open-source, action, adventure, and an RPG. Play how you want. Focus on the story, combat, crafting, and your own floating island!
 tags: []
 author: Kristopher Ali (Makosai)
 date: December 25, 2023
@@ -13,7 +13,7 @@ date: December 25, 2023
 
 ### Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons, and more.
 
-Reia is a fantasy game that's open-source, action, adventure, and an RPG. You can play in various ways. There is an extensive story for you to play through with many possibilities that you can revisit in the same playthrough. That means there's no need to remake your character to experience more content. For the players that want to focus purely on combat and improving their stats to the max, they can also focus their gameplay on that and ignore the other aspects. Aside from story and combat, there's also the economy, managing and designing your own island, creating in-game content such as music and cosmetics to sell, automated battles to conquer more resources, and infinite dungeons that net you powerful gear. While this game is still in early access, it's a game with a lot to accomplish. With each piece put together, that's one more piece of content for you to enjoy. Let's dive into what content the game will have to offer.
+Reia is a fantasy game that's open-source, action, adventure, and an RPG. Play how you want. Focus on the story, combat, crafting, and your own floating island! There is an extensive story for you to play through with many possibilities that you can revisit in the same playthrough. That means there's no need to remake your character to experience more content. For the players that want to focus purely on combat and improving their stats to the max, they can also focus their gameplay on that and ignore the other aspects. Aside from story and combat, there's also the economy, managing and designing your own island, creating in-game content such as music and cosmetics to sell, automated battles to conquer more resources, and infinite dungeons that net you powerful gear. While this game is still in early access, it's a game with a lot to accomplish. With each piece put together, that's one more piece of content for you to enjoy. Let's dive into what content the game will have to offer.
 
 ---
 
