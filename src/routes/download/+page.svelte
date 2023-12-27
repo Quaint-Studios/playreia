@@ -17,7 +17,10 @@
 	<p>Coming soon.</p>
 </ContentContainer>
 
-<Meta title="Download and Experience Reia" description="Download the game from GitHub. Coming soon to all platforms!">
+<Meta
+	title="Download and Experience Adventure"
+	description="Reia is a new and exciting action adventure RPG. Download the game from GitHub. Coming soon to all platforms! That includes PC, Mac, Linux, and all consoles."
+>
 	<script type="application/ld+json" slot="structured">
     {
       "@context": "https://schema.org/",
