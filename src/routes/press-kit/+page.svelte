@@ -1,10 +1,13 @@
 <script>
+	import ContentContainer from '$lib/components/containers/ContentContainer.svelte';
 	import Meta from '$lib/components/head/meta.svelte';
 </script>
 
-<div class="press-kit">
-	<h1>Press-Kit</h1>
-</div>
+<ContentContainer>
+	<div class="press-kit">
+		<h1>Press-Kit</h1>
+	</div>
+</ContentContainer>
 
 <Meta
 	title="Press-Kit"

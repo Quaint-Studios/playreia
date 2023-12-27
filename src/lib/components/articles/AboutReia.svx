@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: article_embed
 
 title: Reia | An Exciting Game that is a Action Adventure and RPG made in Godot
 subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.
