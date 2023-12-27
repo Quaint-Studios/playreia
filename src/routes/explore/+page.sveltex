@@ -2,17 +2,19 @@
 layout: article
 
 title: Explore the World and Lore of Reia
-subTitle: Learn about the existence of the Ethereals, your story, and the various Cities and Realms of this world.
+titleSuffix: ''
 description: Explore the exciting world of Reia and the lore that comes with it. Learn about the fantastical beings that govern realms and how your story plays a role in it.
-author: Kristopher Ali (Makosai)
-date: December 26, 2023
+path: /explore
 ---
+
+<h1>Explore the World and Lore of Reia</h1>
+<h2 class="subtitle">Learn about the existence of the Ethereals, your story, and the various Cities and Realms of this world.</h2>
 
 ## The Ethereals <!-- [#ethereals] -->
 
 ### What are the Ethereals? <!-- [#ethereal-info] -->
 
-The Ethereals are the deities of this world. They govern their own realms and occupants, should they have any. Depending on the nature of the Ethereal, they may even go to war with other realms. Some of the youngest known Ethereals are Reia and her siblings. Her sister, who hasn't been named, and her brothers, Urik and Tacitus. These four ethereals were created by the merging of their parents' realms.
+The <a href="/explore/ethereals">Ethereals</a> are the deities of this world. They govern their own realms and occupants, should they have any. Depending on the nature of the Ethereal, they may even go to war with other realms. Some of the youngest known Ethereals are Reia and her siblings. Her sister, who hasn't been named, and her brothers, Urik and Tacitus. These four Ethereals were created by the merging of their parents' realms.
 
 #### Reia
 
@@ -20,11 +22,11 @@ Reia was born with a natural affinity for all types of elements in the ether. Be
 
 #### Urik
 
-Urik, one of Reia's brothers, is the instigator that influenced Reia's siblings in a devious way to invade Reia's realm. He has a low affinity with using elements. But that doesn't stop him. His specialty comes from his proficiency with obtaining knowledge. His entire realm is based off of soulless occupants that are machines or made from ores and minerals. Urik's proclivity with such vast knowledge has enabled him to be the only ethereal that can infuse such massive objects with magic and control them on such a grand scale.
+Urik, one of Reia's brothers, is the instigator that influenced Reia's siblings in a devious way to invade Reia's realm. He has a low affinity with using elements. But that doesn't stop him. His specialty comes from his proficiency with obtaining knowledge. His entire realm is based off of soulless occupants that are machines or made from ores and minerals. Urik's proclivity with such vast knowledge has enabled him to be the only Ethereal that can infuse such massive objects with magic and control them on such a grand scale.
 
 #### Tacitus
 
-Tacitus, Reia's other brother, is an ethereal that specializes in beasts. We're still gathering more information on him!
+Tacitus, Reia's other brother, is an Ethereal that specializes in beasts. We're still gathering more information on him!
 
 #### The Unnamed One
 
