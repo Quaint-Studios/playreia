@@ -50,6 +50,10 @@
     @apply h6 mt-12 mb-4 font-medium bg-[rgba(0,0,0,0.1)] px-4 py-4 max-w-[55%];
   }
 
+  article :global(h4) {
+    @apply font-bold;
+  }
+
 	article :global(hr) {
 		@apply max-w-[70%] mx-auto mt-16;
 
