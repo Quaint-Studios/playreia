@@ -1,6 +1,5 @@
 <script>
 	import '../app.postcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
 
 	// Assets
 	import Menu from 'svelte-material-icons/Menu.svelte';
@@ -37,6 +36,7 @@
 	import NavBrand from '$lib/components/appbar/NavBrand.svelte';
 	import NavBrandTag from '$lib/components/appbar/NavBrandTag.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import Dropdown from '$lib/components/appbar/Dropdown.svelte';
 
 	// Site data
 	const navItemClass = 'uppercase ml-6';
@@ -52,7 +52,13 @@
 		<a href="/">Home</a>
 		<a href="/blog">Blog</a>
 		<a href="/spirits">Spirits</a>
-		<a href="/explore">Explore</a>
+		<Dropdown>
+			<a href="/explore" slot="parent">Explore</a>
+      <ul slot="items">
+				<li>This is a work in progress</li>
+        <li><a href="/explore/ethereals">Ethereals</a></li>
+      </ul>
+		</Dropdown>
 		<a href="/press-kit">Press-Kit</a>
 		<a href="/about">About Us</a>
 		<a href="/contribute">Contribute</a>
