@@ -16,7 +16,7 @@
     @apply relative;
   }
   .items {
-    @apply absolute bg-black rounded-[8px] p-4 top-full mt-1;
+    @apply hidden absolute bg-black rounded-[8px] p-4 top-full mt-1;
     left: -30%
   }
 </style>
