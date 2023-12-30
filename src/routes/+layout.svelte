@@ -52,10 +52,10 @@
 		<a href="/">Home</a>
 		<a href="/blog">Blog</a>
 		<a href="/spirits">Spirits</a>
-		<a href="/explore">Explore</a>
 		<Dropdown>
 			<a href="/explore" slot="parent">Explore</a>
       <ul slot="items">
+				<li>This is a work in progress</li>
         <li><a href="/explore/ethereals">Ethereals</a></li>
       </ul>
 		</Dropdown>
