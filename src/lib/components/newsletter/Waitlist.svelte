@@ -2,7 +2,7 @@
 	import Countdown from './Countdown.svelte';
 </script>
 
-<div class="waitlist mx-auto md: max-w-lg">
+<div class="waitlist mx-auto md:max-width-lg text-center">
 	<div class="countdown"><Countdown due={1704128400000} done="Now Available" /></div>
 	<div class="form">
 		<a
