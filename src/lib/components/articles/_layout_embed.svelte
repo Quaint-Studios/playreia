@@ -8,12 +8,14 @@
 </script>
 
 <article class="mx-10 md:mx-14">
-	<h1>{title}</h1>
-	<h2 class="subtitle">{subTitle}</h2>
+	<div>
+		<h1>{title}</h1>
+		<strong class="subtitle">{subTitle}</strong>
+	</div>
 
 	<slot />
 
-  <p class="author">by {author}</p>
+	<p class="author">by {author}</p>
 	<p class="date">Last updated: {date}</p>
 </article>
 
@@ -26,11 +28,12 @@
 		@apply h1 text-center font-bold mb-5 mt-24;
 	}
 
-  article h2.subtitle {
-    @apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent pt-0 px-0;
-  }
+	article strong.subtitle {
+		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent block;
+	}
 
-	article .date, article .author {
+	article .date,
+	article .author {
 		@apply text-sm font-bold text-right m-0;
 	}
 
@@ -46,13 +49,13 @@
 		@apply max-w-[70%] font-medium bg-[rgba(0,0,0,0.1)] pb-4 px-2;
 	}
 
-  article :global(:not(h2) + h3) {
-    @apply h6 mt-12 mb-4 font-medium bg-[rgba(0,0,0,0.1)] px-4 py-4 max-w-[55%];
-  }
+	article :global(:not(h2) + h3) {
+		@apply h6 mt-12 mb-4 font-medium bg-[rgba(0,0,0,0.1)] px-4 py-4 max-w-[55%];
+	}
 
-  article :global(h4) {
-    @apply font-bold;
-  }
+	article :global(h4) {
+		@apply font-bold;
+	}
 
 	article :global(hr) {
 		@apply max-w-[70%] mx-auto mt-16;
@@ -60,15 +63,15 @@
 		border-color: rgba(255, 255, 255, 0.5) !important;
 	}
 
-  article :global(a) {
-    @apply font-medium underline;
-  }
+	article :global(a) {
+		@apply font-medium underline;
+	}
 
-  article :global(a):hover {
-    @apply text-secondary-800;
-  }
+	article :global(a):hover {
+		@apply text-secondary-800;
+	}
 
-  article :global(a):active {
-    @apply text-secondary-900;
-  }
+	article :global(a):active {
+		@apply text-secondary-900;
+	}
 </style>

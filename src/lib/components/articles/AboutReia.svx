@@ -1,11 +1,98 @@
 ---
 layout: article_embed
 
-title: Reia | An Exciting Game that is a Action Adventure and RPG made in Godot
+title: "Exploring the World of Reia: An Exciting Action Adventure RPG"
 subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.
 author: Kristopher Ali (Makosai)
 date: December 25, 2023
 ---
+
+<!-- Mine -->
+Reia is a vast and immersive fantasy world filled with a thrilling storyline, action-filled combat, and an Infinite City with dungeons. As you embark on your adventure, you'll be able to also experience what wonders the game has to offer. Experience crafting and gathering, control and customize your floating player-owned island. and for the artists out there you can even create in-game content for everyone to enjoy.
+
+Reia ensures a captivating experience that will leave you eagerly anticipating the magical adventures to come.
+
+<!-- Yours -->
+~~Step into the whimsical world of Reia, an open world RPG where thrilling quests, contending monsters, and hidden treasures await your discovery. Choose your alter ego from a delightful array of character classes –from wielding blades as a boisterous warrior, casting spells as an impish mage or sleuthing through shadows as a sly rogue ; Reia caters to every gaming fancy! Abreast with stunning graphics that transform each step into an epic adventure, nustle into an engaging storyline filled with valor, heart and endless possibilities for exploration ; Reia ensures a captivating experience that is sure to enthrall gamers from all walks of life, leaving them eagerly anticipating magical adventures to come.~~
+
+<!-- Guide -->
+~~Play the way you want. Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons, and more. ...Talk about the article... explain focusing on something, a CTA, the development, the community~~
+
+## Adventurous Storyline
+
+...
+
+### The Consequences of Your Choices
+
+---
+
+## Action-Filled Combat
+
+...
+
+---
+
+## Crafting and Gathering
+
+## Your Player-Owned Islands
+
+...
+
+---
+
+## The Economy in this World
+
+...
+
+---
+
+## The Best Action Adventure RPG Experience
+
+...
+
+---
+
+## Game Development
+
+...
+
+### Art Direction
+
+---
+
+## From Code to Community
+
+...
+<!-- Mine -->
+
+
+<!-- Yours -->
+
+
+<!-- Guide -->
+
+### Discord
+
+### GitHub
+
+### Contribute
+
+### Funding
+
+...
+
+
+<!-- Mine -->
+
+
+<!-- Yours -->
+
+
+<!-- Guide -->
+
+
+
+
 
 ## Play the way you want
 

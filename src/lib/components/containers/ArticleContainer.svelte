@@ -11,7 +11,7 @@
 		@apply h1 text-center font-bold mb-5 mt-24;
 	}
 
-	article :global(h2.subtitle) {
+	article :global(strong.subtitle) {
 		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent pt-0 px-0 mx-auto;
 	}
 
