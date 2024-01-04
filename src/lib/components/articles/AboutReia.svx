@@ -80,6 +80,22 @@ When you've completed any form of activity in the Infinite City, you'll get loot
 
 ## Crafting and Gathering
 
+If your main focus is going to be purely crafting items for your friends, your wallet, or just yourself, then this is the section for you. You can craft a wide range of weapons, equipment, soulstones, and consumables. that will improve your ability to progress through the game. Enhance weapons and equipment more efficiently. Or improve that soulstone you just found by giving it a modifier to gain a new effect. If you're having trouble surviving or dealing enough damage, perhaps it's time to unleash your inner-chef. Start cooking food to give a little boost. Or engage in some alchemy to create potions that do almost the same thing. Let's get more in-depth on how each of these craftable items can help you and your spirits.
+
+### Weapons
+
+...
+
+### Equipment
+
+...
+
+### Soulstones
+
+...
+
+### Consumables
+
 ...
 
 ---
