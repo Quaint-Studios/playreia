@@ -8,10 +8,8 @@
 </script>
 
 <article class="mx-10 sm:mx-16 md:mx-36 lg:mx-48">
-	<div>
-		<h1>{title}</h1>
-		<strong class="subtitle">{subTitle}</strong>
-	</div>
+	<h1>{title}</h1>
+	<strong class="subtitle">{subTitle}</strong>
 
 	<slot />
 

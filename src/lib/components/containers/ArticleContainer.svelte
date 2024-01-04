@@ -12,7 +12,7 @@
 	}
 
 	article :global(strong.subtitle) {
-		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent pt-0 px-0 mx-auto;
+		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent block;
 	}
 
 	article :global(p) {
