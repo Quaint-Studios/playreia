@@ -42,12 +42,12 @@
 <InfoSection title="Events">
 	<div class="flex flex-col" slot="content">
 		<p class="text-primary-700 text-lg max-w-2xl font-medium">
-			We're going to be hosting a short <span class="font-bold">Pre-Alpha Test</span> on
+			We're going to be hosting a short <span class="font-bold">Pre-Alpha Test</span> to play Reia on
 			<span class="font-bold">January 1, 2024</span>
 			and again on <span class="font-bold">February 1, 2024</span>.
 		</p>
 		<p class="text-primary-700 text-lg max-w-2xl font-medium mt-3">
-			If you're interested for these limited time events, subscribe to be notified when it goes
+			If you're interested in these limited time events and you'd like to experience Reia early to help us test it, then subscribe to be notified when it goes
 			live! We'll provide you with more ways to be notified in the future. Like our <span
 				class="font-bold">Discord server</span
 			>!
