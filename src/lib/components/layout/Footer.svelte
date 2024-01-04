@@ -12,12 +12,12 @@
 
 <footer>
 	<div class="social-icons p-4 md:p-10">
-		<a href={socials.github}><GitHub title="GitHub" desc="Reia's GitHub Social"  /></a>
-		<a href={socials.facebook}><Facebook title="Facebook" desc="Reia's Facebook Social"  /></a>
-		<a href={socials.instagram}><Instagram title="Instagram" desc="Reia's Instagram Social"  /></a>
-		<a href={socials.twitter}><Twitter title="Twitter" desc="Reia's Twitter Social"  /></a>
+		<a href={socials.github}><GitHub title="GitHub" desc="Reia's GitHub Social" /></a>
+		<a href={socials.facebook}><Facebook title="Facebook" desc="Reia's Facebook Social" /></a>
+		<a href={socials.instagram}><Instagram title="Instagram" desc="Reia's Instagram Social" /></a>
+		<a href={socials.twitter}><Twitter title="Twitter" desc="Reia's Twitter Social" /></a>
 		<a href={socials.pinterest}><Pinterest title="Pinterest" desc="Reia's Pinterest Social" /></a>
-		<a href={socials.youtube}><YouTube title="YouTube" desc="Reia's YouTube Social"  /></a>
+		<a href={socials.youtube}><YouTube title="YouTube" desc="Reia's YouTube Social" /></a>
 	</div>
 	{#if !hide_nav}
 		<div class="info">
@@ -63,7 +63,15 @@
 		@apply w-full flex gap-16 justify-center items-start bg-primary-600 p-16 pt-10;
 	}
 
-	footer .legal-info {
-		@apply w-full flex justify-between items-center bg-primary-600 py-5 px-16 border-t-[1px] border-[rgba(0,0,0,0.2)];
+	@media (min-width: 820px) {
+		footer .legal-info {
+			@apply w-full flex flex-row justify-between items-center bg-primary-600 py-5 px-16 border-t-[1px] border-[rgba(0,0,0,0.2)];
+		}
+	}
+
+	@media (max-width: 820px) {
+		footer .legal-info {
+			@apply w-full flex flex-col justify-between items-center bg-primary-600 py-5 px-16 border-t-[1px] border-[rgba(0,0,0,0.2)];
+		}
 	}
 </style>
