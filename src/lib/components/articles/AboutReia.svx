@@ -1,23 +1,20 @@
 ---
 layout: article_embed
 
-title: Reia | An Exciting Game that is a Action Adventure and RPG made in Godot
+title: "Exploring the World of Reia: An Exciting Action Adventure RPG"
 subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will continue to grow in an open-source environment.
 author: Kristopher Ali (Makosai)
 date: December 25, 2023
 ---
 
-## Play the way you want
+Reia is a vast and immersive fantasy game filled with a thrilling storyline and action-filled combat. As you embark on your adventure, you'll be able to also experience what wonders the game has to offer. Explore the Infinite City and conquer various dungeons. Experience intricate crafting and gathering. Control and customize your floating player-owned island. And if you're feeling creative, you can even distribute in-game content for everyone to enjoy both free and paid! Play the way you want and never feel forced to play a certain way. Reia ensures a captivating experience that will leave you eagerly anticipating the magical adventures to come.
 
-### Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons, and more.
+**Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons, and more.**
 
-Reia is a fantasy game that's open-source, action, adventure, and an RPG. Play how you want. Focus on the story, combat, crafting, and your own floating island! There is an extensive story for you to play through with many possibilities that you can revisit in the same playthrough. That means there's no need to remake your character to experience more content. For the players that want to focus purely on combat and improving their stats to the max, they can also focus their gameplay on that and ignore the other aspects. Aside from story and combat, there's also the economy, managing and designing your own island, creating in-game content such as music and cosmetics to sell, automated battles to conquer more resources, and infinite dungeons that net you powerful gear. While this game is still in early access, it's a game with a lot to accomplish. With each piece put together, that's one more piece of content for you to enjoy. Let's dive into what content the game will have to offer.
+A fantasy game that’s open-source, action, adventure, and an RPG; that's Reia. We really want you to be able to play the way you want. Focus on the story, combat, crafting, and your own floating island! There is an extensive story for you to play through with many possibilities that you can revisit in the same playthrough. That means there’s no need to remake your character to experience more content. For the players that want to focus purely on combat and improving their stats to the max, they can also focus their gameplay on that and ignore the other aspects. Aside from story and combat, there’s also the economy, managing and designing your own island, creating in-game content such as music and cosmetics to sell, automated battles to conquer more resources, and infinite dungeons that net you powerful gear. While this game is still in early access, it’s a game with a lot to accomplish. With each piece put together, that’s one more piece of content for you to enjoy. Let’s dive into what content the game will have to offer.
 
----
-
-## Exploring the Story
-
-### Each choice has a consequence in your main life. But wait there's more...
+## Adventurous Storyline
+**Each choice has a consequence in your main life. But wait there's more...**
 
 If focusing on the story is your choice then go for it. A story could give you experience as a reward or even new equipment. Some stories will unlock new bosses for you to fight, new events that reward you each time you play them, and access to other quests.
 
@@ -41,9 +38,8 @@ Those three types of stories leave you with plenty of content to peruse through.
 
 ---
 
-## A Combat-focused Gameplay
-
-### Ignore the story and stomp out the enemies! Focus on getting stronger.
+## Combat with Action
+**Ignore the story and stomp out the enemies! Focus on getting stronger.**
 
 For the players that enjoy the thrill of heart-wrenching combat, whether it's fast-paced or slow-paced, this is for you. If you're not a huge fan of the story then you can focus on the combat. Fight endlessly and only complete the parts of the story which unlocks content that'll enhance your combat experience.
 
@@ -61,15 +57,35 @@ Additionally, when you gather more spirits you also diversify the possibilities 
 
 PvP and team-based gameplay will also be a focus. While you can own an island, you can also have a group of players, a Fleet, that own a city. These battles are large-scale and takes a few days to complete. It involves first declaring war against the city. Then scheduling pay rates for all participants in the first wave. The battle has strategic elements to it that are still being finalized. The focus though is allowing participants to gain something great out of it and not just having the rewards from capturing the city go to the owner of the Fleet. Whoever is the owner of the city will have power to dictate taxes, prioritize imports and exports, creating and destroying buildings, and more. They'll essentially be governing the city. A profitable endeavor in most areas. After a battle is over, the city can't be warred for another two days by other Fleets or another week by the same Fleet. To prevent a bombardment of attacks, a deposit is required to declare war. The cost goes down as time passes. A small percentage of this cost goes to the owner of the island if they keep it and the rest goes to the economy of the game.
 
-### The Infinite City's Dungeons
+---
+
+## The Infinite City
+**A unique dungeon and exploring experience with hidden features.**
 
 If that's not enough, then venture into the Infinite City. A collection of dungeons in an open world environment where the deeper you go the stronger the monsters get. Unlock checkpoints to teleport to them later and to teleport back. But be careful, returning from the Infinite City poses risks. If you've received any rewards from a dungeon, the City will try to claim it back. The loot isn't yours forever unless you can make it out. And the only way you can teleport is by waystones. Teleport tablets or spells do not work in the Infinite City.
 
+### The Dangers of The Infinite City
+
+...
+
+### Sharing or Selling your Discoveries
+
+...
+
+### Risks and Rewards
+
+...
+
 ---
 
-## Your Floating Player-Owned Island
+## Crafting and Gathering
 
-### A truly customizable home of your own. What many players have asked for in a game.
+...
+
+---
+
+## Your Floating Player-Owned Islands
+**A truly customizable home of your own. What many players have asked for in a game.**
 
 Each section of your floating island can be customized down to the way your islands are shaped and connected. You can have multiple islands, build stalls, hire staff, invite friends, throw parties, and trade with other islands. It doesn't end there. Decorate your island and invite your spirits to live in their own rooms. Send them on expeditions to help expand your resource income for your island at the risk of losing some of your land. Let's dig into the details!
 
@@ -87,46 +103,74 @@ From your island you can also automate expeditions for your spirits to venture o
 
 ---
 
-## The Art Direction of the Project
-
-### A game where vibrant hues and soft environments is a focus in visuals.
-
-Reia's environmental approach leans heavily on vibrant colors that burn into your eyes without leaving you in pain. I am the only game developer for this project currently and I don't understand the intricacies of color theory and eye-ball theory. So that's all it is, an approach. Reia is being made to provide you with a game you can have fun with and to teach myself things outside of my 20 years of experience in programming. Migrating from Unity 3D and into Godot head first was truly an experience. It was enjoyable learning Godot's GDScript. Making my own shaders, scripts, and art was all a smooth process. Even learning Figma to design some beautiful and vibrant UI. So I'll say going forward I'll continue to have fun with this project. Creating this website is one of the few things I didn't use Figma to design. But a lot of the visuals and development in Godot has Figma to thank. Well, wish me luck! In the future I'll have more to write for this section.
-
----
-
-## Giving you the Best Action RPG Game Experience
-
-### We want you to thoroughly enjoy your time in this game that you truly think it's the best action rpg.
-
-We want you to have so much to do and so little to complain about. Go ahead and spend hours creating your character, knowing you don't have to because there are logical ways to altar it with spells later. Travel around the vast world reliably in a way that doesn't remove the experience of exploring this action RPG. But also know that you can choose to use one of the best methods of traveling fast, teleporting. Enjoy PvP or PvE exclusively, the choice is yours. We want there to be so much for you to do that your opinion of Reia as a game is nothing but positive. And this will take work. It's our mission to put in that work.
-
----
-
 ## Gaming the Economy
-
-### For the flippers and the entrepreneurs, this one is for you.
+**For the flippers and the entrepreneurs, this one is for you.**
 
 Coming soon...
 
 ---
 
-## Creating In-Game Music, Lore, and Cosmetics
-
-### And you can make real money from them too! Or, if you want to, make them free.
+## Player-Made Content
+**And you can make real money from them too! Or, if you want to, make them free.**
 
 Coming less soon...
+
+### In-Game Music
+
+### Expand on the Lore
+
+### Create Cosmetics
+
+---
+
+## The Best Action Adventure RPG Experience
+**We want you to thoroughly enjoy your time in this game that you truly think it's the best action rpg.**
+
+We want you to have so much to do and so little to complain about. Go ahead and spend hours creating your character, knowing you don't have to because there are logical ways to altar it with spells later. Travel around the vast world reliably in a way that doesn't remove the experience of exploring this action RPG. But also know that you can choose to use one of the best methods of traveling fast, teleporting. Enjoy PvP or PvE exclusively, the choice is yours. We want there to be so much for you to do that your opinion of Reia as a game is nothing but positive. And this will take work. It's our mission to put in that work.
+
+---
+
+## Game Development
+**A game where vibrant hues and soft environments is a focus in visuals.**
+
+Reia's environmental approach leans heavily on vibrant colors that burn into your eyes without leaving you in pain. I am the only game developer for this project currently and I don't understand the intricacies of color theory and eye-ball theory. So that's all it is, an approach. Reia is being made to provide you with a game you can have fun with and to teach myself things outside of my 20 years of experience in programming. Migrating from Unity 3D and into Godot head first was truly an experience. It was enjoyable learning Godot's GDScript. Making my own shaders, scripts, and art was all a smooth process. Even learning Figma to design some beautiful and vibrant UI. So I'll say going forward I'll continue to have fun with this project. Creating this website is one of the few things I didn't use Figma to design. But a lot of the visuals and development in Godot has Figma to thank. Well, wish me luck! In the future I'll have more to write for this section.
+
+### Open-Source on GitHub
+
+More infomration coming soon...
+
+### Art Direction
+
+The art direction for Reia has been finalized and we'll be slowly posting more art around the website as time goes on! When that happens, this section will be filled out more. Ultimately, we want you to feel a sense of adventure and become immersed in the action.
+
+### Captivating Music
+
+There's some unique talent working on this project. More information coming soon...
+
+### Detailed Lore
+The lore for Reia is deep. There has been quite some time put forth in designing the story. That also includes the characters too! The Ethereals, their occupants, Realms, parents, and more. These are all things that have been thought about in the story. It's exciting to finally get a chance to release the story so you can experience it.
+
+### Listening to Feedback
+
+We want to make this project better with each update. That's why listening to feedback and taking action directly in front of the community is a priority for us. If there's an issue or a feature out there, this project will take it head on.
 
 ---
 
 ## From Code to Community
-
-### Listening to the community and enabling a community-driven development.
+**Listening to the community and enabling a community-driven development.**
 
 One of the primary focuses for this project is behind its open-source nature. Listening to feedback from the community is a priority. With GitHub as our repository provider, there are several tools to gather feedback. Users can talk directly to the developers. Bugs can be reported immediately and the progress on them is transparent. Features can be requested and voted on. The community also has the power to create updates themselves and propose a review and implementation of it; speeding up development time.
+
+### Discord
+
+The Discord server is invite-only for now but will be opened to the public soon! There are sections to allow you to collaborate with others and share your creativity with the community. We look forward to seeing what amazing things everyone makes in the future.
 
 ### Collaboration and Contribution
 
 At the heart of Reia pulses a spirit of collaboration. Embrace the open-source philosophy, contribute to the game's ever-evolving landscape. Tinker with the code, propose new features, and join a passionate community shaping its future. Whether you're a seasoned programmer or a budding creator, Reia celebrates your unique vision, inviting you to contribute to its success.
 
 Feel free to contribute to the project on <a href="https://github.com/Quaint-Studios/Reia">GitHub</a>.
+
+### Funding
+
+...

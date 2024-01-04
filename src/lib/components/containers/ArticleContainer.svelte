@@ -1,4 +1,4 @@
-<article class="mt-44 mx-10 md:mx-14">
+<article class="mt-44 mx-10 sm:mx-16 md:mx-36 lg:mx-48">
 	<slot />
 </article>
 
@@ -11,8 +11,8 @@
 		@apply h1 text-center font-bold mb-5 mt-24;
 	}
 
-	article :global(h2.subtitle) {
-		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent pt-0 px-0 mx-auto;
+	article :global(strong.subtitle) {
+		@apply h3 text-center font-medium mb-10 mt-0 max-w-max bg-transparent block;
 	}
 
 	article :global(p) {

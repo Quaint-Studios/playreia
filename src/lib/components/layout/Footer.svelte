@@ -4,7 +4,7 @@
 	import Facebook from 'svelte-material-icons/Facebook.svelte';
 	import Instagram from 'svelte-material-icons/Instagram.svelte';
 	import Twitter from 'svelte-material-icons/Twitter.svelte';
-	import TikTok from 'svelte-material-icons/Circle.svelte';
+	import Pinterest from 'svelte-material-icons/Pinterest.svelte';
 	import YouTube from 'svelte-material-icons/Youtube.svelte';
 
 	export let hide_nav = false;
@@ -12,12 +12,12 @@
 
 <footer>
 	<div class="social-icons p-4 md:p-10">
-		<a href={socials.github}><GitHub /></a>
-		<a href={socials.facebook}><Facebook /></a>
-		<a href={socials.instagram}><Instagram /></a>
-		<a href={socials.twitter}><Twitter /></a>
-		<a href={socials.tiktok}><TikTok /></a>
-		<a href={socials.youtube}><YouTube /></a>
+		<a href={socials.github}><GitHub title="GitHub" desc="Reia's GitHub Social"  /></a>
+		<a href={socials.facebook}><Facebook title="Facebook" desc="Reia's Facebook Social"  /></a>
+		<a href={socials.instagram}><Instagram title="Instagram" desc="Reia's Instagram Social"  /></a>
+		<a href={socials.twitter}><Twitter title="Twitter" desc="Reia's Twitter Social"  /></a>
+		<a href={socials.pinterest}><Pinterest title="Pinterest" desc="Reia's Pinterest Social" /></a>
+		<a href={socials.youtube}><YouTube title="YouTube" desc="Reia's YouTube Social"  /></a>
 	</div>
 	{#if !hide_nav}
 		<div class="info">
