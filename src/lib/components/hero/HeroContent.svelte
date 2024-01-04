@@ -3,7 +3,7 @@
 
 <div class="hero-content">
 	<div class="hero-content-wrapper">
-		<h2>Explore endless magical worlds!</h2>
+		<h2>Explore endless magical worlds in Reia!</h2>
 		<h3>
 			Reia is an action-adventure RPG and also an open-source game. Play offline or online with
 			friends, or login for an MMO experience! Create and explore worlds, manage your own economy

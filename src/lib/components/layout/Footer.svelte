@@ -41,7 +41,7 @@
 		</div>
 	{/if}
 	<div class="legal-info">
-		<div>Copyright © 2023 Quaint Studios</div>
+		<div>Copyright © 2023-2024 Quaint Studios</div>
 		<div>
 			<a href="/terms-and-conditions">Terms & Conditions</a> |
 			<a href="/privacy-policy">Privacy Policy</a>

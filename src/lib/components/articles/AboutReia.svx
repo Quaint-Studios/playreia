@@ -18,7 +18,7 @@ A fantasy game that’s open-source, action, adventure, and an RPG; that's Reia.
 
 If focusing on the story is your choice then go for it. A story could give you experience as a reward or even new equipment. Some stories will unlock new bosses for you to fight, new events that reward you each time you play them, and access to other quests.
 
-There are three types of stories in Reia: **Main Story**, **Quests**, and **Mini-Quests**. The main story focuses on Reia herself. Each section of the main story is a requirement for a large chunk of quests. The major difference between the main story and quests is that the main story is linear and the quests can be done in whatever order you want. Mini-quests are like quests but are short. Obvious, right? But quests can also be extremely long or short as well. Let's get into more detail about each type of story.
+There are three types of stories in Reia: **Main Story**, **Quests**, and **Mini-Quests**. The main story focuses on Reia herself. Each section of the main story is a requirement for a large chunk of quests. The major difference between the main story and quests is that the main story is linear and the quests can be done in whatever order you want. Mini-quests are like quests but are short. Obvious, right? But quests can also be extremely long or short as well. Let's get into more detail about each type of story in Reia.
 
 ### Main Story
 
@@ -66,19 +66,35 @@ If that's not enough, then venture into the Infinite City. A collection of dunge
 
 ### The Dangers of The Infinite City
 
-...
+The Infinite City houses many threats. It's not your typical hostile area. While there are many enemies that want to rip and tear you to to shreds, that's not the only thing you'll have to worry about. If you want to avoid those enemies, you have another way to traverse the vastness of these infinite dungeons. There are areas that require you to complete intuitive puzzles to advance forward rather than fighting your way through. But, beware, if you fail the puzzles there will be consequences. It's a trade-off for the calm nature of this route.
 
 ### Sharing or Selling your Discoveries
 
-...
+When you make your way through the Infinite City and conquer a dungeon, if you brought a map with you then you'll have the option of using it. You can record your findings at that location. This is useful because a player can purchase your map from you and when they use it themselves, they'll be able to choose an undiscovered place on their own map to change to match the copy. However, if the location is already discovered then they'll just have to complete that area and then they can overwrite it with the copy they obtained! The catch though is that the cost to copy a map will increase the more you use it on the same dungeon.
 
 ### Risks and Rewards
 
-...
+When you've completed any form of activity in the Infinite City, you'll get loot. You can also use that loot immediately. But, it's not yours to keep just yet. Until you can return to a safezone, the Infinite City will maintain a grasp on your newly obtained loot. You'll soon come to realize that as you venture closer towards the safezone there will be a series of challenges you're presented with. These challenges could be debuffs on you, buffs for enemies, modified spawns, or even sudden death within a time limit. The deeper you venture in certain areas, the more lethal the risks. But you'll still be rewarded for your risks.
 
 ---
 
 ## Crafting and Gathering
+
+If your main focus is going to be purely crafting items for your friends, your wallet, or just yourself, then this is the section for you. You can craft a wide range of weapons, equipment, soulstones, and consumables. that will improve your ability to progress through the game. Enhance weapons and equipment more efficiently. Or improve that soulstone you just found by giving it a modifier to gain a new effect. If you're having trouble surviving or dealing enough damage, perhaps it's time to unleash your inner-chef. Start cooking food to give a little boost. Or engage in some alchemy to create potions that do almost the same thing. Let's get more in-depth on how each of these craftable items can help you and your spirits.
+
+### Weapons
+
+...
+
+### Equipment
+
+...
+
+### Soulstones
+
+...
+
+### Consumables
 
 ...
 
