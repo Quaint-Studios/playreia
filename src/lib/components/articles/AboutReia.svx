@@ -8,9 +8,9 @@ date: December 25, 2023
 ---
 
 <!-- Mine -->
-Reia is a vast and immersive fantasy world filled with a thrilling storyline, action-filled combat, and an Infinite City with dungeons. As you embark on your adventure, you'll be able to also experience what wonders the game has to offer. Experience crafting and gathering, control and customize your floating player-owned island. and for the artists out there you can even create in-game content for everyone to enjoy.
+Reia is a vast and immersive fantasy game filled with a thrilling storyline and action-filled combat. As you embark on your adventure, you'll be able to also experience what wonders the game has to offer. Explore the Infinite City and conquer various dungeons. Experience intricate crafting and gathering. Control and customize your floating player-owned island. And if you're feeling creative, you can even distribute in-game content for everyone to enjoy both free and paid! Play the way you want and never feel forced to play a certain way. Reia ensures a captivating experience that will leave you eagerly anticipating the magical adventures to come.
 
-Reia ensures a captivating experience that will leave you eagerly anticipating the magical adventures to come.
+A fantasy game that’s open-source, action, adventure, and an RPG; that's Reia. We really want you to be able to play the way you want. Focus on the story, combat, crafting, and your own floating island! There is an extensive story for you to play through with many possibilities that you can revisit in the same playthrough. That means there’s no need to remake your character to experience more content. For the players that want to focus purely on combat and improving their stats to the max, they can also focus their gameplay on that and ignore the other aspects. Aside from story and combat, there’s also the economy, managing and designing your own island, creating in-game content such as music and cosmetics to sell, automated battles to conquer more resources, and infinite dungeons that net you powerful gear. While this game is still in early access, it’s a game with a lot to accomplish. With each piece put together, that’s one more piece of content for you to enjoy. Let’s dive into what content the game will have to offer.
 
 <!-- Yours -->
 ~~Step into the whimsical world of Reia, an open world RPG where thrilling quests, contending monsters, and hidden treasures await your discovery. Choose your alter ego from a delightful array of character classes –from wielding blades as a boisterous warrior, casting spells as an impish mage or sleuthing through shadows as a sly rogue ; Reia caters to every gaming fancy! Abreast with stunning graphics that transform each step into an epic adventure, nustle into an engaging storyline filled with valor, heart and endless possibilities for exploration ; Reia ensures a captivating experience that is sure to enthrall gamers from all walks of life, leaving them eagerly anticipating magical adventures to come.~~
@@ -34,6 +34,10 @@ Reia ensures a captivating experience that will leave you eagerly anticipating t
 
 ## Crafting and Gathering
 
+...
+
+---
+
 ## Your Player-Owned Islands
 
 ...
@@ -56,39 +60,42 @@ Reia ensures a captivating experience that will leave you eagerly anticipating t
 
 ...
 
+### Open-Source on GitHub
+
 ### Art Direction
+
+### Captivating Music
+
+### Detailed Lore
+
+### Listening to Feedback
 
 ---
 
 ## From Code to Community
 
 ...
-<!-- Mine -->
-
-
-<!-- Yours -->
-
-
-<!-- Guide -->
 
 ### Discord
 
-### GitHub
-
-### Contribute
+### Collaboration and Contribution
 
 ### Funding
 
-...
 
 
-<!-- Mine -->
 
 
-<!-- Yours -->
 
 
-<!-- Guide -->
+
+
+
+
+
+
+
+
 
 
 

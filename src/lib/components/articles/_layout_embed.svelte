@@ -7,7 +7,7 @@
 	export let date;
 </script>
 
-<article class="mx-10 md:mx-14">
+<article class="mx-10 sm:mx-16 md:mx-36 lg:mx-48">
 	<div>
 		<h1>{title}</h1>
 		<strong class="subtitle">{subTitle}</strong>
@@ -42,7 +42,7 @@
 	}
 
 	article :global(h2) {
-		@apply h4 mt-16 font-bold max-w-[70%] bg-[rgba(0,0,0,0.2)] pt-4 px-2;
+		@apply h3 mt-16 font-bold max-w-[70%] bg-[rgba(0,0,0,0.2)] pt-4 px-2;
 	}
 
 	article :global(h2 + h3) {

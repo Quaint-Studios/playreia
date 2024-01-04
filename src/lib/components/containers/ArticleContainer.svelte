@@ -1,4 +1,4 @@
-<article class="mt-44 mx-10 md:mx-14">
+<article class="mt-44 mx-10 sm:mx-16 md:mx-36 lg:mx-48">
 	<slot />
 </article>
 
