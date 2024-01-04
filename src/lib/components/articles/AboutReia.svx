@@ -66,7 +66,7 @@ If that's not enough, then venture into the Infinite City. A collection of dunge
 
 ### The Dangers of The Infinite City
 
-In Reia, the Infinite City houses many threats. It's not your typical hostile area. While there are many enemies that want to rip and tear you to to shreds, that's not the only thing you'll have to worry about. If you want to avoid those enemies, you have another way to traverse the vastness of Reia's infinite dungeons. There are areas that require you to complete intuitive puzzles to advance forward rather than fighting your way through. But, beware, if you fail the puzzles there will be consequences. It's a trade-off for the calm nature of this route.
+The Infinite City houses many threats. It's not your typical hostile area. While there are many enemies that want to rip and tear you to to shreds, that's not the only thing you'll have to worry about. If you want to avoid those enemies, you have another way to traverse the vastness of these infinite dungeons. There are areas that require you to complete intuitive puzzles to advance forward rather than fighting your way through. But, beware, if you fail the puzzles there will be consequences. It's a trade-off for the calm nature of this route.
 
 ### Sharing or Selling your Discoveries
 
@@ -74,7 +74,7 @@ When you make your way through the Infinite City and conquer a dungeon, if you b
 
 ### Risks and Rewards
 
-...
+When you've completed any form of activity in the Infinite City, you'll get loot. You can also use that loot immediately. But, it's not yours to keep just yet. Until you can return to a safezone, the Infinite City will maintain a grasp on your newly obtained loot. You'll soon come to realize that as you venture closer towards the safezone there will be a series of challenges you're presented with. These challenges could be debuffs on you, buffs for enemies, modified spawns, or even sudden death within a time limit. The deeper you venture in certain areas, the more lethal the risks. But you'll still be rewarded for your risks.
 
 ---
 
