@@ -9,9 +9,9 @@
 		nav_shown = !nav_shown;
 	}
 
-  function hide_nav() {
-    if(nav_shown) show_nav();
-  }
+	function hide_nav() {
+		if (nav_shown) show_nav();
+	}
 </script>
 
 <div id="appbar">
@@ -26,17 +26,25 @@
 		</button>
 	{/if}
 	{#if nav_shown}
-    
-
 		<div
 			id="mobile-items"
 			class="lg:hidden flex"
 			transition:fade={{ delay: 0, duration: 200, easing: quadInOut }}
 		>
-			<button aria-label="Exit Nav Drawer" id="item-holder" class='cursor-default' on:click={show_nav}>
+			<button
+				aria-label="Exit Nav Drawer"
+				id="item-holder"
+				class="cursor-default"
+				on:click={show_nav}
+			>
 				<slot name="items" />
 			</button>
-			<button aria-label="Other Nav Drawer Exit" id="actions-holder" class='cursor-default' on:click={show_nav}>
+			<button
+				aria-label="Other Nav Drawer Exit"
+				id="actions-holder"
+				class="cursor-default"
+				on:click={show_nav}
+			>
 				<div id="actions-flexer">
 					<slot name="actions" />
 				</div>
@@ -47,15 +55,23 @@
 		</div>
 	{/if}
 
-	{#if $$slots['brand']}
-		<div id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset] cursor-default" on:click={hide_nav}>
-			<slot name="brand" />
-		</div>
-	{/if}
-	{#if $$slots['brand-tag']}
-		<div id="brand-tag" class="hidden lg:block">
-			<slot name="brand-tag" />
-		</div>
+	{#if $$slots['brand'] || $$slots['brand-tag']}
+		<a href="/" class="flex un-a w-full lg:w-auto">
+			{#if $$slots['brand']}
+				<div
+					id="brand"
+					class="lg:w-[86px] w-[72px] m-auto lg:m-[unset] cursor-default"
+					on:click={hide_nav}
+				>
+					<slot name="brand" />
+				</div>
+			{/if}
+			{#if $$slots['brand-tag']}
+				<div id="brand-tag" class="hidden lg:block">
+					<slot name="brand-tag" />
+				</div>
+			{/if}
+		</a>
 	{/if}
 	{#if $$slots['items']}
 		<div id="items" class="hidden lg:flex">
@@ -109,7 +125,7 @@
 		@apply w-[100vw] h-[100vh] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
 	}
 
-  #appbar #mobile-items #items-holder :global(a) {
+	#appbar #mobile-items #items-holder :global(a) {
 		@apply w-min;
 	}
 
@@ -118,7 +134,7 @@
 	}
 
 	#appbar #mobile-items #item-holder {
-		@apply flex flex-col justify-start items-start gap-4 uppercase pt-40 px-10 text-xl;
+		@apply flex flex-col justify-start items-start gap-12 uppercase pt-40 px-10 text-xl;
 	}
 
 	#appbar #mobile-items #footer-holder {
