@@ -6,6 +6,7 @@
 <ContentContainer>
 	<div class="press-kit">
 		<h1>Press-Kit</h1>
+<p>When the time comes, we will be utilizing <a href="https://impress.games/press-kitty" rel="nofollow">Press Kitty by <em>impress.games</em></a> to create our press kit.</p>
 	</div>
 </ContentContainer>
 
