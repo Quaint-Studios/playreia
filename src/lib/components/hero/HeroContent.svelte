@@ -16,7 +16,7 @@
 
 <style>
 	.hero-content {
-		@apply w-full flex justify-start;
+		@apply w-full flex justify-start mb-16;
 	}
 
 	.hero-content-wrapper {
