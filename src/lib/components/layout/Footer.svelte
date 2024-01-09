@@ -63,6 +63,13 @@
 		@apply w-full flex gap-16 justify-center items-start bg-primary-600 p-16 pt-10;
 	}
 
+	.game-info li,
+	.game-info li a,
+	.other-info li,
+	.other-info li a {
+		@apply p-4;
+	}
+
 	@media (min-width: 820px) {
 		footer .legal-info {
 			@apply w-full flex flex-row justify-between items-center bg-primary-600 py-5 px-16 border-t-[1px] border-[rgba(0,0,0,0.2)];

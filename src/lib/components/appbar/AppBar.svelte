@@ -56,7 +56,7 @@
 	{/if}
 
 	{#if $$slots['brand'] || $$slots['brand-tag']}
-		<a href="/" class="flex un-a w-full lg:w-auto">
+		<a href="/" class="flex un-a lg:w-auto mx-auto">
 			{#if $$slots['brand']}
 				<div
 					id="brand"
@@ -134,7 +134,7 @@
 	}
 
 	#appbar #mobile-items #item-holder {
-		@apply flex flex-col justify-start items-start gap-12 uppercase pt-40 px-10 text-xl;
+		@apply flex flex-col justify-start items-start gap-4 uppercase pt-40 px-10 text-2xl;
 	}
 
 	#appbar #mobile-items #footer-holder {
