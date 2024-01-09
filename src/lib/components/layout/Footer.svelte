@@ -74,6 +74,15 @@
 			@apply w-full flex flex-col justify-between items-center bg-primary-600 py-5 text-center border-t-[1px] border-[rgba(0,0,0,0.2)];
 		}
 
+		.info {
+			@apply text-lg;
+		}
+
+
+		.info ul {
+			@apply flex flex-col gap-2;
+		}
+
 		.game-info li,
 		.game-info li a,
 		.other-info li,
