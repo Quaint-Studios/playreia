@@ -24,7 +24,7 @@
 
 <style>
 	#hero-section {
-		@apply text-on-primary-token relative w-full h-4/5 min-h-[740px] flex justify-center items-end bg-cover bg-center bg-no-repeat;
+		@apply text-on-primary-token relative w-full flex justify-center items-end bg-cover bg-center bg-no-repeat;
 	}
 
 	#hero-section .hero-img {

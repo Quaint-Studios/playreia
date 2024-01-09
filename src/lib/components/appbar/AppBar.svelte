@@ -134,7 +134,7 @@
 	}
 
 	#appbar #mobile-items #item-holder {
-		@apply flex flex-col justify-start items-start gap-4 uppercase pt-40 px-10 text-2xl;
+		@apply flex flex-col justify-start items-start gap-4 uppercase pt-40 px-10;
 	}
 
 	#appbar #mobile-items #footer-holder {
