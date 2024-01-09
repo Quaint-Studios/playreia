@@ -60,7 +60,7 @@
 			{#if $$slots['brand']}
 				<div
 					id="brand"
-					class="lg:w-[86px] w-[72px] m-auto lg:m-[unset] cursor-default"
+					class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]"
 					on:click={hide_nav}
 				>
 					<slot name="brand" />
