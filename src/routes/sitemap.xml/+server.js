@@ -39,7 +39,7 @@ export async function GET() {
 			page: '',
 			freq: freq.daily,
 			priority: 1.0,
-      lastmod: '2023-1-4'
+      lastmod: '2024-01-10'
 		},
 		{
 			page: '/blog',
@@ -65,7 +65,7 @@ export async function GET() {
 			page: '/press-kit',
 			freq: freq.daily,
 			priority: 0.7,
-      lastmod: '2023-12-23'
+      lastmod: '2024-01-10'
 		},
 		{
 			page: '/about',
@@ -75,8 +75,7 @@ export async function GET() {
 		{
 			page: '/contribute',
 			freq: freq.daily,
-			priority: 0.7,
-      lastmod: '2024-1-4'
+			priority: 0.7
 		},
 		{
 			page: '/download',
@@ -87,22 +86,22 @@ export async function GET() {
 			page: '/cookies',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2023-12-23'
+      lastmod: '2024-01-10'
 		},
 		{
 			page: '/privacy-policy',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2023-12-23'
+      lastmod: '2024-01-10'
 		},
 		{
 			page: '/terms-and-conditions',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2023-12-23'
+      lastmod: '2024-01-10'
 		}
 	];
-	const date = '2024-1-4';
+	const date = '2024-01-10';
 
 	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
