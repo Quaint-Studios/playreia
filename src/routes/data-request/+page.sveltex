@@ -1,0 +1,13 @@
+---
+layout: article
+
+title: 'Data Request - Reia'
+titleSuffix: ''
+description: Request any data we may keep about you. Currently we only have analytics via Plausible and GitHub which doesn't identify you. Exercise your rights to your data.
+path: /data-request
+---
+
+<h1>Request your Data</h1>
+<strong>In the future you can request your data here.</strong>
+
+We aren't storing any data other than analytics for this website and GitHub currently. We currently use Plausible for our analytics for the Website. Which is GDPR compliant. We don't store any identifiable data. If there is any data we collect in the future, you can request it here and even make decisions on how we keep it!
