@@ -95,6 +95,12 @@ export async function GET() {
       lastmod: '2024-01-10'
 		},
 		{
+			page: '/data-request',
+			freq: freq.weekly,
+			priority: 0.3,
+      lastmod: '2024-01-17'
+		},
+		{
 			page: '/terms-and-conditions',
 			freq: freq.weekly,
 			priority: 0.3,
