@@ -136,7 +136,7 @@
 	<p>
 		<a href="#contact">31. CONTACT US</a>
 	</p>
-	<p>1. OUR SERVICES</p>
+	<p id="services">1. OUR SERVICES</p>
 	<p>
 		The information provided when using the Services is not intended for distribution to or use by
 		any person or entity in any jurisdiction or country where such distribution or use would be
@@ -151,7 +151,7 @@
 		etc.), so if your interactions would be subjected to such laws, you may not use the Services.
 		You may not use the Services in a way that would violate the Gramm-Leach-Bliley Act (GLBA).
 	</p>
-	<p>2. INTELLECTUAL PROPERTY RIGHTS</p>
+	<p id="ip">2. INTELLECTUAL PROPERTY RIGHTS</p>
 	<p>Our intellectual property</p>
 	<p>
 		We are the owner or the licensee of all intellectual property rights in our Services, including
@@ -303,7 +303,7 @@
 		available on or through the Services infringes upon any copyright you own or control, please
 		immediately refer to the "<a href="#copyrightyes">COPYRIGHT INFRINGEMENTS</a>" section below.
 	</p>
-	<p>3. USER REPRESENTATIONS</p>
+	<p id="userreps">3. USER REPRESENTATIONS</p>
 	<p>
 		By using the Services, you represent and warrant that: (1) all registration information you
 		submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such
@@ -320,14 +320,14 @@
 		the right to suspend or terminate your account and refuse any and all current or future use of
 		the Services (or any portion thereof).
 	</p>
-	<p>4. USER REGISTRATION</p>
+	<p id="userreg">4. USER REGISTRATION</p>
 	<p>
 		You may be required to register to use the Services. You agree to keep your password
 		confidential and will be responsible for all use of your account and password. We reserve the
 		right to remove, reclaim, or change a username you select if we determine, in our sole
 		discretion, that such username is inappropriate, obscene, or otherwise objectionable.
 	</p>
-	<p>5. PRODUCTS</p>
+	<p id="products">5. PRODUCTS</p>
 	<p>
 		We make every effort to display as accurately as possible the colors, features, specifications,
 		and details of the products available on the Services. However, we do not guarantee that the
@@ -337,7 +337,7 @@
 		and we cannot guarantee that items will be in stock. We reserve the right to discontinue any
 		products at any time for any reason. Prices for all products are subject to change.
 	</p>
-	<p>6. PURCHASES AND PAYMENT</p>
+	<p id="purchases">6. PURCHASES AND PAYMENT</p>
 	<p>We accept the following forms of payment:</p>
 	<p>-&nbsp; PayPal</p>
 	<p>-&nbsp; Mastercard</p>
@@ -371,9 +371,9 @@
 		limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers,
 		or distributors.
 	</p>
-	<p>7. RETURN/REFUNDS POLICY</p>
+	<p id="returnno">7. RETURN/REFUNDS POLICY</p>
 	<p>All sales are final and no refund will be issued.</p>
-	<p>8. SOFTWARE</p>
+	<p id="software">8. SOFTWARE</p>
 	<p>
 		We may include software for use in connection with our Services. If such software is accompanied
 		by an end user license agreement ("EULA"), the terms of the EULA will govern your use of the
@@ -386,7 +386,7 @@
 		performance of any software. You may not reproduce or redistribute any software except in
 		accordance with the EULA or these Legal Terms.
 	</p>
-	<p>9. PROHIBITED ACTIVITIES</p>
+	<p id="prohibited">9. PROHIBITED ACTIVITIES</p>
 	<p>
 		You may not access or use the Services for any purpose other than that for which we make the
 		Services available. The Services may not be used in connection with any commercial endeavors
@@ -515,7 +515,7 @@
 			<p>Use the Services to advertise or offer to sell goods and services without permission.</p>
 		</li>
 	</ul>
-	<p>10. USER GENERATED CONTRIBUTIONS</p>
+	<p id="ugc">10. USER GENERATED CONTRIBUTIONS</p>
 	<p>
 		The Services may invite you to chat, contribute to, or participate in blogs, message boards,
 		online forums, and other functionality, and may provide you with the opportunity to create,
@@ -600,7 +600,7 @@
 		Any use of the Services in violation of the foregoing violates these Legal Terms and may result
 		in, among other things, termination or suspension of your rights to use the Services.
 	</p>
-	<p>11. CONTRIBUTION LICENSE</p>
+	<p id="license">11. CONTRIBUTION LICENSE</p>
 	<p>
 		By posting your Contributions to any part of the Services or making Contributions accessible to
 		the Services by linking your account from the Services to any of your social networking
@@ -635,7 +635,7 @@
 		locations on the Services; and (3) to pre-screen or delete any Contributions at any time and for
 		any reason, without notice. We have no obligation to monitor your Contributions.
 	</p>
-	<p>12. GUIDELINES FOR REVIEWS</p>
+	<p id="reviews">12. GUIDELINES FOR REVIEWS</p>
 	<p>
 		We may provide you areas on the Services to leave reviews or ratings. When posting a review, you
 		must comply with the following criteria: (1) you should have firsthand experience with the
@@ -658,7 +658,7 @@
 		assignable, and sublicensable right and license to reproduce, modify, translate, transmit by any
 		means, display, perform, and/or distribute all content relating to review.
 	</p>
-	<p>13. MOBILE APPLICATION LICENSE</p>
+	<p id="mobile">13. MOBILE APPLICATION LICENSE</p>
 	<p>Use License</p>
 	<p>
 		If you access the Services via the App, then we grant you a revocable, non-exclusive,
@@ -707,7 +707,7 @@
 		conditions in this mobile application license contained in these Legal Terms against you as a
 		third-party beneficiary thereof.
 	</p>
-	<p>14. SOCIAL MEDIA</p>
+	<p id="socialmedia">14. SOCIAL MEDIA</p>
 	<p>
 		As part of the functionality of the Services, you may link your account with online accounts you
 		have with third-party service providers (each such account, a "Third-Party Account") by either:
@@ -744,7 +744,7 @@
 		servers that was obtained through such Third-Party Account, except the username and profile
 		picture that become associated with your account.
 	</p>
-	<p>15. THIRD-PARTY WEBSITES AND CONTENT</p>
+	<p id="thirdparty">15. THIRD-PARTY WEBSITES AND CONTENT</p>
 	<p>
 		The Services may contain (or you may be sent via the Site or App) links to other websites
 		("Third-Party Websites") as well as articles, photographs, text, graphics, pictures, designs,
@@ -770,7 +770,7 @@
 		by you or harm caused to you relating to or resulting in any way from any Third-Party Content or
 		any contact with Third-Party Websites.
 	</p>
-	<p>16. SERVICES MANAGEMENT</p>
+	<p id="sitemanage">16. SERVICES MANAGEMENT</p>
 	<p>
 		We reserve the right, but not the obligation, to: (1) monitor the Services for violations of
 		these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion,
@@ -783,7 +783,7 @@
 		the Services in a manner designed to protect our rights and property and to facilitate the
 		proper functioning of the Services.
 	</p>
-	<p>17. PRIVACY POLICY</p>
+	<p id="ppyes">17. PRIVACY POLICY</p>
 	<p>
 		We care about data privacy and security. Please review our Privacy Policy: <a
 			href="https://www.playreia.com/privacy-policy">https://www.playreia.com/privacy-policy</a
@@ -802,7 +802,7 @@
 		information to us without the requisite and verifiable parental consent, we will delete that
 		information from the Services as quickly as is reasonably practical.
 	</p>
-	<p>18. COPYRIGHT INFRINGEMENTS</p>
+	<p id="copyrightyes">18. COPYRIGHT INFRINGEMENTS</p>
 	<p>
 		We respect the intellectual property rights of others. If you believe that any material
 		available on or through the Services infringes upon any copyright you own or control, please
@@ -813,7 +813,7 @@
 		that material located on or linked to by the Services infringes your copyright, you should
 		consider first contacting an attorney.
 	</p>
-	<p>19. TERM AND TERMINATION</p>
+	<p id="terms">19. TERM AND TERMINATION</p>
 	<p>
 		These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT
 		LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE
@@ -831,7 +831,7 @@
 		your account, we reserve the right to take appropriate legal action, including without
 		limitation pursuing civil, criminal, and injunctive redress.
 	</p>
-	<p>20. MODIFICATIONS AND INTERRUPTIONS</p>
+	<p id="modifications">20. MODIFICATIONS AND INTERRUPTIONS</p>
 	<p>
 		We reserve the right to change, modify, or remove the contents of the Services at any time or
 		for any reason at our sole discretion without notice. However, we have no obligation to update
@@ -848,13 +848,13 @@
 		the Services. Nothing in these Legal Terms will be construed to obligate us to maintain and
 		support the Services or to supply any corrections, updates, or releases in connection therewith.
 	</p>
-	<p>21. GOVERNING LAW</p>
+	<p id="law">21. GOVERNING LAW</p>
 	<p>
 		These Legal Terms and your use of the Services are governed by and construed in accordance with
 		the laws of the State of Florida applicable to agreements made and to be entirely performed
 		within the State of Florida, without regard to its conflict of law principles.
 	</p>
-	<p>22. DISPUTE RESOLUTION</p>
+	<p id="disputes">22. DISPUTE RESOLUTION</p>
 	<p>Informal Negotiations</p>
 	<p>
 		To expedite resolution and control the cost of any dispute, controversy, or claim related to
@@ -923,14 +923,14 @@
 		by a court of competent jurisdiction within the courts listed for jurisdiction above, and the
 		Parties agree to submit to the personal jurisdiction of that court.
 	</p>
-	<p>23. CORRECTIONS</p>
+	<p id="corrections">23. CORRECTIONS</p>
 	<p>
 		There may be information on the Services that contains typographical errors, inaccuracies, or
 		omissions, including descriptions, pricing, availability, and various other information. We
 		reserve the right to correct any errors, inaccuracies, or omissions and to change or update the
 		information on the Services at any time, without prior notice.
 	</p>
-	<p>24. DISCLAIMER</p>
+	<p id="disclaimer">24. DISCLAIMER</p>
 	<p>
 		THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE
 		SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL
@@ -954,7 +954,7 @@
 		PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY
 		ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.
 	</p>
-	<p>25. LIMITATIONS OF LIABILITY</p>
+	<p id="liability">25. LIMITATIONS OF LIABILITY</p>
 	<p>
 		IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY
 		FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES,
@@ -967,7 +967,7 @@
 		EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE
 		DISCLAIMERS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.
 	</p>
-	<p>26. INDEMNIFICATION</p>
+	<p id="indemnification">26. INDEMNIFICATION</p>
 	<p>
 		You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates,
 		and all of our respective officers, agents, partners, and employees, from and against any loss,
@@ -982,7 +982,7 @@
 		such claims. We will use reasonable efforts to notify you of any such claim, action, or
 		proceeding which is subject to this indemnification upon becoming aware of it.
 	</p>
-	<p>27. USER DATA</p>
+	<p id="userdata">27. USER DATA</p>
 	<p>
 		We will maintain certain data that you transmit to the Services for the purpose of managing the
 		performance of the Services, as well as data relating to your use of the Services. Although we
@@ -991,7 +991,7 @@
 		we shall have no liability to you for any loss or corruption of any such data, and you hereby
 		waive any right of action against us arising from any such loss or corruption of such data.
 	</p>
-	<p>28. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</p>
+	<p id="electronic">28. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</p>
 	<p>
 		Visiting the Services, sending us emails, and completing online forms constitute electronic
 		communications. You consent to receive electronic communications, and you agree that all
@@ -1004,14 +1004,14 @@
 		signature or delivery or retention of non-electronic records, or to payments or the granting of
 		credits by any means other than electronic means.
 	</p>
-	<p>29. CALIFORNIA USERS AND RESIDENTS</p>
+	<p id="california">29. CALIFORNIA USERS AND RESIDENTS</p>
 	<p>
 		If any complaint with us is not satisfactorily resolved, you can contact the Complaint
 		Assistance Unit of the Division of Consumer Services of the California Department of Consumer
 		Affairs in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834 or by
 		telephone at (800) 952-5210 or (916) 445-1254.
 	</p>
-	<p>30. MISCELLANEOUS</p>
+	<p id="misc">30. MISCELLANEOUS</p>
 	<p>
 		These Legal Terms and any policies or operating rules posted by us on the Services or in respect
 		to the Services constitute the entire agreement and understanding between you and us. Our
@@ -1028,7 +1028,7 @@
 		them. You hereby waive any and all defenses you may have based on the electronic form of these
 		Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.
 	</p>
-	<p>31. CONTACT US</p>
+	<p id="contact">31. CONTACT US</p>
 	<p>
 		In order to resolve a complaint regarding the Services or to receive further information
 		regarding use of the Services, please contact us at:
