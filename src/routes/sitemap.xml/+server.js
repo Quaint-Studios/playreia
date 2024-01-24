@@ -39,7 +39,7 @@ export async function GET() {
 			page: '',
 			freq: freq.daily,
 			priority: 1.0,
-      lastmod: '2024-01-10'
+      lastmod: '2024-01-21'
 		},
 		{
 			page: '/blog',
