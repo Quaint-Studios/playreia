@@ -3,7 +3,7 @@
 </script>
 
 <div class="waitlist mx-auto md:max-width-lg text-center">
-	<div class="countdown"><Countdown due={1704128400000} done="Next Testing is in February" /></div>
+	<div class="countdown"><Countdown due={1704128400000} done="Next Testing is in April" /></div>
 	<div class="form">
 		<a
 			href="https://zc.vg/IWnQL"
