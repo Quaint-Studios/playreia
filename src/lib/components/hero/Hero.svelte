@@ -1,15 +1,19 @@
 <script>
 	import HeroContent from './HeroContent.svelte';
 	import HeroPlatformChips from './HeroPlatformChips.svelte';
+
+	import Lazy from 'svelte-lazy';
 </script>
 
 <div id="hero-section">
-	<enhanced:img
-		class="hero-img"
-		src="$lib/assets/img/hero/hero_1.jpg"
-		alt="Image of a forest, flower field, and path"
-		title="Hero Section Image 1"
-	/>
+	<Lazy>
+		<enhanced:img
+			class="hero-img"
+			src="$lib/assets/img/hero/hero_1.jpg"
+			alt="Image of a forest, flower field, and path"
+			title="Flower Field and Path"
+		/>
+	</Lazy>
 	<div class="hero-gradient"></div>
 	<div id="hero-wrapper">
 		<HeroContent />
