@@ -47,6 +47,7 @@
 		"@floating-ui/dom": "1.6.3",
 		"@fontsource/metropolis": "^5.0.7",
 		"@fontsource/poppins": "^5.0.12",
+		"svelte-lazy": "^1.2.7",
 		"svelte-material-icons": "^3.0.5"
 	}
 }
