@@ -6,6 +6,9 @@ subTitle: Enjoy an amazing story, combat, crafting, and more in a game that will
 author: Kristopher Ali (Makosai)
 date: December 25, 2023
 ---
+<script>
+  import PlayerOwnedIsland from '$lib/assets/img/home/PlayerOwnedIsland_GENERATED.png';
+</script>
 
 Reia is a vast and immersive fantasy game filled with a thrilling storyline and action-filled combat. As you embark on your adventure, you'll be able to also experience what wonders the game has to offer. Explore the Infinite City and conquer various dungeons. Experience intricate crafting and gathering. Control and customize your floating player-owned island. And if you're feeling creative, you can even distribute in-game content for everyone to enjoy both free and paid! Play the way you want and never feel forced to play a certain way. Reia ensures a captivating experience that will leave you eagerly anticipating the magical adventures to come.
 
@@ -102,6 +105,7 @@ If your main focus is going to be purely crafting items for your friends, your w
 
 ## Your Floating Player-Owned Islands
 **A truly customizable home of your own. What many players have asked for in a game.**
+<img src={PlayerOwnedIsland} alt="Player Owned Island" />
 
 Each section of your floating island can be customized down to the way your islands are shaped and connected. You can have multiple islands, build stalls, hire staff, invite friends, throw parties, and trade with other islands. It doesn't end there. Decorate your island and invite your spirits to live in their own rooms. Send them on expeditions to help expand your resource income for your island at the risk of losing some of your land. Let's dig into the details!
 
