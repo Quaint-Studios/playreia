@@ -6,11 +6,11 @@
 </script>
 
 <div id="hero-section">
-	<Lazy>
+	<Lazy keep={true}>
 		<enhanced:img
 			class="hero-img"
 			src="$lib/assets/img/hero/hero_1.jpg"
-			alt="Image of a forest, flower field, and path"
+			alt="A forest, flower field, and path"
 			title="Flower Field and Path"
 		/>
 	</Lazy>
