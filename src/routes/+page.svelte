@@ -6,6 +6,9 @@
 
 	import AboutReia from '$lib/components/articles/AboutReia.svx';
 	import Waitlist from '$lib/components/newsletter/Waitlist.svelte';
+	import EventsInfoCard from '$lib/components/section/info_cards/EventsInfoCard.svelte';
+	import DiscordInfoCard from '$lib/components/section/info_cards/DiscordInfoCard.svelte';
+	import InfoGrid from '$lib/components/section/InfoGrid.svelte';
 
 	let info;
 
@@ -39,20 +42,11 @@
 </script>
 
 <Hero />
-<InfoSection title="Events">
-	<div class="flex flex-col" slot="content">
-		<!-- <p class="text-primary-700 text-lg max-w-2xl font-medium">
-			We're going to be hosting a short <span class="font-bold">Pre-Alpha Test</span> to play Reia
-			on <span class="font-bold">January 1, 2024</span>
-			and again on <span class="font-bold">February 1, 2024</span>.
-		</p> -->
-		<p class="text-primary-700 text-lg max-w-2xl font-medium mt-3">
-			If you're interested in these limited time events and you'd like to experience Reia early to
-			help us test it, then subscribe to be notified when it goes live! We'll provide you with more
-			ways to be notified in the future. Like our <span class="font-bold">Discord server</span>!
-		</p>
-		<Waitlist />
-	</div>
+<InfoSection title="Information">
+	<InfoGrid slot="content">
+		<EventsInfoCard />
+		<DiscordInfoCard />
+	</InfoGrid>
 </InfoSection>
 <InfoSection title="Blog">
 	<InfoBlog slot="content" items={blogItems} />
@@ -67,11 +61,11 @@
 	description="Explore endless worlds and embark on a magical adventure of a lifetime! Reia is an action-adventure RPG. Create and explore worlds. Download and play now!"
 >
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com"
+		}
 	</script>
 </Meta>

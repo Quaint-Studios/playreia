@@ -2,15 +2,31 @@
 	import ArticleContainer from '../containers/ArticleContainer.svelte';
 	import Meta from '../head/meta.svelte';
 
+	/**
+	 * @type {any}
+	 */
 	export let title;
+	/**
+	 * @type {any}
+	 */
 	export let titleSuffix;
+	/**
+	 * @type {any}
+	 */
 	export let description;
 
-	export let tags;
+	// Future possibilities:
+	// export let tags;
+	/**
+	 * @type {any}
+	 */
 	export let author;
+	/**
+	 * @type {any}
+	 */
 	export let date;
 
-  export let path;
+	export let path;
 
 	export let schema = `<script type="application/ld+json" slot="structured">
   {

@@ -1,9 +1,22 @@
 <script>
+	/**
+	 * @type {any}
+	 */
 	export let title;
+	/**
+	 * @type {any}
+	 */
 	export let subTitle;
-	export let description;
-	export let tags;
+	// Future possibilities:
+	// export let description;
+	// export let tags;
+	/**
+	 * @type {any}
+	 */
 	export let author;
+	/**
+	 * @type {any}
+	 */
 	export let date;
 </script>
 
