@@ -34,7 +34,7 @@
 	.info-card__data {
 		@apply flex flex-col mt-[-4rem] px-4 pt-4 pb-0 w-full rounded-b-2xl h-full;
 		/* From https://css.glass */
-		background: rgba(255, 255, 255, 0.09);
+		background: rgba(255, 255, 255, 0.4);
 		@apply rounded-b-2xl;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(8px);

@@ -9,7 +9,7 @@
 		<enhanced:img src={Wumpus} alt="Discord" title="Discord" />
 	</div>
 	<div slot="content">
-		<p>Join our Discord server to chat with the developers and other players! Send a message to <code class="text-[rgb(var(--color-error-500))]">makosai</code> and ask to join.</p>
+		<p>Join our Discord server to chat with the developers and other players! Send a message to <code class="text-[rgb(var(--color-error-700))]">makosai</code> and ask to join.</p>
 	</div>
 	<div slot="action">
 		<a
