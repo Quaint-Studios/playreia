@@ -2,8 +2,16 @@
 	import { fade } from 'svelte/transition';
 	import Footer from '../layout/Footer.svelte';
 	import { quadInOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
 	let nav_shown = false;
+
+	let turtle = false;
+	let lastScroll = 0;
+	let transparent = true;
+
+	$: turtleBar = turtle ? 'turtle' : '';
+	$: transparencyBar = nav_shown || transparent ? 'bg-transparent' : 'icu-bar';
 
 	async function show_nav() {
 		nav_shown = !nav_shown;
@@ -12,9 +20,22 @@
 	function hide_nav() {
 		if (nav_shown) show_nav();
 	}
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 86) {
+				turtle = window.scrollY > 300 && window.scrollY > lastScroll ? true : false;
+				transparent = false;
+				lastScroll = window.scrollY;
+			} else {
+				turtle = false;
+				transparent = true;
+			}
+		});
+	});
 </script>
 
-<div id="appbar">
+<div id="appbar" class="{turtleBar} {transparencyBar}">
 	{#if $$slots['hamburger']}
 		<button
 			aria-label="Navbar Drawer Button"
@@ -58,13 +79,9 @@
 	{#if $$slots['brand'] || $$slots['brand-tag']}
 		<a href="/" class="flex un-a lg:w-auto mx-auto">
 			{#if $$slots['brand']}
-				<div
-					id="brand"
-					class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]"
-					on:click={hide_nav}
-				>
+				<button id="brand" class="lg:w-[86px] w-[72px] m-auto lg:m-[unset]" on:click={hide_nav}>
 					<slot name="brand" />
-				</div>
+				</button>
 			{/if}
 			{#if $$slots['brand-tag']}
 				<div id="brand-tag" class="hidden lg:block">
@@ -84,16 +101,39 @@
 		</div>
 	{/if}
 </div>
-<div id="dither"></div>
+<div id="dither" class="{turtleBar} {transparencyBar}"></div>
 
 <style>
 	#dither {
 		@apply fixed left-0 top-0 w-full h-36 z-[10];
 		background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+		transition:
+			top ease-in-out 0.33s,
+			background-color ease-in-out 0.25s,
+			opacity ease-in-out 0.25s;
 	}
 
 	#appbar {
-		@apply text-on-primary-token fixed top-0 flex w-full h-[86px] px-[16px] my-[16px] items-center z-[11];
+		@apply text-on-primary-token fixed top-0 flex w-full h-[calc(86px+16px)] px-[16px] py-[8px] items-center z-[11];
+		transition:
+			top ease-in-out 0.33s,
+			background-color ease-in-out 0.25s;
+	}
+	#dither.turtle,
+	#appbar.turtle {
+		top: -150px;
+	}
+
+	#dither.icu-bar {
+		opacity: 0;
+	}
+	#appbar.icu-bar {
+		/* From https://css.glass */
+		background: rgba(58, 50, 95, 0.3);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	}
 
 	#appbar #brand {
@@ -122,7 +162,7 @@
 	}
 
 	#appbar #mobile-items {
-		@apply w-[100vw] h-[100vh] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
+		@apply w-[100vw] h-[calc(100vh+16px)] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
 	}
 
 	#appbar #mobile-items #items-holder :global(a) {

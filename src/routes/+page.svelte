@@ -42,7 +42,7 @@
 </script>
 
 <Hero />
-<InfoSection title="Information">
+<InfoSection title="Info">
 	<InfoGrid slot="content">
 		<EventsInfoCard />
 		<DiscordInfoCard />
