@@ -10,7 +10,7 @@
 	let lastScroll = 0;
 	let transparent = true;
 
-	$: turtleBar = turtle ? 'turtle' : '';
+	$: turtleBar = !nav_shown && turtle ? 'turtle' : '';
 	$: transparencyBar = nav_shown || transparent ? 'bg-transparent' : 'icu-bar';
 
 	async function show_nav() {
@@ -168,14 +168,6 @@
 
 	#appbar #mobile-items {
 		@apply w-[100vw] h-[calc(100vh+16px)] flex-col absolute left-0 top-[-16px] text-xl backdrop-blur-sm z-[-1] bg-[#2971cf2a];
-	}
-
-	#appbar #mobile-items #items-holder :global(a) {
-		@apply w-min;
-	}
-
-	#appbar #mobile-items #items-holder :global(a):hover {
-		@apply text-secondary-500;
 	}
 
 	#appbar #mobile-items #item-holder {

@@ -10,9 +10,9 @@
 	<p>
 		You can contribute via the <a href={socials.github}>GitHub repository</a>.
 	</p>
-  <p>
-		There are several tasks you can complete ranging from creating beautiful art, code, music, and more!
-		If you see a way you can move the project forward with us, join in.
+	<p>
+		There are several tasks you can complete ranging from creating beautiful art, code, music, and
+		more! If you see a way you can move the project forward with us, join in.
 	</p>
 	<h2 id="#Funding" class="h2"># Funding</h2>
 	<p>
@@ -30,45 +30,52 @@
 	description="If you like the story or even the fantasy RPG & action adventure aspect of Reia, our GitHub has everything to contribute code, art, or funding to the project!"
 >
 	<script type="application/ld+json" slot="structured">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "How can I contribute code?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If you have programming experience then head over to https://github.com/Quaint-Studios/Reia or join our community!"
-      }
-    },{
-      "@type": "Question",
-      "name": "What if I want to contribute art?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "This follows the same process as before. On GitHub we can form discussions and talk about ideas, art styles, and submit work. Head over to https://github.com/Quaint-Studios/Reia to get started."
-      }
-    },{
-      "@type": "Question",
-      "name": "If I have experience with sound design or something else, how should I contribute?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You guessed it! GitHub has to covered there too. Join the community and share your work with us."
-      }
-    },{
-      "@type": "Question",
-      "name": "What if I don't have any technical experience or time? Can I help fund the project?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! But, we're currently decided which platform to use for our funding. We currently have an Open Collective page at https://opencollective.com/reia. But it's not set up to accept any donations. Stay tuned for updates! Or suggest something to us."
-      },{
-      "@type": "Question",
-      "name": "How can we contact you about contributing in any form?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Email us at contribute@playreia.com. That would be best for now!"
-      }
-    }]
-  }
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "How can I contribute code?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "If you have programming experience then head over to https://github.com/Quaint-Studios/Reia or join our community!"
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What if I want to contribute art?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "This follows the same process as before. On GitHub we can form discussions and talk about ideas, art styles, and submit work. Head over to https://github.com/Quaint-Studios/Reia to get started."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "If I have experience with sound design or something else, how should I contribute?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "You guessed it! GitHub has to covered there too. Join the community and share your work with us."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What if I don't have any technical experience or time? Can I help fund the project?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes! But, we're currently decided which platform to use for our funding. We currently have an Open Collective page at https://opencollective.com/reia. But it's not set up to accept any donations. Stay tuned for updates! Or suggest something to us."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "How can we contact you about contributing in any form?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Email us at contribute@playreia.com. That would be best for now!"
+					}
+				}
+			]
+		}
 	</script>
 </Meta>
 

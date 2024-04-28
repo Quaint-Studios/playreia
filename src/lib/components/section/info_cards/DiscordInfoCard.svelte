@@ -32,10 +32,6 @@
 		@apply rounded-2xl;
 	}
 
-	.image :global(img) {
-		@apply w-full;
-	}
-
 	a:hover {
 		@apply variant-filled-primary;
 	}
