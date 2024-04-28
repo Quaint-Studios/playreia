@@ -12,11 +12,11 @@
 </div>
 
 <style>
-  .dropdown {
-    @apply relative;
-  }
-  .items {
-    @apply hidden absolute bg-black rounded-[8px] p-4 top-full mt-1;
-    left: -30%
-  }
+	.dropdown {
+		@apply relative;
+	}
+	.items {
+		@apply hidden absolute bg-black rounded-[8px] p-4 top-full mt-1;
+		left: -30%;
+	}
 </style>

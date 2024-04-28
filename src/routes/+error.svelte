@@ -5,7 +5,7 @@
 	const emojis = {
 		// TODO add the rest!
 		420: '🫠',
-    404: '🧐',
+		404: '🧐',
 		500: '💥'
 	};
 </script>
@@ -19,16 +19,20 @@
 	</h1>
 
 	<h2 class="text-sm">Whooops! We're leaking ether...</h2>
-  <h3 class="text-xs my-4">Lets go back to the <a href="/" class="btn bg-[rgb(var(--color-tertiary-400))] mx-1 text-xs">home page</a></h3>
+	<h3 class="text-xs my-4">
+		Lets go back to the <a href="/" class="btn bg-[rgb(var(--color-tertiary-400))] mx-1 text-xs"
+			>home page</a
+		>
+	</h3>
 </div>
 
 <Meta title="Error... there's ether everywhere!" description="Uh oh, an error happened!">
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com"
+		}
 	</script>
 </Meta>

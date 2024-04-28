@@ -6,7 +6,13 @@
 <ContentContainer>
 	<div class="press-kit">
 		<h1>Press-Kit</h1>
-<p>When the time comes, we will be utilizing <a href="https://impress.games/press-kitty" target="_blank" rel="noopener noreferrer">Press Kitty by <em>impress.games</em></a> to create our press kit.</p>
+		<p>
+			When the time comes, we will be utilizing <a
+				href="https://impress.games/press-kitty"
+				target="_blank"
+				rel="noopener noreferrer">Press Kitty by <em>impress.games</em></a
+			> to create our press kit.
+		</p>
 	</div>
 </ContentContainer>
 
@@ -15,11 +21,11 @@
 	description="Enjoy reading, watching, and viewing images about this game based in a fantasy action adventure setting. Reia's press kit gives you all the information and images you'll need about and its development progress."
 >
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com/press-kit"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com/press-kit"
+		}
 	</script>
 </Meta>

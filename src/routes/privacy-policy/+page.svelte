@@ -79,9 +79,10 @@
 		</p>
 		<p>
 			<strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is
-			by visiting <a href="https://www.playreia.com/data-request">https://www.playreia.com/data-request</a>,
-			or by contacting us. We will consider and act upon any request in accordance with applicable
-			data protection laws.
+			by visiting
+			<a href="https://www.playreia.com/data-request">https://www.playreia.com/data-request</a>, or
+			by contacting us. We will consider and act upon any request in accordance with applicable data
+			protection laws.
 		</p>
 		<p>
 			Want to learn more about what we do with any information we collect? <a href="#toc"
@@ -1076,7 +1077,9 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request">
+			https://www.playreia.com/data-request</a
+		>.
 	</p>
 	<p>
 		If we decline to take action regarding your request and you wish to appeal our decision, please
@@ -1106,7 +1109,9 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request">
+			https://www.playreia.com/data-request</a
+		>.
 	</p>
 	<p>
 		If we decline to take action regarding your request and you wish to appeal our decision, please
@@ -1134,7 +1139,9 @@
 	</ul>
 	<p>
 		To submit a request to exercise these rights described above, please email privacy@playreia.com
-		or visit<a href="https://www.playreia.com/data-request"> https://www.playreia.com/data-request</a>.
+		or visit<a href="https://www.playreia.com/data-request">
+			https://www.playreia.com/data-request</a
+		>.
 	</p>
 	<p>Virginia Residents</p>
 	<p>Under the Virginia Consumer Data Protection Act (VCDPA):</p>
@@ -1272,16 +1279,16 @@
 </div>
 
 <Meta
-  title="Privacy Policy"
-  description="This Privacy Policy is intended to help you understand Reia's privacy practices and provide information about the choices you have regarding the ways in which information collected by Reia is used and disclosed."
+	title="Privacy Policy"
+	description="This Privacy Policy is intended to help you understand Reia's privacy practices and provide information about the choices you have regarding the ways in which information collected by Reia is used and disclosed."
 >
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com/privacy-policy"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com/privacy-policy"
+		}
 	</script>
 </Meta>
 

@@ -54,10 +54,10 @@
 		<a href="/spirits">Spirits</a>
 		<Dropdown>
 			<a href="/explore" slot="parent">Explore</a>
-      <ul slot="items">
+			<ul slot="items">
 				<li>This is a work in progress</li>
-        <li><a href="/explore/ethereals">Ethereals</a></li>
-      </ul>
+				<li><a href="/explore/ethereals">Ethereals</a></li>
+			</ul>
 		</Dropdown>
 		<a href="/press-kit">Press-Kit</a>
 		<a href="/about">About Us</a>

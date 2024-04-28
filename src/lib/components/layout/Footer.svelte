@@ -78,7 +78,6 @@
 			@apply text-lg;
 		}
 
-
 		.info ul {
 			@apply flex flex-col gap-2;
 		}

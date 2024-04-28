@@ -67,45 +67,63 @@
 	<ul>
 		<li>
 			<p>
-				<a href="https://support.google.com/chrome/answer/95647#zippy=%2Callow-or-block-cookies" rel="nofollow"
-					>Chrome</a
+				<a
+					href="https://support.google.com/chrome/answer/95647#zippy=%2Callow-or-block-cookies"
+					rel="nofollow">Chrome</a
 				>
 			</p>
 		</li>
 		<li>
 			<p>
 				<a
-					href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d" rel="nofollow"
-					>Internet Explorer</a
+					href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d"
+					rel="nofollow">Internet Explorer</a
 				>
 			</p>
 		</li>
 		<li>
 			<p>
 				<a
-					href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&amp;redirectlocale=en-US" rel="nofollow"
-					>Firefox</a
+					href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&amp;redirectlocale=en-US"
+					rel="nofollow">Firefox</a
 				>
 			</p>
 		</li>
-		<li><p><a href="https://support.apple.com/en-ie/guide/safari/sfri11471/mac" rel="nofollow">Safari</a></p></li>
+		<li>
+			<p>
+				<a href="https://support.apple.com/en-ie/guide/safari/sfri11471/mac" rel="nofollow"
+					>Safari</a
+				>
+			</p>
+		</li>
 		<li>
 			<p>
 				<a
-					href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd" rel="nofollow"
-					>Edge</a
+					href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd"
+					rel="nofollow">Edge</a
 				>
 			</p>
 		</li>
-		<li><p><a href="https://help.opera.com/en/latest/web-preferences/" rel="nofollow">Opera</a></p></li>
+		<li>
+			<p><a href="https://help.opera.com/en/latest/web-preferences/" rel="nofollow">Opera</a></p>
+		</li>
 	</ul>
 	<p>
 		In addition, most advertising networks offer you a way to opt out of targeted advertising. If
 		you would like to find out more information, please visit:
 	</p>
 	<ul>
-		<li><p><a href="http://www.aboutads.info/choices/" rel="nofollow">Digital Advertising Alliance</a></p></li>
-		<li><p><a href="https://youradchoices.ca/" rel="nofollow">Digital Advertising Alliance of Canada</a></p></li>
+		<li>
+			<p>
+				<a href="http://www.aboutads.info/choices/" rel="nofollow">Digital Advertising Alliance</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<a href="https://youradchoices.ca/" rel="nofollow">Digital Advertising Alliance of Canada</a
+				>
+			</p>
+		</li>
 		<li>
 			<p>
 				<a href="http://www.youronlinechoices.com/" rel="nofollow"
@@ -136,12 +154,12 @@
 	<p>
 		If you do not want Flash Cookies stored on your computer, you can adjust the settings of your
 		Flash player to block Flash Cookies storage using the tools contained in the <a
-			href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html" rel="nofollow"
-			>Website Storage Settings Panel</a
+			href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html"
+			rel="nofollow">Website Storage Settings Panel</a
 		>. You can also control Flash Cookies by going to the
 		<a
-			href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html" rel="nofollow" 
-			>Global Storage Settings Panel</a
+			href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html"
+			rel="nofollow">Global Storage Settings Panel</a
 		> and following the instructions (which may include instructions that explain, for example, how to
 		delete existing Flash Cookies (referred to "information" on the Macromedia site), how to prevent
 		Flash LSOs from being placed on your computer without your being asked, and (for Flash Player 8 and
@@ -188,11 +206,11 @@
 	description="This Cookies Policy discloses what cookies are, what cookies Reia uses, and how Reia utilizes cookies on in website."
 >
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com/cookies"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com/cookies"
+		}
 	</script>
 </Meta>

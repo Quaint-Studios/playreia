@@ -1043,11 +1043,11 @@
 	description="The following terms and conditions cover the entire agreement between you and Reia for your use of our services. They contain certain conditions and restrictions."
 >
 	<script type="application/ld+json" slot="structured">
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Reia",
-      "url": "https://www.playreia.com/terms-and-conditions"
-    }
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Reia",
+			"url": "https://www.playreia.com/terms-and-conditions"
+		}
 	</script>
 </Meta>

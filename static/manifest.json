@@ -6,7 +6,7 @@
 	"scope": "/",
 	"display": "standalone",
 	"description": "Information on Reia.",
-  "categories": ["entertainment", "games"],
+	"categories": ["entertainment", "games"],
 	"lang": "en",
 	"dir": "auto",
 	"theme_color": "#284267",

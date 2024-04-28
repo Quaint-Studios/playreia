@@ -31,7 +31,7 @@ export async function GET() {
 	 * page: string,
 	 * freq: Freq,
 	 * priority: number
-   * lastmod?: string
+	 * lastmod?: string
 	 * }}
 	 */
 	const pageData = [
@@ -39,7 +39,7 @@ export async function GET() {
 			page: '',
 			freq: freq.daily,
 			priority: 1.0,
-      lastmod: '2024-01-21'
+			lastmod: '2024-01-21'
 		},
 		{
 			page: '/blog',
@@ -56,16 +56,16 @@ export async function GET() {
 			freq: freq.daily,
 			priority: 0.7
 		},
-    {
-      page: '/explore/ethereals',
-      freq: freq.daily,
-      priority: 0.7,
-    },
+		{
+			page: '/explore/ethereals',
+			freq: freq.daily,
+			priority: 0.7
+		},
 		{
 			page: '/press-kit',
 			freq: freq.daily,
 			priority: 0.7,
-      lastmod: '2024-01-10'
+			lastmod: '2024-01-10'
 		},
 		{
 			page: '/about',
@@ -80,36 +80,37 @@ export async function GET() {
 		{
 			page: '/download',
 			freq: freq.daily,
-			priority: 1.0,
+			priority: 1.0
 		},
 		{
 			page: '/cookies',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2024-01-10'
+			lastmod: '2024-01-10'
 		},
 		{
 			page: '/privacy-policy',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2024-01-10'
+			lastmod: '2024-01-10'
 		},
 		{
 			page: '/data-request',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2024-01-17'
+			lastmod: '2024-01-17'
 		},
 		{
 			page: '/terms-and-conditions',
 			freq: freq.weekly,
 			priority: 0.3,
-      lastmod: '2024-01-10'
+			lastmod: '2024-01-10'
 		}
 	];
 	const date = '2024-01-10';
 
-	return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
+	return new Response(
+		`<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="https://www.w3.org/1999/xhtml"
@@ -118,7 +119,9 @@ export async function GET() {
   xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 >
-  ${pageData.map((elem) => `
+  ${pageData
+		.map(
+			(elem) => `
   <url>
     <loc>${website}${elem.page}</loc>
     <changefreq>${elem.freq}</changefreq>
@@ -128,7 +131,10 @@ export async function GET() {
 		})}</priority>
     <lastmod>${elem.lastmod != undefined ? elem.lastmod : date}</lastmod>
   </url>
-  `).join('').trim()}
+  `
+		)
+		.join('')
+		.trim()}
 		</urlset>`.trim(),
 		{
 			headers: {

@@ -1,7 +1,5 @@
 {
-	"prettier.documentSelectors": [
-		"**/*.svelte"
-	],
+	"prettier.documentSelectors": ["**/*.svelte"],
 	"tailwindCSS.classAttributes": [
 		"class",
 		"accent",
@@ -114,9 +112,6 @@
 		"transition",
 		"width",
 		"zIndex"
-  ],
-  "cSpell.words": [
-    "purgecss",
-    "Reia"
-  ]
+	],
+	"cSpell.words": ["purgecss", "Reia"]
 }
