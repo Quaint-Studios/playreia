@@ -22,16 +22,21 @@
 	}
 
 	onMount(() => {
-		window.addEventListener('scroll', () => {
+		const navCheck = (initialCheck = false) => {
 			if (window.scrollY > 86) {
-				turtle = window.scrollY > 300 && window.scrollY > lastScroll ? true : false;
+				turtle =
+					!initialCheck && window.scrollY > 300 && window.scrollY > lastScroll ? true : false;
 				transparent = false;
 				lastScroll = window.scrollY;
 			} else {
 				turtle = false;
 				transparent = true;
 			}
-		});
+		};
+
+		navCheck(true);
+
+		window.addEventListener('scroll', () => navCheck());
 	});
 </script>
 
