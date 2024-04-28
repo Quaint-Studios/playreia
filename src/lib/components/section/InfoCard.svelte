@@ -46,8 +46,11 @@
 		@apply text-left w-full mb-2 font-bold text-xl;
 	}
 
+	.info-card__image {
+		@apply w-full;
+	}
 	.info-card__image :global(img) {
-		@apply mb-4 rounded-t-2xl;
+		@apply mb-4 rounded-t-2xl w-full;
 	}
 
 	.info-card__content {

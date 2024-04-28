@@ -9,9 +9,11 @@
 	<Lazy keep={true}>
 		<enhanced:img
 			class="hero-img"
-			src="$lib/assets/img/hero/hero_1.jpg"
+			src="$lib/assets/img/hero/hero_1.jpg?enhanced&w=3840;2048;1920;1280"
 			alt="A forest, flower field, and path"
 			title="Flower Field and Path"
+			sizes="min(1280px, 100vw)"
+
 		/>
 	</Lazy>
 	<div class="hero-gradient"></div>

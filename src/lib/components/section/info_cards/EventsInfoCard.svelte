@@ -1,12 +1,12 @@
 <script>
-	import Wumpus from '$lib/assets/img/banners/newsletter.jpg?enhanced';
+	import Newsletter from '$lib/assets/img/banners/newsletter.jpg?enhanced&w=428,512,1024';
 
 	import InfoCard from '../InfoCard.svelte';
 </script>
 
 <InfoCard title="Events: Testing">
 	<div slot="image">
-		<enhanced:img src={Wumpus} alt="Discord" title="Discord" />
+		<enhanced:img src={Newsletter} alt="Newsletter" title="Newsletter" sizes="min(428px, 75vw)" />
 	</div>
 	<div slot="content">
 		<p>
