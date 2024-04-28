@@ -22,20 +22,18 @@
 				<slot name="action" />
 			</div>
 		{/if}
-
-		<div class="info-card__background"></div>
 	</div>
 </div>
 
 <style>
 	.info-card {
-		@apply flex flex-col items-center rounded-2xl bg-secondary-500;
+		@apply flex flex-col items-center rounded-2xl h-full bg-secondary-500;
 		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 	}
 
 	.info-card__data {
-		@apply mt-[-4rem] px-4 pt-4 pb-0 w-full rounded-b-2xl;
-    /* From https://css.glass */
+		@apply flex flex-col mt-[-4rem] px-4 pt-4 pb-0 w-full rounded-b-2xl h-full;
+		/* From https://css.glass */
 		background: rgba(255, 255, 255, 0.09);
 		@apply rounded-b-2xl;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -53,12 +51,10 @@
 	}
 
 	.info-card__content {
-		margin-bottom: 1rem;
-		@apply text-left w-full mb-4;
+		@apply text-left w-full mb-8;
 	}
 
 	.info-card__action {
-		margin-bottom: 1rem;
-		@apply text-right w-full mb-4;
+		@apply flex justify-end text-right mt-auto w-full mb-4;
 	}
 </style>
