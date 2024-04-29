@@ -15,6 +15,7 @@
 	import '@fontsource/poppins/200.css';
 	import '@fontsource/poppins/300.css';
 	import '@fontsource/poppins/400.css';
+	import p400 from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url';
 	import '@fontsource/poppins/500.css';
 	/*import '@fontsource/poppins/600.css'; */
 	import '@fontsource/poppins/700.css';
@@ -41,6 +42,14 @@
 	// Site data
 	const navItemClass = 'uppercase ml-6';
 </script>
+
+<svelte:head>
+	{#each [p400] as font}
+		<link rel="preload" as="font" type="font/woff2" href={font} crossorigin />
+	{/each}
+	
+	<link rel="stylesheet" href="/global.css" />
+</svelte:head>
 
 <AppBar>
 	<Menu width="32" height="32" slot="hamburger" />
