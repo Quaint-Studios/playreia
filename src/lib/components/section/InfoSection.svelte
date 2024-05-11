@@ -58,8 +58,6 @@
 	.info-section .title {
 		@apply text-primary-700 text-2xl md:text-3xl font-bold uppercase;
 	}
-	:global(.dark) .info-section .title {
-	}
 
 	.info-section .content {
 		@apply text-on-secondary-token flex justify-center items-center;
