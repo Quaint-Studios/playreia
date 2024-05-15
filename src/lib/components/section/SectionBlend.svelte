@@ -11,18 +11,19 @@
 	.section-blend.beige-blend {
 		background: linear-gradient(
 			180deg,
-			rgba(100, 243, 100, 0) 20%,
+			rgba(100, 243, 100, 0) 60%,
 			rgb(var(--color-secondary-500)) 100%
 		);
-		@apply h-40 my-[-10rem];
+		@apply h-20 my-[-5rem];
 		width: 100%;
 	}
 
   .section-blend.blue-blend {
 		background: linear-gradient(
 			180deg,
-			rgba(249, 243, 229, 1) 20%,
-			rgb(var(--color-surface-900)) 100%
+      rgba(249, 243, 229, 1) 0%,
+			rgba(249, 243, 229, 0.5) 60%,
+			rgba(42, 70, 108, 0) 100%
 		);
 		@apply h-40 my-[-10rem];
 		width: 100%;
