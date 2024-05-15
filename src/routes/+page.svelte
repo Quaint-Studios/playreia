@@ -54,6 +54,7 @@
 	<InfoBlog slot="content" items={blogItems} />
 </InfoSection>
 <InfoSection title="Explore"></InfoSection>
+<SectionBlend color="blue" />
 <AboutReia />
 
 <Meta
