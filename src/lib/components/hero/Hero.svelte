@@ -29,15 +29,17 @@
 
 <style>
 	#hero-section {
-		@apply text-on-primary-token relative w-full flex justify-center items-end bg-cover bg-center bg-no-repeat;
+		@apply text-on-primary-token relative w-full flex justify-center items-end bg-cover bg-center bg-no-repeat pb-40;
 	}
 
 	#hero-section .hero-img {
-		@apply object-cover absolute w-full h-full top-0 left-0;
+		@apply object-cover absolute w-full top-0 left-0;
+		height: calc(100% + 10rem);
 	}
 
 	#hero-section .hero-gradient {
-		@apply w-full h-full absolute;
+		@apply w-full absolute mb-[-10rem];
+		height: calc(100% + 10rem);
 		background-image: linear-gradient(
 			to bottom right,
 			rgba(0, 0, 0, 0.4),

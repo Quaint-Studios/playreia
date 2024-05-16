@@ -81,7 +81,9 @@
 	</svelte:fragment>
 </AppBar>
 <!-- Page Route Content -->
+<!--<div class="relative mx-auto max-w-[2800px]">-->
 <slot />
+<!--</div>-->
 <Footer />
 
 <style>

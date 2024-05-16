@@ -9,6 +9,7 @@
 	import EventsInfoCard from '$lib/components/section/info_cards/EventsInfoCard.svelte';
 	import DiscordInfoCard from '$lib/components/section/info_cards/DiscordInfoCard.svelte';
 	import InfoGrid from '$lib/components/section/InfoGrid.svelte';
+	import SectionBlend from '$lib/components/section/SectionBlend.svelte';
 
 	let info;
 
@@ -42,6 +43,7 @@
 </script>
 
 <Hero />
+<SectionBlend />
 <InfoSection title="Info">
 	<InfoGrid slot="content">
 		<EventsInfoCard />
@@ -52,6 +54,7 @@
 	<InfoBlog slot="content" items={blogItems} />
 </InfoSection>
 <InfoSection title="Explore"></InfoSection>
+<SectionBlend color="blue" />
 <AboutReia />
 
 <Meta
