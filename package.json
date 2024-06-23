@@ -1,5 +1,5 @@
 {
-	"name": "Reia",
+	"name": "reia",
 	"version": "0.0.2",
 	"private": true,
 	"scripts": {
@@ -28,7 +28,7 @@
 		"@tailwindcss/typography": "0.5.13",
 		"@types/node": "^20.14.8",
 		"autoprefixer": "10.4.19",
-		"eslint": "^9.0.0",
+		"eslint": "^9.5.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.40.0",
 		"globals": "^15.6.0",
