@@ -1,6 +1,7 @@
 // You can also use the generator at https://skeleton.dev/docs/generator to create these values for you
 
-export const Reia = {
+import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
+export const Reia: CustomThemeConfig = {
 	name: 'Reia',
 	properties: {
 		// =~= Theme Properties =~=

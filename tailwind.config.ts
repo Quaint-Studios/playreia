@@ -1,5 +1,5 @@
 import { join } from 'path'
-
+import type { Config } from 'tailwindcss'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
@@ -16,40 +16,10 @@ export default {
 		typography,
 		skeleton({
 			themes: {
-				preset: [
-					{
-						name: 'gold-nouveau',
-						enhancements: true,
-					},
-					{
-						name: 'sahara',
-						enhancements: true,
-					},
-					{
-						name: 'rocket',
-						enhancements: true,
-					},
-					{
-						name: 'hamlindigo',
-						enhancements: true,
-					},
-					{
-						name: 'modern',
-						enhancements: true,
-					},
-					{
-						name: 'wintry',
-						enhancements: true,
-					},
-					{
-						name: 'skeleton',
-						enhancements: true,
-					},
-				],
 				custom: [
 					Reia,
 				],
 			},
 		}),
 	],
-};
+} satisfies Config;
