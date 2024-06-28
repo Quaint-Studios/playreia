@@ -3,8 +3,8 @@ import type { Config } from 'tailwindcss'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import { Reia } from './src/Reia'
-/** @type {import('tailwindcss').Config} */
+import { reia_theme } from './src/reia_theme'
+
 export default {
 	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
@@ -17,7 +17,7 @@ export default {
 		skeleton({
 			themes: {
 				custom: [
-					Reia,
+					reia_theme,
 				],
 			},
 		}),

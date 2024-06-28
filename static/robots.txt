@@ -1,5 +1,0 @@
-# robots.txt Reia welcomes you, robots
-User-agent: *
-Disallow: 
-Disallow: /admin/
-Sitemap: https://www.playreia.com/sitemap.xml
