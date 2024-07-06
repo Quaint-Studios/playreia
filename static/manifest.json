@@ -1,0 +1,14 @@
+{
+  "short_name": "Reia",
+  "name": "Reia | Explore Endless Worlds",
+  "icons": [],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#284267",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#284267",
+  "shortcuts": [],
+  "description": "Information on Reia",
+  "screenshots": []
+}
