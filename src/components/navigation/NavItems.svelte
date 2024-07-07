@@ -71,14 +71,14 @@
 			{#if children}
 				<Icon icon="mdi:chevron-down" />
 				<div class="nav-children">
-					<div class="nav-frame glass-2">
+					<div class="nav-frame glass">
 						{#each children as { name, href, children: _children }, i}
 							<div class="child-item" class:has-children={_children !== undefined}>
 								<a {href}>{name}</a>
 								{#if _children}
 									<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
 									<div class="nav-children">
-										<div class="nav-frame">
+										<div class="nav-frame glass">
 										{#each _children as { name, href }, i}
 											<div class="child-item">
 												<a {href}>{name}</a>
@@ -96,7 +96,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="postcss">
 	/** Nav Items */
 	@media (max-width: 1050px) {
 		.nav-items {
@@ -110,7 +110,7 @@
 
 	.nav-item,
 	.child-item {
-		@apply relative flex justify-center items-center;
+		@apply relative flex justify-center items-center text-nowrap;
 	}
 
 	/** Nav Children */
@@ -119,7 +119,8 @@
 		@apply text-on-primary-token;
 	}
 	a:hover {
-		@apply text-tertiary-400;
+		/* @apply text-tertiary-400; */
+		@apply opacity-50;
 	}
 	a:active {
 		@apply text-tertiary-600;

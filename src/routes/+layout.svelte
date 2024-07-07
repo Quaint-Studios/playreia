@@ -23,16 +23,18 @@
 
 	import NavBrand from '$components/navigation/NavBrand.svelte';
 	import NavItems from '$components/navigation/NavItems.svelte';
+	import NavActions from '$components/navigation/NavActions.svelte';
 </script>
 
 <div class="navbar glass">
 	<NavBrand />
 	<NavItems />
+	<NavActions />
 </div>
 
 <slot />
 
-<style>
+<style lang="postcss">
 	.navbar {
 		@apply fixed top-0 left-0 right-0 z-50;
 		@apply w-full py-2 px-4;

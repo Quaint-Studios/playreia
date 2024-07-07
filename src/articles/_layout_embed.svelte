@@ -30,7 +30,7 @@
 	<p class="date">Last updated: {date}</p>
 </article>
 
-<style>
+<style lang="postcss">
 	article {
 		@apply text-secondary-400;
 	}

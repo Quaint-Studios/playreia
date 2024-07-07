@@ -18,7 +18,7 @@
 	<div id="brand-name">{sitename}</div>
 </a>
 
-<style>
+<style lang="postcss">
 	#brand {
 		@apply flex justify-center items-center;
 	}
