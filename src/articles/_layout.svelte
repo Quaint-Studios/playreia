@@ -1,6 +1,6 @@
 <script>
-	import ArticleContainer from '../containers/ArticleContainer.svelte';
-	import Meta from '../head/meta.svelte';
+	import ArticleContainer from './containers/ArticleContainer.svelte';
+	import Meta from '$components/head/Meta.svelte';
 
 	/**
 	 * @type {any}
@@ -51,7 +51,7 @@
 	{@html schema}
 </Meta>
 
-<style>
+<style lang="postcss">
 	.date,
 	.author {
 		@apply text-sm font-bold text-right m-0;

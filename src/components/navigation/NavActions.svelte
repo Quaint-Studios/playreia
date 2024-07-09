@@ -4,15 +4,15 @@
 
 <div class="nav-actions">
 	<Icon icon="ph:globe-bold" font-size="1.5rem" />
-	<a href="/game" class="button">Play Now</a>
+	<a href="/game" class="button btn">Play Now</a>
 </div>
 
-<style>
+<style lang="postcss">
   .nav-actions {
     @apply flex justify-center items-center gap-4 ml-auto;
   }
 
   .button {
-    @apply btn bg-black;
+    @apply bg-black;
   }
 </style>

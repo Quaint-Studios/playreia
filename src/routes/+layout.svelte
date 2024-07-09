@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
+	import { i18n } from '$lib/i18n';
+
 	import '../app.postcss';
 
 	// import '@fontsource/poppins/100.css';
@@ -26,13 +29,15 @@
 	import NavActions from '$components/navigation/NavActions.svelte';
 </script>
 
-<div class="navbar glass">
-	<NavBrand />
-	<NavItems />
-	<NavActions />
-</div>
+<ParaglideJS {i18n}>
+	<div class="navbar glass">
+		<NavBrand />
+		<NavItems />
+		<NavActions />
+	</div>
 
-<slot />
+	<slot />
+</ParaglideJS>
 
 <style lang="postcss">
 	.navbar {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Divider from '../Divider.svelte';
-	import Lazy from 'svelte-lazy';
+	import Lazy from '../../../../node_modules/svelte-lazy';
 </script>
 
 <section class="section hero">
@@ -35,13 +35,13 @@
 </section>
 
 <style lang="postcss">
-  .hero {
-    @apply relative;
-    @apply pt-[105px] pb-40;
-  }
+	.hero {
+		@apply relative;
+		@apply pt-[105px] pb-40;
+	}
 
 	.hero-image {
-    @apply absolute w-full top-0 left-0;
-    @apply object-cover h-[calc(100%+10rem)];
+		@apply absolute w-full top-0 left-0;
+		@apply object-cover h-[calc(100%+10rem)];
 	}
 </style>
