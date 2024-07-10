@@ -1,5 +1,8 @@
 <script>
-	import Icon from '@iconify/svelte';
+	import Icon, { loadIcons } from '@iconify/svelte';
+
+	const iconName = 'ph:globe-bold';
+	loadIcons(['ph:globe-bold']);
 </script>
 
 <div class="nav-actions">
@@ -8,11 +11,11 @@
 </div>
 
 <style lang="postcss">
-  .nav-actions {
-    @apply flex justify-center items-center gap-4 ml-auto;
-  }
+	.nav-actions {
+		@apply flex justify-center items-center gap-4 ml-auto;
+	}
 
-  .button {
-    @apply bg-black;
-  }
+	.button {
+		@apply bg-black;
+	}
 </style>

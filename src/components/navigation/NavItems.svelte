@@ -1,5 +1,8 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
+	import Icon, { loadIcons } from '@iconify/svelte';
+
+	// Preload Icons
+	loadIcons(['mdi:chevron-down']);
 
 	// Must not have children more than 3 levels deep
 	const navItems = [
@@ -79,11 +82,11 @@
 									<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
 									<div class="nav-children">
 										<div class="nav-frame glass">
-										{#each _children as { name, href }, i}
-											<div class="child-item">
-												<a {href}>{name}</a>
-											</div>
-										{/each}
+											{#each _children as { name, href }, i}
+												<div class="child-item">
+													<a {href}>{name}</a>
+												</div>
+											{/each}
 										</div>
 									</div>
 								{/if}
@@ -95,6 +98,52 @@
 		</div>
 	{/each}
 </div>
+
+<!--
+	/* Item & Child Item */
+	.nav-item,
+	.nav-child {
+		@apply relative flex items-center justify-center;
+	}
+
+	.nav-child {
+		@apply relative;
+	}
+
+	.has-children > :global(svg) {
+		@apply transform rotate-0;
+		@apply transition-transform duration-100 ease-in-out;
+	}
+	.has-children:hover > :global(svg) {
+		@apply !transform !rotate-180;
+	}
+
+	/* Children and Frame */
+	.nav-children {
+		@apply rounded-xl p-2;
+	}
+
+	.nav-children {
+		@apply absolute mt-2 z-50;
+		@apply bg-gray-500 shadow-md;
+		@apply flex flex-col;
+		@apply flex-grow-0 flex-shrink-0 basis-full;
+		@apply opacity-0 pointer-events-none;
+		@apply transition-opacity duration-100 ease-in-out;
+	}
+
+
+	.nav-child .nav-children {
+		@apply !bg-black;
+	}
+
+	.has-children:hover > .nav-children {
+		@apply opacity-100 pointer-events-auto flex flex-col;
+	}
+
+	.nav-children a {
+		@apply py-[0.15rem] px-4 w-full inline-block text-nowrap;
+	} -->
 
 <style lang="postcss">
 	/** Nav Items */
@@ -147,52 +196,4 @@
 	.nav-frame .nav-frame {
 		@apply -mt-2 ml-2;
 	}
-
-
 </style>
-
-<!--
-	/* Item & Child Item */
-	.nav-item,
-	.nav-child {
-		@apply relative flex items-center justify-center;
-	}
-
-	.nav-child {
-		@apply relative;
-	}
-
-	.has-children > :global(svg) {
-		@apply transform rotate-0;
-		@apply transition-transform duration-100 ease-in-out;
-	}
-	.has-children:hover > :global(svg) {
-		@apply !transform !rotate-180;
-	}
-
-	/* Children and Frame */
-	.nav-children {
-		@apply rounded-xl p-2;
-	}
-
-	.nav-children {
-		@apply absolute mt-2 z-50;
-		@apply bg-gray-500 shadow-md;
-		@apply flex flex-col;
-		@apply flex-grow-0 flex-shrink-0 basis-full;
-		@apply opacity-0 pointer-events-none;
-		@apply transition-opacity duration-100 ease-in-out;
-	}
-
-
-	.nav-child .nav-children {
-		@apply !bg-black;
-	}
-
-	.has-children:hover > .nav-children {
-		@apply opacity-100 pointer-events-auto flex flex-col;
-	}
-
-	.nav-children a {
-		@apply py-[0.15rem] px-4 w-full inline-block text-nowrap;
-	} -->

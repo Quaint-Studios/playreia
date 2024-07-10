@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Divider from '../Divider.svelte';
-	import Lazy from '../../../../node_modules/svelte-lazy';
+	import Lazy from 'svelte-lazy';
 </script>
 
 <section class="section hero">
@@ -18,7 +18,7 @@
 			<form>
 				<label for="email">Email</label>
 				<input type="email" id="email" name="email" placeholder="Enter your email" />
-				<button type="submit" class="btn secondary">Notify Me</button>
+				<button type="submit" class="btn secondary variant-filled">Notify Me</button>
 			</form>
 		</div>
 	</div>
@@ -43,5 +43,6 @@
 	.hero-image {
 		@apply absolute w-full top-0 left-0;
 		@apply object-cover h-[calc(100%+10rem)];
+		z-index: -1;
 	}
 </style>
