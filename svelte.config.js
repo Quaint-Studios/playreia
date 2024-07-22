@@ -25,7 +25,13 @@ const config = {
 				formats: ['image/avif', 'image/webp'],
 				minimumCacheTTL: 300
 			}
-		})
+		}),
+
+		alias: {
+			$articles: './src/articles',
+			$assets: './src/assets',
+			$components: './src/components'
+		}
 	}
 };
 export default config;
