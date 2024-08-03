@@ -25,6 +25,7 @@
 	// import '@fontsource/poppins/800-italic.css';
 	// import '@fontsource/poppins/900-italic.css';
 
+	import Hamburger from '$components/navigation/Hamburger.svelte';
 	import NavBrand from '$components/navigation/NavBrand.svelte';
 	import NavItems from '$components/navigation/NavItems.svelte';
 	import NavActions from '$components/navigation/NavActions.svelte';
@@ -32,6 +33,7 @@
 
 <ParaglideJS {i18n}>
 	<div class="navbar glass">
+		<Hamburger />
 		<NavBrand />
 		<NavItems />
 		<NavActions />
@@ -41,9 +43,14 @@
 </ParaglideJS>
 
 <style lang="postcss">
+		@media (max-width: 768px) {
+		.navbar {
+			@apply !justify-center;
+		}
+	}
 	.navbar {
 		@apply fixed top-0 left-0 right-0 z-50;
 		@apply w-full py-2 px-4;
-		@apply flex justify-start items-center bg-transparent;
+		@apply flex justify-center ml:justify-start items-center bg-transparent;
 	}
 </style>

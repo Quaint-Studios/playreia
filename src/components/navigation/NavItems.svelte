@@ -110,13 +110,7 @@
 		@apply relative;
 	}
 
-	.has-children > :global(svg) {
-		@apply transform rotate-0;
-		@apply transition-transform duration-100 ease-in-out;
-	}
-	.has-children:hover > :global(svg) {
-		@apply !transform !rotate-180;
-	}
+
 
 	/* Children and Frame */
 	.nav-children {
@@ -154,7 +148,7 @@
 		}
 	}
 	.nav-items {
-		@apply flex justify-start items-center gap-5 uppercase;
+		@apply hidden ml:flex justify-start items-center gap-5 uppercase;
 	}
 
 	.nav-item,
@@ -182,6 +176,13 @@
 
 	.has-children:hover > .nav-children {
 		@apply flex flex-col justify-center items-start;
+	}
+	.has-children > :global(svg) {
+		@apply transform rotate-0;
+		@apply transition-transform duration-100 ease-in-out;
+	}
+	.has-children:hover > :global(svg) {
+		@apply !transform !rotate-180;
 	}
 
 	.child-item .nav-children {

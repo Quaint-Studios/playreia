@@ -12,6 +12,6 @@
 
 <style lang="postcss">
 	.nav-actions {
-		@apply flex justify-center items-center gap-4 ml-auto;
+		@apply hidden ml:flex justify-center items-center gap-4 ml-auto;
 	}
 </style>
