@@ -12,5 +12,11 @@ declare namespace App {
 	// interface Platform {}
 }
 
+declare global {
+	type HTMLEvent<T extends HTMLElement> = MouseEvent & {
+		currentTarget: EventTarget & T;
+	};
+}
+
 // types/svelte-lazy.d.ts
 declare module 'svelte-lazy';
