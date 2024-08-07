@@ -1,13 +1,18 @@
 <script lang="ts">
+	import { navShown } from "$lib/stores";
 	import Icon from "@iconify/svelte";
 
   function toggleNav() {
-    return;
+    $navShown = !$navShown;
   }
 </script>
 
 <button on:click={toggleNav} class="hamburger">
-  <Icon icon="mdi:menu" font-size=32 />
+  {#if $navShown}
+    <Icon icon="mdi-menu-close" font-size=32 />
+  {:else}
+    <Icon icon="mdi:menu" font-size=32 />
+  {/if}
 </button>
 
 <style lang="postcss">
