@@ -1,6 +1,6 @@
 	// Must not have children more than 3 levels deep
 export default [
-  { name: 'Home', href: '/home' },
+  { name: 'Home', href: '/' },
   { name: 'Blog', href: '/blog' },
   {
     name: 'Learn',
