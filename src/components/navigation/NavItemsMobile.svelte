@@ -2,6 +2,7 @@
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import navItems from './NavItemsData';
 	import { goto } from '$app/navigation';
+	import { navShown } from '$lib/stores';
 
 	// Preload Icons
 	loadIcons(['mdi:chevron-down']);
@@ -31,12 +32,17 @@
 	}
 </script>
 
-<div class="nav-items">
+<div class={`nav-items${!$navShown ? ' hidden' : ''}`}>
 	{#each navItems as { name, href, children }, i}
 		<div class="nav-item" class:has-children={children !== undefined} data-opened={openId === i}>
-			<a {href} on:click={children !== undefined ? (e) => openTab(e, i) : null}>{name}</a>
+			<a {href} on:click={children !== undefined ? (e) => openTab(e, i) : null}>
+				{name}
+
+				{#if children}
+					<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
+				{/if}
+			</a>
 			{#if children}
-				<Icon icon="mdi:chevron-down" />
 				<div class="nav-children">
 					<div class="nav-frame glass">
 						{#each children as { name, href, children: _children }, j}
@@ -47,9 +53,12 @@
 							>
 								<a {href} on:click={_children !== undefined ? (e) => openTab(e, j, true) : null}>
 									{name}
+
+									{#if _children}
+										<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
+									{/if}
 								</a>
 								{#if _children}
-									<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
 									<div class="nav-children">
 										<div class="nav-frame glass">
 											{#each _children as { name, href }, k}
@@ -113,23 +122,39 @@
 	/** Nav Items */
 	@media (max-width: 1050px) {
 		.nav-items {
-			@apply gap-6;
+			@apply gap-0;
 			@apply text-on-primary-token;
 		}
 	}
 	.nav-items {
-		@apply hidden ml:flex justify-start items-center gap-5 uppercase;
+		@apply flex flex-col ml:hidden justify-start items-start gap-0 uppercase;
+		@apply fixed top-[87px] left-0 pt-10;
+		@apply text-2xl;
+		@apply w-dvw h-[calc(100dvh-87px)];
+		@apply bg-[#2971cf2a];
+		@apply backdrop-filter backdrop-blur-[4px];
 	}
 
 	.nav-item,
 	.child-item {
-		@apply relative flex justify-center items-center text-nowrap;
+		@apply relative flex flex-col justify-start items-start text-nowrap;
+	}
+	.nav-item,
+	.child-item {
+		@apply w-full;
+	}
+
+	.nav-children {
+		@apply w-full;
 	}
 
 	/** Nav Children */
 	.nav-children a {
-		@apply w-full py-1;
+		@apply w-full py-4;
 		@apply text-on-primary-token;
+	}
+	a {
+		@apply flex items-center justify-start w-full pl-8 py-4;
 	}
 	a:hover {
 		/* @apply text-tertiary-400; */
@@ -141,17 +166,23 @@
 
 	.nav-children {
 		@apply hidden;
-		@apply absolute top-full left-0;
+		@apply top-full left-full z-50;
 	}
 
-	.has-children[data-opened='true'] > .nav-children {
-		@apply flex flex-col justify-center items-start;
+	.has-children[data-opened='true'] > .nav-item-name a {
+		@apply underline;
 	}
-	.has-children > :global(svg) {
+	.has-children[data-opened='true'] > .nav-children {
+		@apply flex flex-col justify-start items-start;
+	}
+	.has-children > a :global(svg) {
 		@apply transform rotate-0;
 		@apply transition-transform duration-100 ease-in-out;
 	}
-	.has-children[data-opened='true'] > :global(svg) {
+	.has-children[data-opened='true'] > a {
+		@apply bg-[#220d54aa];
+	}
+	.has-children[data-opened='true'] > a :global(svg) {
 		@apply !transform !rotate-180;
 	}
 
@@ -162,9 +193,13 @@
 	.nav-frame {
 		@apply relative;
 		@apply text-on-secondary-token shadow-xl;
-		@apply p-4 rounded-2xl;
+		@apply py-4;
+		@apply w-full;
 	}
-	.nav-frame .nav-frame {
-		@apply -mt-2 ml-2;
+	.nav-frame a {
+		@apply !w-full pl-14;
+	}
+	.nav-frame .nav-frame a {
+		@apply pl-20;
 	}
 </style>
