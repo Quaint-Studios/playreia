@@ -29,6 +29,7 @@
 	import NavBrand from '$components/navigation/NavBrand.svelte';
 	import NavItems from '$components/navigation/NavItems.svelte';
 	import NavActions from '$components/navigation/NavActions.svelte';
+	import NavItemsMobile from '$components/navigation/NavItemsMobile.svelte';
 </script>
 
 <ParaglideJS {i18n}>
@@ -36,6 +37,7 @@
 		<Hamburger />
 		<NavBrand />
 		<NavItems />
+		<NavItemsMobile />
 		<NavActions />
 	</div>
 
@@ -43,12 +45,8 @@
 </ParaglideJS>
 
 <style lang="postcss">
-		@media (max-width: 768px) {
-		.navbar {
-			@apply !justify-center;
-		}
-	}
 	.navbar {
+		@apply ml:justify-center;
 		@apply fixed top-0 left-0 right-0 z-50;
 		@apply w-full py-2 px-4;
 		@apply flex justify-center ml:justify-start items-center bg-transparent;

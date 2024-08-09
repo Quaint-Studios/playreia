@@ -1,13 +1,9 @@
 <script lang="ts">
 	import { navShown } from "$lib/stores";
 	import Icon from "@iconify/svelte";
-
-  function toggleNav() {
-    $navShown = !$navShown;
-  }
 </script>
 
-<button on:click={toggleNav} class="hamburger">
+<button on:click={() => $navShown = !$navShown} id="cheeseburger" class="hamburger">
   {#if $navShown}
     <Icon icon="mdi-menu-close" font-size=32 />
   {:else}

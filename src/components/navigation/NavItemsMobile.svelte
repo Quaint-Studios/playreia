@@ -1,14 +1,23 @@
 <script lang="ts">
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import navItems from './NavItemsData';
-	import { goto } from '$app/navigation';
 	import { navShown } from '$lib/stores';
+	import { onMount } from 'svelte';
 
 	// Preload Icons
 	loadIcons(['mdi:chevron-down']);
 
 	$: openId = -1;
 	$: openSubId = -1;
+
+	onMount(() => {
+		navShown.subscribe((value) => {
+			if (!value) {
+				openId = -1;
+				openSubId = -1;
+			}
+		});
+	});
 
 	function openTab(e: HTMLEvent<HTMLAnchorElement>, tabId: number, subTab = false) {
 		if (subTab) {
@@ -32,50 +41,52 @@
 	}
 </script>
 
-<div class={`nav-items${!$navShown ? ' hidden' : ''}`}>
-	{#each navItems as { name, href, children }, i}
-		<div class="nav-item" class:has-children={children !== undefined} data-opened={openId === i}>
-			<a {href} on:click={children !== undefined ? (e) => openTab(e, i) : null}>
-				{name}
+<div id="nav-mobile-container">
+	<div id="nav-items-mobile" class={`nav-items${$navShown ? '' : ' !hidden'}`}>
+		{#each navItems as { name, href, children }, i}
+			<div class="nav-item" class:has-children={children !== undefined} data-opened={openId === i}>
+				<a {href} on:click={children !== undefined ? (e) => openTab(e, i) : null}>
+					{name}
 
+					{#if children}
+						<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
+					{/if}
+				</a>
 				{#if children}
-					<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
-				{/if}
-			</a>
-			{#if children}
-				<div class="nav-children">
-					<div class="nav-frame glass">
-						{#each children as { name, href, children: _children }, j}
-							<div
-								class="child-item"
-								class:has-children={_children !== undefined}
-								data-opened={openId == i && openSubId === j}
-							>
-								<a {href} on:click={_children !== undefined ? (e) => openTab(e, j, true) : null}>
-									{name}
+					<div class="nav-children">
+						<div class="nav-frame glass">
+							{#each children as { name, href, children: _children }, j}
+								<div
+									class="child-item"
+									class:has-children={_children !== undefined}
+									data-opened={openId == i && openSubId === j}
+								>
+									<a {href} on:click={_children !== undefined ? (e) => openTab(e, j, true) : null}>
+										{name}
 
+										{#if _children}
+											<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
+										{/if}
+									</a>
 									{#if _children}
-										<Icon icon="mdi:chevron-down" rotate={-45} class="text-on-primary-token" />
-									{/if}
-								</a>
-								{#if _children}
-									<div class="nav-children">
-										<div class="nav-frame glass">
-											{#each _children as { name, href }, k}
-												<div class="child-item">
-													<a {href}>{name}</a>
-												</div>
-											{/each}
+										<div class="nav-children">
+											<div class="nav-frame glass">
+												{#each _children as { name, href }, k}
+													<div class="child-item">
+														<a {href}>{name}</a>
+													</div>
+												{/each}
+											</div>
 										</div>
-									</div>
-								{/if}
-							</div>
-						{/each}
+									{/if}
+								</div>
+							{/each}
+						</div>
 					</div>
-				</div>
-			{/if}
-		</div>
-	{/each}
+				{/if}
+			</div>
+		{/each}
+	</div>
 </div>
 
 <!--
@@ -120,7 +131,7 @@
 
 <style lang="postcss">
 	/** Nav Items */
-	@media (max-width: 1050px) {
+	@media (max-width: 1024px) {
 		.nav-items {
 			@apply gap-0;
 			@apply text-on-primary-token;
@@ -155,6 +166,7 @@
 	}
 	a {
 		@apply flex items-center justify-start w-full pl-8 py-4;
+		@apply transition-opacity duration-100 ease-in-out;
 	}
 	a:hover {
 		/* @apply text-tertiary-400; */
@@ -174,13 +186,14 @@
 	}
 	.has-children[data-opened='true'] > .nav-children {
 		@apply flex flex-col justify-start items-start;
+		@apply bg-[#220d54ee];
 	}
 	.has-children > a :global(svg) {
 		@apply transform rotate-0;
 		@apply transition-transform duration-100 ease-in-out;
 	}
 	.has-children[data-opened='true'] > a {
-		@apply bg-[#220d54aa];
+		@apply bg-[#220d54ff];
 	}
 	.has-children[data-opened='true'] > a :global(svg) {
 		@apply !transform !rotate-180;

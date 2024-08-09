@@ -6,7 +6,7 @@
 	loadIcons(['mdi:chevron-down']);
 </script>
 
-<div class="nav-items">
+<div id="nav-items-desktop" class="nav-items">
 	{#each navItems as { name, href, children }, i}
 		<div class="nav-item" class:has-children={children !== undefined}>
 			<a {href}>{name}</a>
@@ -80,10 +80,11 @@
 
 <style lang="postcss">
 	/** Nav Items */
-	@media (max-width: 1050px) {
+	@media (max-width: 1023px) {
 		.nav-items {
 			@apply gap-6;
 			@apply text-on-primary-token;
+			@apply pl-4;
 		}
 	}
 	.nav-items {
