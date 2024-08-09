@@ -3,6 +3,7 @@
 	import navItems from './NavItemsData';
 	import { navShown } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import NavMobileContainer from './NavMobileContainer.svelte';
 
 	// Preload Icons
 	loadIcons(['mdi:chevron-down']);
@@ -41,8 +42,8 @@
 	}
 </script>
 
-<div id="nav-mobile-container">
-	<div id="nav-items-mobile" class={`nav-items${$navShown ? '' : ' !hidden'}`}>
+<NavMobileContainer>
+	<div id="nav-items-mobile" class="nav-items">
 		{#each navItems as { name, href, children }, i}
 			<div class="nav-item" class:has-children={children !== undefined} data-opened={openId === i}>
 				<a {href} on:click={children !== undefined ? (e) => openTab(e, i) : null}>
@@ -87,7 +88,7 @@
 			</div>
 		{/each}
 	</div>
-</div>
+</NavMobileContainer>
 
 <!--
 	/* Item & Child Item */
@@ -139,11 +140,9 @@
 	}
 	.nav-items {
 		@apply flex flex-col ml:hidden justify-start items-start gap-0 uppercase;
-		@apply fixed top-[87px] left-0 pt-10;
+		@apply mt-[87px] left-0 pt-10;
 		@apply text-2xl;
-		@apply w-dvw h-[calc(100dvh-87px)];
-		@apply bg-[#2971cf2a];
-		@apply backdrop-filter backdrop-blur-[4px];
+		@apply w-dvw;
 	}
 
 	.nav-item,
@@ -165,7 +164,7 @@
 		@apply text-on-primary-token;
 	}
 	a {
-		@apply flex items-center justify-start w-full pl-8 py-4;
+		@apply flex items-center justify-start w-full pl-16 py-4;
 		@apply transition-opacity duration-100 ease-in-out;
 	}
 	a:hover {

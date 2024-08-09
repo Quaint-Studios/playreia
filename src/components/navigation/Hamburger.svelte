@@ -3,7 +3,7 @@
 	import Icon from "@iconify/svelte";
 </script>
 
-<button on:click={() => $navShown = !$navShown} id="cheeseburger" class="hamburger">
+<button aria-label="Close Navbar" on:click={() => $navShown = !$navShown} id="cheeseburger" class="hamburger">
   {#if $navShown}
     <Icon icon="mdi-menu-close" font-size=32 />
   {:else}

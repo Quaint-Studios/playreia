@@ -47,7 +47,11 @@ export default [
       { name: 'Guides', href: '/learn/guides' }
     ]
   },
-  { name: 'Press-Kit', href: '/press-kit' },
+  { name: 'Press-Kit', href: '/press-kit'
+    , children: [
+      { name: 'Game Design Document', href: '/press-kit/game-design-document' },
+    ]
+   },
   { name: 'About Us', href: '/about-us' },
   {
     name: 'Contribute',

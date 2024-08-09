@@ -17,7 +17,7 @@
 
 		<div class="cta">
 			<SectionAnchor href="/play">Play Now</SectionAnchor>
-			<SectionButton>Join the Newsletter</SectionButton>
+			<SectionButton aria_label="Newsletter">Join the Newsletter</SectionButton>
 		</div>
 	</div>
 	<div class="hero-image">

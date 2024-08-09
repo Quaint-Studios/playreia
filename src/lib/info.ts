@@ -13,6 +13,18 @@ export enum Socials {
   discord = 'https://discord.gg/playreia',
 }
 
+export enum SocialsIcons {
+	github = 'mdi:github',
+	facebook = 'mdi:facebook',
+	instagram = 'mdi:instagram',
+	twitter = 'mdi:twitter',
+	tiktok = 'ic:baseline-tiktok',
+	pinterest = 'mdi:pinterest',
+	youtube = 'mdi:youtube',
+	open_collective = 'gg:open-collective',
+	discord = 'mdi:discord',
+}
+
 export enum SocialsLocal {
 	github = 'https://github.playreia.com',
 	facebook = 'https://facebook.playreia.com',
