@@ -1,3 +1,5 @@
+@import url('./css/buttons.postcss');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +11,15 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+a {
+  @apply transition-opacity duration-[50ms] ease-in-out;
+}
 a:not(.un-a):hover {
 	/* @apply text-tertiary-300/50; */
   @apply opacity-75;
 }
-
 a:not(.un-a):active {
-	@apply text-primary-500/50;
+	@apply opacity-50;
 }
 
 .glass {
@@ -45,4 +49,5 @@ a:not(.un-a):active {
 
 :root {
   --deep-purple: hsl(258, 73%, 19%);
+  --deep-purple-highlight: hsl(258, 73%, 32%);
 }

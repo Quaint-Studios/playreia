@@ -1,73 +1,12 @@
 <script lang="ts">
 	import Icon, { loadIcons } from '@iconify/svelte';
+	import navItems from './NavItemsData';
 
 	// Preload Icons
 	loadIcons(['mdi:chevron-down']);
-
-	// Must not have children more than 3 levels deep
-	const navItems = [
-		{ name: 'Home', href: '/home' },
-		{ name: 'Blog', href: '/blog' },
-		{
-			name: 'Learn',
-			href: '/learn',
-			children: [
-				{
-					name: 'Characters',
-					href: '/learn/characters',
-					children: [
-						{ name: 'Spirits', href: '/learn/characters/spirits' },
-						{ name: 'NPCs', href: '/learn/characters/npcs' },
-						{ name: 'Monsters', href: '/learn/characters/monsters' },
-						{ name: 'Bosses', href: '/learn/characters/bosses' }
-					]
-				},
-				{
-					name: 'Items',
-					href: '/learn/items',
-					children: [
-						{ name: 'Weapons', href: '/learn/items/weapons' },
-						{ name: 'Soulstones', href: '/learn/items/soulstones' },
-						{ name: 'Consumables', href: '/learn/items/consumables' },
-						{ name: 'Quest Items', href: '/learn/items/quest-items' },
-						{ name: 'Equipment', href: '/learn/items/equipment' },
-						{ name: 'Materials', href: '/learn/items/materials' }
-					]
-				},
-				{
-					name: 'Locations',
-					href: '/learn/locations',
-					children: [
-						{ name: 'Cities', href: '/learn/locations/cities' },
-						{ name: 'Dungeons', href: '/learn/locations/dungeons' },
-						{ name: 'Infinite City', href: '/learn/locations/infinite-city' }
-					]
-				},
-				{
-					name: 'Lore',
-					href: '/learn/lore',
-					children: [{ name: 'Ethereals', href: '/learn/lore/ethereals' }]
-				},
-				{ name: 'Skills', href: '/learn/skills' },
-				{ name: 'Gameplay', href: '/learn/gameplay' },
-				{ name: 'Guides', href: '/learn/guides' }
-			]
-		},
-		{ name: 'Press-Kit', href: '/press-kit' },
-		{ name: 'About Us', href: '/about-us' },
-		{
-			name: 'Contribute',
-			href: '/contribute',
-			children: [
-				{ name: 'Backers', href: '/contribute/backers' },
-				{ name: 'GitHub', href: 'https://github.com/Quaint-Studios/Reia' }
-			]
-		},
-		{ name: 'Jobs', href: '/jobs' }
-	];
 </script>
 
-<div class="nav-items">
+<div id="nav-items-desktop" class="nav-items">
 	{#each navItems as { name, href, children }, i}
 		<div class="nav-item" class:has-children={children !== undefined}>
 			<a {href}>{name}</a>
@@ -110,13 +49,7 @@
 		@apply relative;
 	}
 
-	.has-children > :global(svg) {
-		@apply transform rotate-0;
-		@apply transition-transform duration-100 ease-in-out;
-	}
-	.has-children:hover > :global(svg) {
-		@apply !transform !rotate-180;
-	}
+
 
 	/* Children and Frame */
 	.nav-children {
@@ -147,14 +80,15 @@
 
 <style lang="postcss">
 	/** Nav Items */
-	@media (max-width: 1050px) {
+	@media (max-width: 1023px) {
 		.nav-items {
 			@apply gap-6;
 			@apply text-on-primary-token;
+			@apply pl-4;
 		}
 	}
 	.nav-items {
-		@apply flex justify-start items-center gap-5 uppercase;
+		@apply hidden ml:flex justify-start items-center gap-5 uppercase;
 	}
 
 	.nav-item,
@@ -172,7 +106,7 @@
 		@apply opacity-50;
 	}
 	a:active {
-		@apply text-tertiary-600;
+		@apply !opacity-25 !text-on-primary-token;
 	}
 
 	.nav-children {
@@ -182,6 +116,13 @@
 
 	.has-children:hover > .nav-children {
 		@apply flex flex-col justify-center items-start;
+	}
+	.has-children > :global(svg) {
+		@apply transform rotate-0;
+		@apply transition-transform duration-100 ease-in-out;
+	}
+	.has-children:hover > :global(svg) {
+		@apply !transform !rotate-180;
 	}
 
 	.child-item .nav-children {

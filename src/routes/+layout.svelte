@@ -8,7 +8,7 @@
 	import '@fontsource/poppins/200.css';
 	import '@fontsource/poppins/300.css';
 	import '@fontsource/poppins/400.css';
-	import p400 from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url';
+	// import p400 from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url';
 	import '@fontsource/poppins/500.css';
 	// import '@fontsource/poppins/600.css';
 	import '@fontsource/poppins/700.css';
@@ -25,25 +25,14 @@
 	// import '@fontsource/poppins/800-italic.css';
 	// import '@fontsource/poppins/900-italic.css';
 
-	import NavBrand from '$components/navigation/NavBrand.svelte';
-	import NavItems from '$components/navigation/NavItems.svelte';
-	import NavActions from '$components/navigation/NavActions.svelte';
+	import Footer from '$components/navigation/Footer.svelte';
+	import Navbar from '$components/navigation/Navbar.svelte';
 </script>
 
 <ParaglideJS {i18n}>
-	<div class="navbar glass">
-		<NavBrand />
-		<NavItems />
-		<NavActions />
-	</div>
+	<Navbar />
 
 	<slot />
-</ParaglideJS>
 
-<style lang="postcss">
-	.navbar {
-		@apply fixed top-0 left-0 right-0 z-50;
-		@apply w-full py-2 px-4;
-		@apply flex justify-start items-center bg-transparent;
-	}
-</style>
+	<Footer />
+</ParaglideJS>
