@@ -25,35 +25,14 @@
 	// import '@fontsource/poppins/800-italic.css';
 	// import '@fontsource/poppins/900-italic.css';
 
-	import Hamburger from '$components/navigation/Hamburger.svelte';
-	import NavBrand from '$components/navigation/NavBrand.svelte';
-	import NavItems from '$components/navigation/NavItems.svelte';
-	import NavActions from '$components/navigation/NavActions.svelte';
-	import NavItemsMobile from '$components/navigation/NavItemsMobile.svelte';
-	import { navShown } from '$lib/stores';
 	import Footer from '$components/navigation/Footer.svelte';
+	import Navbar from '$components/navigation/Navbar.svelte';
 </script>
 
 <ParaglideJS {i18n}>
-	<div class={`navbar${$navShown ? '' : ' glass'}`}>
-		<Hamburger />
-		<NavBrand />
-		<NavItems />
-		<NavItemsMobile />
-		<NavActions />
-	</div>
+	<Navbar />
 
 	<slot />
 
 	<Footer />
 </ParaglideJS>
-
-<style lang="postcss">
-	.navbar {
-		@apply ml:justify-center;
-		@apply fixed top-0 left-0 right-0 z-50;
-		@apply w-full py-2 px-4;
-		@apply flex justify-center ml:justify-start items-center;
-		@apply transition-[background-color] duration-200 ease-in-out;
-	}
-</style>
