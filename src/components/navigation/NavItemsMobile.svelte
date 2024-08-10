@@ -176,7 +176,10 @@
 	}
 
 	.nav-children {
-		@apply hidden;
+		@apply flex;
+		@apply overflow-hidden max-h-0;
+		@apply transition-[background-color] duration-100 ease-in-out;
+		@apply transition-[max-height] duration-100 ease-in-out;
 		@apply top-full left-full z-50;
 	}
 
@@ -186,6 +189,7 @@
 	.has-children[data-opened='true'] > .nav-children {
 		@apply flex flex-col justify-start items-start;
 		@apply bg-[#220d54ee];
+		@apply max-h-[200vh];
 	}
 	.has-children > a :global(svg) {
 		@apply transform rotate-0;

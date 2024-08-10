@@ -31,6 +31,7 @@
 	import NavActions from '$components/navigation/NavActions.svelte';
 	import NavItemsMobile from '$components/navigation/NavItemsMobile.svelte';
 	import { navShown } from '$lib/stores';
+	import Footer from '$components/navigation/Footer.svelte';
 </script>
 
 <ParaglideJS {i18n}>
@@ -43,6 +44,8 @@
 	</div>
 
 	<slot />
+
+	<Footer />
 </ParaglideJS>
 
 <style lang="postcss">
@@ -51,5 +54,6 @@
 		@apply fixed top-0 left-0 right-0 z-50;
 		@apply w-full py-2 px-4;
 		@apply flex justify-center ml:justify-start items-center;
+		@apply transition-[background-color] duration-200 ease-in-out;
 	}
 </style>

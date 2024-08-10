@@ -1,15 +1,19 @@
 <script lang="ts">
 	import { navShown } from '$lib/stores';
+	import { quadInOut } from 'svelte/easing';
+	import { fade } from 'svelte/transition';
 
 	import Footer from './Footer.svelte';
 </script>
 
-<div id="nav-mobile-container" class={`${$navShown ? '' : ' !hidden'}`}>
+{#key $navShown}
+<div id="nav-mobile-container" transition:fade={{ delay: 0, duration: 200, easing: quadInOut }} class={`${$navShown ? '' : ' !hidden'}`}>
 	<div class="scrollable">
 		<slot />
 	</div>
-	<Footer />
+	<Footer navbar />
 </div>
+{/key}
 
 <style lang="postcss">
 	/** Container */
@@ -23,6 +27,6 @@
 
 	.scrollable {
 		@apply overflow-x-hidden overflow-y-auto h-full;
-    @apply hide-scrollbar;
+    @apply hide-scrollbar relative;
 	}
 </style>

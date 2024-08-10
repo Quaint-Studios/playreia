@@ -3,6 +3,8 @@
 
 	import { navShown } from '$lib/stores';
 	import Icon from '@iconify/svelte';
+
+  export let navbar = false;
 </script>
 
 <footer>
@@ -34,7 +36,7 @@
 			><Icon title="YouTube" desc="Reia's YouTube Social Icon" icon={SocialsIcons.youtube} /></a
 		>
 	</div>
-	{#if !$navShown}
+	{#if !$navShown && !navbar}
 		<div class="info">
 			<div class="game-info">
 				<div class="font-bold">Game Info</div>
