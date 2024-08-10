@@ -211,6 +211,7 @@
 		@apply text-on-secondary-token shadow-xl;
 		@apply py-4;
 		@apply w-full;
+		@apply border-b-0;
 	}
 	.nav-frame a {
 		@apply !w-full pl-14;

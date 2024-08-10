@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { Socials, SocialsIcons } from '$lib/info';
-
-	import { navShown } from '$lib/stores';
 	import Icon from '@iconify/svelte';
 
   export let navbar = false;
@@ -36,7 +34,7 @@
 			><Icon title="YouTube" desc="Reia's YouTube Social Icon" icon={SocialsIcons.youtube} /></a
 		>
 	</div>
-	{#if !$navShown && !navbar}
+	{#if !navbar}
 		<div class="info">
 			<div class="game-info">
 				<div class="font-bold">Game Info</div>
