@@ -1,3 +1,4 @@
+@import url('./css/texts.postcss');
 @import url('./css/buttons.postcss');
 
 @tailwind base;
@@ -9,17 +10,6 @@ html,
 body {
 	@apply h-full text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg;
 	font-family: 'Poppins', sans-serif;
-}
-
-a {
-  @apply transition-opacity duration-[50ms] ease-in-out;
-}
-a:not(.un-a):hover {
-	/* @apply text-tertiary-300/50; */
-  @apply opacity-75;
-}
-a:not(.un-a):active {
-	@apply opacity-50;
 }
 
 .glass {
