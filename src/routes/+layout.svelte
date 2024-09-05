@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PageContainer from './../components/containers/PageContainer.svelte';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import { i18n } from '$lib/i18n';
 
@@ -32,7 +33,9 @@
 <ParaglideJS {i18n}>
 	<Navbar />
 
-	<slot />
+	<PageContainer>
+		<slot />
+	</PageContainer>
 
 	<Footer />
 </ParaglideJS>
