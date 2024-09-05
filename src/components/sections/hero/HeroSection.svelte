@@ -16,7 +16,7 @@
 		</h3>
 
 		<div class="cta">
-			<SectionAnchor href="/play">Play Now</SectionAnchor>
+			<SectionAnchor href="/game">Play Now</SectionAnchor>
 			<SectionButton aria_label="Newsletter">Join the Newsletter</SectionButton>
 		</div>
 	</div>
@@ -36,7 +36,7 @@
 <style lang="postcss">
 	.hero {
 		@apply relative w-full;
-		@apply pt-[105px];
+		@apply pt-[105px] pb-14 -mt-[102.667px];
 	}
 
 	.hero-image {

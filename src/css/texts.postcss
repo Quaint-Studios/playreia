@@ -1,0 +1,27 @@
+body h1 {
+	@apply text-6xl font-bold mb-4;
+}
+body h2 {
+	@apply text-3xl font-bold mb-3;
+}
+body h3 {
+	@apply !text-2xl !font-bold mb-2;
+}
+body h4 {
+	@apply !text-xl !font-bold mb-1;
+}
+
+a {
+    @apply transition-opacity duration-[50ms] ease-in-out;
+}
+
+.page-container a {
+    @apply text-tertiary-300;
+}
+a:not(.un-a):hover {
+	/* @apply text-tertiary-300/50; */
+	@apply opacity-75;
+}
+a:not(.un-a):active {
+	@apply opacity-50;
+}
