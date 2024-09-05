@@ -7,11 +7,11 @@
 	import { navShown } from '$lib/stores';
 	import { onMount } from 'svelte';
 
-  let lastScroll = 0;
-  let turtle = false;
-  let transparent = true;
+	let lastScroll = 0;
+	let turtle = false;
+	let transparent = true;
 
-  $: turtleBar = turtle ? 'turtle' : '';
+	$: turtleBar = turtle ? 'turtle' : '';
 	$: transparencyBar = $navShown || transparent ? 'bg-transparent' : 'icu-bar';
 
 	onMount(() => {
@@ -43,10 +43,10 @@
 		@apply w-full py-2 px-4;
 		@apply flex justify-center ml:justify-start items-center;
 		@apply transition-[background-color] duration-200 ease-in-out;
-    @apply transition-[top] duration-[330ms] ease-in-out;
+		@apply transition-[top] duration-[330ms] ease-in-out;
 	}
 
-  .turtle {
-    top: -150px !important;
-  }
+	.turtle {
+		top: -150px !important;
+	}
 </style>
