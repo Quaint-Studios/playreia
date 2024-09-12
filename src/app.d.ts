@@ -1,5 +1,6 @@
 import type { AvailableLanguageTag } from '../../lib/paraglide/runtime';
 import type { ParaglideLocals } from '@inlang/paraglide-sveltekit';
+
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 // and what to do when importing types
@@ -17,6 +18,3 @@ declare global {
 		currentTarget: EventTarget & T;
 	};
 }
-
-// types/svelte-lazy.d.ts
-declare module 'svelte-lazy';
