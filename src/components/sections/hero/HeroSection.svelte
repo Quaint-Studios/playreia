@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Lazy from 'svelte-lazy';
 
-	import Divider from '../Divider.svelte';
 	import SectionAnchor from '../SectionAnchor.svelte';
 	import SectionButton from '../SectionButton.svelte';
 </script>
@@ -9,11 +8,11 @@
 <section class="section hero">
 	<div class="hero-content">
 		<h2><strong>Explore</strong> endless magical worlds in <strong>Reia</strong>!</h2>
-		<h3>
+		<p>
 			Reia is an action-adventure RPG and also an open-source game. Play offline or online with
 			friends, or login for an MMO experience! Create and explore worlds, manage your own economy
 			and products, and restore Reia's world via the story. Choose the way you want to play.
-		</h3>
+		</p>
 
 		<div class="cta">
 			<SectionAnchor href="/game">Play Now</SectionAnchor>
@@ -47,12 +46,12 @@
 
 	.hero-content {
 		@apply pt-24 px-10 pb-10;
-		@apply max-w-[370rpx] sm:max-w-[390px] md:max-w-[614px];
+		@apply max-w-[450px] md:max-w-[614px];
 	}
 	.hero-content h2 {
 		@apply block text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold;
 	}
-	.hero-content h3 {
+	.hero-content p {
 		@apply block font-medium pt-8;
 	}
 	.hero-content strong {
