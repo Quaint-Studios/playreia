@@ -67,7 +67,7 @@
 
 <style lang="postcss">
 	footer {
-		@apply w-full mt-0 ml:mt-16;
+		@apply w-full mt-0;
 	}
 
 	footer .social-icons {
