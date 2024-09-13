@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="hero-image">
-		<Lazy keep={true}>
+		<Lazy keep={true} height="700px">
 			<enhanced:img
 				class="hero-image"
 				src="$assets/images/hero/hero_1.jpg"
@@ -39,8 +39,8 @@
 	}
 
 	.hero-image {
-		@apply absolute w-full top-0 left-0;
-		@apply object-cover h-[calc(100%+5rem)];
+		@apply absolute h-full w-full top-0 left-0;
+		@apply object-cover;
 		z-index: -1;
 	}
 
@@ -64,9 +64,8 @@
 	}
 
 	.hero-gradient {
-		@apply w-full absolute mb-[-10rem] top-0 left-0;
+		@apply w-full h-full absolute mb-[-10rem] top-0 left-0;
 		z-index: -1;
-		height: calc(100% + 10rem);
 		background-image: linear-gradient(
 			to bottom right,
 			rgba(0, 0, 0, 0.4),
