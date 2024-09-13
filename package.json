@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"@floating-ui/dom": "1.6.10",
+		"@fontsource/metropolis": "^5.1.0",
 		"@fontsource/poppins": "^5.1.0",
 		"@inlang/paraglide-sveltekit": "0.11.0",
 		"@sveltejs/adapter-vercel": "^5.4.3",

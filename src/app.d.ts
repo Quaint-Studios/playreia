@@ -17,4 +17,6 @@ declare global {
 	type HTMLEvent<T extends HTMLElement> = MouseEvent & {
 		currentTarget: EventTarget & T;
 	};
+
+	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 }
