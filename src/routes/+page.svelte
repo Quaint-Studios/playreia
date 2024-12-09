@@ -1,7 +1,2 @@
-<script lang="ts">
-	import HeroSection from '$components/sections/hero/HeroSection.svelte';
-	import DownloadSection from '$components/sections/download/DownloadSection.svelte';
-</script>
-
-<HeroSection />
-<DownloadSection />
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>

@@ -1,5 +1,3 @@
-// file initialized by the Paraglide-SvelteKit CLI - Feel free to edit it
+import * as runtime from '$lib/paraglide/runtime';
 import { createI18n } from '@inlang/paraglide-sveltekit';
-import * as runtime from '$lib/paraglide/runtime.js';
-
 export const i18n = createI18n(runtime);
