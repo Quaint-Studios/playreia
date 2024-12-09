@@ -1,0 +1,28 @@
+h1 {
+	@apply text-6xl font-bold;
+}
+
+h2 {
+	@apply text-4xl font-black;
+}
+
+h3 {
+	@apply text-3xl font-black;
+}
+
+h1 strong,
+h2 strong {
+	@apply font-black text-[--primary];
+}
+
+h1.alt strong {
+	@apply text-[--pink];
+}
+
+a:active {
+	@apply scale-90;
+}
+
+.info-paragraph {
+	@apply max-w-screen-md indent-6 text-lg font-medium;
+}

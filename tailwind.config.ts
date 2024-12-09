@@ -7,7 +7,11 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			boxShadow: {
+				'boxed': '0px 4px 28px rgba(180,190,205,.28)',
+			  }
+		}
 	},
 
 	plugins: [typography, forms, containerQueries]

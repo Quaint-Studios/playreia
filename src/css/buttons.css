@@ -1,0 +1,111 @@
+.lb-button {
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid transparent;
+	border-radius: 3em;
+	font-weight: 700;
+	line-height: 1;
+	opacity: 100%;
+	transition: all 0.1s ease-in-out;
+}
+.lb-button--roundness-small {
+	border-radius: 7px;
+}
+.lb-button--roundness-medium {
+	border-radius: 8px;
+}
+.lb-button--roundness-large {
+	border-radius: 10px;
+}
+.lb-button--roundness-full {
+	border-radius: 9999px;
+}
+.lb-button--underline,
+.lb-button--selected {
+	color: var(--hover-color);
+	position: relative;
+}
+.lb-button--underline:after,
+body .lb-button--selected:after {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	content: '';
+	position: absolute;
+	display: inline-block;
+	margin: 0 auto;
+	transition: width 0.1s ease-in-out;
+}
+.lb-button--underline:after {
+	width: 0px;
+	transition: width 0.1s ease-in-out;
+}
+.lb-button--square {
+	border-radius: 4rem;
+}
+.lb-button--primary {
+	background-color: #1ea7fd;
+	@apply shadow-lg hover:shadow-xl;
+	transition: box-shadow 0.1s ease-in-out;
+	color: white;
+}
+.lb-button--secondary {
+	box-shadow: rgba(0, 0, 0, 0.025) 0px 0px 0px 1px inset;
+	background-color: transparent;
+	color: #333;
+}
+.lb-button--raw {
+	box-shadow: none;
+}
+.lb-button--small {
+	padding: 10px 16px;
+	font-size: 12px;
+}
+.lb-button--small.lb-button--underline:hover:after {
+	width: calc(100% - 32px);
+}
+body .lb-button--small.lb-button--selected:after {
+	width: calc(100% - (32px * 1.5));
+}
+.lb-button--medium {
+	padding: 11px 20px;
+	font-size: 14px;
+}
+.lb-button--medium.lb-button--underline:hover:after {
+	width: calc(100% - 40px);
+}
+body .lb-button--medium.lb-button--selected:after {
+	width: calc(100% - (40px * 1.5));
+}
+.lb-button--large {
+	padding: 12px 24px;
+	font-size: 16px;
+}
+.lb-button--large.lb-button--underline:hover:after {
+	width: calc(100% - 48px);
+}
+body .lb-button--large.lb-button--selected:after {
+	width: calc(100% - (48px * 1.5));
+}
+.lb-button--xlarge {
+	padding: 14px 28px;
+	font-size: 20px;
+}
+.lb-button--xlarge.lb-button--underline:hover:after {
+	width: calc(100% - 56px);
+}
+body .lb-button--xlarge.lb-button--selected:after {
+	width: calc(100% - (56px * 1.5));
+}
+.lb-button:hover {
+	opacity: 0.85;
+}
+.lb-button:active {
+	opacity: 0.75;
+	transform: scale(0.95);
+}
+.lb-button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

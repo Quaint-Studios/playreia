@@ -8,6 +8,27 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	type HTMLAttributeAnchorRel =
+		| 'alternate'
+		| 'author'
+		| 'bookmark'
+		| 'external'
+		| 'help'
+		| 'license'
+		| 'next'
+		| 'nofollow'
+		| 'noreferrer'
+		| 'noopener'
+		| 'prev'
+		| 'search'
+		| 'tag';
+
+	type HTMLEvent<T extends HTMLElement> = MouseEvent & {
+		currentTarget: EventTarget & T;
+	};
+
+	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 }
 
 export {};
