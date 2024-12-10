@@ -62,13 +62,14 @@
 	}: Props = $props();
 
 	let hoverColorState = $state(color);
+	let borderHoverColorState = $state(borderColor);
 </script>
 
 <a
 	{target}
 	{rel}
 	{href}
-	style="border: 2px solid {borderColor};"
+	style="border: 2px solid {borderHoverColorState};"
 	style:color={hoverColorState ?? color}
 	style:background-color={backgroundColor}
 	class={['lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(' ')}
@@ -80,10 +81,14 @@
 	onmouseenter={() => {
 		if (hoverColor) {
 			hoverColorState = hoverColor;
+			if (borderColor !== 'transparent') {
+				borderHoverColorState = hoverColor;
+			}
 		}
 	}}
 	onmouseleave={() => {
 		hoverColorState = color;
+		borderHoverColorState = borderColor;
 	}}
 >
 	{@render children()}

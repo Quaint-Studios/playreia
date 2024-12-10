@@ -1,3 +1,7 @@
+.poppins {
+	font-family: 'Poppins', sans-serif;
+}
+
 h1 {
 	@apply text-6xl font-bold;
 }
@@ -12,11 +16,11 @@ h3 {
 
 h1 strong,
 h2 strong {
-	@apply font-black text-[--primary];
+	@apply font-black text-[--tertiary];
 }
 
 h1.alt strong {
-	@apply text-[--pink];
+	@apply text-[--deepPurple];
 }
 
 a:active {

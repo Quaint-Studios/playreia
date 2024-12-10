@@ -1,6 +1,7 @@
 :root {
 	--primary: #7666c1;
 	--secondary: #ffffff;
+	--tertiary: #f9f3e5;
 	--success: #77dd77;
 	--danger: #ff6961;
 	--warning: #ffd700;
@@ -9,6 +10,7 @@
 	--border: #f4f4f4;
 	--light: #f0f8ff;
 	--dark: #323232;
+	--blue: #239af4;
 	--deepPurple: #220d54;
 	--deepPurpleHighlight: #3a168;
 }

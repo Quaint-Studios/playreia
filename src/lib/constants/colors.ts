@@ -9,6 +9,8 @@ export const colors = {
 	border: '#f4f4f4',
 	light: '#f0f8ff',
 	dark: '#323232',
+	blue: '#239af4',
+	darkBlue: '#1e88e5',
 	deepPurple: '#220d54',
 	deepPurpleHighlight: '#3a168d'
 };

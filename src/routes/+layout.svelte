@@ -3,8 +3,12 @@
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import '../app.css';
 
-	// Supports weights 100-900
-	import '@fontsource-variable/urbanist';
+	import '@fontsource-variable/urbanist'; // Supports weights 100-900
+	import '@fontsource/poppins/500.css';
+	import '@fontsource/poppins/600.css';
+	import '@fontsource/poppins/700.css';
+	import '@fontsource/poppins/900.css';
+
 	import Navbar from '$components/navigation/Navbar.svelte';
 
 	let { children } = $props();

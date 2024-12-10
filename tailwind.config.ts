@@ -18,12 +18,11 @@ export default {
 	},
 
 	plugins: [
-		skeleton({
-			// NOTE: each theme included will be added to your CSS bundle
-			themes: [themes.rose]
-		}),
 		typography,
 		forms,
-		containerQueries
+		containerQueries,
+		skeleton({
+			themes: [themes.rose]
+		})
 	]
 } satisfies Config;

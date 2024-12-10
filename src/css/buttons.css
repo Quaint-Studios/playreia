@@ -35,11 +35,9 @@ body .lb-button--selected:after {
 	position: absolute;
 	display: inline-block;
 	margin: 0 auto;
-	transition: width 0.1s ease-in-out;
 }
 .lb-button--underline:after {
 	width: 0px;
-	transition: width 0.1s ease-in-out;
 }
 .lb-button--square {
 	border-radius: 4rem;
@@ -47,7 +45,6 @@ body .lb-button--selected:after {
 .lb-button--primary {
 	background-color: #1ea7fd;
 	@apply shadow-lg hover:shadow-xl;
-	transition: box-shadow 0.1s ease-in-out;
 	color: white;
 }
 .lb-button--secondary {
@@ -99,10 +96,10 @@ body .lb-button--xlarge.lb-button--selected:after {
 	width: calc(100% - (56px * 1.5));
 }
 .lb-button:hover {
-	opacity: 0.85;
+	opacity: 0.90;
 }
 .lb-button:active {
-	opacity: 0.75;
+	opacity: 0.80;
 	transform: scale(0.95);
 }
 .lb-button:disabled {
