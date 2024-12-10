@@ -5,9 +5,12 @@
 
 	// Supports weights 100-900
 	import '@fontsource-variable/urbanist';
+	import Navbar from '$components/navigation/Navbar.svelte';
 
 	let { children } = $props();
 </script>
+
+<Navbar />
 
 <ParaglideJS {i18n}>
 	{@render children()}
