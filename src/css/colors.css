@@ -14,3 +14,28 @@
 	--deepPurple: #220d54;
 	--deepPurpleHighlight: #3a168;
 }
+
+.glass {
+	/* From https://css.glass */
+	background: rgba(58, 50, 95, 0.3);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-light {
+	background: rgba(255, 255, 255, 0.09);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-dark {
+	background: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
