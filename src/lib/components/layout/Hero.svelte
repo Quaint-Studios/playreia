@@ -28,8 +28,28 @@
 		</p>
 
 		<div class="cta">
-			<Link button primary href="/game" backgroundColor={colors.primary} hoverColor={colors.dark} color={colors.light} roundness="large" size="large">Play now</Link>
-			<Link button primary href="/newsletter" backgroundColor={colors.deepPurpleHighlight} color={colors.light} hoverColor={colors.link} roundness="large" size="large">Join the Newsletter</Link>
+			<Link
+				button
+				primary
+				href="/game"
+				backgroundColor={colors.blue}
+				hoverColor={colors.deepPurple}
+				color={colors.light}
+				roundness="large"
+				size="large">Play now</Link
+			>
+			<Link
+				button
+				primary
+				href="/newsletter"
+				backgroundColor={colors.secondary}
+				color={colors.dark}
+				hoverColor={colors.deepPurpleHighlight}
+				--hover-color={colors.deepPurpleHighlight}
+				borderColor={colors.border}
+				roundness="large"
+				size="large">Join the Newsletter</Link
+			>
 		</div>
 	</div>
 </section>
@@ -43,12 +63,12 @@
 
 	.hero .content {
 		@apply absolute left-0 top-0 max-w-[25rem] sm:max-w-[34rem];
-		@apply mx-4 sm:ml-12 h-full font-bold text-[--light];
-		@apply transition-[margin_max-width] ease-in-out duration-150;
+		@apply mx-4 h-full font-bold text-[--light] sm:ml-12;
+		@apply transition-[margin_max-width] duration-150 ease-in-out;
 		@apply flex flex-col justify-center;
 	}
 	.hero .content h1 {
-		@apply transition-[font-size] ease-in-out duration-150;
+		@apply transition-[font-size] duration-150 ease-in-out;
 		@apply mb-4 text-4xl sm:text-5xl;
 	}
 	.hero .content h1 strong {

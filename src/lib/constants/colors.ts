@@ -12,8 +12,9 @@ export const colors = {
 	buttonGray: '#d3d3d3',
 	light: '#f0f8ff',
 	dark: '#323232',
+	lightDark: '#424242',
 	blue: '#239af4',
-	darkBlue: '#1e88e5',
+	deepBlue: '#0d47a1',
 	deepPurple: '#220d54',
 	deepPurpleHighlight: '#3a168d'
 };

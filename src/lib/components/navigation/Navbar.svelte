@@ -34,10 +34,10 @@
 					href="/play"
 					button
 					primary
-					backgroundColor={colors.primary}
+					backgroundColor={colors.blue}
 					color={colors.light}
-					hoverColor={colors.dark}
-					--hover-color={colors.dark}
+					hoverColor={colors.deepPurple}
+					--hover-color={colors.deepPurple}
 					roundness="large"
 				>
 					<div class="flex justify-center gap-1">
