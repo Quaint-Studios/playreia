@@ -42,7 +42,7 @@
 				>
 					<div class="flex justify-center gap-1">
 						<Icon icon="solar:play-bold" />
-						<span class="w-full">Play now</span>
+						<span class="w-full text-nowrap">Play now</span>
 					</div>
 				</Link>
 				<UserMenu />
