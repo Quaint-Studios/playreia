@@ -17,13 +17,13 @@
 			<div class="hidden lg:inline-block">
 				{#each listData as { name, href, children }}
 					<Link {href} color={colors.light} hoverColor={colors.deepPurple}>
-						{name}
+						{name.toUpperCase()}
 					</Link>
 				{/each}
 			</div>
 		</div>
 		<div class="flex">
-			<div class="hidden gap-2 lg:flex">
+			<div class="hidden gap-2 lg:flex items-center">
 				<Link
 					href="/play"
 					button
@@ -36,7 +36,7 @@
 				>
 					<div class="flex justify-center gap-1">
 						<Icon icon="solar:play-bold" />
-						<span>Play now</span>
+						<span class="w-full">Play now</span>
 					</div>
 				</Link>
 				<UserMenu />
