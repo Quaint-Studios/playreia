@@ -6,7 +6,7 @@
 	font-weight: 700;
 	line-height: 1;
 	opacity: 100%;
-	transition: all 0.1s ease-in-out;
+	transition: width 0.1s ease-in-out, box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 .lb-button--roundness-small {
 	border-radius: 7px;

@@ -7,6 +7,7 @@
 	import { tick } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
 	import alinks from '$lib/constants/alinks';
+	import NavBrand from './NavBrand.svelte';
 
 	interface Props {
 		listData: NavItem[];
@@ -67,20 +68,25 @@ Tips for Drawer modals:
 <Modal
 	bind:open={drawerState}
 	triggerBase="btn preset-tonal"
-	contentBase="bg-white p-4 space-y-4 shadow-xl w-[480px] h-screen"
-	positionerJustify="justify-start"
+	contentBase="bg-white p-4 space-y-4 w-[480px] h-screen"
+	positionerJustify="justify-center"
 	positionerAlign=""
 	positionerPadding=""
 	transitionsPositionerIn={{ x: -480, duration: 200 }}
-	transitionsPositionerOut={{ x: -480, duration: 200 }}
+	transitionsPositionerOut={{ x: -480, duration: 100 }}
+	transitionsBackdropIn={{ duration: 200 }}
+	transitionsBackdropOut={{ duration: 100 }}
+	backdropBackground="glass"
+	contentBackground="bg-transparent"
 >
 	{#snippet content()}
-		<header class="flex items-center justify-between">
-			<h2 class="text-2xl font-bold text-[--primary]">La Beau</h2>
+	<div class="content">
+		<header class="flex items-center justify-between absolute w-full left-0 px-6">
+			<NavBrand />
 			<div class="flex items-center justify-center gap-4">
 				<UserMenu />
 				<button onclick={drawerClose}>
-					<Icon icon="solar:close-circle-bold" font-size="48px" class="hover:text-[--primary]" />
+					<Icon icon="solar:close-circle-bold" font-size="48px" class="text-[--light] hover:text-[--deepPurple]" />
 				</button>
 			</div>
 		</header>
@@ -89,10 +95,8 @@ Tips for Drawer modals:
 				{#each listData as { name, href }}
 					<Link
 						{href}
-						color={colors.dark}
-						hoverColor={colors.primary}
-						underline
-						--hover-color={colors.primary}
+						color={colors.light}
+						hoverColor={colors.deepPurple}
 						size="xlarge"
 					>
 						{name}
@@ -101,14 +105,13 @@ Tips for Drawer modals:
 			</div>
 			<div class="mt-auto flex items-center justify-center gap-2">
 				<Link
-					href={alinks.calendly}
+					href="/play"
 					button
 					primary
-					backgroundColor={'#fff'}
-					color={colors.dark}
-					hoverColor={colors.primary}
-					--hover-color={colors.primary}
-					borderColor={colors.border}
+					backgroundColor={colors.primary}
+					color={colors.light}
+					hoverColor={colors.buttonGray}
+					--hover-color={colors.border}
 					size="large"
 					roundness="large"
 				>
@@ -126,18 +129,22 @@ Tips for Drawer modals:
 				</a>
 			{/each}
 		</footer>
+	</div>
 	{/snippet}
 </Modal>
 
 <style lang="postcss">
+	.content {
+		@apply flex flex-col h-full;
+	}
 	article {
-		@apply flex h-[calc(100svh-175px)] flex-col justify-between;
+		@apply flex h-full flex-col justify-between pt-24;
 	}
 	footer {
 		@apply flex justify-center gap-3 py-4;
 	}
 	footer * {
-		@apply rounded-lg bg-[#f8ad9a] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
+		@apply rounded-lg bg-[--primary] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>
