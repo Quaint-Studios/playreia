@@ -37,6 +37,9 @@
 </button>
 
 <style lang="postcss">
+	button:hover {
+		@apply border-[--deepPurple];
+	}
 	button:hover .icon-holder {
 		@apply bg-[--deepPurple];
 	}

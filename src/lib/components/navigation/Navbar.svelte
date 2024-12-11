@@ -18,11 +18,11 @@
 				{#each listData as { name, href, children }}
 					<Link {href} color={colors.light} hoverColor={colors.deepPurple} tight>
 						
-                        <div class="flex justify-center items-center gap-1">
+                        <div class="flex justify-center items-center gap-1 flex-nowrap">
                             {#if children}
                             <Icon icon="solar:alt-arrow-down-bold" />
                             {/if}
-                            <span class="w-full">{name.toUpperCase()}</span>
+                            <span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
                         </div>
 					</Link>
 				{/each}

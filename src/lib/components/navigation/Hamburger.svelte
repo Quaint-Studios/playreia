@@ -51,7 +51,7 @@
 
 <button
 	onclick={drawerOpen}
-	class="absolute bottom-0 right-4 top-0 px-4 hover:text-[--deepPurple] text-white lg:static lg:hidden"
+	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-[--deepPurple] lg:static lg:hidden"
 >
 	<Icon icon="solar:hamburger-menu-linear" font-size="24px" class="hover:text-[inherit]" />
 </button>
@@ -68,7 +68,7 @@ Tips for Drawer modals:
 <Modal
 	bind:open={drawerState}
 	triggerBase="btn preset-tonal"
-	contentBase="bg-white p-4 space-y-4 w-[480px] h-screen"
+	contentBase="p-4 space-y-4 w-[480px] h-screen"
 	positionerJustify="justify-center"
 	positionerAlign=""
 	positionerPadding=""
@@ -80,65 +80,69 @@ Tips for Drawer modals:
 	contentBackground="bg-transparent"
 >
 	{#snippet content()}
-	<div class="content">
-		<header class="flex items-center justify-between absolute w-full left-0 px-6">
-			<NavBrand />
-			<div class="flex items-center justify-center gap-4">
-				<UserMenu />
-				<button onclick={drawerClose}>
-					<Icon icon="solar:close-circle-bold" font-size="48px" class="text-[--light] hover:text-[--deepPurple]" />
-				</button>
-			</div>
-		</header>
-		<article>
-			<div class="flex flex-col items-center justify-center">
-				{#each listData as { name, href }}
+		<div class="content">
+			<header class="absolute left-0 flex w-full items-center justify-between px-6">
+				<NavBrand />
+				<div class="flex items-center justify-center gap-4">
+					<UserMenu />
+					<button onclick={drawerClose}>
+						<Icon
+							icon="solar:close-circle-bold"
+							font-size="48px"
+							class="text-[--light] hover:text-[--deepPurple]"
+						/>
+					</button>
+				</div>
+			</header>
+			<article>
+				<div class="flex flex-col items-center justify-center">
+					{#each listData as { name, href, children }}
+						<Link {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
+							<div class="flex justify-center gap-1">
+								{#if children}
+									<Icon icon="solar:alt-arrow-down-bold" />
+								{/if}
+								<span>{name}</span>
+							</div>
+						</Link>
+					{/each}
+				</div>
+				<div class="mt-auto flex items-center justify-center gap-2">
 					<Link
-						{href}
+						href="/play"
+						button
+						primary
+						backgroundColor={colors.primary}
 						color={colors.light}
-						hoverColor={colors.deepPurple}
-						size="xlarge"
+						hoverColor={colors.buttonGray}
+						--hover-color={colors.border}
+						size="large"
+						roundness="large"
 					>
-						{name}
+						<div class="flex justify-center gap-1">
+							<Icon icon="solar:play-bold" />
+							<span>Play now</span>
+						</div>
 					</Link>
+				</div>
+			</article>
+			<footer>
+				{#each socials as { id, icon, href }}
+					<a {href} target="_blank" rel="nofollow" class="social">
+						<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
+					</a>
 				{/each}
-			</div>
-			<div class="mt-auto flex items-center justify-center gap-2">
-				<Link
-					href="/play"
-					button
-					primary
-					backgroundColor={colors.primary}
-					color={colors.light}
-					hoverColor={colors.buttonGray}
-					--hover-color={colors.border}
-					size="large"
-					roundness="large"
-				>
-					<div class="flex justify-center gap-1">
-						<Icon icon="solar:play-bold" />
-						<span>Play now</span>
-					</div>
-				</Link>
-			</div>
-		</article>
-		<footer>
-			{#each socials as { id, icon, href }}
-				<a {href} target="_blank" rel="nofollow" class="social">
-					<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
-				</a>
-			{/each}
-		</footer>
-	</div>
+			</footer>
+		</div>
 	{/snippet}
 </Modal>
 
 <style lang="postcss">
 	.content {
-		@apply flex flex-col h-full;
+		@apply flex h-full flex-col;
 	}
 	article {
-		@apply flex h-full flex-col justify-between pt-24;
+		@apply flex h-full flex-col justify-between pt-32;
 	}
 	footer {
 		@apply flex justify-center gap-3 py-4;
