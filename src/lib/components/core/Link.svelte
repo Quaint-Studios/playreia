@@ -23,13 +23,15 @@
 		backgroundColor?: string | undefined;
 		/** What border color to use. */
 		borderColor?: string;
+		/** Tighten the padding */
+		tight?:	boolean;
 		/** Should the link be underlined on hover? */
+		/** How round should the button be? */
+		roundness?: 'small' | 'medium' | 'large' | 'full';
 		underline?: boolean;
 		/** Should the link be underlined less on hover? */
 		selected?: boolean;
 
-		/** How round should the button be? */
-		roundness?: 'small' | 'medium' | 'large' | 'full';
 		/** How large should the button be? */
 		size?: 'small' | 'medium' | 'large' | 'xlarge';
 		/** Use raw styles. */
@@ -52,6 +54,7 @@
 		backgroundColor = undefined,
 		borderColor = 'transparent',
 
+		tight = false,
 		roundness = 'medium',
 		underline = false,
 		selected = false,
@@ -78,6 +81,7 @@
 	class:lb-button--underline={underline}
 	class:lb-button--selected={selected}
 	class:lb-button--raw={raw}
+	class:lb-button--tight={tight}
 	onmouseenter={() => {
 		if (hoverColor) {
 			hoverColorState = hoverColor;

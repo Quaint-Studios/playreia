@@ -14,10 +14,16 @@
 	<div class="nav-container">
 		<div class="flex items-center justify-center">
 			<NavBrand />
-			<div class="hidden lg:inline-block">
+			<div class="hidden lg:flex">
 				{#each listData as { name, href, children }}
-					<Link {href} color={colors.light} hoverColor={colors.deepPurple}>
-						{name.toUpperCase()}
+					<Link {href} color={colors.light} hoverColor={colors.deepPurple} tight>
+						
+                        <div class="flex justify-center items-center gap-1">
+                            {#if children}
+                            <Icon icon="solar:alt-arrow-down-bold" />
+                            {/if}
+                            <span class="w-full">{name.toUpperCase()}</span>
+                        </div>
 					</Link>
 				{/each}
 			</div>
