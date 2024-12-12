@@ -6,11 +6,14 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex({
-		layout: {
-			home: './src/lib/layouts/Home.layout.svelte'
-		}
-	})],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			layout: {
+				home: './src/lib/layouts/Home.layout.svelte'
+			}
+		})
+	],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
@@ -24,7 +27,17 @@ const config = {
 			$components: './src/lib/components',
 			$stores: './src/lib/stores',
 			$utils: './src/lib/utils',
-			$images: './src/lib/images',
+			$images: './src/lib/images'
+		},
+		csp: {
+			directives: {
+				'script-src': ['self']
+			},
+			// must be specified with either the `report-uri` or `report-to` directives, or both
+			reportOnly: {
+				'script-src': ['self'],
+				'report-uri': ['/']
+			}
 		}
 	},
 
