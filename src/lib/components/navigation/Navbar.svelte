@@ -14,7 +14,7 @@
 	<div class="nav-container">
 		<div class="flex flex-nowrap items-center justify-center">
 			<NavBrand />
-			<div class="hidden text-nowrap lg:flex">
+			<div role="menubar" class="hidden text-nowrap lg:flex">
 				{#each listData as { name, href, children }}
 					<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} tight>
 						<div class="flex flex-nowrap items-center justify-center gap-1">

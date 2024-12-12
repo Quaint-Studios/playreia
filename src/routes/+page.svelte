@@ -28,7 +28,7 @@
 	backgroundColor={colors.deepBlue}
 	color={colors.light}
 	title="Coming <strong>Soon</strong>"
-	lead="Play Reia across multiple platforms"
+	lead="Download Reia for multiple platforms"
 	titlePosition="center"
 >
 	<DownloadSection />

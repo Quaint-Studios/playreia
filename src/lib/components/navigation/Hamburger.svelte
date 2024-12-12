@@ -97,7 +97,7 @@ Tips for Drawer modals:
 				</div>
 			</header>
 			<article>
-				<div class="ml-[-24px] flex flex-col items-center justify-center">
+				<div role="menubar" class="ml-[-24px] flex flex-col items-center justify-center">
 					{#each listData as { name, href, children }}
 						<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
 							<div class="flex justify-center gap-1">
