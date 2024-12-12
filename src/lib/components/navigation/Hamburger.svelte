@@ -50,6 +50,8 @@
 </script>
 
 <button
+	aria-label="Open Navigation Drawer"
+	aria-expanded={drawerState}
 	onclick={drawerOpen}
 	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-[--deepPurple] lg:static lg:hidden"
 >
@@ -85,7 +87,7 @@ Tips for Drawer modals:
 				<NavBrand />
 				<div class="flex items-center justify-center gap-4">
 					<UserMenu />
-					<button onclick={drawerClose}>
+					<button aria-label="Close Navigation Drawer" onclick={drawerClose}>
 						<Icon
 							icon="solar:close-circle-bold"
 							font-size="48px"
@@ -95,20 +97,21 @@ Tips for Drawer modals:
 				</div>
 			</header>
 			<article>
-				<div class="flex flex-col items-center justify-center ml-[-24px]">
+				<div class="ml-[-24px] flex flex-col items-center justify-center">
 					{#each listData as { name, href, children }}
-						<Link {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
+						<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
 							<div class="flex justify-center gap-1">
 								{#if children}
 									<Icon icon="solar:alt-arrow-down-bold" />
 								{/if}
-								<span class={!children ? "pl-[24px]" : undefined}>{name}</span>
+								<span class={!children ? 'pl-[24px]' : undefined}>{name}</span>
 							</div>
 						</Link>
 					{/each}
 				</div>
 				<div class="mt-auto flex items-center justify-center gap-2">
 					<Link
+						label="Play now"
 						href="/play"
 						button
 						primary

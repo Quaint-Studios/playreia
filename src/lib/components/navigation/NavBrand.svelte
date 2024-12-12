@@ -4,7 +4,7 @@
 	import colors from '$constants/colors';
 </script>
 
-<Link href="/" color={colors.light}>
+<Link label="Home" href="/" color={colors.light}>
 	<div class="flex items-center justify-center">
 		<enhanced:img
 			class="m-auto h-[64px] w-[64px] lg:m-[unset]"

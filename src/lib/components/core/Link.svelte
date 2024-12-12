@@ -1,7 +1,7 @@
 <script lang="ts">
 	import colors from '$lib/constants/colors';
 	import type { Snippet } from 'svelte';
-	import type { HTMLAttributeAnchorTarget } from 'svelte/elements';
+	import type { AriaRole, HTMLAttributeAnchorTarget } from 'svelte/elements';
 
 	interface Props {
 		/** The target. */
@@ -10,6 +10,11 @@
 		rel?: HTMLAttributeAnchorRel;
 		/** The URL to link to. */
 		href: string;
+
+		/** The role. */
+		role?: AriaRole;
+		/** The label. */
+		label?: string;
 
 		/** Show it as a button. */
 		button?: boolean;
@@ -46,6 +51,9 @@
 		rel = undefined,
 		href,
 
+		role = undefined,
+		label = undefined,
+
 		button = false,
 		primary = false,
 
@@ -72,6 +80,8 @@
 	{target}
 	{rel}
 	{href}
+	{role}
+	aria-label={label}
 	style="border: 2px solid {borderHoverColorState};"
 	style:color={hoverColorState ?? color}
 	style:background-color={backgroundColor}

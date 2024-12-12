@@ -32,6 +32,7 @@
 
 		<div class="cta">
 			<Link
+				label="Play now"
 				button
 				primary
 				href="/game"
@@ -47,6 +48,7 @@
 				</div>
 			</Link>
 			<Link
+				label="Notify me"
 				button
 				primary
 				href="/newsletter"

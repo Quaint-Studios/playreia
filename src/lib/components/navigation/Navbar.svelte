@@ -10,13 +10,13 @@
 	loadIcons(['solar:cart-4-bold', 'solar:calendar-date-bold']);
 </script>
 
-<div id="navbar" class="glass-light">
+<div id="navbar" class="glass-light" role="navigation">
 	<div class="nav-container">
 		<div class="flex flex-nowrap items-center justify-center">
 			<NavBrand />
 			<div class="hidden text-nowrap lg:flex">
 				{#each listData as { name, href, children }}
-					<Link {href} color={colors.light} hoverColor={colors.deepPurple} tight>
+					<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} tight>
 						<div class="flex flex-nowrap items-center justify-center gap-1">
 							{#if children}
 								<Icon icon="solar:alt-arrow-down-bold" />
@@ -30,6 +30,7 @@
 		<div class="flex">
 			<div class="hidden items-center gap-2 lg:flex">
 				<Link
+					label="Play now"
 					href="/play"
 					button
 					primary
