@@ -87,7 +87,7 @@
 			<button
 				aria-label="{platform} Platform"
 				onclick={() => {
-					showProgress = false;
+					showProgress = true;
 					fadingPlatform = platform;
 				}}
 			>
@@ -112,8 +112,7 @@
 	{#if currentPlatform === 'Desktop' && fadingPlatform == 'Desktop'}
 		<div
 			class="platform-group"
-			in:fade
-			out:fade
+			transition:fade
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each desktopPlatforms as { lead, tag, store, icon }}
@@ -123,8 +122,7 @@
 	{:else if currentPlatform === 'Console' && fadingPlatform == 'Console'}
 		<div
 			class="platform-group"
-			in:fade
-			out:fade
+			transition:fade
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each consolePlatforms as { lead, tag, store, icon }}
@@ -134,8 +132,7 @@
 	{:else if currentPlatform === 'Mobile' && fadingPlatform == 'Mobile'}
 		<div
 			class="platform-group"
-			in:fade
-			out:fade
+            transition:fade
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each mobilePlatforms as { lead, tag, store, icon }}
