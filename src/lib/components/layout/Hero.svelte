@@ -48,7 +48,7 @@
 				--hover-color={colors.deepPurpleHighlight}
 				borderColor={colors.border}
 				roundness="large"
-				size="large">Join the Newsletter</Link
+				size="large">Join Newsletter</Link
 			>
 		</div>
 	</div>

@@ -2,6 +2,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+.metropolis {
+	font-family: 'Metropolis', sans-serif;
+}
+
 h1 {
 	@apply text-6xl font-bold;
 }
