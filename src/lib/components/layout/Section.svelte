@@ -17,6 +17,8 @@
 		titlePosition?: 'left' | 'center' | 'right';
 		/** Content positioning. */
 		contentPosition?: 'start' | 'center' | 'end';
+		/** Alternate styling. */
+		alt?: boolean;
 		/** The section contents. */
 		children: Snippet<[]>;
 	}
@@ -29,6 +31,7 @@
 		backgroundColor = 'transparent',
 		titlePosition = 'left',
 		contentPosition = 'start',
+		alt = false,
 		children
 	}: Props = $props();
 </script>
@@ -41,7 +44,12 @@
 					<Icon {icon} {color} font-size={12} />
 				{/each}
 			</div>
-			<h2 class="mb-2 w-full" class:lead style="color: {color}; text-align: {titlePosition}">
+			<h2
+				class="mb-2 w-full"
+				class:alt
+				class:lead
+				style="color: {color}; text-align: {titlePosition}"
+			>
 				{@html title}
 			</h2>
 			<div class="icons">

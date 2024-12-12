@@ -26,6 +26,9 @@ h2 strong {
 h1.alt strong {
 	@apply text-[--deepPurple];
 }
+h2.alt strong {
+	@apply !text-[--warning];
+}
 
 a:active {
 	@apply scale-90;
