@@ -3,6 +3,9 @@
 
 	import Link from '$components/core/Link.svelte';
 	import colors from '$constants/colors';
+	import Icon, { loadIcons } from '@iconify/svelte';
+
+	loadIcons(['solar:play-bold', 'line-md:email-alert-filled']);
 </script>
 
 <section class="hero">
@@ -32,12 +35,17 @@
 				button
 				primary
 				href="/game"
-				backgroundColor={colors.blue}
-				hoverColor={colors.deepPurple}
-				color={colors.light}
+				backgroundColor={colors.blueHighlight}
+				color={colors.white}
+				hoverColor={colors.black}
 				roundness="large"
-				size="large">Play now</Link
+				size="large"
 			>
+				<div class="flex justify-center gap-2">
+					<Icon icon="solar:play-bold" />
+					<span class="w-full text-nowrap">Play now</span>
+				</div>
+			</Link>
 			<Link
 				button
 				primary
@@ -45,17 +53,22 @@
 				backgroundColor={colors.secondary}
 				color={colors.dark}
 				hoverColor={colors.deepPurpleHighlight}
-				--hover-color={colors.deepPurpleHighlight}
 				borderColor={colors.border}
 				roundness="large"
-				size="large">Join Newsletter</Link
+				size="large"
 			>
+				<div class="flex justify-center items-center gap-2">
+					<Icon icon="line-md:email-alert-filled" />
+					<span class="w-full text-nowrap">Notify me</span>
+				</div>
+			</Link>
 		</div>
 	</div>
 </section>
 
 <style lang="postcss">
 	.hero {
+		@apply bg-[--deepPurpleHighlight];
 		@apply h-[45rem] w-full;
 		@apply text-[--light];
 		@apply relative;

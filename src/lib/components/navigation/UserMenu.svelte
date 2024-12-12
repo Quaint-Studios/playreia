@@ -56,7 +56,7 @@
 	}
 
 	.icon-holder {
-		@apply aspect-square rounded-[10px] bg-[--blue] p-2;
+		@apply aspect-square rounded-[10px] bg-[--blueHighlight] p-2;
 		transition: background-color 0.1s ease-in-out;
 	}
 	.menu-container {

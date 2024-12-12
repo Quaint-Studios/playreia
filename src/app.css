@@ -7,6 +7,6 @@
 @import url('./css/typography.css');
 
 body {
-    @apply bg-white text-[--dark];
+    @apply bg-[--deepBlue] text-[--dark];
 	font-family: 'Urbanist Variable', sans-serif;
 }

@@ -95,14 +95,14 @@ Tips for Drawer modals:
 				</div>
 			</header>
 			<article>
-				<div class="flex flex-col items-center justify-center">
+				<div class="flex flex-col items-center justify-center ml-[-24px]">
 					{#each listData as { name, href, children }}
 						<Link {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
 							<div class="flex justify-center gap-1">
 								{#if children}
 									<Icon icon="solar:alt-arrow-down-bold" />
 								{/if}
-								<span>{name}</span>
+								<span class={!children ? "pl-[24px]" : undefined}>{name}</span>
 							</div>
 						</Link>
 					{/each}
@@ -112,7 +112,7 @@ Tips for Drawer modals:
 						href="/play"
 						button
 						primary
-						backgroundColor={colors.blue}
+						backgroundColor={colors.blueHighlight}
 						color={colors.light}
 						hoverColor={colors.buttonGray}
 						--hover-color={colors.border}
@@ -148,7 +148,7 @@ Tips for Drawer modals:
 		@apply flex justify-center gap-3 py-4;
 	}
 	footer * {
-		@apply rounded-lg bg-[--blue] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
+		@apply rounded-lg bg-[--blueHighlight] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>

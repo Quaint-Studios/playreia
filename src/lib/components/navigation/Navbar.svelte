@@ -12,32 +12,30 @@
 
 <div id="navbar" class="glass-light">
 	<div class="nav-container">
-		<div class="flex items-center justify-center">
+		<div class="flex flex-nowrap items-center justify-center">
 			<NavBrand />
-			<div class="hidden lg:flex">
+			<div class="hidden text-nowrap lg:flex">
 				{#each listData as { name, href, children }}
 					<Link {href} color={colors.light} hoverColor={colors.deepPurple} tight>
-						
-                        <div class="flex justify-center items-center gap-1 flex-nowrap">
-                            {#if children}
-                            <Icon icon="solar:alt-arrow-down-bold" />
-                            {/if}
-                            <span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
-                        </div>
+						<div class="flex flex-nowrap items-center justify-center gap-1">
+							{#if children}
+								<Icon icon="solar:alt-arrow-down-bold" />
+							{/if}
+							<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
+						</div>
 					</Link>
 				{/each}
 			</div>
 		</div>
 		<div class="flex">
-			<div class="hidden gap-2 lg:flex items-center">
+			<div class="hidden items-center gap-2 lg:flex">
 				<Link
 					href="/play"
 					button
 					primary
-					backgroundColor={colors.blue}
-					color={colors.light}
-					hoverColor={colors.deepPurple}
-					--hover-color={colors.deepPurple}
+					backgroundColor={colors.blueHighlight}
+					color={colors.white}
+					hoverColor={colors.black}
 					roundness="large"
 				>
 					<div class="flex justify-center gap-1">

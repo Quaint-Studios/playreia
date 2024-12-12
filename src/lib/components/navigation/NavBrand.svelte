@@ -5,15 +5,15 @@
 </script>
 
 <Link href="/" color={colors.light}>
-	<div class="flex justify-center items-center">
+	<div class="flex items-center justify-center">
 		<enhanced:img
-			class="m-auto w-[64px] lg:m-[unset] lg:w-[px]"
+			class="m-auto h-[64px] w-[64px] lg:m-[unset]"
 			src="$images/logos/reia_logo_white_transparent.png?enhanced&w=184;168"
 			alt="Reia Logo White Transparent"
 			title="Reia"
 			sizes="(min-width: 768px) 84px, 92px"
 		/>
 		<div class="mx-4 hidden h-11 border-r-2 border-solid md:block"></div>
-		<span class="hidden md:block text-2xl">Reia</span>
+		<span class="hidden text-2xl md:block">Reia</span>
 	</div>
 </Link>
