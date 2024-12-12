@@ -112,7 +112,7 @@ Tips for Drawer modals:
 						href="/play"
 						button
 						primary
-						backgroundColor={colors.primary}
+						backgroundColor={colors.blue}
 						color={colors.light}
 						hoverColor={colors.buttonGray}
 						--hover-color={colors.border}
@@ -148,7 +148,7 @@ Tips for Drawer modals:
 		@apply flex justify-center gap-3 py-4;
 	}
 	footer * {
-		@apply rounded-lg bg-[--primary] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
+		@apply rounded-lg bg-[--blue] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>
