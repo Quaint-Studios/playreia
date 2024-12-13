@@ -30,10 +30,10 @@ const config = {
 			$utils: './src/lib/utils',
 			$images: './src/lib/images'
 		},
-		csp: {
-			mode: 'hash',
-			directives: cspDirectives
-		}
+		// csp: {
+		// 	mode: 'hash',
+		// 	directives: cspDirectives
+		// }
 	},
 
 	extensions: ['.svelte', '.svx']
