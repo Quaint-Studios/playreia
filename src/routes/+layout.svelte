@@ -7,9 +7,9 @@
 	import '@fontsource/poppins/500.css';
 	import '@fontsource/poppins/700.css';
 
-	import UrbanistWoff2 from '@fontsource-variable/urbanist/files/urbanist-latin-wght-normal.woff2';
-	import Poppins500Woff2 from '@fontsource/poppins/files/poppins-latin-500-normal.woff2';
-	import Poppins700Woff2 from '@fontsource/poppins/files/poppins-latin-700-normal.woff2';
+	import UrbanistWoff2 from '@fontsource-variable/urbanist/files/urbanist-latin-wght-normal.woff2?url';
+	import Poppins500Woff2 from '@fontsource/poppins/files/poppins-latin-500-normal.woff2?url';
+	import Poppins700Woff2 from '@fontsource/poppins/files/poppins-latin-700-normal.woff2?url';
 
 	import Navbar from '$components/navigation/Navbar.svelte';
 

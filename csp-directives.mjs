@@ -3,7 +3,16 @@ const rootDomain = process.env.VITE_DOMAIN; // or your server IP for dev
 const cspDirectives = {
 	'base-uri': ["'self'"],
 	'child-src': ["'self'"],
-	'connect-src': ["'self'", 'ws://localhost:*', 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
+	'connect-src': [
+		"'self'",
+		'ws://localhost:*',
+		'https://*.playreia.com',
+		'https://hcaptcha.com',
+		'https://*.hcaptcha.com',
+		'https://api.iconify.design',
+		'https://api.simplesvg.com',
+		'https://api.unisvg.com',
+	],
 	'img-src': ["'self'", 'data:'],
 	'font-src': ["'self'", 'data:'],
 	'form-action': ["'self'"],
@@ -16,16 +25,17 @@ const cspDirectives = {
 	'default-src': [
 		'self',
 		...(rootDomain ? [rootDomain, `ws://${rootDomain}`] : []),
-		'https://*.stripe.com',
+		'https://*.stripe.com'
 	],
 	'script-src': [
 		'self',
-        'https://*.playreia.com',
+		'https://*.playreia.com',
 		'https://*.stripe.com',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com',
+		'sha256-ddDavB1BxPBJjxjRjPq0UoE2WssVO48hvRkFymSEBL0='
 	],
-	'worker-src': ["'self'"],
+	'worker-src': ["'self'"]
 	// remove report-to & report-uri if you do not want to use Sentry reporting
 	// 'report-to': ["'csp-endpoint'"],
 	// 'report-uri': [
