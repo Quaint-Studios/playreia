@@ -5,6 +5,8 @@
 	import colors from '$constants/colors';
 	import Icon, { loadIcons } from '@iconify/svelte';
 
+	let altGradient = $state(false);
+
 	loadIcons(['solar:play-bold', 'line-md:email-alert-filled']);
 </script>
 
@@ -21,6 +23,7 @@
 		</Lazy>
 	</div>
 	<div class="gradient"></div>
+	<div class="section-gradient" class:alt={altGradient}><Icon onclick={()=> { altGradient = !altGradient }} class="cursor-pointer hover:pt-2 transition-[padding-top]" icon="solar:alt-arrow-down-bold-duotone" font-size={72} /></div>
 	<div class="content poppins">
 		<h1 class="poppins">
 			Play <strong>Reia</strong> and <strong>Explore</strong> a game with endless magical worlds!
@@ -53,10 +56,10 @@
 				button
 				primary
 				href="/newsletter"
-				backgroundColor={colors.secondary}
-				color={colors.dark}
-				hoverColor={colors.deepPurpleHighlight}
-				borderColor={colors.border}
+				backgroundColor={colors.midnightBlue}
+				color={colors.white}
+				hoverColor={colors.border}
+				borderColor={colors.midnightBlue}
 				roundness="large"
 				size="large"
 			>
@@ -98,7 +101,18 @@
 	}
 
 	.hero .image {
-		@apply absolute top-0 h-[45rem] w-full object-cover object-center;
+		@apply absolute top-0 h-[45rem] w-full object-cover object-bottom;
+	}
+
+	.section-gradient {
+		@apply absolute bottom-0 h-[184px] w-full flex justify-center items-center;
+		background: linear-gradient(to bottom, #08124700, #081247ff);
+		/* background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%); */
+		transition: background 0.3s ease-in-out;
+	}
+
+	.section-gradient.alt {
+		background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%);
 	}
 
 	.gradient {

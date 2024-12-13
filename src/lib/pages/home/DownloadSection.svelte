@@ -186,7 +186,7 @@
 		@apply absolute bottom-1 left-0 h-[1px] w-0;
 		@apply border-b-[3px] border-solid;
 		@apply z-[2];
-		border-color: rgba(255, 70, 70, 0.75);
+		border-color: var(--crimsonRed);
 	}
 
 	.platform-tab-button {
@@ -195,6 +195,9 @@
 
 	button .platform-tab-button {
 		@apply text-base font-bold transition-[font-size] sm:text-xl;
+	}
+	button .platform-tab-button .text {
+		@apply cursor-pointer text-white;
 	}
 	button:hover .platform-tab-button .text {
 		@apply cursor-pointer opacity-80;

@@ -25,9 +25,9 @@
 <Hero />
 
 <Section
-	backgroundColor={colors.deepBlue}
-	color={colors.light}
-	lead="Coming <strong>Soon</strong>"
+	backgroundColor={colors.midnightBlue}
+	color={colors.white}
+	lead="<strong>Coming Soon</strong>"
 	title="Download Reia for multiple platforms"
 	titlePosition="center"
 >
