@@ -106,13 +106,12 @@
 
 	.section-gradient {
 		@apply absolute bottom-0 h-[184px] w-full flex justify-center items-center;
-		background: linear-gradient(to bottom, #08124700, #081247ff);
-		/* background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%); */
+		background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%);
 		transition: background 0.3s ease-in-out;
 	}
-
+	
 	.section-gradient.alt {
-		background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%);
+		background: linear-gradient(to bottom, #08124700, #081247ff);
 	}
 
 	.gradient {
