@@ -20,7 +20,11 @@ h3 {
 
 h1 strong,
 h2 strong {
-	@apply font-black text-[--tertiary];
+	@apply font-black text-[--gold];
+}
+
+p.lead strong {
+	@apply font-black text-[--gold];
 }
 
 h1.alt strong {
