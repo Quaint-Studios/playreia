@@ -12,10 +12,11 @@
 	<div class="image">
 		<Lazy keep={true} height="700px">
 			<enhanced:img
-				class="image"
-				src="$images/hero/hero_1.jpg"
+				class="hero-img"
+				src="$lib/assets/img/hero/hero_1.jpg?enhanced&w=3840;2048;1920;1280"
 				alt="A forest, flower field, and path"
 				title="Flower Field and Path"
+				sizes="min(1280px, 100vw)"
 			/>
 		</Lazy>
 	</div>
@@ -48,7 +49,7 @@
 				</div>
 			</Link>
 			<Link
-				label="Notify me"
+				label="Newsletter"
 				button
 				primary
 				href="/newsletter"
@@ -59,7 +60,7 @@
 				roundness="large"
 				size="large"
 			>
-				<div class="flex justify-center items-center gap-2">
+				<div class="flex items-center justify-center gap-2">
 					<Icon icon="line-md:email-alert-filled" />
 					<span class="w-full text-nowrap">Notify me</span>
 				</div>
