@@ -25,8 +25,8 @@
 
 	const {
 		icons = ['mdi:minus', 'mdi:circle-medium', 'mdi:rhombus'],
-		title,
 		lead,
+		title,
 		color = '#323232',
 		backgroundColor = 'transparent',
 		titlePosition = 'left',
@@ -38,31 +38,26 @@
 
 <div style="background-color: {backgroundColor}" class="w-full">
 	<section>
-		<div class="icons gap-3">
-			<div class="icons">
-				{#each icons as icon}
-					<Icon {icon} {color} font-size={12} />
-				{/each}
-			</div>
-			<h2
-				class="mb-2 w-full"
-				class:alt
-				class:lead
-				style="color: {color}; text-align: {titlePosition}"
-			>
-				{@html title}
-			</h2>
-			<div class="icons">
-				{#each icons.slice().reverse() as icon}
-					<Icon {icon} {color} font-size={12} />
-				{/each}
-			</div>
-		</div>
 		{#if lead}
-			<p class="lead" style="color: {color}; text-align: {titlePosition}">
-				{lead}
-			</p>
+			<div class="icons gap-3">
+				<div class="icons">
+					{#each icons as icon}
+						<Icon {icon} {color} font-size={12} />
+					{/each}
+				</div>
+				<p class="lead" class:alt class:lead style="color: {color}; text-align: {titlePosition}">
+					{@html lead}
+				</p>
+				<div class="icons">
+					{#each icons.slice().reverse() as icon}
+						<Icon {icon} {color} font-size={12} />
+					{/each}
+				</div>
+			</div>
 		{/if}
+		<h2 style="color: {color}; text-align: {titlePosition}">
+			{title}
+		</h2>
 		<div
 			class="content"
 			style="color: {color}; justify-content: {contentPosition}; align-items: {contentPosition}"
@@ -74,7 +69,7 @@
 
 <style lang="postcss">
 	section {
-		@apply mx-auto w-full px-4 py-12;
+		@apply mx-auto w-full px-4 py-14;
 		@apply relative flex max-w-screen-xl flex-col items-center justify-center space-y-4;
 	}
 
@@ -82,11 +77,12 @@
 		@apply flex w-full flex-col;
 	}
 
-	h2.lead {
-		@apply mb-0 text-lg;
-	}
 	p.lead {
-		@apply !mt-0 w-full text-4xl font-black;
+		@apply mb-0 w-full text-lg font-black;
+	}
+
+	.icons + h2 {
+		@apply !mt-0;
 	}
 
 	.icons {

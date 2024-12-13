@@ -10,9 +10,9 @@
 
 <section class="hero">
 	<div class="image">
-		<Lazy keep={true} height="700px">
+		<Lazy keep={true} height="500px">
 			<enhanced:img
-				class="hero-img"
+				class="image"
 				src="$images/hero/hero_1.jpg?enhanced&w=3840;2048;1920;1280"
 				alt="A forest, flower field, and path"
 				title="Flower Field and Path"

@@ -27,8 +27,8 @@
 <Section
 	backgroundColor={colors.deepBlue}
 	color={colors.light}
-	title="Coming <strong>Soon</strong>"
-	lead="Download Reia for multiple platforms"
+	lead="Coming <strong>Soon</strong>"
+	title="Download Reia for multiple platforms"
 	titlePosition="center"
 >
 	<DownloadSection />
