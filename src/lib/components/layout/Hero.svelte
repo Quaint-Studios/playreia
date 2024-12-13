@@ -28,7 +28,7 @@
 			onclick={() => {
 				altGradient = !altGradient;
 			}}
-			class="cursor-pointer transition-[padding-top] hover:pt-2"
+			class="cursor-pointer transition-[padding-top] hover:pt-2 mt-8"
 			icon="solar:alt-arrow-down-bold-duotone"
 			font-size={72}
 		/>
@@ -120,7 +120,7 @@
 	}
 
 	.section-gradient.alt {
-		background: radial-gradient(100% 100% at 50% 0%, #08124700 0%, #08124700 75%, red 100%);
+		background: radial-gradient(100% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%);
 	}
 
 	@media (min-width: 1024px) {
