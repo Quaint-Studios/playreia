@@ -1,6 +1,7 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import cspDirectives from './csp-directives.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -30,14 +31,8 @@ const config = {
 			$images: './src/lib/images'
 		},
 		csp: {
-			directives: {
-				'script-src': ['self']
-			},
-			// must be specified with either the `report-uri` or `report-to` directives, or both
-			reportOnly: {
-				'script-src': ['self'],
-				'report-uri': ['/']
-			}
+			mode: 'hash',
+			directives: cspDirectives
 		}
 	},
 
