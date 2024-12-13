@@ -21,7 +21,7 @@ const cspDirectives = {
 	'manifest-src': ["'self'"],
 	'media-src': ["'self'", 'data:'],
 	'object-src': ["'none'"],
-	'style-src': ["'self'", "'unsafe-inline'", 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
+	'style-src': ["'self'", 'https://hcaptcha.com', 'https://*.hcaptcha.com'],
 	'default-src': [
 		'self',
 		...(rootDomain ? [rootDomain, `ws://${rootDomain}`] : []),
@@ -30,10 +30,10 @@ const cspDirectives = {
 	'script-src': [
 		'self',
 		'https://*.playreia.com',
+		'sha256-f5lsRfP9D3IfItCArg/eFPe3u1pBW1Uh5IahkioNYEA=',
 		'https://*.stripe.com',
 		'https://hcaptcha.com',
-		'https://*.hcaptcha.com',
-		'sha256-ddDavB1BxPBJjxjRjPq0UoE2WssVO48hvRkFymSEBL0='
+		'https://*.hcaptcha.com'
 	],
 	'worker-src': ["'self'"]
 	// remove report-to & report-uri if you do not want to use Sentry reporting
