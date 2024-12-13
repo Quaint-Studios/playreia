@@ -15,11 +15,14 @@ export const colors = {
 	white: '#ffffff',
 	black: '#000000',
 	lightDark: '#424242',
+	gold: '#fed18e',
 	red: '#fc3c35',
+	crimsonRed: '#ff4646bf',
 	yellow: '#f9fc35',
 	blue: '#239af4',
 	blueHighlight: '#0b78cb',
 	deepBlue: '#0d47a1',
+	midnightBlue: '#081247',
 	deepPurple: '#220d54',
 	deepPurpleHighlight: '#3a168d'
 };
