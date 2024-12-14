@@ -47,10 +47,14 @@
 	<DownloadSection />
 </Section>
 
-<!-- Info section -->
 <Section headerColor="var(--gold)" title="Announcements">
-	<div class="grid grid-cols-3">
-		<SectionCard title="Join our Discord Join our Discord Join our Discord Join our Discord Join us">
+	<div class="mt-12 flex w-full flex-wrap items-center justify-center gap-6">
+		<SectionCard
+			shout
+			title="Join our Discord"
+			url="https://discord.com/users/83303489945468928"
+			cta="Message"
+		>
 			{#snippet img()}
 				<enhanced:img
 					src="$images/banners/discord.jpg?enhanced&w=428,512,1024"
@@ -59,7 +63,124 @@
 				/>
 			{/snippet}
 			Join our Discord server to chat with the developers and other players! Send a message to
-			<code>makosai</code> and ask to join.
+			<code class="gold">makosai</code> and ask to join.
+		</SectionCard>
+		<SectionCard shout title="Alpha Tests" url="/newsletter" cta="Notify me">
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/newsletter.jpg?enhanced&w=428,512,1024"
+					alt="Newsletter Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			Testing currently is private. But you can subscribe to our newsletter to get in on some cool multiplayer
+			tests!
+		</SectionCard>
+	</div>
+</Section>
+
+<Section headerColor="var(--gold)" title="Blog Posts">
+	<div class="mx-auto mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+		<SectionCard
+			title="Update v1.0.0.5-pre-alpha | Changelogs are finally here!"
+			date={new Date('January 1, 2024 12:02pm')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.5-pre-alpha"
+			target="_blank"
+			rel={['noopener', 'noreferrer']}
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			Pre-alpha is coming along nicely! I'm excited to see where this goes. I hope you are too! This
+			update is pretty big. It features a changelog, new main menu, vfx, new water shaders, more inventory
+			updates, Discord SDK integration, and more.
+		</SectionCard>
+		<SectionCard
+			title="Update v1.0.0.4-pre-alpha | Now with creepy health bars that follow you, an inventory layout change, and transparent colors!"
+			date={new Date('October 2, 2023 10:02am')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.4-pre-alpha"
+			target="_blank"
+			rel={['noopener', 'noreferrer']}
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			It's almost time. We're getting closer. This update features health bars, a minimap, icons to identify
+			entities on the minimap, inventory updates, and some fixes.
+		</SectionCard>
+		<SectionCard
+			title="Update v1.0.0.3-pre-alpha | New character and animation."
+			date={new Date('October 1, 2023 2:06pm')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.3-pre-alpha"
+			target="_blank"
+			rel={['noopener', 'noreferrer']}
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			I don't believe anyone truly likes rigging and the time it consumes. Finally animated the character
+			model. The character model has been changed.
+		</SectionCard>
+		<SectionCard
+			title="Update v1.0.0.2-pre-alpha | Items and Inventory system, better lighting, better ui, papa-- oh."
+			date={new Date('September 25, 2023 2:00am')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.2-pre-alpha"
+			target="_blank"
+			rel={['noopener', 'noreferrer']}
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			Okay, we have a stick to fight with now. But... we can't use it? What the!?! This update includes
+			music, a Sound Manager, updates to the UI, and many more. Check it out!
+		</SectionCard>
+		<SectionCard
+			title="Update v1.0.0.1-pre-alpha | Slowly getting there..."
+			date={new Date('September 22, 2023 5:15am')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.1-pre-alpha"
+			target="_blank"
+			rel={['noopener', 'noreferrer']}
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			Only if we had something to fight with other than our fists. The lighting is improved. But... it
+			could be better! We now have... COMBAT! You can click things. And more.
+		</SectionCard>
+		<SectionCard
+			title="Update: v1.0.0.0-pre-alpha | This is the beginning! Migrating from Unity to Godot."
+			date={new Date('September 21, 2023 2:59pm')}
+			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.0-pre-alpha"
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					alt="Blog Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			It works! We've successfully migrated from Unity to Godot. A basic level was created to test some
+			features of the project. All Unity-related assets have been removed.
 		</SectionCard>
 	</div>
 </Section>

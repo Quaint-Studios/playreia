@@ -41,3 +41,7 @@ a:active {
 .info-paragraph {
 	@apply max-w-screen-md indent-6 text-lg font-medium;
 }
+
+code.gold {
+	@apply text-[--gold];
+}

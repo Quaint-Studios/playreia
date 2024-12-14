@@ -1,11 +1,17 @@
 <script lang="ts">
+	import Link from '$components/core/Link.svelte';
+	import colors from '$constants/colors';
 	import type { Snippet } from 'svelte';
+	import type { HTMLAttributeAnchorTarget } from 'svelte/elements';
 
 	interface SectionCardProps {
 		title: string;
-		date?: string;
+		date?: Date;
 		url?: string;
-        shout?: boolean;
+		target?: HTMLAttributeAnchorTarget;
+		rel?: HTMLAttributeAnchorRel[];
+		cta?: string;
+		shout?: boolean;
 		/**
         Here's an example on how to use the img snippet in this component:
         ```js
@@ -20,54 +26,73 @@
         */
 		img: Snippet<[]>;
 		children: Snippet<[]>;
-	}
 
-	export const { title, date, url, shout = false, img, children }: SectionCardProps = $props();
+	}
+    
+	export const { title, date, url, target, rel, cta = "Read more", shout = false, img, children }: SectionCardProps = $props();
+
+    let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
+let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
 </script>
 
 <div class="section-card">
 	<div class="content glass">
 		<h3 class="poppins" class:shout>{title}</h3>
 		<p>{@render children()}</p>
-		<div class="card-footer">
-			{#if date}
-				<p>{date}</p>
-			{/if}
-			{#if url}
-				<a href={url}>Read More</a>
-			{/if}
-		</div>
 	</div>
-    <div class="image">
+	<div class="card-footer glass" class:end={!date && url}>
+		{#if date}
+			<span class="date">{`${month} ${day}, ${year}`}</span>
+		{/if}
+		{#if url}
+			<div class="poppins">
+				<Link tight href={url} color={colors.gold} hoverColor={colors.tertiary} size="large" {target} {rel}>{cta}</Link>
+			</div>
+		{/if}
+	</div>
+
+	<div class="image">
 		{@render img()}
 	</div>
 </div>
 
 <style lang="postcss">
 	.section-card {
-		@apply relative flex flex-col w-[380px] h-[450px];
-        @apply rounded-3xl bg-[--midnightBlue] shadow-lg;
-        @apply border-[--borderHalf] border-[1px] border-solid;
-        @apply overflow-hidden;
+		@apply relative flex max-w-[400px] flex-col;
+		@apply rounded-3xl bg-[--midnightBlue] shadow-lg;
+		@apply border-[1px] border-solid border-[--borderBlueHalf];
+		@apply overflow-hidden;
 	}
 
-	.image, .image :global(img) {
+	.image,
+	.image :global(img) {
 		@apply absolute left-0 top-0 object-cover object-center;
-        @apply w-full h-[285px];
+		@apply h-[285px] w-full;
 	}
 
-    .content {
-        @apply flex flex-col gap-2 z-10 p-4 mt-52 h-full border-none;
-    }
+	.content {
+		@apply z-10 mt-52 flex h-full flex-col gap-2 border-none p-4;
+	}
 
-    h3.shout {
-        @apply text-3xl;
-    }
-    h3 {
-        @apply text-xl;
-    }
+	h3.shout {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-xl max-h-[90px] w-[calc(100%)] overflow-ellipsis overflow-hidden;
+	}
 
-    p {
-        @apply mt-2;
-    }
+	p {
+		@apply mt-2;
+	}
+
+	.card-footer {
+		@apply flex items-center justify-between border-none pb-4 pl-4 pr-2;
+	}
+	.card-footer.end {
+		@apply justify-end;
+	}
+	.card-footer .date {
+		@apply font-light tracking-wide;
+	}
 </style>

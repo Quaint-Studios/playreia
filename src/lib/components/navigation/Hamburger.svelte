@@ -132,7 +132,7 @@ Tips for Drawer modals:
 			</article>
 			<footer>
 				{#each socials as { id, icon, href }}
-					<a {href} target="_blank" rel="nofollow" class="social">
+					<a {href} target="_blank" rel="noopener noreferrer" class="social">
 						<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
 					</a>
 				{/each}

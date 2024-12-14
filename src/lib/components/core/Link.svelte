@@ -7,7 +7,7 @@
 		/** The target. */
 		target?: HTMLAttributeAnchorTarget;
 		/** The rel. */
-		rel?: HTMLAttributeAnchorRel;
+		rel?: HTMLAttributeAnchorRel[];
 		/** The URL to link to. */
 		href: string;
 
@@ -29,7 +29,7 @@
 		/** What border color to use. */
 		borderColor?: string;
 		/** Tighten the padding */
-		tight?:	boolean;
+		tight?: boolean;
 		/** Should the link be underlined on hover? */
 		/** How round should the button be? */
 		roundness?: 'small' | 'medium' | 'large' | 'full';
@@ -78,7 +78,7 @@
 
 <a
 	{target}
-	{rel}
+	rel={rel?.join(' ')}
 	{href}
 	{role}
 	aria-label={label}
