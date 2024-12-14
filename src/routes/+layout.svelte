@@ -16,8 +16,9 @@
 	const heroIcons = ['solar:play-bold', 'line-md:email-alert-filled'];
 	const navbarIcons = ['solar:alt-arrow-down-bold' /*'solar:play-bold'*/];
 	const hamburgerIcons = ['solar:hamburger-menu-linear', 'solar:close-circle-bold'];
+	const sectionIcons = ['mdi:minus', 'mdi:circle-medium', 'mdi:rhombus'];
 
-	loadIcons([...userMenuIcons, ...heroIcons, ...navbarIcons, ...hamburgerIcons]);
+	loadIcons([...userMenuIcons, ...heroIcons, ...navbarIcons, ...hamburgerIcons, ...sectionIcons]);
 </script>
 
 <Navbar />
