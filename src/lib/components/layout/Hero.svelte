@@ -92,6 +92,10 @@
 		@apply mx-4 h-full font-bold text-[--light] sm:ml-12;
 		@apply transition-[margin_max-width] duration-150 ease-in-out;
 		@apply flex flex-col justify-center;
+		@apply pointer-events-none;
+	}
+	.hero .content * {
+		@apply pointer-events-auto;
 	}
 	.hero .content h1 {
 		@apply transition-[font-size] duration-150 ease-in-out;

@@ -3,7 +3,6 @@
 	import Hero from '$components/layout/Hero.svelte';
 	import Section from '$components/layout/Section.svelte';
 	import Meta from '$components/seo/Meta.svelte';
-	import colors from '$constants/colors';
 	import DownloadSection from '$lib/pages/home/DownloadSection.svelte';
 	import SectionCard from '$components/layout/SectionCard.svelte';
 
