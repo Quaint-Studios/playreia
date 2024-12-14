@@ -3,11 +3,9 @@
 
 	import Link from '$components/core/Link.svelte';
 	import colors from '$constants/colors';
-	import Icon, { loadIcons } from '@iconify/svelte';
+	import Icon from '@iconify/svelte';
 
 	let altGradient = $state(true);
-
-	loadIcons(['solar:play-bold', 'line-md:email-alert-filled']);
 </script>
 
 <section class="hero">

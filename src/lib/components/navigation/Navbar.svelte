@@ -3,11 +3,9 @@
 	import UserMenu from './UserMenu.svelte';
 	import Link from '$components/core/Link.svelte';
 	import colors from '$lib/constants/colors';
-	import Icon, { loadIcons } from '@iconify/svelte';
+	import Icon from '@iconify/svelte';
 	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
-
-	loadIcons(['solar:cart-4-bold', 'solar:calendar-date-bold']);
 </script>
 
 <div id="navbar" class="glass-light" role="navigation">

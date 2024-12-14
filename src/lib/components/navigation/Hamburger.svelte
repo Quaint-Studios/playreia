@@ -40,13 +40,7 @@
 		});
 	}
 
-	loadIcons([
-		'solar:hamburger-menu-linear',
-		'solar:close-circle-bold',
-		'solar:cart-4-bold',
-		'solar:calendar-date-bold',
-		...socials.map((s) => s.icon)
-	]);
+	loadIcons([...socials.map((s) => s.icon)]);
 </script>
 
 <button
@@ -99,7 +93,14 @@ Tips for Drawer modals:
 			<article>
 				<div role="menubar" class="ml-[-24px] flex flex-col items-center justify-center">
 					{#each listData as { name, href, children }}
-						<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} size="xlarge">
+						<Link
+							label="{name} Page"
+							role="menuitem"
+							{href}
+							color={colors.light}
+							hoverColor={colors.deepPurple}
+							size="xlarge"
+						>
 							<div class="flex justify-center gap-1">
 								{#if children}
 									<Icon icon="solar:alt-arrow-down-bold" />

@@ -1,9 +1,22 @@
 <script lang="ts">
+	import { loadIcons } from '@iconify/svelte';
 	import Hero from '$components/layout/Hero.svelte';
 	import Section from '$components/layout/Section.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import colors from '$constants/colors';
 	import DownloadSection from '$lib/pages/home/DownloadSection.svelte';
+
+	const platformIcons = [
+		'mdi:windows',
+		'mdi:apple',
+		'mdi:linux',
+		'mdi:xbox',
+		'mdi:playstation',
+		'mdi:nintendo-switch',
+		'mdi:google-play'
+	];
+
+	loadIcons([...platformIcons]);
 </script>
 
 <Meta

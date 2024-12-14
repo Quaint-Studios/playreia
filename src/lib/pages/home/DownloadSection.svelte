@@ -3,7 +3,6 @@
 	import { quadIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import PlatformButton from '$components/core/PlatformButton.svelte';
-	import { loadIcons } from '@iconify/svelte';
 
 	function progress(_node: HTMLSpanElement, { duration = 4000, easing = quadIn }) {
 		return {
@@ -73,23 +72,15 @@
 	];
 
 	const platforms: Platforms[] = ['Desktop', 'Console', 'Mobile'];
+
 	let currentPlatform: Platforms = $state('Desktop' as Platforms);
 	let fadingPlatform = $state('Desktop' as Platforms);
 	let showProgress = $state(false);
+	let starting = $state(true);
 
 	onMount(() => {
 		showProgress = true;
 	});
-
-	loadIcons([
-		'mdi:windows',
-		'mdi:apple',
-		'mdi:linux',
-		'mdi:xbox',
-		'mdi:playstation',
-		'mdi:nintendo-switch',
-		'mdi:google-play'
-	]);
 </script>
 
 <div class="platform-tabs metropolis">
@@ -115,6 +106,7 @@
 							onintroend={() => {
 								fadingPlatform = i === platforms.length - 1 ? platforms[0] : platforms[i + 1];
 								showProgress = false;
+								starting = false;
 								tick().then(() => {
 									showProgress = true;
 								});
@@ -127,10 +119,25 @@
 	{/each}
 </div>
 <div class="platforms">
-	{#if currentPlatform === 'Desktop' && fadingPlatform === 'Desktop' && showProgress}
+	{#if starting}
 		<div
 			class="platform-group"
-			transition:fade={{ delay: 1 }}
+			out:fade={{ delay: 1 }}
+			onoutroend={() => {
+				fadingPlatform = platforms[1];
+				currentPlatform = fadingPlatform;
+				starting = false;
+			}}
+		>
+			{#each desktopPlatforms as { lead, tag, store, icon }}
+				<PlatformButton {lead} {tag} {store} {icon} />
+			{/each}
+		</div>
+	{:else if currentPlatform === 'Desktop' && fadingPlatform === 'Desktop' && showProgress}
+		<div
+			class="platform-group"
+			in:fade={{ delay: 1 }}
+			out:fade={{ delay: 1 }}
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each desktopPlatforms as { lead, tag, store, icon }}
@@ -140,7 +147,7 @@
 	{:else if currentPlatform === 'Console' && fadingPlatform === 'Console' && showProgress}
 		<div
 			class="platform-group"
-			transition:fade={{ delay: 1 }}
+			out:fade={{ delay: 1 }}
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each consolePlatforms as { lead, tag, store, icon }}
@@ -150,7 +157,7 @@
 	{:else if currentPlatform === 'Mobile' && fadingPlatform === 'Mobile' && showProgress}
 		<div
 			class="platform-group"
-			transition:fade={{ delay: 1 }}
+			out:fade={{ delay: 1 }}
 			onoutroend={() => (currentPlatform = fadingPlatform)}
 		>
 			{#each mobilePlatforms as { lead, tag, store, icon }}

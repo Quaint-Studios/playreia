@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Link from '../core/Link.svelte';
 	import colors from '$lib/constants/colors';
-	import Icon, { loadIcons } from '@iconify/svelte';
+	import Icon from '@iconify/svelte';
 
 	let show = $state(false);
 
@@ -10,8 +10,6 @@
 		{ href: '/settings', text: 'Settings' },
 		{ href: '/logout', text: 'Logout' }
 	];
-
-	loadIcons(['solar:user-bold', 'solar:alt-arrow-down-linear']);
 </script>
 
 <button
@@ -25,7 +23,9 @@
 		class="transition-transform duration-100 {show ? 'rotate-180' : ''}"
 	/>
 	<div class="icon-holder">
-		<Icon icon="solar:user-bold" class="text-white" />
+		<div class="w-4 h-4">
+			<Icon icon="solar:user-bold" class="text-white" />
+		</div>
 		<div class="menu-container">
 			<div class="menu">
 				{#each links as { href, text }}
