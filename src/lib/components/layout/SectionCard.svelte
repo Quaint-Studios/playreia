@@ -26,14 +26,23 @@
         */
 		img: Snippet<[]>;
 		children: Snippet<[]>;
-
 	}
-    
-	export const { title, date, url, target, rel, cta = "Read more", shout = false, img, children }: SectionCardProps = $props();
 
-    let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
-let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
-let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+	export const {
+		title,
+		date,
+		url,
+		target,
+		rel,
+		cta = 'Read more',
+		shout = false,
+		img,
+		children
+	}: SectionCardProps = $props();
+
+	let year = date ? new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(date) : undefined;
+	let month = date ? new Intl.DateTimeFormat('en-US', { month: 'short' }).format(date) : undefined;
+	let day = date ? new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(date) : undefined;
 </script>
 
 <div class="section-card">
@@ -47,7 +56,15 @@ let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
 		{/if}
 		{#if url}
 			<div class="poppins">
-				<Link tight href={url} color={colors.gold} hoverColor={colors.tertiary} size="large" {target} {rel}>{cta}</Link>
+				<Link
+					tight
+					href={url}
+					color={colors.gold}
+					hoverColor={colors.tertiary}
+					size="large"
+					{target}
+					{rel}>{cta}</Link
+				>
 			</div>
 		{/if}
 	</div>
@@ -79,7 +96,7 @@ let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
 		@apply text-3xl;
 	}
 	h3 {
-		@apply text-xl max-h-[90px] w-[calc(100%)] overflow-ellipsis overflow-hidden;
+		@apply max-h-[90px] w-[calc(100%)] overflow-hidden overflow-ellipsis text-xl;
 	}
 
 	p {

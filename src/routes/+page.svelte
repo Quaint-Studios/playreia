@@ -83,7 +83,7 @@
 	<div class="mx-auto mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 		<SectionCard
 			title="Update v1.0.0.5-pre-alpha | Changelogs are finally here!"
-			date={new Date('January 1, 2024 12:02pm')}
+			date={new Date('January 1, 2024 12:02')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.5-pre-alpha"
 			target="_blank"
 			rel={['noopener', 'noreferrer']}
@@ -101,7 +101,7 @@
 		</SectionCard>
 		<SectionCard
 			title="Update v1.0.0.4-pre-alpha | Now with creepy health bars that follow you, an inventory layout change, and transparent colors!"
-			date={new Date('October 2, 2023 10:02am')}
+			date={new Date('October 2, 2023 10:02')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.4-pre-alpha"
 			target="_blank"
 			rel={['noopener', 'noreferrer']}
@@ -118,7 +118,7 @@
 		</SectionCard>
 		<SectionCard
 			title="Update v1.0.0.3-pre-alpha | New character and animation."
-			date={new Date('October 1, 2023 2:06pm')}
+			date={new Date('October 1, 2023 14:06')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.3-pre-alpha"
 			target="_blank"
 			rel={['noopener', 'noreferrer']}
@@ -135,7 +135,7 @@
 		</SectionCard>
 		<SectionCard
 			title="Update v1.0.0.2-pre-alpha | Items and Inventory system, better lighting, better ui, papa-- oh."
-			date={new Date('September 25, 2023 2:00am')}
+			date={new Date('September 25, 2023 02:00')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.2-pre-alpha"
 			target="_blank"
 			rel={['noopener', 'noreferrer']}
@@ -152,7 +152,7 @@
 		</SectionCard>
 		<SectionCard
 			title="Update v1.0.0.1-pre-alpha | Slowly getting there..."
-			date={new Date('September 22, 2023 5:15am')}
+			date={new Date('September 22, 2023 05:15')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.1-pre-alpha"
 			target="_blank"
 			rel={['noopener', 'noreferrer']}
@@ -169,7 +169,7 @@
 		</SectionCard>
 		<SectionCard
 			title="Update: v1.0.0.0-pre-alpha | This is the beginning! Migrating from Unity to Godot."
-			date={new Date('September 21, 2023 2:59pm')}
+			date={new Date('September 21, 2023 14:59')}
 			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.0-pre-alpha"
 		>
 			{#snippet img()}
