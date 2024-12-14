@@ -13,6 +13,9 @@ export default {
 		extend: {
 			boxShadow: {
 				boxed: '0px 4px 28px rgba(180,190,205,.28)'
+			},
+			borderRadius: {
+				'lg2': '0.625rem'
 			}
 		}
 	},

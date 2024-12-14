@@ -5,6 +5,7 @@
 	import Meta from '$components/seo/Meta.svelte';
 	import colors from '$constants/colors';
 	import DownloadSection from '$lib/pages/home/DownloadSection.svelte';
+	import SectionCard from '$components/layout/SectionCard.svelte';
 
 	const platformIcons = [
 		'mdi:windows',
@@ -38,11 +39,27 @@
 <Hero />
 
 <Section
-	backgroundColor={colors.midnightBlue}
-	color={colors.white}
 	lead="<strong>Coming Soon</strong>"
 	title="Download Reia for multiple platforms"
 	titlePosition="center"
+	contentPosition="center"
 >
 	<DownloadSection />
+</Section>
+
+<!-- Info section -->
+<Section headerColor="var(--gold)" title="Announcements">
+	<div class="grid grid-cols-3">
+		<SectionCard title="Join our Discord Join our Discord Join our Discord Join our Discord Join us">
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/discord.jpg?enhanced&w=428,512,1024"
+					alt="Discord Banner"
+					sizes="min(428px, 60vw)"
+				/>
+			{/snippet}
+			Join our Discord server to chat with the developers and other players! Send a message to
+			<code>makosai</code> and ask to join.
+		</SectionCard>
+	</div>
 </Section>

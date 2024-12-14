@@ -1,4 +1,5 @@
 <script lang="ts">
+	import colors from '$constants/colors';
 	import Icon from '@iconify/svelte';
 	import type { Snippet } from 'svelte';
 
@@ -11,6 +12,8 @@
 		lead?: string;
 		/** The section color. */
 		color?: string;
+		/** The section header color. */
+		headerColor?: string;
 		/** The section bg color. */
 		backgroundColor?: string;
 		/** Title positioning. */
@@ -27,7 +30,8 @@
 		icons = ['mdi:minus', 'mdi:circle-medium', 'mdi:rhombus'],
 		lead,
 		title,
-		color = '#323232',
+		color = colors.white,
+		headerColor,
 		backgroundColor = 'transparent',
 		titlePosition = 'left',
 		contentPosition = 'start',
@@ -55,7 +59,7 @@
 				</div>
 			</div>
 		{/if}
-		<h2 style="color: {color}; text-align: {titlePosition}">
+		<h2 style="color: {headerColor ?? color}; text-align: {titlePosition}">
 			{title}
 		</h2>
 		<div

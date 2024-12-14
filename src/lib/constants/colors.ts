@@ -8,6 +8,7 @@ export const colors = {
 	info: '#add8e6',
 	link: '#b0c4de',
 	border: '#f4f4f4',
+	borderHalf: '#f4f4f480',
 	textGray: '#808080',
 	buttonGray: '#d3d3d3',
 	light: '#f0f8ff',

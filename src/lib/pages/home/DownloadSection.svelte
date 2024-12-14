@@ -178,7 +178,7 @@
 
 	.platform-tabs {
 		@apply font-normal;
-		@apply mb-2 flex w-full items-center justify-center gap-4 sm:mb-4;
+		@apply mt-4 mb-2 flex w-full items-center justify-center gap-4 sm:mb-4;
 	}
 	.platform-tabs .progress-container {
 		@apply relative block;
