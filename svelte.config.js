@@ -1,7 +1,7 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import cspDirectives from './csp-directives.mjs';
+// import cspDirectives from './csp-directives.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,6 +15,10 @@ const config = {
 			}
 		})
 	],
+	
+	compilerOptions: {
+		// runes: true
+	},
 
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.

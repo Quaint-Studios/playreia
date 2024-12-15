@@ -4,10 +4,14 @@
 
 	import Icon from '@iconify/svelte';
 
-	export let lead: string;
-	export let tag: string;
-	export let store: string;
-	export let icon: string;
+	interface Props {
+		lead: string;
+		tag: string;
+		store: string;
+		icon: string;
+	}
+
+	let { lead, tag, store, icon }: Props = $props();
 
 	const href = `/download#${tag}`;
 

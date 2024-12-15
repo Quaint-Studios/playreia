@@ -4,7 +4,7 @@
 	import type { Snippet } from 'svelte';
 	import type { HTMLAttributeAnchorTarget } from 'svelte/elements';
 
-	interface SectionCardProps {
+	interface Props {
 		title: string;
 		date?: Date;
 		url?: string;
@@ -28,7 +28,7 @@
 		children: Snippet<[]>;
 	}
 
-	export const {
+	let {
 		title,
 		date,
 		url,
@@ -38,7 +38,7 @@
 		shout = false,
 		img,
 		children
-	}: SectionCardProps = $props();
+	}: Props = $props();
 
 	let year = date ? new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(date) : undefined;
 	let month = date ? new Intl.DateTimeFormat('en-US', { month: 'short' }).format(date) : undefined;
@@ -46,27 +46,29 @@
 </script>
 
 <div class="section-card">
-	<div class="content glass">
-		<h3 class="poppins" class:shout>{title}</h3>
-		<p>{@render children()}</p>
-	</div>
-	<div class="card-footer glass" class:end={!date && url}>
-		{#if date}
-			<span class="date">{`${month} ${day}, ${year}`}</span>
-		{/if}
-		{#if url}
-			<div class="poppins">
-				<Link
-					tight
-					href={url}
-					color={colors.gold}
-					hoverColor={colors.tertiary}
-					size="large"
-					{target}
-					{rel}>{cta}</Link
-				>
-			</div>
-		{/if}
+	<div class="main glass">
+		<div class="content">
+			<h3 class="poppins" class:shout>{title}</h3>
+			<p>{@render children()}</p>
+		</div>
+		<div class="card-footer" class:end={!date && url}>
+			{#if date}
+				<span class="date">{`${month} ${day}, ${year}`}</span>
+			{/if}
+			{#if url}
+				<div class="poppins">
+					<Link
+						tight
+						href={url}
+						color={colors.gold}
+						hoverColor={colors.tertiary}
+						size="large"
+						{target}
+						{rel}>{cta}</Link
+					>
+				</div>
+			{/if}
+		</div>
 	</div>
 
 	<div class="image">
@@ -88,8 +90,11 @@
 		@apply h-[285px] w-full;
 	}
 
+	.main {
+		@apply z-10 mt-52 flex h-full flex-col gap-2 border-none;
+	}
 	.content {
-		@apply z-10 mt-52 flex h-full flex-col gap-2 border-none p-4;
+		@apply flex h-full flex-col gap-2 p-4;
 	}
 
 	h3.shout {
@@ -100,7 +105,7 @@
 	}
 
 	p {
-		@apply mt-2;
+		@apply mt-2 leading-5;
 	}
 
 	.card-footer {
