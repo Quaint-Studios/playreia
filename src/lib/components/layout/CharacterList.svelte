@@ -6,13 +6,15 @@
 	}
 
 	let items: DropItem[] = [
-		{ label: 'Item 1', icon: 'mdi:home' },
-		{ label: 'Item 2', icon: 'mdi:account' }
+		{ label: 'Item 1', icon: 'hugeicons:justice-scale-01' },
+		{ label: 'Item 2', icon: 'carbon:ibm-watson-openscale' },
+		{ label: 'Item 3', icon: 'iconoir:spark-solid' },
+		{ label: 'Item 4', icon: 'basil:fire-solid' }
 	];
 </script>
 
 <div>
-	<DropMenu {items} {onClick} />
+	<DropMenu ariaId="characters" {items} {onClick} />
 	<div class="ring"></div>
 </div>
 

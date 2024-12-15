@@ -9,6 +9,7 @@
 	--link: #b0c4de;
 	--border: #f4f4f4;
 	--borderHalf: #f4f4f480;
+	--borderQuarter: #f4f4f440;
 	--borderBlueHalf : #86c7f980;
 	--textGray: #808080;
 	--buttonGray: #d3d3d3;
@@ -18,6 +19,7 @@
 	--black: #000000;
 	--lightDark: #424242;
 	--gold: #fed18e;
+	--goldHalf: #fed18ebb;
 	--red: #fc3c35;
 	--crimsonRed: #ff4646bf;
 	--yellow: #f9fc35;
