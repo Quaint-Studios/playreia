@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-	@apply text-3xl font-black;
+	@apply text-2xl font-black;
 }
 
 h1 strong,
@@ -54,4 +54,17 @@ a.unset {
 
 code.gold {
 	@apply text-[--gold];
+}
+
+.blog-container {
+	@apply mx-auto max-w-screen-lg;
+}
+p.blog {
+	@apply my-4;
+}
+p.blog.col {
+	@apply md:columns-2;
+}
+p.blog + p.blog {
+	@apply mt-0;
 }

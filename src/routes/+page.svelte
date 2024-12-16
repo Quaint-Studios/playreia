@@ -88,8 +88,11 @@
 				/>
 			{/snippet}
 			"Folding" is your way to help combat diseases like cancers and Alzheimer's disease. Join our
-			<a target="_blank" rel="noopener noreferer" href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute. We're looking
-			into distributing in-game rewards as an incentive!
+			<a
+				target="_blank"
+				rel="noopener noreferer"
+				href="https://stats.foldingathome.org/team/1066033">team</a
+			> and help us contribute. We're looking into distributing in-game rewards as an incentive!
 		</SectionCard>
 	</div>
 </Section>
@@ -207,6 +210,155 @@
 			It works! We've successfully migrated from Unity to Godot. A basic level was created to test some
 			features of the project. All Unity-related assets have been removed.
 		</SectionCard>
+	</div>
+</Section>
+
+<!-- What is Reia? -->
+<Section headerColor="var(--gold)" title="Exploring the World of Reia" titlePosition="left">
+	<div class="blog-container">
+		<strong>An Exciting Action Adventure RPG.</strong>
+		<p class="blog col">
+			Reia is a vast and immersive fantasy game filled with a thrilling storyline and action-filled
+			combat. Enjoy an amazing story, combat, crafting, and more in a game that will continue to
+			grow in an open-source environment. As you embark on your adventure, you'll be able to also
+			experience what wonders the game has to offer. Explore the Infinite City and conquer various
+			dungeons. Experience intricate crafting and gathering. Control and customize your floating
+			player-owned island. And if you're feeling creative, you can even distribute in-game content
+			for everyone to enjoy both free and paid! Play the way you want and never feel forced to play
+			a certain way. Reia ensures a captivating experience that will leave you eagerly anticipating
+			the magical adventures to come.
+		</p>
+
+		<strong>
+			Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons,
+			and more.
+		</strong>
+		<p class="blog col">
+			A fantasy game that's open-source, action, adventure, and an RPG; that's Reia. We really want
+			you to be able to play the way you want. Focus on the story, combat, crafting, and your own
+			floating island! There is an extensive story for you to play through with many possibilities
+			that you can revisit in the same playthrough. That means there's no need to remake your
+			character to experience more content. For the players that want to focus purely on combat and
+			improving their stats to the max, they can also focus their gameplay on that and ignore the
+			other aspects. Aside from story and combat, there's also the economy, managing and designing
+			your own island, creating in-game content such as music and cosmetics to sell, automated
+			battles to conquer more resources, and infinite dungeons that net you powerful gear. While
+			this game is still in early access, it's a game with a lot to accomplish. With each piece put
+			together, that's one more piece of content for you to enjoy. Let's dive into what content the
+			game will have to offer.
+		</p>
+	</div>
+</Section>
+
+<!-- Adventurous Storyline -->
+<Section headerColor="var(--gold)" title="Adventurous Storyline" titlePosition="left">
+	<div class="blog-container">
+		<strong>Each choice has a consequence in your main life. But wait there's more…</strong>
+		<p class="blog">
+			If focusing on the story is your choice then go for it. A story could give you experience as a
+			reward or even new equipment. Some stories will unlock new bosses for you to fight, new events
+			that reward you each time you play them, and access to other quests.
+		</p>
+
+		<p class="blog">
+			There are three types of stories in Reia: <strong>Main Story</strong>,
+			<strong>Quests</strong>, and <strong>Mini-Quests</strong>. The main story focuses on Reia
+			herself. Each section of the main story is a requirement for a large chunk of quests. The
+			major difference between the main story and quests is that the main story is linear and the
+			quests can be done in whatever order you want. Mini-quests are like quests but are short.
+			Obvious, right? But quests can also be extremely long or short as well. Let's get into more
+			detail about each type of story in Reia.
+		</p>
+
+		<h3>Main Story</h3>
+		<p class="blog">
+			When completing a section of the main story you'll, as mentioned before, unlock access to new
+			quests. This is a standard prerequisite. The main story can also enable to you unlock new
+			Spirits and abilities too. In Reia, you spend most of your time repairing the realm and making
+			it better than it was before the invasion. Collecting Spirits to unlock new abilities is one
+			of the rewards you get access to from completing the main story. You'll still have to complete
+			the Spirit's quest to be able to use them. But the prerequisite will require the main story to
+			start the quest.
+		</p>
+
+		<h3>Quests</h3>
+		<p class="blog">
+			A quest focuses more on telling your story. While you play the role as one of the voices of
+			Reia, you have the ability to make your own choices. And with each choice, there's a
+			consequence. One of the key features of Reia though is that with those consequences, you're
+			not locked out of certain rewards forever. You can revisit the past and replay the story with
+			different outcomes, gaining unique rewards for doing so with a slight drawback. These
+			drawbacks are usually cosmetic. But whenever you do future quests, your past choices will
+			influence them.
+		</p>
+
+		<h3>Mini-Quests</h3>
+		<p class="blog">
+			These short stories stitch together key events in the lore and can even be something as
+			trivial as planting a potato. Something so simple that comes in handy in a quest later down
+			the line. They'll still reward you with experience but it will be much less.
+		</p>
+
+		<p class="blog">
+			Those three types of stories leave you with plenty of content to peruse through. Whether you
+			prefer your stories linear or in your own order, you have two options!
+		</p>
+	</div>
+</Section>
+
+<Section headerColor="var(--gold)" title="Combat with Action" titlePosition="left">
+	<div class="blog-container">
+		<strong>Ignore the story and stomp out the enemies! Focus on getting stronger.</strong>
+		<p class="blog">
+			For the players that enjoy the thrill of heart-wrenching combat, whether it's fast-paced or
+			slow-paced, this is for you. If you're not a huge fan of the story then you can focus on the
+			combat. Fight endlessly and only complete the parts of the story which unlocks content that'll
+			enhance your combat experience.
+		</p>
+
+		<h3>How Reia's Combat Systems are Influenced</h3>
+		<p class="blog">
+			One of the things that sparked the creation of Reia as a game was some amazing combat in other
+			games. The feeling that if you were hit by a well-telegraphed attack then you should expect a
+			well-deserved loss of brain cells from your character. Well, well, well… If it isn't the
+			consequences of your own actions.
+		</p>
+		<p class="blog">
+			It doesn't matter if you're fighting bosses, mini-bosses, or just your average enemy. We want
+			most of the content to feel engaging. Some content should remain calm for players that would
+			like a slow-paced experience. So you can still play the game on the side while working or
+			reading a book if that's the case! The focus here is to provide content that requires
+			different levels of attention and rewarding you accordingly.
+		</p>
+
+		<h3>Diversifying your Playstyle with Spirits</h3>
+		<p class="blog">
+			Additionally, when you gather more spirits you also diversify the possibilities you can build
+			your playstyle around. Each spirit will unlock new passives. Leveling up your character will
+			do the same. Leveling up your spirit will allow you to branch out into the skill tree as your
+			character gets more efficient at using a spirit. This means you can eventually mix more
+			spirits together in unique ways.
+		</p>
+
+		<h3>Governing Cities and War</h3>
+		<p class="blog">
+			PvP and team-based gameplay will also be a focus. While you can own an island, you can also
+			have a group of players, a Fleet, that own a city. These battles are large-scale and takes a
+			few days to complete. It involves first declaring war against the city. Then scheduling pay
+			rates for all participants in the first wave. The battle has strategic elements to it that are
+			still being finalized. The focus though is allowing participants to gain something great out
+			of it and not just having the rewards from capturing the city go to the owner of the Fleet.
+		</p>
+
+		<p class="blog">
+			Whoever is the owner of the city will have power to dictate taxes, prioritize imports and
+			exports, creating and destroying buildings, and more. They’ll essentially be governing the
+			city. A profitable endeavor in most areas. After a battle is over, the city can’t be warred
+			for another two days by other Fleets or another week by the same Fleet. To prevent a
+			bombardment of attacks, a deposit is required to declare war. The cost goes down as time
+			passes. A small percentage of this cost goes to the owner of the island if they keep it and
+			the rest goes to the economy of the game.
+		</p>
 	</div>
 </Section>
 

@@ -33,7 +33,7 @@
 		color = colors.white,
 		headerColor,
 		backgroundColor = 'transparent',
-		titlePosition = 'left',
+		titlePosition = 'center',
 		contentPosition = 'start',
 		alt = false,
 		children
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 		{/if}
-		<h2 style="color: {headerColor ?? color}; text-align: {titlePosition}">
+		<h2 style="color: {headerColor ?? color}; text-align: {titlePosition}; width: 100%">
 			{title}
 		</h2>
 		<div
