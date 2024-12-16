@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Lazy from 'svelte-lazy';
 	import { loadIcons } from '@iconify/svelte';
 	import Hero from '$components/layout/Hero.svelte';
 	import Section from '$components/layout/Section.svelte';
@@ -216,7 +217,9 @@
 <!-- What is Reia? -->
 <Section headerColor="var(--gold)" title="Exploring the World of Reia" titlePosition="left">
 	<div class="blog-container">
-		<strong>An Exciting Action Adventure RPG.</strong>
+		<div class="bg">
+			<strong>An Exciting Action Adventure RPG.</strong>
+		</div>
 		<p class="blog col">
 			Reia is a vast and immersive fantasy game filled with a thrilling storyline and action-filled
 			combat. Enjoy an amazing story, combat, crafting, and more in a game that will continue to
@@ -229,10 +232,12 @@
 			the magical adventures to come.
 		</p>
 
-		<strong>
-			Focus on the Story, Combat, milking the economy, managing your own Island, Infinite Dungeons,
-			and more.
-		</strong>
+		<div class="bg">
+			<strong>
+				Focus on the Story, Combat, milking the economy, managing your own Island, Infinite
+				Dungeons, and more.
+			</strong>
+		</div>
 		<p class="blog col">
 			A fantasy game that's open-source, action, adventure, and an RPG; that's Reia. We really want
 			you to be able to play the way you want. Focus on the story, combat, crafting, and your own
@@ -253,7 +258,9 @@
 <!-- Adventurous Storyline -->
 <Section headerColor="var(--gold)" title="Adventurous Storyline" titlePosition="left">
 	<div class="blog-container">
-		<strong>Each choice has a consequence in your main life. But wait there's more…</strong>
+		<div class="bg">
+			<strong>Each choice has a consequence in your main life. But wait there's more…</strong>
+		</div>
 		<p class="blog">
 			If focusing on the story is your choice then go for it. A story could give you experience as a
 			reward or even new equipment. Some stories will unlock new bosses for you to fight, new events
@@ -308,7 +315,9 @@
 
 <Section headerColor="var(--gold)" title="Combat with Action" titlePosition="left">
 	<div class="blog-container">
-		<strong>Ignore the story and stomp out the enemies! Focus on getting stronger.</strong>
+		<div class="bg">
+			<strong>Ignore the story and stomp out the enemies! Focus on getting stronger.</strong>
+		</div>
 		<p class="blog">
 			For the players that enjoy the thrill of heart-wrenching combat, whether it's fast-paced or
 			slow-paced, this is for you. If you're not a huge fan of the story then you can focus on the
@@ -358,6 +367,62 @@
 			bombardment of attacks, a deposit is required to declare war. The cost goes down as time
 			passes. A small percentage of this cost goes to the owner of the island if they keep it and
 			the rest goes to the economy of the game.
+		</p>
+	</div>
+</Section>
+
+<Section headerColor="var(--gold)" title="The Infinite City" titlePosition="left">
+	<div class="blog-container">
+		<div class="bg">
+			<strong>A unique dungeon and exploring experience with hidden features.</strong>
+		</div>
+		<Lazy keep={true} class="blog-banner">
+			<enhanced:img
+				src="$images/pages/home/InfiniteCity_GENERATED.jpeg?enhanced&w=1920;1280;720"
+				alt="The Infinite City"
+				title="The Infinite City - Reia"
+				sizes="min(1280px, 100vw)"
+			/>
+		</Lazy>
+		<p class="blog">
+			If that’s not enough, then venture into the Infinite City. A collection of dungeons in an open
+			world environment where the deeper you go the stronger the monsters get. Unlock checkpoints to
+			teleport to them later and to teleport back. But be careful, returning from the Infinite City
+			poses risks. If you’ve received any rewards from a dungeon, the City will try to claim it
+			back. The loot isn’t yours forever unless you can make it out. And the only way you can
+			teleport is by waystones. Teleport tablets or spells do not work in the Infinite City.
+		</p>
+
+		<h3>The Dangers of The Infinite City</h3>
+		<p class="blog">
+			The Infinite City houses many threats. It’s not your typical hostile area. While there are
+			many enemies that want to rip and tear you to to shreds, that’s not the only thing you’ll have
+			to worry about. If you want to avoid those enemies, you have another way to traverse the
+			vastness of these infinite dungeons. There are areas that require you to complete intuitive
+			puzzles to advance forward rather than fighting your way through. But, beware, if you fail the
+			puzzles there will be consequences. It’s a trade-off for the calm nature of this route.
+		</p>
+
+		<h3>Sharing or Selling your Discoveries</h3>
+		<p class="blog">
+			When you make your way through the Infinite City and conquer a dungeon, if you brought a map
+			with you then you’ll have the option of using it. You can record your findings at that
+			location. This is useful because a player can purchase your map from you and when they use it
+			themselves, they’ll be able to choose an undiscovered place on their own map to change to
+			match the copy. However, if the location is already discovered then they’ll just have to
+			complete that area and then they can overwrite it with the copy they obtained! The catch
+			though is that the cost to copy a map will increase the more you use it on the same dungeon.
+		</p>
+
+		<h3>Risks and Rewards</h3>
+		<p class="blog">
+			When you’ve completed any form of activity in the Infinite City, you’ll get loot. You can also
+			use that loot immediately. But, it’s not yours to keep just yet. Until you can return to a
+			safezone, the Infinite City will maintain a grasp on your newly obtained loot. You’ll soon
+			come to realize that as you venture closer towards the safezone there will be a series of
+			challenges you’re presented with. These challenges could be debuffs on you, buffs for enemies,
+			modified spawns, or even sudden death within a time limit. The deeper you venture in certain
+			areas, the more lethal the risks. But you’ll still be rewarded for your risks.
 		</p>
 	</div>
 </Section>

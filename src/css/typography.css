@@ -68,3 +68,7 @@ p.blog.col {
 p.blog + p.blog {
 	@apply mt-0;
 }
+
+.bg {
+	@apply bg-[--deepPurpleHighlightHalf] p-2 rounded-lg w-fit;
+}

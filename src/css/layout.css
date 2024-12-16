@@ -1,0 +1,3 @@
+.blog-banner img {
+	@apply object-cover rounded-lg2 w-full h-[125px] my-4;
+}

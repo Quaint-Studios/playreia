@@ -32,7 +32,8 @@ export const colors = {
 	deepBlue: '#0d47a1',
 	midnightBlue: '#081247',
 	deepPurple: '#220d54',
-	deepPurpleHighlight: '#3a168d'
+	deepPurpleHighlight: '#3a168d',
+	deepPurpleHighlightHalf: '#3a168d80',
 };
 
 export default colors;
