@@ -88,7 +88,7 @@
 				/>
 			{/snippet}
 			"Folding" is your way to help combat diseases like cancers and Alzheimer's disease. Join our
-			<a href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute. We're looking
+			<a target="_blank" rel="noopener noreferer" href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute. We're looking
 			into distributing in-game rewards as an incentive!
 		</SectionCard>
 	</div>
