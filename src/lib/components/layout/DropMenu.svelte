@@ -19,11 +19,13 @@
 	let currentItem = $state(0);
 </script>
 
-<div role="list" class="drop-menu-container" onmouseleave={() => {}}>
+<form class="drop-menu-container" onmouseleave={() => (show = false)}>
 	<button
 		type="button"
 		class="drop-menu"
 		onclick={() => (show = !show)}
+		role="combobox"
+		aria-controls={`${ariaId}_list`}
 		aria-expanded={show}
 		aria-haspopup="listbox"
 	>
@@ -37,18 +39,19 @@
 		id="{ariaId}_list"
 		class="dropdown"
 		class:show
-		tabindex="-1"
+		tabindex={currentItem}
 		role="listbox"
-		aria-activedescendant={`${ariaId}_${items[currentItem].label.replaceAll(' ', '_')}`}
+		aria-activedescendant={`${ariaId}_list_${currentItem}`}
 	>
 		{#each items as { label, icon }, i}
 			<button
-				id={`${ariaId}_${label.replaceAll(' ', '_')}`}
+				id={`${ariaId}_list_${i}`}
 				class="item"
 				class:selected={currentItem == i}
 				onclick={() => {
 					onClick(i);
 					currentItem = i;
+					show = false;
 				}}
 				role="option"
 				aria-selected={currentItem == i}
@@ -60,7 +63,7 @@
 			</button>
 		{/each}
 	</div>
-</div>
+</form>
 
 <style lang="postcss">
 	.drop-menu-container {

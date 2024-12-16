@@ -78,12 +78,7 @@
 			Testing currently is private. But you can subscribe to our newsletter to get in on some cool multiplayer
 			tests!
 		</SectionCard>
-		<SectionCard
-			shout
-			title="Folding@Home"
-			url="/foldingathome"
-			cta="Start folding"
-		>
+		<SectionCard shout title="Folding@Home" url="/foldingathome" cta="Start folding">
 			{#snippet img()}
 				<enhanced:img
 					src="$images/banners/folding_at_home.jpg?enhanced&w=428,512,1024"
@@ -92,8 +87,9 @@
 					style="object-position: 100% 0;"
 				/>
 			{/snippet}
-			"Folding" is your way to help fight diseases. Join our <a href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute to the cause.
-			We're looking into distributing in-game rewards as an incentive!
+			"Folding" is your way to help combat diseases like cancers and Alzheimer's disease. Join our
+			<a href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute. We're looking
+			into distributing in-game rewards as an incentive!
 		</SectionCard>
 	</div>
 </Section>

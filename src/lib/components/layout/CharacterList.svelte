@@ -1,16 +1,21 @@
 <script lang="ts">
+	import colors from '$constants/colors';
+	import Icon from '@iconify/svelte';
 	import DropMenu, { type DropItem } from './DropMenu.svelte';
 
 	function onClick(index: number) {
-		console.log('Clicked!');
+		currentItem = index;
 	}
 
 	let items: DropItem[] = [
-		{ label: 'Item 1 Justice', icon: 'hugeicons:justice-scale-01' },
-		{ label: 'Item 2 Axis', icon: 'carbon:ibm-watson-openscale' },
-		{ label: 'Item 3 Spark', icon: 'iconoir:spark-solid' },
-		{ label: 'Item 4 Flames', icon: 'basil:fire-solid' }
+		{ label: 'Char 1 Hydro', icon: 'game-icons:water-splash' },
+		{ label: 'Char 2 Pyro', icon: 'basil:fire-solid' },
+		{ label: 'Char 3 Electro', icon: 'iconoir:spark-solid' },
+		{ label: 'Char 4 Aero', icon: 'carbon:ibm-watson-openscale' },
+		{ label: 'Char 5 Terra', icon: 'hugeicons:justice-scale-01' }
 	];
+
+	let currentItem = $state(0);
 </script>
 
 <div class="character-list">
@@ -21,19 +26,23 @@
 	<div class="ring-container">
 		<div class="ring"></div>
 		<div class="bubble-container">
-			<div class="bubble"></div>
-			<div class="bubble"></div>
-			<div class="bubble"></div>
-			<div class="bubble"></div>
-			<div class="bubble"></div>
-			<div class="big-bubble"><div class="inner-bubble"></div></div>
+			{#each items as { icon }, i}
+				<div class="bubble" class:selected={currentItem == i}>
+					<Icon {icon} font-size={32} color={colors.gold} />
+				</div>
+			{/each}
+			<div class="big-bubble">
+				<div class="inner-bubble">
+					<Icon icon={items[currentItem].icon} font-size={96} color={colors.gold} />
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style lang="postcss">
 	.character-list {
-		@apply relative w-full mt-10 mb-16;
+		@apply relative mb-16 mt-10 w-full;
 	}
 
 	.gradient {
@@ -58,17 +67,17 @@
 	.bubble {
 		@apply absolute bottom-0 left-0 right-0 top-0 m-auto;
 		/* // Translate along the edge of the circle */
-		@apply aspect-square w-[12%] rounded-full border-[3px] border-[--borderSilver];
+		@apply flex aspect-square w-[12%] items-center justify-center rounded-full border-[1px] border-[--borderSilver] md:border-[3px];
 		background: linear-gradient(to bottom, var(--silverDark), var(--silverLight));
 	}
 
-	.bubble-container .bubble:nth-child(1) {
+	.bubble-container .bubble:nth-child(5) {
 		transform: translate(
 			calc(0px + (100% * (100 / 12 / 2)) * cos(10deg)),
 			calc(0px + (100% * (100 / 12 / 2)) * sin(10deg))
 		);
 	}
-	.bubble-container .bubble:nth-child(2) {
+	.bubble-container .bubble:nth-child(4) {
 		transform: translate(
 			calc(0px + (100% * (100 / 12 / 2)) * cos(30deg)),
 			calc(0px + (100% * (100 / 12 / 2)) * sin(30deg))
@@ -82,30 +91,40 @@
 		);
 	}
 
-	.bubble-container .bubble:nth-child(4) {
+	.bubble-container .bubble:nth-child(2) {
 		transform: translate(
 			calc(0px + (100% * (100 / 12 / 2)) * cos(70deg)),
 			calc(0px + (100% * (100 / 12 / 2)) * sin(70deg))
 		);
 	}
 
-	.bubble-container .bubble:nth-child(5) {
+	.bubble-container .bubble:nth-child(1) {
 		transform: translate(
 			calc(0px + (100% * (100 / 12 / 2)) * cos(90deg)),
 			calc(0px + (100% * (100 / 12 / 2)) * sin(90deg))
 		);
 	}
 
+	.bubble {
+		@apply brightness-[0.6];
+	}
+	.bubble.selected {
+		@apply brightness-100;
+	}
+	.bubble, .big-bubble {
+		@apply transition-[filter] duration-1000;
+	}
+
 	.bubble-container .big-bubble {
-		@apply absolute bottom-0 left-0 right-0 top-0 m-auto p-0.5;
-		@apply aspect-square w-[40%] rounded-full border-[4px] border-[--borderSilver];
+		@apply absolute bottom-0 left-0 right-0 top-0 m-auto brightness-[0.6];
+		@apply aspect-square w-[40%] rounded-full border-[1.5px] border-[--borderSilver] sm:border-[4px];
 		transform: translate(
 			calc(0px + (100% * (100 / 40 / 2)) * cos(130deg)),
 			calc(0px + (100% * (100 / 40 / 2)) * sin(130deg))
 		);
 	}
 	.bubble-container .big-bubble .inner-bubble {
-		@apply h-full w-full rounded-full;
+		@apply absolute left-[3px] top-[3px] flex h-[calc(100%-6px)] w-[calc(100%-6px)] items-center justify-center rounded-full;
 		background: linear-gradient(to bottom, var(--silverDark), var(--silverLight));
 	}
 </style>

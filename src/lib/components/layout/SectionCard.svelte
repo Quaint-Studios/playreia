@@ -80,7 +80,7 @@
 	.section-card {
 		@apply relative flex max-w-[400px] flex-col;
 		@apply rounded-3xl bg-[--midnightBlue] shadow-lg;
-		@apply border-[1px] border-solid border-[--borderBlueHalf];
+		@apply border-[1px] border-solid hover:border-[--borderHalf] border-[--borderBlueHalf];
 		@apply overflow-hidden;
 	}
 
