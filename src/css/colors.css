@@ -10,7 +10,10 @@
 	--border: #f4f4f4;
 	--borderHalf: #f4f4f480;
 	--borderQuarter: #f4f4f440;
-	--borderBlueHalf : #86c7f980;
+	--borderBlueHalf: #86c7f980;
+	--borderSilver: #d2d9e7;
+	--silverDark: #2b364c;
+	--silverLight: #94a2b7;
 	--textGray: #808080;
 	--buttonGray: #d3d3d3;
 	--light: #f0f8ff;
@@ -23,6 +26,7 @@
 	--red: #fc3c35;
 	--crimsonRed: #ff4646bf;
 	--yellow: #f9fc35;
+	--lightBlue: #47aaf5;
 	--blue: #239af4;
 	--blueHighlight: #0b78cb;
 	--deepBlue: #0d47a1; /* #1e90ff */
