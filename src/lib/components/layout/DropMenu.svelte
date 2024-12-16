@@ -8,12 +8,13 @@
 	}
 
 	interface Props {
+		ariaLabel: string;
 		ariaId: string;
 		items: DropItem[];
 		onClick: (index: number) => void;
 	}
 
-	let { ariaId, items, onClick }: Props = $props();
+	let { ariaLabel, ariaId, items, onClick }: Props = $props();
 
 	let show = $state(false);
 	let currentItem = $state(0);
@@ -25,6 +26,7 @@
 		class="drop-menu"
 		onclick={() => (show = !show)}
 		role="combobox"
+		aria-label={ariaLabel}
 		aria-controls={`${ariaId}_list`}
 		aria-expanded={show}
 		aria-haspopup="listbox"
@@ -53,6 +55,7 @@
 					currentItem = i;
 					show = false;
 				}}
+				aria-label={label}
 				role="option"
 				aria-selected={currentItem == i}
 			>

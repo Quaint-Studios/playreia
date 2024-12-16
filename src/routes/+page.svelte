@@ -82,7 +82,7 @@
 			{#snippet img()}
 				<enhanced:img
 					src="$images/banners/folding_at_home.jpg?enhanced&w=428,512,1024"
-					alt="Newsletter Banner"
+					alt="Folding@Home Banner"
 					sizes="min(428px, 60vw)"
 					style="object-position: 100% 0;"
 				/>
