@@ -57,7 +57,7 @@ code.gold {
 }
 
 .blog-container {
-	@apply mx-auto max-w-screen-lg;
+	@apply mx-auto max-w-screen-lg w-full;
 }
 p.blog {
 	@apply my-4;

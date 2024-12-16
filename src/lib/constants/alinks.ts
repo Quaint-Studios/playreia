@@ -9,7 +9,8 @@ const alinks = {
 	pinterest: 'https://pinterest.com/playreia',
 	youtube: 'https://youtube.com/@playreia',
 	open_collective: 'https://opencollective.com/reia',
-	discord: 'https://discord.gg/playreia'
+	discord: 'https://discord.gg/playreia',
+	discordMsg: 'https://discord.com/users/83303489945468928'
 };
 
 export default alinks;
