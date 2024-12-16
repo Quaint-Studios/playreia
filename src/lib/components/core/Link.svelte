@@ -85,7 +85,7 @@
 	style="border: 2px solid {borderHoverColorState};"
 	style:color={hoverColorState ?? color}
 	style:background-color={backgroundColor}
-	class={['lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(' ')}
+	class={['unset', 'lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(' ')}
 	class:lb-button--primary={primary && button}
 	class:lb-button--secondary={!primary && button}
 	class:lb-button--underline={underline}

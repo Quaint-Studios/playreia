@@ -23,7 +23,7 @@
 	// It'll need some fiddling. Maybe even multiple images with diff clips.
 </script>
 
-<a {href} aria-label="{store} Download" class="platform">
+<a {href} aria-label="{store} Download" class="platform unset">
 	<Icon {icon} font-size="38" />
 	<div class="content">
 		<div class="lead">{lead}</div>
