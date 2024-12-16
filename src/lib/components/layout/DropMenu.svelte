@@ -20,7 +20,7 @@
 	let currentItem = $state(0);
 </script>
 
-<form class="drop-menu-container" onmouseleave={() => (show = false)}>
+<form class="drop-menu-container" onmouseleave={() => (show = false)} onsubmit={(e) => e.preventDefault()}>
 	<button
 		type="button"
 		class="drop-menu"
