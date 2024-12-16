@@ -33,7 +33,7 @@
 
 <style lang="postcss">
 	.character-list {
-		@apply relative w-full mt-10;
+		@apply relative w-full mt-10 mb-16;
 	}
 
 	.gradient {
