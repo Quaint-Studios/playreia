@@ -19,7 +19,7 @@
 	let currentItem = $state(0);
 </script>
 
-<div role="list" class="relative" onmouseleave={() => (show = false)}>
+<div role="list" class="drop-menu-container" onmouseleave={() => {}}>
 	<button
 		type="button"
 		class="drop-menu"
@@ -46,7 +46,10 @@
 				id={`${ariaId}_${label.replaceAll(' ', '_')}`}
 				class="item"
 				class:selected={currentItem == i}
-				onclick={() => onClick(i)}
+				onclick={() => {
+					onClick(i);
+					currentItem = i;
+				}}
 				role="option"
 				aria-selected={currentItem == i}
 			>
@@ -60,6 +63,9 @@
 </div>
 
 <style lang="postcss">
+	.drop-menu-container {
+		@apply relative pb-1.5;
+	}
 	.drop-menu {
 		@apply flex items-center justify-center gap-2;
 		@apply py-1.5 pl-6 pr-4;
@@ -83,7 +89,7 @@
 	}
 
 	.label {
-		@apply text-left text-lg font-light;
+		@apply text-left text-lg font-light text-nowrap;
 	}
 	.selected .label {
 		@apply font-normal text-[--gold];
@@ -100,8 +106,8 @@
 	}
 
 	.dropdown {
-		@apply absolute right-0 top-full hidden w-full flex-col overflow-hidden;
-		@apply mt-1.5;
+		@apply z-10 min-w-full;
+		@apply absolute right-0 top-full hidden w-auto flex-col overflow-hidden;
 		@apply rounded-lg border-[1px] border-[--gold] bg-[--midnightBlue];
 	}
 	.dropdown.show {
