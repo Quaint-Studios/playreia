@@ -17,6 +17,9 @@ h2 {
 h3 {
 	@apply text-2xl font-black;
 }
+p.blog + h3 {
+	@apply !mt-12;
+}
 
 h1 strong,
 h2 strong {
