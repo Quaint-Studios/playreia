@@ -440,9 +440,9 @@
 			yourself, then this is the section for you. You can craft a wide range of weapons, equipment,
 			soulstones, and consumables. that will improve your ability to progress through the game.
 			Enhance weapons and equipment more efficiently. Or improve that soulstone you just found by
-			giving it a modifier to gain a new effect. If you’re having trouble surviving or dealing
-			enough damage, perhaps it’s time to unleash your inner-chef. Start cooking food to give a
-			little boost. Or engage in some alchemy to create potions that do almost the same thing. Let’s
+			giving it a modifier to gain a new effect. If you're having trouble surviving or dealing
+			enough damage, perhaps it's time to unleash your inner-chef. Start cooking food to give a
+			little boost. Or engage in some alchemy to create potions that do almost the same thing. Let's
 			get more in-depth on how each of these craftable items can help you and your spirits.
 		</p>
 
@@ -480,35 +480,35 @@
 		<p class="blog">
 			Each section of your floating island can be customized down to the way your islands are shaped
 			and connected. You can have multiple islands, build stalls, hire staff, invite friends, throw
-			parties, and trade with other islands. It doesn’t end there. Decorate your island and invite
+			parties, and trade with other islands. It doesn't end there. Decorate your island and invite
 			your spirits to live in their own rooms. Send them on expeditions to help expand your resource
-			income for your island at the risk of losing some of your land. Let’s dig into the details!
+			income for your island at the risk of losing some of your land. Let's dig into the details!
 		</p>
 
 		<h3>Enjoyable Island Presets</h3>
 		<p class="blog">
-			The idea was to present players with preset islands to choose from. It’ll be an extensive list
-			but it won’t be a voxel-like experience. That would be a nightmare to keep stored on
-			databases. This already is. But that’s okay. It’s for your enjoyment! The best alternative
+			The idea was to present players with preset islands to choose from. It'll be an extensive list
+			but it won't be a voxel-like experience. That would be a nightmare to keep stored on
+			databases. This already is. But that's okay. It's for your enjoyment! The best alternative
 			would be to have presets and label them as numbers. For the tech nerds out there, that means
-			it’ll just be stored as a number instead of a list of numbers describing each voxel point.
+			it'll just be stored as a number instead of a list of numbers describing each voxel point.
 			This means there can be a lot more customizations and more connected islands. You can choose
 			what sort of connection you want between islands. A launch pad? We have your back. A bridge?
-			Build it. A ethereal staircase? We’ll have to contact city hall to get that approved but it’ll
+			Build it. A ethereal staircase? We'll have to contact city hall to get that approved but it'll
 			happen. Just enjoy your building experience and have fun.
 		</p>
 
 		<h3>Automatic Resource Gathering, Crafting, and run your own Store</h3>
 		<p class="blog">
 			For each island that you have, you can also build a stall. The stalls can be dedicated to
-			things like selling goods, farming them, or crafting them. If you’re selling, you can
-			prioritize a specific store, set a minimum and maximum price, and limit your volume. If you’re
-			farming resources, you can build specific buildings to do so. It doesn’t matter if it wood,
-			stone, water, minerals, herbs or ore. You can go for it. Lastly, if you’re going to be
-			crafting things, you can automate this process as well. You’ll just have to either manually
+			things like selling goods, farming them, or crafting them. If you're selling, you can
+			prioritize a specific store, set a minimum and maximum price, and limit your volume. If you're
+			farming resources, you can build specific buildings to do so. It doesn't matter if it wood,
+			stone, water, minerals, herbs or ore. You can go for it. Lastly, if you're going to be
+			crafting things, you can automate this process as well. You'll just have to either manually
 			run these things or hire an NPC to do the job for you. You can, however, pay other players
-			too. They’ll cost more but they’ll produce faster. You know the rules: you can either have it
-			cheap, fast, or done well! Unless you’re taking advantage of someone, you can’t have it all.
+			too. They'll cost more but they'll produce faster. You know the rules: you can either have it
+			cheap, fast, or done well! Unless you're taking advantage of someone, you can't have it all.
 		</p>
 
 		<h3>Risky Expeditions to Increase Resource Gathering</h3>
@@ -516,11 +516,11 @@
 			From your island you can also automate expeditions for your spirits to venture on. These
 			expeditions are to claim land on the surface. The gameplay here is centered around using the
 			proper spirit element to gain an advantage. As well as proper gear. Each zone will be centered
-			around a specific element type and will have certain enemies. So it’s easy to plan
-			accordingly. You’ll also be able to dictate what level ranges to stop at. The speed of the
-			expedition is the same as an actual fight in that zone. You’ll see the progress of the clear
+			around a specific element type and will have certain enemies. So it's easy to plan
+			accordingly. You'll also be able to dictate what level ranges to stop at. The speed of the
+			expedition is the same as an actual fight in that zone. You'll see the progress of the clear
 			in real-time. And it can be cancelled at anytime. But the progress will slowly go down unless
-			it’s fully cleared. Zones can sometimes have enemies that reappear. That’s where planning to
+			it's fully cleared. Zones can sometimes have enemies that reappear. That's where planning to
 			have a team that handles that specifically comes in. The reward can be a boost to your
 			resource gathering. But the difficulty scales the more land you explore. Planning out
 			recovery, such as when their health gets low, and difficulty levels is crucial to keep the
@@ -567,19 +567,19 @@
 	<div class="blog-container">
 		<div class="bg">
 			<strong
-				>We want you to thoroughly enjoy your time in this game that you truly think it’s the best
+				>We want you to thoroughly enjoy your time in this game that you truly think it's the best
 				action rpg.</strong
 			>
 		</div>
 
 		<p class="blog">
 			We want you to have so much to do and so little to complain about. Go ahead and spend hours
-			creating your character, knowing you don’t have to because there are logical ways to altar it
-			with spells later. Travel around the vast world reliably in a way that doesn’t remove the
+			creating your character, knowing you don't have to because there are logical ways to altar it
+			with spells later. Travel around the vast world reliably in a way that doesn't remove the
 			experience of exploring this action RPG. But also know that you can choose to use one of the
 			best methods of traveling fast, teleporting. Enjoy PvP or PvE exclusively, the choice is
 			yours. We want there to be so much for you to do that your opinion of Reia as a game is
-			nothing but positive. And this will take work. It’s our mission to put in that work.
+			nothing but positive. And this will take work. It's our mission to put in that work.
 		</p>
 	</div>
 </Section>
@@ -591,20 +591,20 @@
 		</div>
 
 		<p class="blog">
-			Reia’s environmental approach leans heavily on vibrant colors that burn into your eyes without
-			leaving you in pain. I am the only game developer for this project currently and I don’t
-			understand the intricacies of color theory and eye-ball theory. So that’s all it is, an
+			Reia's environmental approach leans heavily on vibrant colors that burn into your eyes without
+			leaving you in pain. I am the only game developer for this project currently and I don't
+			understand the intricacies of color theory and eye-ball theory. So that's all it is, an
 			approach. Reia is being made to provide you with a game you can have fun with and to teach
 			myself things outside of my 20 years of experience in programming.
 		</p>
 
 		<p class="blog">
 			Migrating from Unity 3D and into Godot head first was truly an experience. It was enjoyable
-			learning Godot’s GDScript. Making my own shaders, scripts, and art was all a smooth process.
-			Even learning Figma to design some beautiful and vibrant UI. So I’ll say going forward I’ll
+			learning Godot's GDScript. Making my own shaders, scripts, and art was all a smooth process.
+			Even learning Figma to design some beautiful and vibrant UI. So I'll say going forward I'll
 			continue to have fun with this project. Creating this website is one of the few things I
-			didn’t use Figma to design. But a lot of the visuals and development in Godot has Figma to
-			thank. Well, wish me luck! In the future I’ll have more to write for this section.
+			didn't use Figma to design. But a lot of the visuals and development in Godot has Figma to
+			thank. Well, wish me luck! In the future I'll have more to write for this section.
 		</p>
 
 		<h3>Open-Source on GitHub</h3>
@@ -612,28 +612,28 @@
 
 		<h3>Art Direction</h3>
 		<p class="blog">
-			The art direction for Reia has been finalized and we’ll be slowly posting more art around the
+			The art direction for Reia has been finalized and we'll be slowly posting more art around the
 			website as time goes on! When that happens, this section will be filled out more. Ultimately,
 			we want you to feel a sense of adventure and become immersed in the action.
 		</p>
 
 		<h3>Captivating Music</h3>
 		<p class="blog">
-			There’s some unique talent working on this project. More information coming soon…
+			There's some unique talent working on this project. More information coming soon…
 		</p>
 
 		<h3>Detailed Lore</h3>
 		<p class="blog">
 			The lore for Reia is deep. There has been quite some time put forth in designing the story.
 			That also includes the characters too! The Ethereals, their occupants, Realms, parents, and
-			more. These are all things that have been thought about in the story. It’s exciting to finally
+			more. These are all things that have been thought about in the story. It's exciting to finally
 			get a chance to release the story so you can experience it.
 		</p>
 
 		<h3>Listening to Feedback</h3>
 		<p class="blog">
-			We want to make this project better with each update. That’s why listening to feedback and
-			taking action directly in front of the community is a priority for us. If there’s an issue or
+			We want to make this project better with each update. That's why listening to feedback and
+			taking action directly in front of the community is a priority for us. If there's an issue or
 			a feature out there, this project will take it head on.
 		</p>
 	</div>
@@ -668,8 +668,8 @@
 		<h3>Collaboration and Contribution</h3>
 		<p class="blog">
 			At the heart of Reia pulses a spirit of collaboration. Embrace the open-source philosophy,
-			contribute to the game’s ever-evolving landscape. Tinker with the code, propose new features,
-			and join a passionate community shaping its future. Whether you’re a seasoned programmer or a
+			contribute to the game's ever-evolving landscape. Tinker with the code, propose new features,
+			and join a passionate community shaping its future. Whether you're a seasoned programmer or a
 			budding creator, Reia celebrates your unique vision, inviting you to contribute to its
 			success. Feel free to contribute to our <a
 				target="_blank"
