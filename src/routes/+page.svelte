@@ -50,7 +50,7 @@
 </Section>
 
 <Section headerColor="var(--gold)" title="Announcements">
-	<div class="mt-10 flex w-full flex-wrap items-center justify-center gap-6">
+	<div class="announcements">
 		<SectionCard
 			shout
 			title="Join our Discord"
@@ -78,7 +78,28 @@
 			Testing currently is private. But you can subscribe to our newsletter to get in on some cool multiplayer
 			tests!
 		</SectionCard>
+		<SectionCard
+			shout
+			title="Folding@Home"
+			url="/foldingathome"
+			cta="Start folding"
+		>
+			{#snippet img()}
+				<enhanced:img
+					src="$images/banners/folding_at_home.jpg?enhanced&w=428,512,1024"
+					alt="Newsletter Banner"
+					sizes="min(428px, 60vw)"
+					style="object-position: 100% 0;"
+				/>
+			{/snippet}
+			"Folding" is your way to help fight diseases. Join our <a href="https://stats.foldingathome.org/team/1066033">team</a> and help us contribute to the cause.
+			We're looking into distributing in-game rewards as an incentive!
+		</SectionCard>
 	</div>
+</Section>
+
+<Section headerColor="var(--gold)" lead="Learn" title="Character Previews">
+	<CharacterList />
 </Section>
 
 <Section headerColor="var(--gold)" title="Blog Posts">
@@ -193,6 +214,9 @@
 	</div>
 </Section>
 
-<Section headerColor="var(--gold)" lead="Learn" title="Character Previews">
-	<CharacterList />
-</Section>
+<style lang="postcss">
+	.announcements {
+		@apply mx-auto mt-10 w-full;
+		@apply flex flex-wrap justify-center gap-6 xl:grid xl:grid-cols-3;
+	}
+</style>
