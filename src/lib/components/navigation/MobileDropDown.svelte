@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 	import type { NavItem } from './ListData';
 	import Button from '$components/core/Button.svelte';
 	import colors from '$constants/colors';
@@ -17,9 +17,14 @@
 
 	const { id, name, items }: Props = $props();
 	let show = $state(false);
+	let dropdownItem: HTMLDivElement;
+
+	onMount(() => {
+		dropdownItem = document.getElementById(`mobiledropdown_${id}`) as HTMLDivElement;
+	});
 </script>
 
-<div class="nav-link" class:show>
+<div id={`mobiledropdown_${id}`} class="nav-link" class:show>
 	<Button
 		haspopup={true}
 		expanded={show}
@@ -27,14 +32,20 @@
 		label="{name} Page"
 		role="menuitem"
 		backgroundColor="transparent"
-		color={colors.light}
+		color={show ? colors.gold : colors.light}
 		hoverColor={colors.gold}
 		size="xlarge"
-		onClick={() => (show = !show)}
+		onClick={() => {
+			show = !show;
+			if (show && dropdownItem) dropdownItem.scrollIntoView();
+		}}
 	>
 		<div class="flex gap-2">
-			<Icon icon="solar:alt-arrow-down-bold" />
 			<span class="font-black">{name}</span>
+			<Icon
+				icon="solar:alt-arrow-down-bold"
+				class={`${show ? 'rotate-180' : 'rotate-0'} transition-transform`}
+			/>
 		</div>
 	</Button>
 	<div class="nav-link-child">
@@ -61,15 +72,11 @@
 </div>
 
 <style lang="postcss">
-    .nav-link {
-        @apply relative;
-    }
+	.nav-link-child {
+		@apply mx-6 hidden flex-col;
+	}
 
-    .nav-link-child {
-        @apply flex-col hidden;
-    }
-
-    .nav-link.show .nav-link-child {
-        @apply flex;
-    }
+	.nav-link.show .nav-link-child {
+		@apply flex;
+	}
 </style>

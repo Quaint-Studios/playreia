@@ -24,7 +24,7 @@
 		{ id: 'h-twitter', icon: 'line-md:twitter', href: alinks.twitter }
 	];
 
-	let drawerState = $state(true);
+	let drawerState = $state(false);
 
 	function drawerOpen() {
 		drawerState = true;
@@ -66,8 +66,8 @@ Tips for Drawer modals:
 <Modal
 	bind:open={drawerState}
 	triggerBase="btn preset-tonal"
-	contentBase="p-4 space-y-4 w-[480px] h-dvh"
-	positionerJustify="justify-center"
+	contentBase="pl-4 space-y-4 w-full h-dvh"
+	positionerJustify="justify-start"
 	positionerAlign=""
 	positionerPadding=""
 	transitionsPositionerIn={{ x: -480, duration: 200 }}
@@ -79,7 +79,7 @@ Tips for Drawer modals:
 >
 	{#snippet content()}
 		<div class="content">
-			<header class="absolute left-0 flex w-full items-center justify-between px-6">
+			<header class="absolute left-0 flex w-full items-center justify-between px-6 z-10">
 				<NavBrand />
 				<div class="flex items-center justify-center gap-4">
 					<UserMenu />
@@ -94,7 +94,7 @@ Tips for Drawer modals:
 			</header>
 			<div class="flex h-full flex-col overflow-y-auto">
 				<article>
-					<div role="menubar" class="ml-[-24px] flex flex-col items-center justify-center">
+					<div role="menubar" class="ml-[-24px] flex flex-col">
 						{#each listData as { name, href, children }}
 							{#if children}
 								<MobileDropDown id="mobilenav" {name} items={children} />
@@ -107,9 +107,7 @@ Tips for Drawer modals:
 									hoverColor={colors.gold}
 									size="xlarge"
 								>
-									<div class="flex justify-center gap-1">
-										<span class={!children ? 'pl-[24px]' : undefined}>{name}</span>
-									</div>
+									<span class={!children ? 'font-black' : undefined}>{name}</span>
 								</Link>
 							{/if}
 						{/each}
@@ -153,10 +151,23 @@ Tips for Drawer modals:
 		@apply flex h-full flex-col;
 	}
 	article {
-		@apply flex min-h-[calc(100%-150px)] flex-col justify-between pt-32 overflow-y-auto;
+		@apply flex h-full min-h-[calc(100%-300px)] w-full flex-col overflow-y-auto pt-[100px] pb-[165px];
+		mask-image: linear-gradient(
+				to bottom,
+				transparent 75px,
+				black 100px,
+				black calc(100% - 165px),
+				transparent calc(100% - 140px)
+			),
+			linear-gradient(to right, transparent calc(100% - 20px), black calc(100% - 20px));
+		-ms-overflow-style: -ms-autohiding-scrollbar; /* IE and Edge */
+		scrollbar-width: thin; /* Firefox */
+	}
+	article::-webkit-scrollbar {
+		@apply w-1;
 	}
 	footer {
-		@apply flex flex-col justify-center py-4 items-center;
+		@apply absolute bottom-0 left-0 right-0 mx-auto flex w-full flex-col items-center justify-center py-4;
 	}
 	.socials {
 		@apply flex justify-center gap-3 py-4;
