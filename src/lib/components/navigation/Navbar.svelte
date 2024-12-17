@@ -6,6 +6,20 @@
 	import Icon from '@iconify/svelte';
 	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
+	import { onMount } from 'svelte';
+	import { navShiftPixels } from '$lib/info';
+
+	function checkShifted() {
+		shifted = window.scrollY >= $navShiftPixels;
+	}
+
+	let shifted = $state($navShiftPixels === 0);
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			checkShifted();
+		});
+	});
 </script>
 
 <div id="navbar" class="glass-light" role="navigation">
@@ -14,14 +28,42 @@
 			<NavBrand />
 			<div role="menubar" class="hidden text-nowrap lg:flex">
 				{#each listData as { name, href, children }}
-					<Link label="{name} Page" role="menuitem" {href} color={colors.light} hoverColor={colors.deepPurple} tight>
-						<div class="flex flex-nowrap items-center justify-center gap-1">
-							{#if children}
-								<Icon icon="solar:alt-arrow-down-bold" />
-							{/if}
-							<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
-						</div>
-					</Link>
+					<div class="nav-link">
+						<Link
+							label="{name} Page"
+							role="menuitem"
+							{href}
+							color={colors.light}
+							hoverColor={shifted ? colors.gold : colors.deepPurple}
+							tight
+						>
+							<div class="flex flex-nowrap items-center justify-center gap-1">
+								{#if children}
+									<Icon icon="solar:alt-arrow-down-bold" />
+								{/if}
+								<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
+							</div>
+						</Link>
+						{#if children}
+							<div class="nav-link-child glass">
+								{#each children as { name, href }}
+									<div class="nav-link">
+										<Link
+											label="{name} Page"
+											role="menuitem"
+											{href}
+											color={colors.light}
+											hoverColor={shifted ? colors.gold : colors.deepPurple}
+										>
+											<div class="flex flex-nowrap items-center justify-center gap-1">
+												<span class="w-full drop-shadow-lg">{name}</span>
+											</div>
+										</Link>
+									</div>
+								{/each}
+							</div>
+						{/if}
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -59,5 +101,22 @@
 		@apply relative;
 		@apply container mx-auto flex items-center justify-center md:justify-between;
 		transition: max-width 0.1s ease-in-out;
+	}
+
+	.nav-link {
+		@apply relative;
+	}
+
+	.nav-link:hover .nav-link-child {
+		@apply flex scale-100;
+	}
+	.nav-link-child {
+		@apply absolute left-2 top-full flex-col;
+		@apply rounded-lg2 border-[1px] !border-[--borderHalf];
+		@apply transition-transform scale-0 origin-top;
+	}
+
+	.nav-link-child .nav-link > :global(a) {
+		@apply w-full;
 	}
 </style>

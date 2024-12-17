@@ -4,6 +4,9 @@
 	import type { AriaRole } from 'svelte/elements';
 
 	type Props = {
+		haspopup?: boolean;
+		expanded?: boolean;
+		controls?: string;
 		/** The label. */
 		label?: string;
 		/** The role. */
@@ -36,12 +39,17 @@
 
 		/** The onclick event handler. */
 		onClick: () => void;
-		
+
+		onMouseLeave?: () => void;
+
 		/** Button contents. */
 		children: Snippet<[]>;
 	};
 
 	const {
+		haspopup = undefined,
+		expanded = undefined,
+		controls = undefined,
 		label = undefined,
 		role = 'button',
 		type = 'button',
@@ -60,6 +68,7 @@
 		raw = false,
 
 		onClick,
+		onMouseLeave,
 
 		children
 	}: Props = $props();
@@ -68,6 +77,9 @@
 </script>
 
 <button
+	aria-haspopup={haspopup}
+	aria-expanded={expanded}
+	aria-controls={controls}
 	aria-label={label}
 	{role}
 	{type}
@@ -87,6 +99,9 @@
 	}}
 	onmouseleave={() => {
 		hoverColorState = color;
+		if (onMouseLeave) {
+			onMouseLeave();
+		}
 	}}
 	onclick={onClick}
 >

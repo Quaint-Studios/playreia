@@ -1,6 +1,7 @@
 export interface NavItem {
 	name: string;
 	href: string;
+	icon?: string;
 	children?: NavItem[];
 }
 
@@ -12,6 +13,11 @@ export default [
 		name: 'Learn',
 		href: '/learn',
 		children: [
+			{
+				name: 'Explore Reia',
+				href: '/learn',
+				icon: 'solar:notebook-minimalistic-outline'
+			},
 			{
 				name: 'Characters',
 				href: '/learn/characters',
@@ -56,13 +62,16 @@ export default [
 	{
 		name: 'Press-Kit',
 		href: '/press-kit',
-		children: [{ name: 'Game Design Document', href: '/press-kit/game-design-document' }]
+		children: [
+			{ name: 'Browse Press-Kit', href: '/press-kit' },
+			{ name: 'Game Design Document', href: '/press-kit/game-design-document' }]
 	},
 	{ name: 'About Us', href: '/about-us' },
 	{
 		name: 'Contribute',
 		href: '/contribute',
 		children: [
+			{ name: 'How to Help', href: '/contribute' },
 			{ name: 'Backers', href: '/contribute/backers' },
 			{ name: 'GitHub', href: 'https://github.com/Quaint-Studios/Reia' }
 		]

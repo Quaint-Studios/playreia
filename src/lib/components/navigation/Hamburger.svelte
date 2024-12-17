@@ -8,6 +8,8 @@
 	import UserMenu from './UserMenu.svelte';
 	import alinks from '$lib/constants/alinks';
 	import NavBrand from './NavBrand.svelte';
+	import Button from '$components/core/Button.svelte';
+	import MobileDropDown from './MobileDropDown.svelte';
 
 	interface Props {
 		listData: NavItem[];
@@ -22,7 +24,7 @@
 		{ id: 'h-twitter', icon: 'line-md:twitter', href: alinks.twitter }
 	];
 
-	let drawerState = $state(false);
+	let drawerState = $state(true);
 
 	function drawerOpen() {
 		drawerState = true;
@@ -90,53 +92,58 @@ Tips for Drawer modals:
 					</button>
 				</div>
 			</header>
-			<article>
-				<div role="menubar" class="ml-[-24px] flex flex-col items-center justify-center">
-					{#each listData as { name, href, children }}
+			<div class="flex h-full flex-col overflow-y-auto">
+				<article>
+					<div role="menubar" class="ml-[-24px] flex flex-col items-center justify-center">
+						{#each listData as { name, href, children }}
+							{#if children}
+								<MobileDropDown id="mobilenav" {name} items={children} />
+							{:else}
+								<Link
+									label="{name} Page"
+									role="menuitem"
+									{href}
+									color={colors.light}
+									hoverColor={colors.gold}
+									size="xlarge"
+								>
+									<div class="flex justify-center gap-1">
+										<span class={!children ? 'pl-[24px]' : undefined}>{name}</span>
+									</div>
+								</Link>
+							{/if}
+						{/each}
+					</div>
+				</article>
+				<footer>
+					<div class="w-min">
 						<Link
-							label="{name} Page"
-							role="menuitem"
-							{href}
+							label="Play now"
+							href="/play"
+							button
+							primary
+							backgroundColor={colors.blueHighlight}
 							color={colors.light}
-							hoverColor={colors.deepPurple}
-							size="xlarge"
+							hoverColor={colors.buttonGray}
+							--hover-color={colors.border}
+							size="large"
+							roundness="large"
 						>
 							<div class="flex justify-center gap-1">
-								{#if children}
-									<Icon icon="solar:alt-arrow-down-bold" />
-								{/if}
-								<span class={!children ? 'pl-[24px]' : undefined}>{name}</span>
+								<Icon icon="solar:play-bold" />
+								<span class="text-nowrap">Play now</span>
 							</div>
 						</Link>
-					{/each}
-				</div>
-				<div class="mt-auto flex items-center justify-center gap-2">
-					<Link
-						label="Play now"
-						href="/play"
-						button
-						primary
-						backgroundColor={colors.blueHighlight}
-						color={colors.light}
-						hoverColor={colors.buttonGray}
-						--hover-color={colors.border}
-						size="large"
-						roundness="large"
-					>
-						<div class="flex justify-center gap-1">
-							<Icon icon="solar:play-bold" />
-							<span>Play now</span>
-						</div>
-					</Link>
-				</div>
-			</article>
-			<footer>
-				{#each socials as { id, icon, href }}
-					<a {href} target="_blank" rel="noopener noreferrer" class="social unset">
-						<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
-					</a>
-				{/each}
-			</footer>
+					</div>
+					<div class="socials">
+						{#each socials as { id, icon, href }}
+							<a {href} target="_blank" rel="noopener noreferrer" class="social unset">
+								<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
+							</a>
+						{/each}
+					</div>
+				</footer>
+			</div>
 		</div>
 	{/snippet}
 </Modal>
@@ -146,12 +153,15 @@ Tips for Drawer modals:
 		@apply flex h-full flex-col;
 	}
 	article {
-		@apply flex h-full flex-col justify-between pt-32;
+		@apply flex min-h-[calc(100%-150px)] flex-col justify-between pt-32 overflow-y-auto;
 	}
 	footer {
+		@apply flex flex-col justify-center py-4 items-center;
+	}
+	.socials {
 		@apply flex justify-center gap-3 py-4;
 	}
-	footer * {
+	footer .socials * {
 		@apply rounded-lg bg-[--blueHighlight] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
