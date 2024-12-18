@@ -27,9 +27,9 @@
 		<div class="ring"></div>
 		<div class="bubble-container">
 			{#each items as { icon }, i}
-				<div class="bubble" class:selected={currentItem == i}>
+				<button class="bubble" class:selected={currentItem == i} onclick={() => onClick(i)}>
 					<Icon {icon} font-size={32} color={colors.gold} />
-				</div>
+				</button>
 			{/each}
 			<div class="big-bubble">
 				<div class="inner-bubble">
@@ -65,7 +65,7 @@
 		@apply absolute right-0 top-0 flex h-full w-full flex-col items-end justify-end gap-2;
 	}
 	.bubble {
-		@apply absolute bottom-0 left-0 right-0 top-0 m-auto;
+		@apply absolute bottom-0 left-0 right-0 top-0 m-auto cursor-pointer pointer-events-auto;
 		/* // Translate along the edge of the circle */
 		@apply flex aspect-square w-[12%] items-center justify-center rounded-full border-[1px] border-[--borderSilver] md:border-[3px];
 		background: linear-gradient(to bottom, var(--silverDark), var(--silverLight));
@@ -111,7 +111,8 @@
 	.bubble.selected {
 		@apply brightness-100;
 	}
-	.bubble, .big-bubble {
+	.bubble,
+	.big-bubble {
 		@apply transition-[filter] duration-1000;
 	}
 
