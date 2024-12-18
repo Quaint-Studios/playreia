@@ -8,7 +8,7 @@
 <Content>
 	<h1 class="page-title">The Reia Blog and Stories</h1>
 	<Section>
-		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12 mx-auto">
 			<BlogItem
 				href="/blog/blog-item-1"
 				title="Update 1: This is a blog item title example sentence."
