@@ -7,7 +7,7 @@
 		/** The section icons. */
 		icons?: string[];
 		/** The section title. */
-		title: string;
+		title?: string;
 		/** The section lead. */
 		lead?: string;
 		/** The section color. */
@@ -59,9 +59,11 @@
 				</div>
 			</div>
 		{/if}
-		<h2 style="color: {headerColor ?? color}; text-align: {titlePosition}; width: 100%">
-			{title}
-		</h2>
+		{#if title}
+			<h2 style="color: {headerColor ?? color}; text-align: {titlePosition}; width: 100%">
+				{title}
+			</h2>
+		{/if}
 		<div
 			class="content"
 			style="color: {color}; justify-content: {contentPosition}; align-items: {contentPosition}"
