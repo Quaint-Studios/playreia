@@ -29,6 +29,25 @@ declare global {
 	};
 
 	type Platforms = 'Desktop' | 'Console' | 'Mobile';
+
+	namespace Images {
+		declare module '$images/*.jpg?enhanced' {
+			const src: string;
+			export default src;
+		}
+		declare module '$images/*.jpeg?enhanced' {
+			const src: string;
+			export default src;
+		}
+		declare module '$images/*.png?enhanced' {
+			const src: string;
+			export default src;
+		}
+		declare module '$images/*.png?enhanced&w=720;540;360' {
+			const src: string;
+			export default src;
+		}
+	}
 }
 
 export {};
