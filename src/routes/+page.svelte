@@ -63,7 +63,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/discord.jpg?enhanced&w=428,512,1024"
+					src="$images/banners/discord.jpg?enhanced&w=428;512;1024"
 					alt="Discord Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -74,7 +74,7 @@
 		<SectionCard shout title="Alpha Tests" url="/newsletter" cta="Notify me">
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/newsletter.jpg?enhanced&w=428,512,1024"
+					src="$images/banners/newsletter.jpg?enhanced&w=428;512;1024"
 					alt="Newsletter Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -85,7 +85,7 @@
 		<SectionCard shout title="Folding@Home" url="/foldingathome" cta="Start folding">
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/folding_at_home.jpg?enhanced&w=428,512,1024"
+					src="$images/banners/folding_at_home.jpg?enhanced&w=428;512;1024"
 					alt="Folding@Home Banner"
 					sizes="min(428px, 60vw)"
 					style="object-position: 100% 0;"
@@ -117,7 +117,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -136,7 +136,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -154,7 +154,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -172,7 +172,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -190,7 +190,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
@@ -206,7 +206,7 @@
 		>
 			{#snippet img()}
 				<enhanced:img
-					src="$images/banners/wumpus.png?enhanced&w=428,512,1024"
+					src="$images/banners/wumpus.png?enhanced&w=428;512;1024"
 					alt="Blog Banner"
 					sizes="min(428px, 60vw)"
 				/>
