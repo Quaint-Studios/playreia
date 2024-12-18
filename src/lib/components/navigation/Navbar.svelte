@@ -7,19 +7,6 @@
 	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
 	import { onMount } from 'svelte';
-	import { navShiftPixels } from '$lib/info';
-
-	function checkShifted() {
-		shifted = window.scrollY >= $navShiftPixels;
-	}
-
-	let shifted = $state($navShiftPixels === 0);
-
-	onMount(() => {
-		window.addEventListener('scroll', () => {
-			checkShifted();
-		});
-	});
 </script>
 
 <div id="navbar" class="glass-light" role="navigation">
@@ -34,7 +21,7 @@
 							role="menuitem"
 							{href}
 							color={colors.light}
-							hoverColor={shifted ? colors.gold : colors.deepPurple}
+							hoverColor={colors.gold}
 							tight
 						>
 							<div class="flex flex-nowrap items-center justify-center gap-1">
@@ -53,7 +40,7 @@
 											role="menuitem"
 											{href}
 											color={colors.light}
-											hoverColor={shifted ? colors.gold : colors.deepPurple}
+											hoverColor={colors.gold}
 										>
 											<div class="flex flex-nowrap items-center justify-center gap-1">
 												<span class="w-full drop-shadow-lg">{name}</span>
