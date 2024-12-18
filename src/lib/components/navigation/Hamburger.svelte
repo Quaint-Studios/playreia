@@ -79,7 +79,7 @@ Tips for Drawer modals:
 >
 	{#snippet content()}
 		<div class="content">
-			<header class="absolute left-0 flex w-full items-center justify-between px-6 z-10">
+			<header class="absolute left-0 z-10 flex w-full items-center justify-between px-6">
 				<NavBrand />
 				<div class="flex items-center justify-center gap-4">
 					<UserMenu />
@@ -151,7 +151,7 @@ Tips for Drawer modals:
 		@apply flex h-full flex-col;
 	}
 	article {
-		@apply flex h-full min-h-[calc(100%-300px)] w-full flex-col overflow-y-auto pt-[100px] pb-[165px];
+		@apply flex h-full min-h-[calc(100%-300px)] w-full flex-col overflow-y-auto pb-[165px] pt-[100px];
 		mask-image: linear-gradient(
 				to bottom,
 				transparent 75px,

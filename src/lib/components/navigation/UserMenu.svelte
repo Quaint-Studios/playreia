@@ -21,6 +21,7 @@
 	<Icon
 		icon="solar:alt-arrow-down-linear"
 		class="transition-transform duration-100 {show ? 'rotate-180' : ''}"
+		color={colors.dark}
 	/>
 	<div class="icon-holder">
 		<div class="w-4 h-4">
