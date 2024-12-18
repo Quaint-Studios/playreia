@@ -30,6 +30,9 @@ p.lead strong {
 	@apply font-black text-[--gold];
 }
 
+h1.page-title {
+	@apply text-center font-black text-[--gold];
+}
 h1.alt strong {
 	@apply text-[--deepPurple];
 }
