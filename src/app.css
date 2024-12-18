@@ -12,6 +12,6 @@ html, body {
 }
 
 body {
-    @apply bg-[--midnightBlue] text-[--dark];
+    @apply bg-[--midnightBlue] text-[--white];
 	font-family: 'Urbanist Variable', sans-serif;
 }
