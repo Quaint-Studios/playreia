@@ -38,7 +38,7 @@
 		<enhanced:img
 			src={image}
 			alt={title}
-			class="aspect-[16/9] max-w-[400px] rounded-lg2 object-cover"
+			class="aspect-[16/9] max-w-[400px] w-full rounded-lg2 object-cover hover:brightness-[1.05]"
 			sizes="min(720px, 100vw)"
 		/>
 	</a>
@@ -47,9 +47,9 @@
 			<address>
 				<a rel="author" target="_blank" href="/blog/authors/{author}">{author}</a>
 			</address>
-			<time datetime={date}>{date}</time>
+			<time datetime={date} class="text-[--borderSilver]">{date}</time>
 		</div>
-		<h2><a class="tracking-wide text-[--gold] no-underline" {href}>{title}</a></h2>
+		<h2><a class="tracking-wide text-[--borderSilver] no-underline" {href}>{title}</a></h2>
 		<div class="categories">
 			<span class="font-medium">Tags:</span>
 			{#each categories as category}
@@ -66,9 +66,9 @@
 </article>
 
 <style lang="postcss">
-    article {
-        @apply max-w-[400px];
-    }
+	article {
+		@apply max-w-[400px];
+	}
 	address {
 		@apply font-medium not-italic;
 	}
@@ -94,7 +94,7 @@
 	}
 
 	.categories {
-		@apply flex gap-2 mb-4 mt-0.5;
+		@apply mb-4 mt-0.5 flex gap-2;
 	}
 
 	.categories a {
