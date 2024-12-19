@@ -33,7 +33,7 @@
 		/>
 	</div>
 	<div class="content poppins">
-		<h1 class="poppins">
+		<h1>
 			Play <strong>Reia</strong> and <strong>Explore</strong> a game with endless magical worlds!
 		</h1>
 		<p>
