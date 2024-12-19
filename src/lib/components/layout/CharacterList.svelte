@@ -26,8 +26,8 @@
 	<div class="ring-container">
 		<div class="ring"></div>
 		<div class="bubble-container">
-			{#each items as { icon }, i}
-				<button class="bubble" class:selected={currentItem == i} onclick={() => onClick(i)}>
+			{#each items as { label, icon }, i}
+				<button class="bubble" class:selected={currentItem == i} onclick={() => onClick(i)} aria-label={label}>
 					<Icon {icon} font-size={32} color={colors.gold} />
 				</button>
 			{/each}
