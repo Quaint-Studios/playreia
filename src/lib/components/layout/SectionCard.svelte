@@ -2,6 +2,7 @@
 	import Link from '$components/core/Link.svelte';
 	import colors from '$constants/colors';
 	import type { Snippet } from 'svelte';
+	import Lazy from 'svelte-lazy';
 	import type { HTMLAttributeAnchorTarget } from 'svelte/elements';
 
 	interface Props {
@@ -12,19 +13,10 @@
 		rel?: HTMLAttributeAnchorRel[];
 		cta?: string;
 		shout?: boolean;
-		/**
-        Here's an example on how to use the img snippet in this component:
-        ```js
-        {#snippet img()}
-            <enhanced:img
-                src="$images/banners/discord.jpg?enhanced&w=428,512,1024"
-                alt="Discord Banner"
-                sizes="min(428px, 60vw)"
-            />
-        {/snippet}
-        ```
-        */
-		img: Snippet<[]>;
+		src: string;
+		alt: string;
+		sizes?: string;
+		objectPosition?: string;
 		children: Snippet<[]>;
 	}
 
@@ -36,7 +28,10 @@
 		rel,
 		cta = 'Read more',
 		shout = false,
-		img,
+		src,
+		alt,
+		sizes,
+		objectPosition,
 		children
 	}: Props = $props();
 
@@ -72,7 +67,14 @@
 	</div>
 
 	<div class="image">
-		{@render img()}
+		<Lazy keep={true} height="285px">
+			<enhanced:img
+				{src}
+				{alt}
+				{sizes}
+				style={objectPosition ? `object-position: ${objectPosition}` : undefined}
+			/>
+		</Lazy>
 	</div>
 </div>
 
@@ -80,7 +82,7 @@
 	.section-card {
 		@apply relative flex max-w-[400px] flex-col;
 		@apply rounded-3xl bg-[--midnightBlue] shadow-lg;
-		@apply border-[1px] border-solid hover:border-[--borderHalf] border-[--borderBlueHalf];
+		@apply border-[1px] border-solid border-[--borderBlueHalf] hover:border-[--borderHalf];
 		@apply overflow-hidden;
 	}
 

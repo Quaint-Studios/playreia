@@ -35,11 +35,19 @@ declare global {
 			const src: string;
 			export default src;
 		}
+		declare module '$images/*.jpg?enhanced&w=428;512;1024' {
+			const src: string;
+			export default src;
+		}
 		declare module '$images/*.jpeg?enhanced' {
 			const src: string;
 			export default src;
 		}
 		declare module '$images/*.png?enhanced' {
+			const src: string;
+			export default src;
+		}
+		declare module '$images/*.png?enhanced&w=428;512;1024' {
 			const src: string;
 			export default src;
 		}
