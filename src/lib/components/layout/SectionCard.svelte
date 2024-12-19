@@ -17,6 +17,7 @@
 		alt: string;
 		sizes?: string;
 		objectPosition?: string;
+		loading?: "lazy" | "eager" | null;
 		children: Snippet<[]>;
 	}
 
@@ -32,6 +33,7 @@
 		alt,
 		sizes,
 		objectPosition,
+		loading = 'lazy',
 		children
 	}: Props = $props();
 
@@ -72,6 +74,7 @@
 				{src}
 				{alt}
 				{sizes}
+				{loading}
 				style={objectPosition ? `object-position: ${objectPosition}` : undefined}
 			/>
 		</Lazy>
