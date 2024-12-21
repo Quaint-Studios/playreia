@@ -16,12 +16,13 @@
 	}
 
 	const authors: Author[] = [
-		{ id: '459394642', username: 'author1', name: 'Author 1' },
-		{ id: '346546867', username: 'author2', name: 'Author 2' },
-		{ id: '985892235', username: 'author3', name: 'Author 3' },
-		{ id: '194697653', username: 'author4', name: 'Author 4' },
-		{ id: '434998346', username: 'author5', name: 'Author 5' },
-		{ id: '534036346', username: 'author6', name: 'Author 6' }
+		{ id: '459394642', name: 'Author 1' },
+		{ id: '346546867', name: 'Author 2' },
+		{ id: '985892235', name: 'Author 3' },
+		{ id: '194697653', name: 'Author 4' },
+		{ id: '434998346', name: 'Author 5' },
+		{ id: '534036346', name: 'Author 6' },
+		{ id: '299384441', name: 'Author 7' }
 	];
 
 	/*
@@ -94,6 +95,16 @@
 			author: authors[5],
 			category: BlogCategory.DevBlog,
 			readTime: 6
+		},
+		{
+			href: '/blog/dev-blog-2',
+			title: 'Dev Blog: Behind the Scenes',
+			description: 'Insights from the development team.',
+			image: Wumpus,
+			date: '2024-12-06',
+			author: authors[6],
+			category: BlogCategory.DevBlog,
+			readTime: 7
 		}
 	];
 </script>
@@ -134,11 +145,12 @@
 </Content>
 
 <style lang="postcss">
-	.lg-grid, .md-grid {
+	.lg-grid,
+	.md-grid {
 		@apply max-w-screen-xl;
 	}
 	.lg-grid {
-		@apply mx-auto grid grid-cols-1 mb-12;
+		@apply mx-auto mb-12 grid grid-cols-1;
 	}
 	.md-grid {
 		@apply mx-auto grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 xl:grid-cols-3;

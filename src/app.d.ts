@@ -30,9 +30,14 @@ declare global {
 
 	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 
-	type Author = {
+	type User = {
 		id: string;
 		username: string;
+		name: string;
+	}
+
+	type Author = {
+		id: string;
 		name: string;
 	}
 
