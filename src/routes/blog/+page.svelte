@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import BlogItem from '$components/layout/BlogItem.svelte';
 	import Content from '$components/layout/Content.svelte';
+	import Paginator from '$components/layout/Paginator.svelte';
 	import Section from '$components/layout/Section.svelte';
 	import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
+	import { blogs } from '$lib/info';
 	import { BlogCategory } from '$lib/types';
 
 	const authors: Author[] = [
@@ -97,39 +100,62 @@
 			readTime: 7
 		}
 	];
+
+	let currentPage = Number($page.url.searchParams.get('page')) || 1;
 </script>
 
 <Content>
 	<h1 class="page-title">The Reia Blog and Stories</h1>
 	<Section>
-		<div class="lg-grid">
-			<BlogItem
-				href={blogData[0].href}
-				title={blogData[0].title}
-				description={blogData[0].description}
-				image={blogData[0].image}
-				date={blogData[0].date}
-				author={blogData[0].author}
-				category={blogData[0].category}
-				readTime={blogData[0].readTime}
-				size="large"
-			/>
-		</div>
-
-		<div class="md-grid">
-			{#each blogData.slice(1) as blogItem}
+		{#if currentPage === 1}
+			<div class="lg-grid">
 				<BlogItem
-					href={blogItem.href}
-					title={blogItem.title}
-					description={blogItem.description}
-					image={blogItem.image}
-					date={blogItem.date}
-					author={blogItem.author}
-					category={blogItem.category}
-					readTime={blogItem.readTime}
-					size="medium"
+					href={blogData[0].href}
+					title={blogData[0].title}
+					description={blogData[0].description}
+					image={blogData[0].image}
+					date={blogData[0].date}
+					author={blogData[0].author}
+					category={blogData[0].category}
+					readTime={blogData[0].readTime}
+					size="large"
 				/>
-			{/each}
+			</div>
+
+			<div class="md-grid">
+				{#each blogData.slice(1) as blogItem}
+					<BlogItem
+						href={blogItem.href}
+						title={blogItem.title}
+						description={blogItem.description}
+						image={blogItem.image}
+						date={blogItem.date}
+						author={blogItem.author}
+						category={blogItem.category}
+						readTime={blogItem.readTime}
+						size="medium"
+					/>
+				{/each}
+			</div>
+		{:else}
+			<div class="md-grid">
+				{#each blogs.slice(0, 6) as blogItem}
+					<BlogItem
+						href={blogItem.href}
+						title={blogItem.title}
+						description={blogItem.description}
+						image={blogItem.image}
+						date={blogItem.date}
+						author={blogItem.author}
+						category={blogItem.category}
+						readTime={blogItem.readTime}
+						size="medium"
+					/>
+				{/each}
+			</div>
+		{/if}
+		<div class="mt-4 w-full">
+			<Paginator page={currentPage} count={2} />
 		</div>
 	</Section>
 </Content>
