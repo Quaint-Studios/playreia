@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Link from '$components/core/Link.svelte';
-	import colors from '$constants/colors';
+	import type { BlogCategory } from '$lib/types';
 
 	interface Props {
 		/** The link. */
@@ -14,101 +13,142 @@
 		/** The blog item date. */
 		date: string;
 		/** The blog item author. */
-		author: string;
-		/** The call to action. */
-		cta?: string;
+		author: Author;
 		/** The blog category. */
-		categories?: string[];
+		category: BlogCategory;
+		/** The read time. */
+		readTime: number;
+		/** The size of this blog entry. */
+		size?: 'medium' | 'large';
 	}
 
-	const {
-		href,
-		title,
-		description,
-		image,
-		date,
-		author,
-		cta = 'Read this post',
-		categories = []
-	}: Props = $props();
+	const { href, title, description, image, date, author, category, readTime, size }: Props =
+		$props();
+
+	function getDate() {
+		const dateArr = new Date(date).toDateString().split(' ').slice(1);
+		dateArr[1] += ', ';
+		return dateArr.join(' ');
+	}
 </script>
 
-<article>
-	<a {href} aria-label={title}>
+<article class={size}>
+	<a {href} aria-label={title} class="image">
 		<enhanced:img
 			src={image}
 			alt={title}
-			class="aspect-[16/9] max-w-[400px] w-full rounded-lg2 object-cover hover:brightness-[1.05]"
+			class="aspect-[16/9] h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05]"
 			sizes="min(720px, 100vw)"
 		/>
 	</a>
 	<div>
-		<div class="meta tracking-wide">
-			<address>
-				<a rel="author" target="_blank" href="/blog/authors/{author}">{author}</a>
-			</address>
-			<time datetime={date} class="text-[--borderSilver]">{date}</time>
-		</div>
-		<h2><a class="tracking-wide text-[--borderSilver] no-underline" {href}>{title}</a></h2>
-		<div class="categories">
-			<span class="font-medium">Tags:</span>
-			{#each categories as category}
-				<a class="unset" href="/blog/categories/{category.toLowerCase().replaceAll(' ', '-')}">
+		{#if size === 'large'}
+			<div class="content">
+				<h2><a {href}>{title}</a></h2>
+				<p>{description}</p>
+			</div>
+			<div class="categories">
+				<a class="unset" href="/{category.toLowerCase().replaceAll(' ', '-')}">
 					{category}
 				</a>
-			{/each}
-		</div>
-		<p>{description}</p>
-		<div class="cta">
-			<Link tight {href} color={colors.gold} hoverColor={colors.tertiary} size="large">{cta}</Link>
-		</div>
+				<span class="time-to-read">{readTime} min read</span>
+			</div>
+			<div class="meta">
+				<address>
+					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
+				</address>
+				<time datetime={date} class="text-[--borderSilver]">{getDate()}</time>
+			</div>
+		{:else}
+			<div class="categories">
+				<a class="unset" href="/{category.toLowerCase().replaceAll(' ', '-')}">
+					{category}
+				</a>
+				<span class="time-to-read">{readTime} min read</span>
+			</div>
+			<div class="content">
+				<h2><a {href}>{title}</a></h2>
+				<p>{description}</p>
+			</div>
+			<div class="meta">
+				<address>
+					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
+				</address>
+				<time datetime={date} class="text-[--borderSilver]">{getDate()}</time>
+			</div>
+		{/if}
 	</div>
 </article>
 
 <style lang="postcss">
-	article {
-		@apply max-w-[400px];
+	article.large {
+		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-[--borderQuarter] bg-blue-950 bg-opacity-25 p-4;
 	}
+	article.large:hover {
+		@apply bg-blue-900 bg-opacity-25;
+	}
+	article {
+		@apply max-w-[450px];
+	}
+
+	.image {
+		@apply block w-full overflow-hidden rounded-lg2 transition-transform;
+	}
+	a.image:active {
+		@apply scale-[0.98];
+	}
+
 	address {
 		@apply font-medium not-italic;
 	}
-
 	address a {
-		@apply no-underline;
+		@apply text-white no-underline;
+	}
+	address a:hover {
+		@apply text-[--blue];
 	}
 
-	address a:hover {
-		@apply underline;
+	.large .content {
+		@apply flex w-full flex-col items-center text-center;
 	}
 
 	h2 {
 		@apply text-2xl font-black;
 	}
-
+	h2 a {
+		@apply tracking-wide text-white no-underline;
+	}
 	h2 a:hover {
-		@apply underline;
+		@apply text-[--blue];
+	}
+	.large h2 {
+		@apply mt-4;
+	}
+
+	.large h2, .large p {
+		@apply max-w-screen-sm;
 	}
 
 	.meta {
-		@apply mb-4 mt-2 flex justify-between gap-2;
+		@apply mb-4 mt-4 flex justify-start gap-4 text-[--borderSilver];
+	}
+	.large .meta {
+		@apply my-0 text-sm md:text-base;
+	}
+	.large .meta a {
+		@apply font-bold;
 	}
 
 	.categories {
-		@apply mb-4 mt-0.5 flex gap-2;
+		@apply mb-4 mt-6 flex items-center gap-4;
 	}
-
 	.categories a {
-		@apply rounded-full bg-[--lightBlue] px-2 py-0.5 text-sm font-medium;
+		@apply font-bold uppercase text-white;
 	}
 	.categories a:hover {
-		@apply bg-[--blue] text-black;
+		@apply text-[--blue];
 	}
-
-	.cta {
-		@apply mt-4 flex w-full justify-start;
-	}
-
-	.cta :global(a) {
-		@apply pl-0;
+	.large .categories {
+		@apply mb-0 text-sm md:text-base;
 	}
 </style>

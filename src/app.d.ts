@@ -30,6 +30,12 @@ declare global {
 
 	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 
+	type Author = {
+		id: string;
+		username: string;
+		name: string;
+	}
+
 	namespace Images {
 		declare module '$images/*.jpg?enhanced' {
 			const src: string;
