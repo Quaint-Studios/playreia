@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Lazy from 'svelte-lazy';
 	import { loadIcons } from '@iconify/svelte';
 	import Hero from '$components/layout/Hero.svelte';
 	import Section from '$components/layout/Section.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import Download from '$lib/pages/home/Download.svelte';
-	import SectionCard from '$components/layout/SectionCard.svelte';
 	import CharacterList from '$components/layout/CharacterList.svelte';
 	import Announcements from '$lib/pages/home/Announcements.svelte';
 	import HomeContent from '$lib/pages/home/HomeContent.svelte';
-	import Wumpus from '$images/banners/wumpus.png?enhanced&w=428;512;1024';
+	import BlogItem from '$components/layout/BlogItem.svelte';
+	import { blogs } from '$lib/info';
+	import BlogLoadMore from '$components/layout/BlogLoadMore.svelte';
 
 	const platformIcons = [
 		'mdi:windows',
@@ -34,9 +34,9 @@
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
+				"href": "https://www.playreia.com"
 				"@type": "WebSite",
 				"name": "Reia",
-				"url": "https://www.playreia.com"
 			}
 		</script>
 	{/snippet}
@@ -63,89 +63,10 @@
 
 <Section headerColor="var(--gold)" title="Blog Posts">
 	<div class="mx-auto mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-		<SectionCard
-			title="Update v1.0.0.5-pre-alpha | Changelogs are finally here!"
-			date={new Date('January 1, 2024 12:02')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.5-pre-alpha"
-			cta="View changelog"
-			target="_blank"
-			rel={['noopener', 'noreferrer']}
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			Pre-alpha is coming along nicely! I'm excited to see where this goes. I hope you are too! This
-			update is pretty big. It features a changelog, new main menu, vfx, new water shaders, more
-			inventory updates, Discord SDK integration, and more.
-		</SectionCard>
-		<SectionCard
-			title="Update v1.0.0.4-pre-alpha | Now with creepy health bars that follow you, an inventory layout change, and transparent colors!"
-			date={new Date('October 2, 2023 10:02')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.4-pre-alpha"
-			cta="View changelog"
-			target="_blank"
-			rel={['noopener', 'noreferrer']}
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			It's almost time. We're getting closer. This update features health bars, a minimap, icons to
-			identify entities on the minimap, inventory updates, and some fixes.
-		</SectionCard>
-		<SectionCard
-			title="Update v1.0.0.3-pre-alpha | New character and animation."
-			date={new Date('October 1, 2023 14:06')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.3-pre-alpha"
-			cta="View changelog"
-			target="_blank"
-			rel={['noopener', 'noreferrer']}
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			I don't believe anyone truly likes rigging and the time it consumes. Finally animated the
-			character model. The character model has been changed.
-		</SectionCard>
-		<SectionCard
-			title="Update v1.0.0.2-pre-alpha | Items and Inventory system, better lighting, better ui, papa-- oh."
-			date={new Date('September 25, 2023 02:00')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.2-pre-alpha"
-			cta="View changelog"
-			target="_blank"
-			rel={['noopener', 'noreferrer']}
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			Okay, we have a stick to fight with now. But... we can't use it? What the!?! This update
-			includes music, a Sound Manager, updates to the UI, and many more. Check it out!
-		</SectionCard>
-		<SectionCard
-			title="Update v1.0.0.1-pre-alpha | Slowly getting there..."
-			date={new Date('September 22, 2023 05:15')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.1-pre-alpha"
-			cta="View changelog"
-			target="_blank"
-			rel={['noopener', 'noreferrer']}
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			Only if we had something to fight with other than our fists. The lighting is improved. But...
-			it could be better! We now have... COMBAT! You can click things. And more.
-		</SectionCard>
-		<SectionCard
-			title="Update: v1.0.0.0-pre-alpha | This is the beginning! Migrating from Unity to Godot."
-			date={new Date('September 21, 2023 14:59')}
-			url="https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.0-pre-alpha"
-			cta="View changelog"
-			src={Wumpus}
-			alt="Blog Banner"
-			sizes="min(428px, 60vw)"
-		>
-			It works! We've successfully migrated from Unity to Godot. A basic level was created to test
-			some features of the project. All Unity-related assets have been removed.
-		</SectionCard>
+		{#each blogs.slice(0, 5) as blog}
+			<BlogItem {...blog} />
+		{/each}
+		<BlogLoadMore />
 	</div>
 </Section>
 

@@ -7,7 +7,7 @@
 
 	let links = [
 		{ href: '/profile', text: 'Profile' },
-		{ href: '/settings', text: 'Settings' },
+		{ href: '/profile/settings', text: 'Settings' },
 		{ href: '/logout', text: 'Logout' }
 	];
 </script>

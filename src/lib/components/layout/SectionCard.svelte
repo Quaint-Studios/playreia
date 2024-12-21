@@ -17,7 +17,7 @@
 		alt: string;
 		sizes?: string;
 		objectPosition?: string;
-		loading?: "lazy" | "eager" | null;
+		loading?: 'lazy' | 'eager' | null;
 		children: Snippet<[]>;
 	}
 
@@ -45,7 +45,7 @@
 <div class="section-card">
 	<div class="main glass">
 		<div class="content">
-			<h3 class="poppins" class:shout>{title}</h3>
+			<h3 class="poppins" class:shout><a href={url} rel={rel?.join(' ')}>{title}</a></h3>
 			<p>{@render children()}</p>
 		</div>
 		<div class="card-footer" class:end={!date && url}>
@@ -68,17 +68,20 @@
 		</div>
 	</div>
 
-	<div class="image">
-		<Lazy keep={true} height="285px">
-			<enhanced:img
-				{src}
-				{alt}
-				{sizes}
-				{loading}
-				style={objectPosition ? `object-position: ${objectPosition}` : undefined}
-			/>
-		</Lazy>
-	</div>
+	<a href={url} {target} rel={rel?.join(' ')}>
+		<div class="image">
+			<Lazy keep={true} height="285px">
+				<enhanced:img
+					class="img"
+					{src}
+					{alt}
+					{sizes}
+					{loading}
+					style={objectPosition ? `object-position: ${objectPosition}` : undefined}
+				/>
+			</Lazy>
+		</div>
+	</a>
 </div>
 
 <style lang="postcss">
@@ -89,10 +92,19 @@
 		@apply overflow-hidden;
 	}
 
+	.image {
+		@apply overflow-hidden;
+	}
 	.image,
-	.image :global(img) {
+	.image .img {
 		@apply absolute left-0 top-0 object-cover object-center;
 		@apply h-[285px] w-full;
+	}
+	.image .img {
+		@apply transition-transform;
+	}
+	.image .img:hover {
+		@apply scale-105;
 	}
 
 	.main {
@@ -106,7 +118,13 @@
 		@apply text-3xl;
 	}
 	h3 {
-		@apply max-h-[90px] w-[calc(100%)] overflow-hidden overflow-ellipsis text-xl;
+		@apply max-h-[90px] w-[calc(100%)] overflow-hidden overflow-ellipsis text-xl text-white;
+	}
+	h3 a {
+		@apply text-white no-underline;
+	}
+	h3 a:hover {
+		@apply text-[--gold];
 	}
 
 	p {

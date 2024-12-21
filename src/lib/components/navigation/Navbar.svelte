@@ -6,7 +6,6 @@
 	import Icon from '@iconify/svelte';
 	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
-	import { onMount } from 'svelte';
 </script>
 
 <div id="navbar" class="glass-light" role="navigation">

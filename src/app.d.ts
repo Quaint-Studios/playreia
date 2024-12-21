@@ -1,4 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
+
+import type { BlogCategory } from "$lib/types";
+
 // for information about these interfaces
 declare global {
 	namespace App {
@@ -30,16 +33,27 @@ declare global {
 
 	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 
+	interface BlogData {
+		href: string;
+		title: string;
+		description: string;
+		image: string;
+		date: string;
+		author: Author;
+		category: BlogCategory;
+		readTime: number; // Average WPM is 238.
+	}
+
 	type User = {
 		id: string;
 		username: string;
 		name: string;
-	}
+	};
 
 	type Author = {
 		id: string;
 		name: string;
-	}
+	};
 
 	namespace Images {
 		declare module '$images/*.jpg?enhanced' {

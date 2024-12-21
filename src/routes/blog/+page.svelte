@@ -4,16 +4,6 @@
 	import Section from '$components/layout/Section.svelte';
 	import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 	import { BlogCategory } from '$lib/types';
-	interface BlogData {
-		href: string;
-		title: string;
-		description: string;
-		image: string;
-		date: string;
-		author: Author;
-		category: BlogCategory;
-		readTime: number; // Average WPM is 238.
-	}
 
 	const authors: Author[] = [
 		{ id: '459394642', name: 'Author 1' },

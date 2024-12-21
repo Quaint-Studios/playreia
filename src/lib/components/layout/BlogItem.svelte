@@ -34,12 +34,7 @@
 
 <article class={size}>
 	<a {href} aria-label={title} class="image">
-		<enhanced:img
-			src={image}
-			alt={title}
-			class="img"
-			sizes="min(720px, 100vw)"
-		/>
+		<enhanced:img src={image} alt={title} class="img" sizes="min(720px, 100vw)" />
 	</a>
 	<div>
 		{#if size === 'large'}
@@ -83,9 +78,14 @@
 <style lang="postcss">
 	article.large {
 		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-[--borderQuarter] bg-blue-950 bg-opacity-25 p-4;
-	}
-	article.large:hover {
-		@apply bg-blue-900 bg-opacity-25;
+		background: hsla(233, 54%, 18%, 1);
+		background: linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(233, 54%, 18%, 1) 0%,
+			hsla(220, 78%, 29%, 1) 100%
+		);
 	}
 	article {
 		@apply max-w-[450px];
@@ -131,7 +131,8 @@
 		@apply mt-4;
 	}
 
-	.large h2, .large p {
+	.large h2,
+	.large p {
 		@apply max-w-screen-sm;
 	}
 

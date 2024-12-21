@@ -31,6 +31,7 @@ export const colors = {
 	blueHighlight: '#0b78cb',
 	deepBlue: '#0d47a1',
 	midnightBlue: '#081247',
+	midnightBlueIconBG: '#394690',
 	deepPurple: '#220d54',
 	deepPurpleHighlight: '#3a168d',
 	deepPurpleHighlightHalf: '#3a168d80',
