@@ -58,7 +58,7 @@
 			<div class="hidden items-center gap-2 lg:flex">
 				<Link
 					label="Play now"
-					href="/play"
+					href="/game"
 					button
 					primary
 					backgroundColor={colors.blueHighlight}

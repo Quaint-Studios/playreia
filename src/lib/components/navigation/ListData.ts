@@ -70,7 +70,7 @@ export default [
 			{ name: 'Browse Press-Kit', href: '/press-kit', icon: 'typcn:camera' },
 			{
 				name: 'Game Design Document',
-				href: '/press-kit/game-design-document',
+				href: '/game-design-document',
 				icon: 'fluent:design-ideas-16-filled'
 			}
 		]

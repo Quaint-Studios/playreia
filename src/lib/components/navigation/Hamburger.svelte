@@ -117,7 +117,7 @@ Tips for Drawer modals:
 					<div class="w-min">
 						<Link
 							label="Play now"
-							href="/play"
+							href="/game"
 							button
 							primary
 							backgroundColor={colors.blueHighlight}
