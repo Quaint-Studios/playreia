@@ -11,6 +11,9 @@ export default {
 
 	theme: {
 		extend: {
+			screens: {
+				'xs': '375px'
+			},
 			boxShadow: {
 				boxed: '0px 4px 28px rgba(180,190,205,.28)'
 			},

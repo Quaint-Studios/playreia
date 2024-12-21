@@ -9,6 +9,7 @@
 
 	import { loadIcons } from '@iconify/svelte';
 	import Navbar from '$components/navigation/Navbar.svelte';
+	import Footer from '$components/footers/Footer.svelte';
 
 	let { children } = $props();
 
@@ -33,8 +34,27 @@
 	]);
 </script>
 
+<svelte:head>
+	{/* @ts-ignore */ null}
+	<script
+		defer
+		event-logged_in="false"
+		data-domain="www.playreia.com"
+		src="https://plausible.playreia.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+	></script>
+	<script>
+		window.plausible =
+			window.plausible ||
+			function () {
+				(window.plausible.q = window.plausible.q || []).push(arguments);
+			};
+	</script>
+</svelte:head>
+
 <Navbar />
 
 <ParaglideJS {i18n}>
 	{@render children()}
 </ParaglideJS>
+
+<Footer />

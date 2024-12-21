@@ -68,9 +68,9 @@
 		</div>
 	</div>
 
-	<a href={url} {target} rel={rel?.join(' ')}>
-		<div class="image">
-			<Lazy keep={true} height="285px">
+	<div class="image">
+		<Lazy keep={true} height="285px">
+			<a aria-label={title} href={url} {target} rel={rel?.join(' ')}>
 				<enhanced:img
 					class="img"
 					{src}
@@ -79,9 +79,9 @@
 					{loading}
 					style={objectPosition ? `object-position: ${objectPosition}` : undefined}
 				/>
-			</Lazy>
-		</div>
-	</a>
+			</a>
+		</Lazy>
+	</div>
 </div>
 
 <style lang="postcss">

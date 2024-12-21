@@ -6,23 +6,15 @@
 	import colors from '$lib/constants/colors';
 	import { tick } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
-	import alinks from '$lib/constants/alinks';
 	import NavBrand from './NavBrand.svelte';
-	import Button from '$components/core/Button.svelte';
 	import MobileDropDown from './MobileDropDown.svelte';
+	import { socials } from '$lib/info.js';
 
 	interface Props {
 		listData: NavItem[];
 	}
 
 	const { listData }: Props = $props();
-
-	const socials = [
-		{ id: 'h-tiktok', icon: 'line-md:tiktok', href: alinks.tiktok },
-		{ id: 'h-instagram', icon: 'line-md:instagram', href: alinks.instagram },
-		{ id: 'h-facebook', icon: 'line-md:facebook', href: alinks.facebook },
-		{ id: 'h-twitter', icon: 'line-md:twitter', href: alinks.twitter }
-	];
 
 	let drawerState = $state(false);
 
@@ -42,14 +34,14 @@
 		});
 	}
 
-	loadIcons([...socials.map((s) => s.icon)]);
+	loadIcons([...socials.slice(0, 6).map((s) => s.icon)]);
 </script>
 
 <button
 	aria-label="Open Navigation Drawer"
 	aria-expanded={drawerState}
 	onclick={drawerOpen}
-	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-[--deepPurple] lg:static lg:hidden"
+	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-[--gold] lg:static lg:hidden"
 >
 	<Icon icon="solar:hamburger-menu-linear" font-size="24px" class="hover:text-[inherit]" />
 </button>
@@ -87,7 +79,7 @@ Tips for Drawer modals:
 						<Icon
 							icon="solar:close-circle-bold"
 							font-size="48px"
-							class="text-[--light] hover:text-[--deepPurple]"
+							class="text-[--light] hover:text-[--gold]"
 						/>
 					</button>
 				</div>
@@ -134,9 +126,9 @@ Tips for Drawer modals:
 						</Link>
 					</div>
 					<div class="socials">
-						{#each socials as { id, icon, href }}
+						{#each socials.slice(0, 6) as { id, icon, href }}
 							<a {href} target="_blank" rel="noopener noreferrer" class="social unset">
-								<Icon on:load={() => play(id)} {id} {icon} color="white" font-size="24px" />
+								<Icon on:load={() => play(id)} id="h-{id}" {icon} color="white" font-size="24px" />
 							</a>
 						{/each}
 					</div>
@@ -170,7 +162,7 @@ Tips for Drawer modals:
 		@apply absolute bottom-0 left-0 right-0 mx-auto flex w-full flex-col items-center justify-center py-4;
 	}
 	.socials {
-		@apply flex justify-center gap-3 py-4;
+		@apply flex flex-wrap justify-center gap-3 py-4;
 	}
 	footer .socials * {
 		@apply rounded-lg bg-[--blueHighlight] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;

@@ -1,8 +1,23 @@
 export const siteName = 'Reia';
 export const website = 'https://www.playreia.com';
 
+import alinks from '$constants/alinks';
 import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 import { BlogCategory } from './types';
+
+export const socials = [
+	{ id: 'discord', icon: 'lineicons:discord', href: alinks.discordMsg },
+	{ id: 'youtube', icon: 'lineicons:youtube', href: alinks.youtube },
+	{ id: 'tiktok', icon: 'lineicons:tiktok', href: alinks.tiktok },
+	{ id: 'bluesky', icon: 'simple-icons:bluesky', href: alinks.bluesky },
+	{ id: 'twitter', icon: 'lineicons:twitter', href: alinks.twitter },
+	{ id: 'instagram', icon: 'lineicons:instagram', href: alinks.instagram },
+	{ id: 'facebook', icon: 'lineicons:facebook', href: alinks.facebook },
+	{ id: 'linkedin', icon: 'lineicons:linkedin', href: alinks.linkedIn },
+	{ id: 'pinterest', icon: 'lineicons:pinterest', href: alinks.pinterest },
+	{ id: 'github', icon: 'lineicons:github', href: alinks.github },
+    { id: 'opencollective', icon: 'simple-icons:opencollective', href: alinks.open_collective }
+];
 
 export const blogs: BlogData[] = [
 	{
