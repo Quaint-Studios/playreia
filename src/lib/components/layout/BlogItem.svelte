@@ -37,7 +37,7 @@
 		<enhanced:img
 			src={image}
 			alt={title}
-			class="aspect-[16/9] h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05]"
+			class="img"
 			sizes="min(720px, 100vw)"
 		/>
 	</a>
@@ -96,6 +96,12 @@
 	}
 	a.image:active {
 		@apply scale-[0.98];
+	}
+	.large .image .img {
+		@apply aspect-[16/9] md:aspect-[16/5];
+	}
+	.image .img {
+		@apply aspect-[16/9] h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05];
 	}
 
 	address {
