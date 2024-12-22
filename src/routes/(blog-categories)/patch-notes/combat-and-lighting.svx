@@ -6,7 +6,9 @@ author: { id: '100000000', name: 'Kristopher Ali' }
 category: Patch Notes
 ---
 
-> Patch Notes: [GitHub](https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.1-pre-alpha)
+> {description}
+>
+> Patch notes: [GitHub](https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.1-pre-alpha)
 
 ## Todo Blog Post
 

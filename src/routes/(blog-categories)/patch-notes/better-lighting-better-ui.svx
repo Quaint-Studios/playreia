@@ -1,0 +1,27 @@
+---
+title: 'Patch Notes 3: Better lighting, better UI, Papa-- Oh.'
+description: "Okay, we have a stick to fight with now. But... we can't use it? What the!?! This update includes music, improved lighting, a Sound Manager, updates to the UI, and many more. Check it out!"
+date: 2023-9-25
+author: { id: '100000000', name: 'Kristopher Ali' }
+category: Patch Notes
+---
+
+> {description}
+>
+> Patch notes: [GitHub](https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.2-pre-alpha)
+
+## Todo Blog Post
+
+...
+
+## Patch Notes
+
+**Changes:**
+
+- ...
+- ...
+
+**Added:**
+
+- ...
+- ...

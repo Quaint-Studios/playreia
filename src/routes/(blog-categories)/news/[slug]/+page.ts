@@ -1,10 +1,10 @@
-import type { BlogCategory } from '$lib/types';
+import type { BlogCategory } from "$lib/types";
 
 interface Props {
-	title: string;
-	date: string;
-	author: Author;
-	category: BlogCategory;
+    title: string;
+    date: string;
+    author: Author;
+    category: BlogCategory;
 }
 
 export async function load({ params }) {
@@ -13,10 +13,10 @@ export async function load({ params }) {
 	const content = post.default;
 
 	return {
-		title,
+        title,
 		date,
-		author,
-		category,
+        author,
+        category,
 		content
 	};
 }

@@ -1,0 +1,27 @@
+---
+title: 'Patch Notes 4: New Character, Rigging, and Animation'
+description: "I don't believe anyone truly likes rigging and the time it consumes. Finally animated the character model. The character model has been changed."
+date: 2023-10-1
+author: { id: '100000000', name: 'Kristopher Ali' }
+category: Patch Notes
+---
+
+> {description}
+>
+> Patch notes: [GitHub](https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.4-pre-alpha)
+
+## Todo Blog Post
+
+...
+
+## Patch Notes
+
+**Changes:**
+
+- ...
+- ...
+
+**Added:**
+
+- ...
+- ...

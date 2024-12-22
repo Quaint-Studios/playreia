@@ -32,7 +32,8 @@ const config = {
 			$components: './src/lib/components',
 			$stores: './src/lib/stores',
 			$utils: './src/lib/utils',
-			$images: './src/lib/images'
+			$images: './src/lib/images',
+			"$blog-categories": './src/routes/(blog-categories)'
 		},
 		// csp: {
 		// 	mode: 'hash',

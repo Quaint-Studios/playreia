@@ -1,0 +1,15 @@
+---
+title: 'Example News'
+description: "This is an example of a news post."
+date: 2024-12-22
+author: { id: '100000000', name: 'Kristopher Ali' }
+category: News
+---
+
+> **Hello:**
+>
+> {description}
+
+## Todo Blog Post
+
+...

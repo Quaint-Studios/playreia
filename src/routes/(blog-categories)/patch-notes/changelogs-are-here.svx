@@ -1,0 +1,27 @@
+---
+title: 'Patch Notes 6: Changelogs are Finally Here'
+description: "Reia is coming along nicely! I'm excited to see where this game goes. I hope you are too! This update is pretty big. It features a changelog, new main menu, vfx, new water shaders, more inventory updates, Discord SDK integration, and more."
+date: 2024-1-1
+author: { id: '100000000', name: 'Kristopher Ali' }
+category: Patch Notes
+---
+
+> {description}
+>
+> Patch notes: [GitHub](https://github.com/Quaint-Studios/Reia/releases/tag/v1.0.0.4-pre-alpha)
+
+## Todo Blog Post
+
+...
+
+## Patch Notes
+
+**Changes:**
+
+- ...
+- ...
+
+**Added:**
+
+- ...
+- ...
