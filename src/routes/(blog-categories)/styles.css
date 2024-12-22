@@ -1,0 +1,15 @@
+body h1 {
+	@apply text-4xl sm:text-6xl text-center;
+}
+
+body h2 {
+	@apply mb-4 mt-12 text-2xl sm:text-4xl;
+}
+
+body h1, body h2, body p, body ul, body ol {
+	@apply max-w-screen-md mx-auto;
+}
+
+article {
+	@apply w-full sm:text-lg;
+}

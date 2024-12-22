@@ -11,6 +11,9 @@ export default {
 
 	theme: {
 		extend: {
+			fontSize: {
+				'md': '0.9rem'
+			},
 			screens: {
 				'xs': '375px'
 			},

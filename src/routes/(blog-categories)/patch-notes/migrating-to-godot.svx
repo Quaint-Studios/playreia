@@ -1,0 +1,22 @@
+---
+title: Migrating to Godot
+date: 2023-9-21
+author: { id: '100000000', name: 'Kristopher Ali' }
+category: Patch Notes
+---
+
+## Why We Migrated to Godot?
+
+Reia has been developed using Unity for a long time, but it's been decided to migrate to Godot for a few reasons. It's no secret that a lot of people moved over to Godot because of Unity's pricing model. But, outside of that, Godot can be viewed similar to Blender3D. The growth of Godot can end up being explosive in the same way.
+
+## Patch Notes
+
+**Changes:**
+
+- ...
+- ...
+
+**Added:**
+
+- ...
+- ...
