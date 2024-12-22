@@ -5,7 +5,7 @@
 </script>
 
 <div class="socials">
-	{#each socials.slice(0, 6) as { id, icon, href }}
+	{#each socials as { id, icon, href }}
 		<a
 			{href}
 			target="_blank"
@@ -20,17 +20,13 @@
 
 <style lang="postcss">
 	.socials {
-		@apply flex items-center justify-center gap-4;
-        @apply pt-12 px-3;
+		@apply flex max-w-[385px] flex-wrap items-center justify-center gap-4 mx-auto;
+		@apply px-3 pt-12;
 	}
-
-    .socials a:nth-child(1) {
-        @apply hidden xs:block;
-    }
-    .socials a {
-        @apply rounded-full bg-[--midnight4] p-3;
-    }
-    .socials a:hover {
-        @apply bg-[--gold2];
-    }
+	.socials a {
+		@apply rounded-full bg-[--midnight4] p-3;
+	}
+	.socials a:hover {
+		@apply bg-[--gold2];
+	}
 </style>
