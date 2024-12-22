@@ -17,6 +17,7 @@
 				alt="A forest, flower field, and path"
 				title="Flower Field and Path"
 				sizes="(min-width: 3840px) 3840px, (min-width: 2048px) 2048px, (min-width: 1536px): 1920px, (min-width: 1280px) 1280px"
+				loading="lazy"
 			/>
 		</Lazy>
 	</div>
