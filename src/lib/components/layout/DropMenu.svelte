@@ -11,13 +11,13 @@
 		ariaLabel: string;
 		ariaId: string;
 		items: DropItem[];
+		currentItem: number;
 		onClick: (index: number) => void;
 	}
 
-	let { ariaLabel, ariaId, items, onClick }: Props = $props();
+	let { ariaLabel, ariaId, items, currentItem, onClick }: Props = $props();
 
 	let show = $state(false);
-	let currentItem = $state(0);
 </script>
 
 <form class="drop-menu-container" onmouseleave={() => (show = false)} onsubmit={(e) => e.preventDefault()}>

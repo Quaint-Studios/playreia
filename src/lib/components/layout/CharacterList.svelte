@@ -21,7 +21,7 @@
 <div class="character-list">
 	<div class="gradient"></div>
 	<div class="flex justify-end">
-		<DropMenu ariaLabel="Select a character" ariaId="characters" {items} {onClick} />
+		<DropMenu ariaLabel="Select a character" ariaId="characters" {currentItem} {items} {onClick} />
 	</div>
 	<div class="ring-container">
 		<div class="ring"></div>
