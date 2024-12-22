@@ -13,11 +13,12 @@
 		button
 		primary
 		href="/"
-		backgroundColor={colors.gold}
-		color={colors.black}
-		hoverColor={colors.deepPurple}
 		roundness="large"
 		size="large"
+		--color="var(--black)"
+		--bg-color="var(--gold)"
+		--hover-color="var(--white)"
+		--hover-bg-color="var(--gold2)"
 	>
 		Go back home
 	</Link>

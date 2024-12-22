@@ -26,7 +26,7 @@
 			onclick={() => {
 				altGradient = !altGradient;
 			}}
-			class="cursor-pointer transition-[padding-top] hover:pt-2 mt-8"
+			class="mt-8 cursor-pointer transition-[padding-top] hover:pt-2"
 			icon="solar:alt-arrow-down-bold-duotone"
 			font-size={72}
 		/>
@@ -52,6 +52,9 @@
 				hoverColor={colors.black}
 				roundness="large"
 				size="large"
+				--color="--white"
+				--bg-color="var(--blueHighlight)"
+				--hover-bg-color="var(--lightBlue)"
 			>
 				<div class="flex justify-center gap-2">
 					<Icon icon="solar:play-bold" />
@@ -63,12 +66,11 @@
 				button
 				primary
 				href="/newsletter"
-				backgroundColor={colors.midnightBlue}
-				color={colors.white}
-				hoverColor={colors.border}
-				borderColor={colors.midnightBlue}
 				roundness="large"
 				size="large"
+				--color="--white"
+				--bg-color="var(--midnight3)"
+				--hover-bg-color="var(--midnight4)"
 			>
 				<div class="flex items-center justify-center gap-2">
 					<Icon icon="line-md:email-alert-filled" />
@@ -127,7 +129,12 @@
 
 	@media (min-width: 1024px) {
 		.section-gradient.alt {
-			background: radial-gradient(75% 100% at 50% 0%, #08124700 0%, #08124700 75%, #081247ff 100%) !important;
+			background: radial-gradient(
+				75% 100% at 50% 0%,
+				#08124700 0%,
+				#08124700 75%,
+				#081247ff 100%
+			) !important;
 		}
 	}
 

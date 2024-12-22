@@ -19,9 +19,9 @@
 							label="{name} Page"
 							role="menuitem"
 							{href}
-							color={colors.light}
-							hoverColor={colors.gold}
 							tight
+							--color="var(--light)"
+							--hover-color="var(--gold)"
 						>
 							<div class="flex flex-nowrap items-center justify-center gap-1">
 								{#if children}
@@ -38,8 +38,8 @@
 											label="{name} Page"
 											role="menuitem"
 											{href}
-											color={colors.light}
-											hoverColor={colors.gold}
+											--color="var(--light)"
+											--hover-color="var(--gold)"
 										>
 											<div class="flex flex-nowrap items-center justify-center gap-1">
 												<span class="w-full drop-shadow-lg">{name}</span>
@@ -64,6 +64,9 @@
 					color={colors.white}
 					hoverColor={colors.black}
 					roundness="large"
+					--color="var(--white)"
+					--bg-color="var(--blueHighlight)"
+					--hover-bg-color="var(--lightBlue)"
 				>
 					<div class="flex justify-center gap-1">
 						<Icon icon="solar:play-bold" />

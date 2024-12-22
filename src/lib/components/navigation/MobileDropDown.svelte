@@ -58,6 +58,8 @@
 					color={colors.light}
 					hoverColor={colors.gold}
 					size="xlarge"
+					--color="var(--light)"
+					--hover-color="var(--gold)"
 				>
 					<div class="flex gap-2">
 						{#if icon}

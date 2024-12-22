@@ -95,9 +95,9 @@ Tips for Drawer modals:
 									label="{name} Page"
 									role="menuitem"
 									{href}
-									color={colors.light}
-									hoverColor={colors.gold}
 									size="xlarge"
+									--color="var(--light)"
+									--hover-color="var(--gold)"
 								>
 									<span class={!children ? 'font-black' : undefined}>{name}</span>
 								</Link>
@@ -112,12 +112,12 @@ Tips for Drawer modals:
 							href="/game"
 							button
 							primary
-							backgroundColor={colors.blueHighlight}
-							color={colors.light}
-							hoverColor={colors.buttonGray}
-							--hover-color={colors.border}
 							size="large"
 							roundness="large"
+							--color="var(--light)"
+							--hover-color="var(--buttonGray)"
+							--bg-color="var(--blueHighlight)"
+							--hover-bg-color="var(--gold2)"
 						>
 							<div class="flex justify-center gap-1">
 								<Icon icon="solar:play-bold" />
@@ -165,7 +165,7 @@ Tips for Drawer modals:
 		@apply flex flex-wrap justify-center gap-3 py-4;
 	}
 	footer .socials * {
-		@apply rounded-lg bg-[--blueHighlight] p-1 opacity-100 shadow-lg hover:opacity-70 hover:shadow-xl;
+		@apply rounded-lg2 bg-[--blueHighlight] hover:bg-[--gold2] p-2 opacity-100 shadow-lg hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>

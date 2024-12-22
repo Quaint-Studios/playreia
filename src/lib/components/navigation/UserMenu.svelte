@@ -24,13 +24,15 @@
 		color={colors.dark}
 	/>
 	<div class="icon-holder">
-		<div class="w-4 h-4">
+		<div class="h-4 w-4">
 			<Icon icon="solar:user-bold" class="text-white" />
 		</div>
 		<div class="menu-container">
 			<div class="menu">
 				{#each links as { href, text }}
-					<Link label={text} {href} color={colors.dark} hoverColor={colors.primary}>{text}</Link>
+					<Link label={text} {href} --color="var(--black)" --hover-color="var(--primary)">
+						{text}
+					</Link>
 				{/each}
 			</div>
 		</div>
@@ -46,7 +48,7 @@
 	}
 	.user-menu {
 		@apply flex items-center justify-center gap-2 rounded-[10px];
-		@apply py-0.5 pl-2 pr-0.5 bg-white;
+		@apply bg-white py-0.5 pl-2 pr-0.5;
 		@apply shadow-lg hover:shadow-xl;
 		@apply relative;
 		transition: all 0.1s ease-in-out;

@@ -47,7 +47,7 @@
 	}
 
 	const {
-		target = '_self',
+		target,
 		rel = undefined,
 		href,
 
@@ -56,11 +56,6 @@
 
 		button = false,
 		primary = false,
-
-		color = colors.link,
-		hoverColor = undefined,
-		backgroundColor = undefined,
-		borderColor = 'transparent',
 
 		tight = false,
 		roundness = 'medium',
@@ -71,9 +66,6 @@
 
 		children
 	}: Props = $props();
-
-	let hoverColorState = $state(color);
-	let borderHoverColorState = $state(borderColor);
 </script>
 
 <a
@@ -82,36 +74,30 @@
 	{href}
 	{role}
 	aria-label={label}
-	style="border: 2px solid {borderHoverColorState};"
-	style:color={hoverColorState ?? color}
-	style:background-color={backgroundColor}
-	class={['unset', 'lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(' ')}
+	class={['unset', 'lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(
+		' '
+	)}
 	class:lb-button--primary={primary && button}
 	class:lb-button--secondary={!primary && button}
 	class:lb-button--underline={underline}
 	class:lb-button--selected={selected}
 	class:lb-button--raw={raw}
 	class:lb-button--tight={tight}
-	onmouseenter={() => {
-		if (hoverColor) {
-			hoverColorState = hoverColor;
-			if (borderColor !== 'transparent') {
-				borderHoverColorState = hoverColor;
-			}
-		}
-	}}
-	onmouseleave={() => {
-		hoverColorState = color;
-		borderHoverColorState = borderColor;
-	}}
 >
 	{@render children()}
 </a>
 
 <style lang="postcss">
+	a {
+		color: var(--color) !important;
+		background-color: var(--bg-color);
+	}
+	a:hover {
+		color: var(--hover-color) !important;
+		background-color: var(--hover-bg-color);
+	}
 	.lb-button--selected {
 		@apply font-black;
-		color: var(--hover-color);
 	}
 	.lb-button::after {
 		display: contents;

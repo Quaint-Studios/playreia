@@ -55,14 +55,16 @@
 			{#if url}
 				<div class="poppins">
 					<Link
-						tight
-						href={url}
-						color={colors.gold}
-						hoverColor={colors.tertiary}
-						size="large"
 						{target}
-						{rel}>{cta}</Link
+						{rel}
+						href={url}
+						size="large"
+						tight
+						--color="var(--gold)"
+						--hover-color="var(--tertiary)"
 					>
+						{cta}
+					</Link>
 				</div>
 			{/if}
 		</div>
