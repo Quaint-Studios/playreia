@@ -1,13 +1,18 @@
 body .blog-post h1 {
-	@apply text-4xl sm:text-6xl text-center;
+	@apply text-center text-4xl sm:text-6xl;
 }
 
 body .blog-post h2 {
 	@apply mb-4 mt-12 text-2xl sm:text-4xl;
 }
 
-body .blog-post h1, body .blog-post h2, body .blog-post p, body .blog-post ul, body .blog-post ol, body .blog-post blockquote {
-	@apply max-w-screen-md mx-auto;
+body .blog-post h1,
+body .blog-post h2,
+body .blog-post p,
+body .blog-post ul,
+body .blog-post ol,
+body .blog-post blockquote {
+	@apply mx-auto max-w-screen-md;
 }
 
 body article.blog-post {
@@ -15,9 +20,9 @@ body article.blog-post {
 }
 
 body .blog-post blockquote {
-	@apply bg-[--midnight3] p-3 text-base flex flex-col gap-4;
+	@apply flex flex-col gap-4 bg-[--midnight3] p-3 text-base;
 }
 
 body .blog-post blockquote p {
-	@apply text-[--borderSilver] mx-0;
+	@apply mx-0 text-[--borderSilver];
 }
