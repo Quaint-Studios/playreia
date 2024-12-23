@@ -27,8 +27,29 @@ h5 {
 	@apply text-lg font-black;
 }
 
+.legal {
+	h1 + p {
+		@apply mb-4 mt-2 font-bold text-[--gold];
+	}
+
+	p + h2, p + h3, ul + h3, p + h4, ul + h4 {
+		@apply mt-8;
+	}
+
+	h2, h3, h4 {
+		@apply mb-2;
+	}
+
+	h3 + h4 {
+		@apply mt-4;
+	}
+}
+
 ul li {
-	@apply list-disc list-inside;
+	@apply list-disc list-inside my-1;
+}
+ul li p {
+	@apply inline;
 }
 
 h1 strong,
