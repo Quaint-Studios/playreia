@@ -20,6 +20,16 @@ h3 {
 p.blog + h3 {
 	@apply !mt-12;
 }
+h4 {
+	@apply text-xl font-black;
+}
+h5 {
+	@apply text-lg font-black;
+}
+
+ul li {
+	@apply list-disc list-inside;
+}
 
 h1 strong,
 h2 strong {
