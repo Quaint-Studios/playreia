@@ -1,8 +1,9 @@
 ---
+title: Privacy Policy
+description: This Privacy Policy is intended to help you understand Reia's privacy practices and provide information about the choices you have regarding the ways in which information collected by Reia is used and disclosed.
+slug: privacy
 layout: legal
 ---
-
-# Privacy Policy
 
 Last updated: December 23, 2024
 

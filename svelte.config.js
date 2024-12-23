@@ -11,11 +11,12 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			layout: {
-				home: './src/lib/layouts/Home.layout.svelte'
+				home: './src/lib/layouts/Home.layout.svelte',
+				legal: './src/routes/(legal)/legal.svelte'
 			}
 		})
 	],
-	
+
 	compilerOptions: {
 		// runes: true
 	},
@@ -33,8 +34,8 @@ const config = {
 			$stores: './src/lib/stores',
 			$utils: './src/lib/utils',
 			$images: './src/lib/images',
-			"$blog-categories": './src/routes/(blog-categories)'
-		},
+			'$blog-categories': './src/routes/(blog-categories)'
+		}
 		// csp: {
 		// 	mode: 'hash',
 		// 	directives: cspDirectives
