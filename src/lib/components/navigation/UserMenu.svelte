@@ -4,11 +4,15 @@
 	import Icon from '@iconify/svelte';
 
 	let show = $state(false);
+	let signedIn = false;
 
-	let links = [
+	let links = signedIn ? [
 		{ href: '/profile', text: 'Profile' },
 		{ href: '/profile/settings', text: 'Settings' },
 		{ href: '/logout', text: 'Logout' }
+	] : [
+		{ href: '/login', text: 'Login' },
+		{ href: '/register', text: 'Register' }
 	];
 </script>
 
