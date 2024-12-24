@@ -113,5 +113,5 @@ p.blog + p.blog {
 }
 
 .bg {
-	@apply bg-[--deepPurpleHighlightHalf] p-2 rounded-lg w-fit;
+	@apply bg-[--midnight3] p-2 w-fit;
 }

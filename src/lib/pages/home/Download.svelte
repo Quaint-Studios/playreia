@@ -3,6 +3,8 @@
 	import { quadIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import PlatformButton from '$components/core/PlatformButton.svelte';
+	import Link from '$components/core/Link.svelte';
+	import LinkedButton from '$components/layout/LinkedButton.svelte';
 
 	function progress(_node: HTMLSpanElement, { duration = 4000, easing = quadIn }) {
 		return {
@@ -166,10 +168,12 @@
 		</div>
 	{/if}
 </div>
+<LinkedButton href="/download">Download now</LinkedButton>
+
 
 <style lang="postcss">
 	.platforms {
-		@apply flex w-full justify-center;
+		@apply flex w-full justify-center mb-8;
 	}
 
 	.platform-group {

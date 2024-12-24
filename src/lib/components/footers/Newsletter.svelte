@@ -35,7 +35,7 @@
 	<h2>Enter your e-mail address and stay updated</h2>
 	<div class="container">
 		<input aria-label="Newsletter" type="email" id="newsletter-email" placeholder="Your email..." />
-		<button onclick={subscribe}>Subscribe</button>
+		<button onclick={subscribe} class="plausible-event-name=newsletter+subscribe">Subscribe</button>
 	</div>
 </div>
 

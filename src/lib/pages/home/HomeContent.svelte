@@ -427,7 +427,6 @@
 </Section>
 
 <Section headerColor="var(--gold)" title="From Code to Community" titlePosition="left">
-	<a rel="me" href="https://mastodon.social/@playreia" class="hidden">Mastodon</a>
 	<div class="blog-container">
 		<div class="bg">
 			<strong>Listening to the community and enabling a community-driven development.</strong>
