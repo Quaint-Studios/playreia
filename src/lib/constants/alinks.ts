@@ -6,6 +6,7 @@ const alinks = {
 	youtube: 'https://youtube.com/@playreia',
 	tiktok: 'https://tiktok.com/@playreia',
 	bluesky: 'https://bsky.app/profile/playreia.com',
+	mastodon: 'https://mastodon.social/@playreia',
 	twitter: 'https://twitter.com/playreia',
 	instagram: 'https://instagram.com/playreia',
 

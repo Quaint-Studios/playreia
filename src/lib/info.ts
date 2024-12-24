@@ -10,6 +10,7 @@ export const socials = [
 	{ id: 'youtube', icon: 'lineicons:youtube', href: alinks.youtube },
 	{ id: 'tiktok', icon: 'lineicons:tiktok', href: alinks.tiktok },
 	{ id: 'bluesky', icon: 'simple-icons:bluesky', href: alinks.bluesky },
+	{ id: 'mastodon', icon: 'simple-icons:mastodon', href: alinks.mastodon },
 	{ id: 'twitter', icon: 'lineicons:twitter', href: alinks.twitter },
 	{ id: 'instagram', icon: 'lineicons:instagram', href: alinks.instagram },
 	{ id: 'facebook', icon: 'lineicons:facebook', href: alinks.facebook },

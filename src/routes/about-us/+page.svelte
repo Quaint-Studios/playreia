@@ -32,10 +32,26 @@
 	{#snippet structured()}
 		<script type="application/ld+json">
 			{
-				"@context": "https://schema.org/",
-				"@type": "WebSite",
+				"@context": "https://schema.org",
+				"@type": "Project",
 				"name": "Reia",
-				"url": "https://www.playreia.com/terms-and-conditions"
+				"url": "https://www.playreia.com/about-us",
+				"logo": "https://www.playreia.com/reia_logo_meta.png",
+				"sameAs": [
+					"https://opencollective.playreia.com",
+					"https://github.playreia.com",
+					"https://pinterest.playreia.com",
+					"https://linkedin.playreia.com",
+					"https://facebook.playreia.com",
+					"https://instagram.playreia.com",
+					"https://twitter.playreia.com",
+					"https://mastadon.playreia.com",
+					"https://bluesky.playreia.com",
+					"https://tiktok.playreia.com",
+					"https://youtube.playreia.com",
+					"https://discord.playreia.com",
+					"https://playreia.com"
+				]
 			}
 		</script>
 	{/snippet}
@@ -48,8 +64,9 @@
 
 			<div class="bg quote">
 				<em>
-					"Reia is a project that I started as a passion project. I wanted to create a game that I
-					would love to play myself."
+					"Reia is a game that I started as a passion project. I wanted to create a game that I
+					would love to play myself. I also wanted to deeply understand every process of creating a
+					game so I can communicate with the team more effectively."
 				</em>
 				<em class="author">— Kristopher Ali</em>
 			</div>
