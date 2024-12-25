@@ -46,7 +46,7 @@
 					}
 				},
 				"datePublished": "2023-12-23",
-				"dateModified": "2023-12-22"
+				"dateModified": "2024-12-25"
 			}
 		</script>
 	{/snippet}

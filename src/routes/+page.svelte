@@ -34,9 +34,9 @@
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
-				"href": "https://www.playreia.com"
 				"@type": "WebSite",
 				"name": "Reia",
+				"url": "https://www.playreia.com"
 			}
 		</script>
 	{/snippet}
