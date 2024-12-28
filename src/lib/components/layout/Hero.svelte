@@ -86,7 +86,7 @@
 <style lang="postcss">
 	.hero {
 		@apply bg-[--deepPurpleHighlight];
-		@apply h-[60rem] w-full;
+		@apply h-[45rem] sm:h-[60rem] w-full transition-[height];
 		@apply text-[--light];
 		@apply relative;
 	}
@@ -116,7 +116,7 @@
 	}
 
 	.hero .image {
-		@apply absolute top-0 h-[60rem] w-full object-cover object-bottom;
+		@apply absolute top-0 h-[45rem] sm:h-[60rem] w-full object-cover object-bottom transition-[height];
 	}
 
 	.section-gradient {
