@@ -24,14 +24,16 @@
 	</div>
 	<div class="gradient"></div>
 	<div class="section-gradient" class:alt={altGradient}>
-		<Icon
+		<button
+			class="arrow-container"
 			onclick={() => {
 				altGradient = !altGradient;
 			}}
-			class="mt-8 cursor-pointer transition-[padding-top] hover:pt-2"
-			icon="solar:alt-arrow-down-bold-duotone"
-			font-size={72}
-		/>
+		>
+		<div class="arrow">
+			<Icon icon="solar:alt-arrow-down-bold-duotone" font-size={72} />
+		</div>
+		</button>
 	</div>
 	<div class="content poppins">
 		<h1>
@@ -84,9 +86,28 @@
 </section>
 
 <style lang="postcss">
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(-25%);
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		}
+		50% {
+			transform: translateY(0);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+	.arrow-container {
+		@apply mt-8 cursor-pointer transition-[padding-top] hover:pt-2;
+	}
+	.arrow-container .arrow {
+		@apply m-auto;
+		animation: bounce 1500ms infinite;
+	}
+
 	.hero {
 		@apply bg-[--deepPurpleHighlight];
-		@apply h-[50rem] sm:h-[60rem] w-full transition-[height];
+		@apply h-[50rem] w-full transition-[height] sm:h-[60rem];
 		@apply text-[--light];
 		@apply relative;
 	}
@@ -116,7 +137,7 @@
 	}
 
 	.hero .image {
-		@apply absolute top-0 h-[50rem] sm:h-[60rem] w-full object-cover object-bottom transition-[height];
+		@apply absolute top-0 h-[50rem] w-full object-cover object-bottom transition-[height] sm:h-[60rem];
 	}
 
 	.section-gradient {
