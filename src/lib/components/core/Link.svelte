@@ -30,6 +30,7 @@
 		borderColor?: string;
 		/** Tighten the padding */
 		tight?: boolean;
+		tighter?: boolean;
 		/** Should the link be underlined on hover? */
 		/** How round should the button be? */
 		roundness?: 'small' | 'medium' | 'large' | 'full';
@@ -58,6 +59,7 @@
 		primary = false,
 
 		tight = false,
+		tighter = false,
 		roundness = 'medium',
 		underline = false,
 		selected = false,
@@ -83,6 +85,7 @@
 	class:lb-button--selected={selected}
 	class:lb-button--raw={raw}
 	class:lb-button--tight={tight}
+	class:lb-button--tighter={tighter}
 >
 	{@render children()}
 </a>

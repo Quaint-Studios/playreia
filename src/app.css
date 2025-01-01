@@ -4,6 +4,7 @@
 
 @import url('./css/buttons.css');
 @import url('./css/colors.css');
+@import url('./css/form.css');
 @import url('./css/layout.css');
 @import url('./css/typography.css');
 
@@ -12,6 +13,6 @@ html, body {
 }
 
 body {
-    @apply bg-[--midnightBlue] text-[--white];
+    @apply bg-[--midnightBlue] text-[--white] sm:text-lg;
 	font-family: 'Urbanist Variable', sans-serif;
 }

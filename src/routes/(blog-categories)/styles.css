@@ -15,7 +15,7 @@ body .blog-post blockquote {
 	@apply mx-auto max-w-screen-md;
 }
 
-body article.blog-post {
+body article.blog-post, body .blog-post {
 	@apply w-full sm:text-lg;
 }
 

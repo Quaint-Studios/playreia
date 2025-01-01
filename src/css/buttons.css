@@ -94,6 +94,9 @@ body .lb-button--medium.lb-button--selected:after {
 .lb-button--large.lb-button--tight {
 	padding: 10px 14px;
 }
+.lb-button--large.lb-button--tighter {
+	padding: 8px 4px;
+}
 .lb-button--large.lb-button--underline:hover:after {
 	width: calc(100% - 48px);
 }

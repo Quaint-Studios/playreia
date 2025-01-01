@@ -6,9 +6,23 @@
 	import Icon from '@iconify/svelte';
 	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
+
+	import { onMount } from 'svelte';
+
+	let atTop = $state(true);
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 0) {
+				atTop = false;
+			} else {
+				atTop = true;
+			}
+		});
+	});
 </script>
 
-<div id="navbar" class="glass-light" role="navigation">
+<div id="navbar" class:at-top={atTop} role="navigation">
 	<div class="nav-container">
 		<div class="flex flex-nowrap items-center justify-center">
 			<NavBrand />
@@ -24,10 +38,10 @@
 							--hover-color="var(--gold)"
 						>
 							<div class="flex flex-nowrap items-center justify-center gap-1">
+								<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
 								{#if children}
 									<Icon icon="solar:alt-arrow-down-bold" />
 								{/if}
-								<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
 							</div>
 						</Link>
 						{#if children}
@@ -82,13 +96,23 @@
 
 <style lang="postcss">
 	#navbar {
-		@apply shadow-md;
+		/* @apply shadow-md; */
 		@apply fixed z-50 w-full;
+		@apply py-4;
+		@apply transition-[padding__backdrop-filter__border-color] duration-[0.45s];
+		border-color: #ffffff00;
+		backdrop-filter: blur(0px);
+	}
+	#navbar:not(.at-top) {
+		@apply py-0;
+		background-color: #00000020;
+		@apply border-b-[1px] border-[var(--borderHalf)] backdrop-blur-sm;
 	}
 
 	.nav-container {
 		@apply relative;
-		@apply container mx-auto flex items-center justify-center md:justify-between;
+		@apply mx-auto flex items-center justify-center md:justify-between;
+		@apply max-w-[1820px] pr-4;
 		transition: max-width 0.1s ease-in-out;
 	}
 
@@ -102,7 +126,7 @@
 	.nav-link-child {
 		@apply absolute left-2 top-full flex-col;
 		@apply rounded-lg2 border-[1px] !border-[--borderHalf];
-		@apply transition-transform scale-0 origin-top;
+		@apply origin-top scale-0 transition-transform;
 	}
 
 	.nav-link-child .nav-link > :global(a) {

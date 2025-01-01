@@ -45,7 +45,7 @@
 
 <style lang="postcss">
 	.newsletter {
-		@apply flex w-full flex-col items-center justify-center bg-[--midnight4] px-3 py-12;
+		@apply flex w-full flex-col items-center justify-center bg-[--midnight4] px-3 py-12 text-base;
 	}
 
 	span {

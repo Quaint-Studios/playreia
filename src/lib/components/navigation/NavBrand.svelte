@@ -5,7 +5,7 @@
 <Link label="Home" href="/" --color="var(--light)">
 	<div class="flex items-center justify-center">
 		<enhanced:img
-			class="m-auto h-[64px] w-[64px] lg:m-[unset]"
+			class="m-auto h-[64px] w-[64px] aspect-square lg:m-[unset] grow shrink-0"
 			src="$images/logos/reia_logo_white_transparent.png?enhanced&w=184;168"
 			alt="Reia Logo White Transparent"
 			title="Reia"

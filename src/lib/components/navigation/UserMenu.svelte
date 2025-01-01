@@ -29,7 +29,7 @@
 	/>
 	<div class="icon-holder">
 		<div class="h-4 w-4">
-			<Icon icon="solar:user-bold" class="text-white" />
+			<Icon icon="solar:user-bold" class="text-white h-full w-full" />
 		</div>
 		<div class="menu-container">
 			<div class="menu">
