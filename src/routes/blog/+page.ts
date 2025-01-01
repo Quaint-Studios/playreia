@@ -37,8 +37,6 @@ export async function load({ url }) {
 
 	const page = Number(url.searchParams.get('page')) || 1;
 
-	console.log('Hello');
-
 	try {
 		return {
 			posts: page === 1 ? posts.slice(0, 7) : posts.slice((page - 1) * 6 + 1, page * 6 + 1),

@@ -12,6 +12,8 @@
 	let atTop = $state(true);
 
 	onMount(() => {
+		atTop = window.scrollY === 0;
+
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 0) {
 				atTop = false;
