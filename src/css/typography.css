@@ -28,13 +28,18 @@ h5 {
 }
 
 .legal {
-	@apply max-w-screen-lg mx-auto;
+	@apply mx-auto max-w-screen-lg;
 
 	h1 + p {
 		@apply mb-4 mt-2 font-bold text-[--gold];
 	}
 
-	p + h2, ul + h2, p + h3, ul + h3, p + h4, ul + h4 {
+	p + h2,
+	ul + h2,
+	p + h3,
+	ul + h3,
+	p + h4,
+	ul + h4 {
 		@apply mt-8;
 	}
 
@@ -42,7 +47,9 @@ h5 {
 		@apply mt-4;
 	}
 
-	h2, h3, h4 {
+	h2,
+	h3,
+	h4 {
 		@apply mb-2 text-[--gold];
 	}
 
@@ -52,7 +59,7 @@ h5 {
 }
 
 ul li {
-	@apply list-disc list-inside my-1;
+	@apply my-1 list-inside list-disc;
 }
 ul li p {
 	@apply inline;
@@ -100,7 +107,7 @@ code.gold {
 }
 
 .blog-container {
-	@apply mx-auto max-w-screen-lg w-full;
+	@apply mx-auto w-full max-w-screen-lg;
 }
 p.blog {
 	@apply my-4;
@@ -113,5 +120,5 @@ p.blog + p.blog {
 }
 
 .bg {
-	@apply bg-[--midnight3] p-2 w-fit;
+	@apply w-fit bg-[--midnight3] p-2;
 }
