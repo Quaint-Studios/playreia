@@ -18,11 +18,9 @@
 			})
 				.then((response) => {
 					if (response.ok) {
-						alert('Subscribed!');
 						status = 'success';
 						email = '';
 					} else {
-						alert('Error subscribing');
 						status = 'error';
 					}
 				})
