@@ -33,7 +33,7 @@ export async function GET() {
 		  page: '/',
 		  freq: freq.daily,
 		  priority: 1.0,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/dev-blog',
@@ -69,7 +69,7 @@ export async function GET() {
 		  page: '/about',
 		  freq: freq.yearly,
 		  priority: 0.8,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/blog',
@@ -80,25 +80,25 @@ export async function GET() {
 		  page: '/contact',
 		  freq: freq.yearly,
 		  priority: 0.7,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/contribute',
 		  freq: freq.yearly,
 		  priority: 0.7,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/contribute/backers',
 		  freq: freq.weekly,
 		  priority: 0.7,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/download',
 		  freq: freq.monthly,
 		  priority: 0.9,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/faq',
@@ -114,7 +114,7 @@ export async function GET() {
 		  page: '/game',
 		  freq: freq.monthly,
 		  priority: 0.9,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/game-design-document',
@@ -125,7 +125,7 @@ export async function GET() {
 		  page: '/jobs',
 		  freq: freq.monthly,
 		  priority: 0.7,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/learn',
@@ -246,7 +246,7 @@ export async function GET() {
 		  page: '/newsletter',
 		  freq: freq.yearly,
 		  priority: 0.7,
-		  lastmod: '2025-1-10'
+		  lastmod: '2025-01-10'
 		},
 		{
 		  page: '/press-kit',
