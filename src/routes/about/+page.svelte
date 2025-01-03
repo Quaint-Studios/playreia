@@ -34,8 +34,9 @@
 			{
 				"@context": "https://schema.org",
 				"@type": "Project",
-				"name": "Reia",
-				"url": "https://www.playreia.com/about-us",
+				"name": "About Reia",
+				"url": "https://www.playreia.com/about",
+				"description": "Learn all about Reia, the team, and the development journey. Find out why this project was started, our process, what we've learned, and what we plan to do!",
 				"logo": "https://www.playreia.com/reia_logo_meta.png",
 				"sameAs": [
 					"https://opencollective.playreia.com",

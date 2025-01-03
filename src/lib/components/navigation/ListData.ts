@@ -75,7 +75,7 @@ export default [
 			}
 		]
 	},
-	{ name: 'About Us', href: '/about-us' },
+	{ name: 'About Us', href: '/about' },
 	{
 		name: 'Contribute',
 		href: '/contribute',

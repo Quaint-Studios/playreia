@@ -110,13 +110,19 @@
 	const allJobs: Category[] = [frontend, sound, art, modeling, design, programming, web, marketing];
 </script>
 
-<Meta titlePrefix="Reia - " titleSuffix="" keywords={''} description="">
+<Meta
+	titlePrefix=""
+	title="Join our Team - Jobs at Reia"
+	titleSuffix=""
+	keywords={'reia, game, action, adventure , rpg, games, jobs, team, hiring, frontend, backend, sound, art, modeling, design, programming, marketing, positions, roles, join, team, create, best action, best adventure, best rpg, best game'}
+	description="Be a part of the Reia team and help us create the best action adventure RPG game. We're looking for frontend, sound, art, modeling, design, programming, and marketing positions."
+>
 	{#snippet structured()}
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Reia",
+				"name": "Join our Team - Jobs at Reia",
 				"url": "https://www.playreia.com/jobs"
 			}
 		</script>
@@ -129,11 +135,11 @@
 			<h1>Jobs at Reia</h1>
 
 			<blockquote>
-				We're looking for people to join the team. We're not actively hiring just yet. But feel free
-				to browse some of the position we'll be looking for in the future. If you're interested in
-				any of the following positions, please contact us at <a href="mailto:jobs@playreia.com"
-					>jobs@playreia.com</a
-				> and we'll be in touch.
+				If you love action adventure RPG games like Reia then we're looking for people like you to
+				join the team. We're not actively hiring just yet. But feel free to browse some of the
+				position we'll be looking for in the future. If you're interested in any of the following
+				positions, please contact us at <a href="mailto:jobs@playreia.com">jobs@playreia.com</a> and
+				we'll be in touch.
 			</blockquote>
 
 			<Tabs
@@ -179,7 +185,9 @@
 											<span>{name}</span>
 											{#if member}
 												<span>
-													[<i>{note}</i><a href={member.link} target="_blank" rel="noopener">{member.name}</a>]
+													[<i>{note}</i><a href={member.link} target="_blank" rel="noopener"
+														>{member.name}</a
+													>]
 												</span>
 											{/if}
 										</div>

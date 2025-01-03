@@ -5,6 +5,8 @@ import alinks from '$constants/alinks';
 import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 import { BlogCategory } from './types';
 
+export const contactEmail = 'contact@playreia.com';
+
 export const socials = [
 	{ id: 'discord', icon: 'lineicons:discord', href: alinks.discordMsg },
 	{ id: 'youtube', icon: 'lineicons:youtube', href: alinks.youtube },

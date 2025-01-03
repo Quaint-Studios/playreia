@@ -35,7 +35,7 @@
 				"author": {
 					"@type": "Organization",
 					"name": "Reia",
-					"url": "https://www.playreia.com/about-us"
+					"url": "https://www.playreia.com/about"
 				},
 				"publisher": {
 					"@type": "Organization",
@@ -46,7 +46,7 @@
 					}
 				},
 				"datePublished": "2023-12-23",
-				"dateModified": "2024-12-25"
+				"dateModified": "2025-1-10"
 			}
 		</script>
 	{/snippet}

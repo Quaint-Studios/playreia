@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Meta from '$components/seo/Meta.svelte';
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
@@ -46,6 +47,30 @@
 	let email: string | undefined = $state(undefined);
 	let password: string | undefined = $state(undefined);
 </script>
+
+<Meta
+	titlePrefix=""
+	title="Reia Newsletter - Be a part of the Family and Adventure"
+	titleSuffix=""
+	keywords={'reia, newsletter, game, development, tests, family, waitlist, play, early, early access, early-access, updates, weekly, progress, notify, tests, releases'}
+	description="Join the Reia newsletter and be a part of the family. Get notified of all the major development and tests we do here. Newsletter members are also added to a waitlist to play the game early."
+>
+	{#snippet structured()}
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org/",
+				"@type": "WebSite",
+				"name": "Join Reia's Newsletter to be a part of the Family and Adventure",
+				"url": "https://www.playreia.com/newsletter",
+				"potentialAction": {
+					"@type": "SubscribeAction",
+					"target": "https://www.playreia.com/newsletter",
+					"description": "Subscribe to the Reia RPG Newsletter for a regular email newsletter with news and updates."
+				}
+			}
+		</script>
+	{/snippet}
+</Meta>
 
 <div class="newsletter">
 	<div class="bg"></div>
@@ -110,7 +135,7 @@
 	}
 	.newsletter .bg {
 		@apply absolute z-0 h-[calc(100dvh-128px)] w-[calc(100dvw-64px)];
-		@apply bg-contain bg-center bg-no-repeat sm:opacity-[3%] opacity-5 bg-transparent;
+		@apply bg-transparent bg-contain bg-center bg-no-repeat opacity-5 sm:opacity-[3%];
 		background-image: url('/images/backgrounds/magic-circle.svg');
 	}
 

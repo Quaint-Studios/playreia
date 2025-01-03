@@ -127,7 +127,7 @@ Tips for Drawer modals:
 					</div>
 					<div class="socials">
 						{#each socials.slice(0, 6) as { id, icon, href }}
-							<a {href} target="_blank" rel="noopener noreferrer" class="social unset">
+							<a {href} target="_blank" rel="noopener" class="social unset">
 								<Icon on:load={() => play(id)} id="h-{id}" {icon} color="white" font-size="24px" />
 							</a>
 						{/each}
