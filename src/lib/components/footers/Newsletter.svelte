@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
+	import { onMount } from 'svelte';
 
 	function subscribe() {
 		if (status !== 'idle' && status !== 'error') return;
@@ -32,6 +33,13 @@
 			status = 'error';
 		}
 	}
+
+	onMount(() => {
+		const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
+		emailInput.addEventListener('keyup', (event) => {
+			if (event.key === 'Enter') subscribe();
+		});
+	});
 
 	type Status = 'idle' | 'pending' | 'success' | 'error';
 	let status: Status = $state('idle');

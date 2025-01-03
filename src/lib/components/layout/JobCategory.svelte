@@ -30,8 +30,7 @@
 				<span>{name}</span>
 				{#if member}
 					<span>
-						[<i>{note}</i>
-						<a href={member.link} target="_blank" rel="noopener">{member.name}</a>]
+						[<i>{note}</i><a href={member.link} target="_blank" rel="noopener">{member.name}</a>]
 					</span>
 				{/if}
 			</div>
