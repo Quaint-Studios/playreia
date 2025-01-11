@@ -53,7 +53,7 @@
 	<meta name="author" content={author} />
 	{@render structured()}
 
-	<meta property="og:logo" content="${$page.url.origin}/pwa/android-chrome-192x192.png" />
+	<meta property="og:logo" content="{$page.url.origin}/pwa/android-chrome-192x192.png" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
