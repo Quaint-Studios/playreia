@@ -8,15 +8,13 @@
 		status = 'pending';
 
 		if (email) {
+			const formData = new FormData();
+			formData.append('email', email);
+			if(password) formData.append('password', password);
+
 			fetch(`/newsletter`, {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					email,
-					password
-				})
+				body: formData
 			})
 				.then((response) => {
 					if (response.ok) {
@@ -77,7 +75,7 @@
 	<span>Be a part of the family</span>
 	<h1>Join the <strong>Reia Newsletter</strong> for an Adventure</h1>
 	<div class="container">
-		<form autocomplete="off">
+		<form id="newsletter-page-form" autocomplete="off">
 			<input
 				class:error={status === 'error'}
 				aria-label="Newsletter"

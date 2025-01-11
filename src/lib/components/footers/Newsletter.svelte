@@ -7,15 +7,13 @@
 		status = 'pending';
 
 		if (email) {
+			const formData = new FormData();
+			formData.append('email', email);
+			if(password) formData.append('password', password);
+
 			fetch(`/newsletter`, {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					email,
-					password
-				})
+				body: formData
 			})
 				.then((response) => {
 					if (response.ok) {

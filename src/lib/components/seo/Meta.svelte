@@ -12,6 +12,7 @@
 		author?: string;
 		reia_logo_meta?: string;
 		canonical?: boolean;
+		locale?: string;
 		structured: Snippet<[]>;
 		children?: Snippet<[]>;
 	}
@@ -26,6 +27,7 @@
 		author = 'Quaint Studios',
 		reia_logo_meta = '/reia_logo_meta.png',
 		canonical = true,
+		locale = 'en_US',
 		structured,
 		children
 	}: Props = $props();
@@ -50,6 +52,8 @@
 	<meta name="revisit-after" content="3 days" />
 	<meta name="author" content={author} />
 	{@render structured()}
+
+	<meta property="og:logo" content="${$page.url.origin}/pwa/android-chrome-192x192.png" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
