@@ -1,52 +1,7 @@
 <script lang="ts">
+	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import alinks from '$constants/alinks';
-	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
-	import { onMount } from 'svelte';
-
-	function subscribe() {
-		if (status !== 'idle' && status !== 'error') return;
-		status = 'pending';
-
-		if (email) {
-			fetch(`/newsletter`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					email,
-					password
-				})
-			})
-				.then((response) => {
-					if (response.ok) {
-						status = 'success';
-						email = '';
-					} else {
-						status = 'error';
-					}
-				})
-				.catch((error) => {
-					console.error('Error:', error);
-					status = 'error';
-				});
-		} else {
-			status = 'error';
-		}
-	}
-
-	onMount(() => {
-		const emailInput = document.getElementById('newsletter-page-email') as HTMLInputElement;
-		emailInput.addEventListener('keyup', (event) => {
-			if (event.key === 'Enter') subscribe();
-		});
-	});
-
-	type Status = 'idle' | 'pending' | 'success' | 'error';
-	let status: Status = $state('idle');
-	let email: string | undefined = $state(undefined);
-	let password: string | undefined = $state(undefined);
 </script>
 
 <Meta
@@ -72,44 +27,7 @@
 	<div class="bg"></div>
 	<span>Get notified</span>
 	<h1>Get <strong>Reia Newsletter</strong> for an Adventure</h1>
-	<div class="container">
-		<form autocomplete="off">
-			<input
-				class:error={status === 'error'}
-				aria-label="Newsletter"
-				type="email"
-				id="newsletter-page-email"
-				placeholder={status !== 'success' ? 'Your email...' : "We'll notify you.  :)"}
-				bind:value={email}
-				onsubmit={subscribe}
-			/>
-			<input
-				type="text"
-				id="newsletter-page-password"
-				class="hidden"
-				placeholder="Leave this field blank"
-				bind:value={password}
-				tabindex="-1"
-				autocomplete="off"
-				aria-autocomplete="none"
-			/>
-		</form>
-		<button onclick={subscribe} class="plausible-event-name=newsletter+subscribe">
-			{#if status === 'idle' || status === 'error'}
-				Subscribe
-			{:else if status === 'pending'}
-				<ProgressRing
-					size="size-6"
-					strokeWidth="4px"
-					value={25}
-					max={100}
-					meterStroke="stroke-[--midnight2]"
-				/>
-			{:else}
-				Subscribed!
-			{/if}
-		</button>
-	</div>
+	<NewsletterButton alt />
 	<p>
 		We'd love to include you in the <strong>game development of Reia</strong>. By subscribing to the
 		newsletter, you can keep up to date with all of the major development and tests we do here. This
