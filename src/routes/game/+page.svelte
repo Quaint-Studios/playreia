@@ -56,7 +56,7 @@
 		@apply text-[--gold];
 	}
 	.newsletter {
-		@apply relative flex h-dvh w-full flex-col items-center justify-center bg-[--midnight] px-3 py-12;
+		@apply relative flex min-h-dvh w-full flex-col items-center justify-center bg-[--midnight] px-3 py-36;
 	}
 	.newsletter > * {
 		@apply z-10;

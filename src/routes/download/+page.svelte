@@ -26,7 +26,7 @@
 <div class="game newsletter">
 	<div class="bg"></div>
 	<span>Get notified</span>
-	<h1>Get <strong>Reia Newsletter</strong> for an Adventure</h1>
+	<h1>Subscribe for Reia's <strong>Download Updates</strong></h1>
 	<NewsletterButton alt />
 	<p>
 		We'd love to include you in the <strong>game development of Reia</strong>. By subscribing to the
@@ -59,7 +59,7 @@
 		@apply text-[--gold];
 	}
 	.newsletter {
-		@apply relative flex h-dvh w-full flex-col items-center justify-center bg-[--midnight] px-3 py-12;
+		@apply relative flex min-h-dvh w-full flex-col items-center justify-center bg-[--midnight] px-3 py-36;
 	}
 	.newsletter > * {
 		@apply z-10;
