@@ -8,8 +8,8 @@
 	titlePrefix=""
 	title="Reia - Download the Game and Unlock your Magical Adventure"
 	titleSuffix=""
-	keywords={'reia, contribute, contribute to reia, open-source, open-source contributor, open-source contribution, open-source project, open-source development, open-source community, open-source software, open-source game, open-source game development, open-source game design, open-source game art, open-source game writing, open-source game programming, open-source game developer, open-source game designer, open-source game artist, open-source game writer, open-source game programmer, open-source game development community, open-source game design community, open-source game art community, open-source game writing community, open-source game programming community, open-source game developer community, open-source game designer community, open-source game artist community, open-source game writer community, open-source game programmer community'}
-	description="Contribute to Reia's development. Whether you're a programmer, artist, designer, or writer, there's a place for you in the Reia community."
+	keywords={'reia, download, download reia, download the game, download reia game, download reia action-adventure rpg, download reia action-adventure rpg game, download reia action-adventure rpg game for windows, download reia action-adventure rpg game for linux, download reia action-adventure rpg game for android, download reia action-adventure rpg game for ios, download reia action-adventure rpg game for macos, download reia action-adventure rpg game for console, download reia action-adventure rpg game for windows, download reia action-adventure rpg game for linux, download reia action-adventure rpg game for android, download reia action-adventure rpg game for ios, download reia action-adventure rpg game for macos, download reia action-adventure rpg game for console'}
+	description="Download Reia, an action-adventure RPG game. Download the game for Windows, Linux, and Android. Coming soon to iOS, MacOS, and console. Get notified of updates and play the game early."
 >
 	{#snippet structured()}
 		<script type="application/ld+json">

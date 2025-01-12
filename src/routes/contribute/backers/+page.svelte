@@ -7,10 +7,10 @@
 
 <Meta
 	titlePrefix=""
-	title="Reia - Become an Open-Source Contributor"
+	title="Reia - Our Amazing Backers and Supporters"
 	titleSuffix=""
-	keywords={'reia, contribute, contribute to reia, open-source, open-source contributor, open-source contribution, open-source project, open-source development, open-source community, open-source software, open-source game, open-source game development, open-source game design, open-source game art, open-source game writing, open-source game programming, open-source game developer, open-source game designer, open-source game artist, open-source game writer, open-source game programmer, open-source game development community, open-source game design community, open-source game art community, open-source game writing community, open-source game programming community, open-source game developer community, open-source game designer community, open-source game artist community, open-source game writer community, open-source game programmer community'}
-	description="Contribute to Reia's development. Whether you're a programmer, artist, designer, or writer, there's a place for you in the Reia community."
+	keywords={'reia, contribute, contribute to reia, open-source, open-source contributor, open-source contribution, open-source project, open-source development, open-source community, open-source software, open-source game, open-source game development, open-source game design, open-source game art, open-source game writing, open-source game programming, open-source game developer, open-source game designer, open-source game artist, open-source game writer, open-source game programmer, open-source game development community, open-source game design community, open-source game art community, open-source game writing community, open-source game programming community, open-source game developer community, open-source game designer community, open-source game artist community, open-source game writer community, open collective, open collective backers, open collective supporters, open collective contributors, open collective financial backers, open collective financial supporters, open collective financial contributors, opencollective backers, opencollective supporters, opencollective contributors, opencollective financial backers, opencollective financial supporters, opencollective financial contributors'}
+	description="This is a list of all the amazing backers and supporters of the Reia project. This gives recognization to those who have supported the project's game development."
 >
 	{#snippet structured()}
 		<script type="application/ld+json">
