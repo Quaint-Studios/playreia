@@ -40,7 +40,7 @@
 		defer
 		event-logged_in="false"
 		data-domain="www.playreia.com"
-		src="https://plausible.playreia.com/js/script.manual.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+		src="https://plausible.playreia.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
 	></script>
 	<!-- define the `plausible` function to manually trigger events -->
 	<script>
@@ -49,23 +49,6 @@
 			function () {
 				(window.plausible.q = window.plausible.q || []).push(arguments);
 			};
-	</script>
-	<!-- trigger pageview -->
-	<script>
-		function prepareUrl(params) {
-			const url = new URL(location.href);
-			const queryParams = new URLSearchParams(location.search);
-			let customUrl = url.protocol + '//' + url.hostname + url.pathname.replace(/\/$/, '') + (params ? '?' : '');
-			for (const paramName of params) {
-				const paramValue = queryParams.get(paramName);
-				if (paramValue) customUrl = customUrl + '&' + paramValue;
-			}
-			return customUrl;
-		}
-
-		plausible('pageview', {
-			u: prepareUrl(['utm_custom', 'bsky', 'page', '_aid']) + window.location.search
-		});
 	</script>
 </svelte:head>
 
