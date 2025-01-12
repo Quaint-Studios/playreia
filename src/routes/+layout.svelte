@@ -42,12 +42,39 @@
 		data-domain="www.playreia.com"
 		src="https://plausible.playreia.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
 	></script>
+	<!-- define the `plausible` function to manually trigger events -->
 	<script>
 		window.plausible =
 			window.plausible ||
 			function () {
 				(window.plausible.q = window.plausible.q || []).push(arguments);
 			};
+	</script>
+	<!-- trigger pageview -->
+	<script>
+		function prepareUrl(params) {
+			const url = new URL(location.href);
+			const queryParams = new URLSearchParams(location.search);
+			let customUrl = url.protocol + '//' + url.hostname + url.pathname.replace(/\/$/, '');
+			for (const paramName of params) {
+				const paramValue = queryParams.get(paramName);
+				if (paramValue) customUrl = customUrl + '/' + paramValue;
+			}
+			return customUrl;
+		}
+		// utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword}&utm_custom={_aid}
+		plausible('pageview', {
+			u:
+				prepareUrl([
+					'utm_source',
+					'utm_medium',
+					'utm_campaign',
+					'utm_content',
+					'utm_term',
+					'utm_custom',
+					'bsky'
+				]) + window.location.search
+		});
 	</script>
 </svelte:head>
 
