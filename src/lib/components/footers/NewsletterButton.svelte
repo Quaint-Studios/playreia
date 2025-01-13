@@ -1,12 +1,14 @@
 <script lang="ts">
+	import { validateEmail } from '$utils';
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
 	function subscribe() {
+		reason = '';
 		if (status !== 'idle' && status !== 'error') return;
 		status = 'pending';
 
-		if (email) {
+		if (email && validateEmail(email)) {
 			const formData = new FormData();
 			formData.append('email', email);
 			if (password) formData.append('password', password);
@@ -15,19 +17,22 @@
 				method: 'POST',
 				body: formData
 			})
-				.then((response) => {
-					if (response.ok) {
+				.then((res) => {
+					if (res.ok) {
 						status = 'success';
 						email = '';
 					} else {
+						reason = 'There was an error. Please try again.';
 						status = 'error';
 					}
 				})
 				.catch((error) => {
+					reason = 'There was an error. Please try again.';
 					console.error('Error:', error);
 					status = 'error';
 				});
 		} else {
+			reason = 'Enter a valid email.';
 			status = 'error';
 		}
 	}
@@ -41,6 +46,7 @@
 
 	type Status = 'idle' | 'pending' | 'success' | 'error';
 	let status: Status = $state('idle');
+	let reason = $state('');
 	let email: string | undefined = $state(undefined);
 	let password: string | undefined = $state(undefined);
 
@@ -49,8 +55,14 @@
 
 <div class="container" class:alt>
 	{#if status === 'error'}
-		<div class="absolute left-0 right-0 -top-5 text-[#ff4646] text-sm text-center">
-			<p>There was an error. Please try again.</p>
+		<div class="absolute -top-5 left-0 right-0 text-center text-sm text-[#ff4646]">
+			<p>
+				{#if reason}
+					{reason}
+				{:else}
+					Something went wrong. Please try again.
+				{/if}
+			</p>
 		</div>
 	{/if}
 	<form autocomplete="off">

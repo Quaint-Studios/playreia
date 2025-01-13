@@ -1,6 +1,7 @@
 import { error, fail, type Actions } from '@sveltejs/kit';
 import { RESEND_API_KEY } from '$env/static/private';
 import { Resend } from 'resend';
+import { validateEmail } from '$utils';
 
 export const actions = {
 	default: async ({ request }) => {
@@ -10,13 +11,17 @@ export const actions = {
 
 		console.log(email, password);
 
+		if (password) {
+			// This is a bot
+			return { status: 201 };
+		}
+
 		if(!email) {
 			fail(400, { email, missing: true });
 		}
 
-		if (password) {
-			// This is a bot
-			return { status: 201 };
+		if (!validateEmail(email)) {
+			fail(400, { email, invalid: true });
 		}
 
 		const resend = new Resend(RESEND_API_KEY);
