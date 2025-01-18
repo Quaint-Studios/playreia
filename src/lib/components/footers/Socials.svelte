@@ -24,9 +24,9 @@
 		@apply px-3 pt-12;
 	}
 	.socials a {
-		@apply rounded-full bg-[--midnight4] p-3;
+		@apply rounded-full bg-r-midnight-400 p-3;
 	}
 	.socials a:hover {
-		@apply bg-[--gold2];
+		@apply bg-r-gold-2;
 	}
 </style>

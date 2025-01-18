@@ -111,7 +111,7 @@
 		@apply text-white no-underline;
 	}
 	address a:hover {
-		@apply text-[--blue];
+		@apply text-r-blue-default;
 	}
 
 	.large .content {

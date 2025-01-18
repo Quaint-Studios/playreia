@@ -107,7 +107,7 @@
 	}
 
 	h2 {
-		@apply mb-4 mt-16 w-full text-center text-3xl text-[--gold] sm:text-4xl;
+		@apply mb-4 mt-16 w-full text-center text-3xl text-r-gold sm:text-4xl;
 	}
 
 	h3 {

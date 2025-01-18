@@ -14,7 +14,7 @@
 
 <style lang="postcss">
 	.newsletter {
-		@apply flex w-full flex-col items-center justify-center bg-[--midnight4] px-3 py-12 text-base;
+		@apply flex w-full flex-col items-center justify-center bg-r-midnight-400 px-3 py-12 text-base;
 	}
 
 	span {

@@ -21,20 +21,20 @@
 
 <style lang="postcss">
 	footer {
-		@apply bg-[--midnight3] pb-16;
+		@apply bg-r-midnight-300 pb-16;
 	}
 
     .links {
         @apply pt-12 grid grid-cols-3 gap-y-3 sm:grid-cols-4 max-w-[600px] text-center mx-auto px-3;
     }
     .links a {
-        @apply font-medium text-[--gold2] no-underline;
+        @apply font-medium text-r-gold-2 no-underline;
     }
     .links a:nth-child(4) {
         @apply col-span-3 sm:col-span-1;
     }
     .links a:hover {
-        @apply text-[--blue];
+        @apply text-r-blue-default;
     }
 
     .copy {

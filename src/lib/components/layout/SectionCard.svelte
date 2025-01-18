@@ -89,7 +89,7 @@
 <style lang="postcss">
 	.section-card {
 		@apply relative flex max-w-[400px] flex-col;
-		@apply rounded-3xl bg-[--midnightBlue] shadow-lg;
+		@apply rounded-3xl bg-r-midnight-blue shadow-lg;
 		@apply border-[1px] border-solid border-[--borderBlueHalf] hover:border-[--borderHalf];
 		@apply overflow-hidden;
 	}
@@ -126,7 +126,7 @@
 		@apply text-white no-underline;
 	}
 	h3 a:hover {
-		@apply text-[--gold];
+		@apply text-r-gold;
 	}
 
 	p {

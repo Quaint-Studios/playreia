@@ -109,10 +109,6 @@
 	h1 {
 		@apply w-full text-center;
 	}
-
-	strong {
-		@apply text-[--gold];
-	}
 	blockquote {
 		@apply mb-6 mt-4;
 	}

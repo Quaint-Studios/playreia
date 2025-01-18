@@ -40,7 +40,7 @@
 	}
 
 	.icon {
-		@apply h-10 w-10 rounded-lg2 bg-[--midnightBlueIconBG] p-2;
+		@apply h-10 w-10 rounded-lg2 bg-r-midnight-icon-bg p-2;
 	}
 
 	a {

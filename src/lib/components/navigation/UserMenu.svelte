@@ -45,10 +45,10 @@
 
 <style lang="postcss">
 	button:hover {
-		@apply border-[--deepPurple];
+		@apply border-r-purple-deep;
 	}
 	button:hover .icon-holder {
-		@apply bg-[--deepPurple];
+		@apply bg-r-purple-deep;
 	}
 	.user-menu {
 		@apply flex items-center justify-center gap-2 rounded-[10px];
@@ -63,7 +63,7 @@
 	}
 
 	.icon-holder {
-		@apply aspect-square rounded-[10px] bg-[--blueHighlight] p-2;
+		@apply aspect-square rounded-[10px] bg-r-blue-highlight p-2;
 		transition: background-color 0.1s ease-in-out;
 	}
 	.menu-container {

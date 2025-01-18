@@ -262,7 +262,7 @@
 
 <style lang="postcss">
 	:global(.selected-job) {
-		@apply border-none bg-[var(--midnight6)] text-white;
+		@apply border-none bg-r-midnight-600 text-white;
 	}
 	h1 {
 		@apply mb-4 w-full text-center;

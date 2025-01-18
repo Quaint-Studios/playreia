@@ -75,10 +75,10 @@
 	.drop-menu {
 		@apply flex items-center justify-center gap-2;
 		@apply py-1.5 pl-6 pr-4;
-		@apply rounded-lg border-[1px] border-[--goldHalf] bg-[--midnightBlue];
+		@apply rounded-lg border-[1px] border-r-gold-0.5 bg-r-midnight-blue;
 	}
 	.drop-menu:hover {
-		@apply border-[--gold] bg-[#00000040];
+		@apply border-r-gold bg-[#00000040];
 	}
 	.drop-menu:hover > :global(svg) {
 		@apply opacity-75;
@@ -98,23 +98,23 @@
 		@apply text-left text-lg font-light text-nowrap;
 	}
 	.selected .label {
-		@apply font-normal text-[--gold];
+		@apply font-normal text-r-gold;
 	}
 	button.selected.item:hover .label {
-		@apply !text-[--blue];
+		@apply !text-r-blue-default;
 	}
 
 	.item :global(svg) {
 		@apply flex-shrink-0 flex-grow opacity-75;
 	}
 	.selected.item :global(svg) {
-		@apply !text-[--gold];
+		@apply !text-r-gold;
 	}
 
 	.dropdown {
 		@apply z-10 min-w-full;
 		@apply absolute right-0 top-full hidden w-auto flex-col overflow-hidden;
-		@apply rounded-lg border-[1px] border-[--gold] bg-[--midnightBlue];
+		@apply rounded-lg border-[1px] border-r-gold bg-r-midnight-blue;
 	}
 	.dropdown.show {
 		@apply flex;
@@ -124,9 +124,9 @@
 		@apply py-1.5 pl-6 pr-4;
 	}
 	button.item:hover {
-		@apply bg-[#00000040] text-[--blue];
+		@apply bg-[#00000040] text-r-blue-default;
 	}
 	button.item:hover :global(svg) {
-		@apply !text-[--blue];
+		@apply !text-r-blue-default;
 	}
 </style>

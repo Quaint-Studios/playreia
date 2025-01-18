@@ -95,7 +95,7 @@
 				strokeWidth="4px"
 				value={25}
 				max={100}
-				meterStroke="stroke-[--midnight2]"
+				meterStroke="stroke-r-midnight-300"
 			/>
 		{:else}
 			Subscribed!
@@ -108,10 +108,10 @@
 		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
 	.container input {
-		@apply w-full bg-[--midnightBlue] py-3.5 pl-3 pr-[135px] text-white;
+		@apply w-full bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white;
 	}
 	.container.alt input {
-		@apply bg-[--midnight3];
+		@apply bg-r-midnight-300;
 	}
 	.container.alt input::placeholder {
 		@apply text-[--borderSilver];
@@ -120,7 +120,7 @@
 		@apply !border-solid !border-[#ff4646] border-opacity-70;
 	}
 	.container input.email:focus {
-		@apply border-solid border-transparent !bg-[--midnight5];
+		@apply border-solid border-transparent !bg-r-midnight-100;
 		box-shadow: 0 0 0 1px var(--midnight7);
 	}
 
@@ -131,10 +131,10 @@
 		width: 122px;
 		height: 40.8px;
 		@apply absolute right-[5px] my-auto flex justify-center rounded-lg2 font-bold;
-		@apply bg-[--midnight6] py-2 text-white hover:bg-[--midnight7];
+		@apply bg-r-midnight-600 py-2 text-white hover:bg-r-midnight-700;
 	}
 	.alt button {
-		@apply hover:bg-[--gold2];
+		@apply hover:bg-r-gold-2;
 	}
 	button:active {
 		@apply scale-[0.98];

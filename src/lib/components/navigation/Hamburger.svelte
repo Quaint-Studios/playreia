@@ -41,7 +41,7 @@
 	aria-label="Open Navigation Drawer"
 	aria-expanded={drawerState}
 	onclick={drawerOpen}
-	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-[--gold] lg:static lg:hidden"
+	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-r-gold lg:static lg:hidden"
 >
 	<Icon icon="solar:hamburger-menu-linear" font-size="24px" class="hover:text-[inherit]" />
 </button>
@@ -79,7 +79,7 @@ Tips for Drawer modals:
 						<Icon
 							icon="solar:close-circle-bold"
 							font-size="48px"
-							class="text-[--light] hover:text-[--gold]"
+							class="text-[--light] hover:text-r-gold"
 						/>
 					</button>
 				</div>
@@ -165,7 +165,7 @@ Tips for Drawer modals:
 		@apply flex flex-wrap justify-center gap-3 py-4;
 	}
 	footer .socials * {
-		@apply rounded-lg2 bg-[--blueHighlight] hover:bg-[--gold2] p-2 opacity-100 shadow-lg hover:shadow-xl;
+		@apply rounded-lg2 bg-r-blue-highlight hover:bg-r-gold-2 p-2 opacity-100 shadow-lg hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>

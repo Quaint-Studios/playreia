@@ -95,7 +95,7 @@
 	}
 	code,
 	strong {
-		@apply text-[--gold];
+		@apply text-r-gold;
 	}
 	blockquote {
 		@apply mb-6 mt-4;

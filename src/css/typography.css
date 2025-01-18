@@ -31,7 +31,7 @@ h5 {
 	@apply mx-auto max-w-screen-lg;
 
 	h1 + p {
-		@apply mb-4 mt-2 font-bold text-[--gold];
+		@apply mb-4 mt-2 font-bold text-r-gold;
 	}
 
 	p + h2,
@@ -50,7 +50,7 @@ h5 {
 	h2,
 	h3,
 	h4 {
-		@apply mb-2 text-[--gold];
+		@apply mb-2 text-r-gold;
 	}
 
 	h3 + h4 {
@@ -67,28 +67,28 @@ ul li p {
 
 h1 strong,
 h2 strong {
-	@apply font-black text-[--gold];
+	@apply font-black text-r-gold;
 }
 
 p.lead strong {
-	@apply font-black text-[--gold];
+	@apply font-black text-r-gold;
 }
 
 h1.page-title {
-	@apply text-center font-black text-[--gold];
+	@apply text-center font-black text-r-gold;
 }
 h1.alt strong {
-	@apply text-[--deepPurple];
+	@apply text-r-purple-deep;
 }
 h2.alt strong {
 	@apply !text-[--warning];
 }
 
 a {
-	@apply text-[--lightBlue] underline;
+	@apply text-r-blue-light underline;
 }
 a:hover {
-	@apply text-[--blue];
+	@apply text-r-blue-default;
 }
 a:active {
 	@apply scale-90 text-[--primary];
@@ -103,7 +103,7 @@ a.unset {
 }
 
 code.gold {
-	@apply text-[--gold];
+	@apply text-r-gold;
 }
 
 .blog-container {
@@ -120,5 +120,5 @@ p.blog + p.blog {
 }
 
 .bg {
-	@apply w-fit bg-[--midnight3] p-2;
+	@apply w-fit bg-r-midnight-300 p-2;
 }

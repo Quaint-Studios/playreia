@@ -11,6 +11,9 @@ export default {
 
 	theme: {
 		extend: {
+			borderWidth: {
+				'1': '1px',
+			},
 			fontSize: {
 				'md': '0.9rem'
 			},
@@ -18,6 +21,7 @@ export default {
 				'xs': '375px'
 			},
 			boxShadow: {
+				min: '0 0 1px',
 				boxed: '0px 4px 28px rgba(180,190,205,.28)'
 			},
 			borderRadius: {

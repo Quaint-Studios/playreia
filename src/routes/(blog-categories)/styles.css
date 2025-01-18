@@ -20,7 +20,7 @@ body article.blog-post, body .blog-post {
 }
 
 body .blog-post blockquote {
-	@apply flex flex-col gap-4 bg-[--midnight3] p-3 text-base;
+	@apply flex flex-col gap-4 bg-r-midnight-300 p-3 text-base;
 }
 
 body .blog-post blockquote p {

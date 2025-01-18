@@ -25,7 +25,7 @@ body article.readable, body .readable {
 }
 
 body .readable blockquote {
-	@apply flex flex-col gap-4 bg-[--midnight3] p-3 text-base;
+	@apply flex flex-col gap-4 bg-r-midnight-300 p-3 text-base;
 }
 
 body .readable blockquote p {

@@ -33,7 +33,7 @@
 
 <style lang="postcss">
     time {
-        @apply flex justify-center text-[--gold2] text-sm;
+        @apply flex justify-center text-r-gold-2 text-sm;
     }
     .meta {
         @apply flex gap-4 justify-center mt-4 mb-8 text-lg;
@@ -42,6 +42,6 @@
         @apply text-[--borderSilver] no-underline not-italic font-medium;
     }
     .meta a:hover {
-        @apply text-[--lightBlue];
+        @apply text-r-blue-light;
     }
 </style>

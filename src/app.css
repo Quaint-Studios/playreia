@@ -13,6 +13,6 @@ html, body {
 }
 
 body {
-    @apply bg-[--midnightBlue] text-[--white] sm:text-lg;
+    @apply bg-r-midnight-blue text-r-white sm:text-lg;
 	font-family: 'Urbanist Variable', sans-serif;
 }

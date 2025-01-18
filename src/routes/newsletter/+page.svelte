@@ -45,10 +45,10 @@
 
 <style lang="postcss">
 	strong {
-		@apply text-[--gold];
+		@apply text-r-gold;
 	}
 	.newsletter {
-		@apply relative flex min-h-dvh w-full flex-col items-center justify-center bg-[--midnight] px-3 py-36;
+		@apply relative flex min-h-dvh w-full flex-col items-center justify-center px-3 py-36;
 	}
 	.newsletter > * {
 		@apply z-10;

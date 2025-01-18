@@ -25,7 +25,7 @@
 <style lang="postcss">
 	a.page {
 		@apply flex aspect-square h-10 w-10 items-center justify-center rounded-lg p-3 no-underline transition-colors;
-		@apply bg-[--midnightBlueIconBG] font-medium text-white hover:brightness-125;
+		@apply bg-r-midnight-icon-bg font-medium text-white hover:brightness-125;
 	}
 	a.page.selected {
 		@apply brightness-[1.75];
