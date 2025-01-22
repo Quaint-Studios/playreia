@@ -25,6 +25,7 @@
 	<div class="gradient"></div>
 	<div class="section-gradient" class:alt={altGradient}>
 		<button
+			aria-label="Change gradient for fun"
 			class="arrow-container"
 			onclick={() => {
 				altGradient = !altGradient;
