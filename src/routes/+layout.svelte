@@ -3,9 +3,12 @@
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import '../app.css';
 
-	import '@fontsource-variable/urbanist'; // Supports weights 100-900
+	// import '@fontsource-variable/urbanist'; // Supports weights 100-900
+	import urbanistWoff2 from '@fontsource-variable/urbanist/files/urbanist-latin-wght-normal.woff2?url';
 	import '@fontsource/poppins/500.css';
+	import poppins500Woff2 from '@fontsource/poppins/files/poppins-latin-500-normal.woff2?url';
 	import '@fontsource/poppins/700.css';
+	import poppins700Woff2 from '@fontsource/poppins/files/poppins-latin-700-normal.woff2?url';
 
 	import { loadIcons } from '@iconify/svelte';
 	import Navbar from '$components/navigation/Navbar.svelte';
@@ -50,6 +53,9 @@
 				(window.plausible.q = window.plausible.q || []).push(arguments);
 			};
 	</script>
+	{#each [urbanistWoff2, poppins500Woff2, poppins700Woff2] as font}
+		<link rel="preload" as="font" type="font/woff2" href={font} crossorigin="anonymous" />
+	{/each}
 </svelte:head>
 
 <Navbar />

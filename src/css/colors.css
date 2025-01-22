@@ -33,13 +33,13 @@
 	--deepBlue: #0d47a1; /* #1e90ff */
 	--midnightBlue: #081247;
 	--midnightBlueIconBG: #394690;
-	--midnight1: hsla(209, 45%, 31%, 1);
-	--midnight2: hsla(233, 54%, 18%, 1);
+	--midnight5: #101537;
+	--midnight2: #151b47;
 	--midnight3: #172569;
 	--midnight4: #1c2c7d;
-	--midnight5: hsla(233, 54%, 14%, 1);
-	--midnight6: hsl(231, 43%, 39%);
-	--midnight7: hsl(231, 43%, 49%);
+	--midnight1: #2b5073;
+	--midnight6: #39468e;
+	--midnight7: #4757b3;
 	--deepPurple: #220d54;
 	--deepPurpleHighlight: #3a168d;
 	--deepPurpleHighlightHalf: #3a168d80;
