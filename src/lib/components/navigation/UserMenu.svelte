@@ -34,7 +34,7 @@
 		<div class="menu-container">
 			<div class="menu">
 				{#each links as { href, text }}
-					<Link label={text} {href} --color="var(--black)" --hover-color="var(--primary)">
+					<Link label={text} {href} class="text-r-black hover:text-r-primary" --color="var(--black)" --hover-color="var(--primary)">
 						{text}
 					</Link>
 				{/each}

@@ -4,6 +4,9 @@
 	import type { AriaRole, HTMLAttributeAnchorTarget } from 'svelte/elements';
 
 	interface Props {
+		/** The class. */
+		class?: string;
+
 		/** The target. */
 		target?: HTMLAttributeAnchorTarget;
 		/** The rel. */
@@ -48,6 +51,8 @@
 	}
 
 	const {
+		class: classProp,
+
 		target,
 		rel = undefined,
 		href,
@@ -76,9 +81,15 @@
 	{href}
 	{role}
 	aria-label={label}
-	class={['unset', 'lb-button', `lb-button--${size}`, `lb-button--roundness-${roundness}`].join(
-		' '
-	)}
+	class={[
+		'unset',
+		'lb-button',
+		`lb-button--${size}`,
+		`lb-button--roundness-${roundness}`,
+		classProp
+	]
+		.join(' ')
+		.trimEnd()}
 	class:lb-button--primary={primary && button}
 	class:lb-button--secondary={!primary && button}
 	class:lb-button--underline={underline}
