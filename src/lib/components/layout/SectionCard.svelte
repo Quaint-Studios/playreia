@@ -45,7 +45,7 @@
 <div class="section-card">
 	<div class="main glass">
 		<div class="content">
-			<h3 class="poppins" class:shout><a href={url} rel={rel?.join(' ')}>{title}</a></h3>
+			<h3 class="poppins" class:shout><a {target} rel={rel?.join(' ')} href={url}>{title}</a></h3>
 			<p>{@render children()}</p>
 		</div>
 		<div class="card-footer" class:end={!date && url}>
@@ -72,7 +72,7 @@
 
 	<div class="image">
 		<Lazy keep={true} height="285px">
-			<a aria-label={title} href={url} {target} rel={rel?.join(' ')}>
+			<a aria-label={title} {target} rel={rel?.join(' ')} href={url}>
 				<enhanced:img
 					class="img"
 					{src}
@@ -90,7 +90,7 @@
 	.section-card {
 		@apply relative flex max-w-[400px] flex-col;
 		@apply rounded-3xl bg-r-midnight-blue shadow-lg;
-		@apply border-[1px] border-solid border-[--borderBlueHalf] hover:border-[--borderHalf];
+		@apply border-1 border-solid border-r-border-blue-0.5 hover:border-r-border-0.5;
 		@apply overflow-hidden;
 	}
 
@@ -120,7 +120,7 @@
 		@apply text-3xl;
 	}
 	h3 {
-		@apply max-h-[90px] w-[calc(100%)] overflow-hidden overflow-ellipsis text-xl text-white;
+		@apply max-h-[90px] w-full overflow-hidden overflow-ellipsis text-xl text-white;
 	}
 	h3 a {
 		@apply text-white no-underline;

@@ -11,7 +11,7 @@
 	<SectionCard
 		shout
 		title="Join our Discord"
-		url={alinks.discordMsg}
+		url={alinks.discord}
 		target="_blank"
 		rel={['noopener', 'noreferrer']}
 		cta="Message"
@@ -19,8 +19,7 @@
 		alt="Discord Banner"
 		sizes="min(428px, 60vw)"
 	>
-		Join our Discord server to chat with the developers and other players! Send a message to
-		<code class="gold">makosai</code> and ask to join.
+		Join our Discord server to chat with the developers and other players! We'd love to hear from you.
 	</SectionCard>
 	<SectionCard
 		shout

@@ -44,10 +44,11 @@
 			rel="noopener">releases page on GitHub</a
 		>. We're always looking for feedback and suggestions. If you have any, please feel free to
 		<a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discordMsg}>Discord</a>. The platforms we immediately support
-		are Windows, Linux, and Android but we will be adding iOS and MacOS support as soon as we can.
-		The limiting factor is the cost of the Apple Developer Program and the hardware to test on. The
-		same goes for consoles.
+		or chat with us on
+		<a target="_blank" rel="noopener noreferer" href={alinks.discord}>Discord</a>. The platforms we
+		immediately support are Windows, Linux, and Android but we will be adding iOS and MacOS support
+		as soon as we can. The limiting factor is the cost of the Apple Developer Program and the
+		hardware to test on. The same goes for consoles.
 	</p>
 </div>
 

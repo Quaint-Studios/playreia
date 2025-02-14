@@ -8,7 +8,7 @@ import { BlogCategory } from './types';
 export const contactEmail = 'contact@playreia.com';
 
 export const socials = [
-	{ id: 'discord', icon: 'lineicons:discord', href: alinks.discordMsg },
+	{ id: 'discord', icon: 'lineicons:discord', href: alinks.discord },
 	{ id: 'youtube', icon: 'lineicons:youtube', href: alinks.youtube },
 	{ id: 'tiktok', icon: 'lineicons:tiktok', href: alinks.tiktok },
 	{ id: 'bluesky', icon: 'simple-icons:bluesky', href: alinks.bluesky },

@@ -70,7 +70,7 @@
 			<h2>Discord Server</h2>
 			<p>
 				Message <code>makosai</code> on
-				<a href={alinks.discordMsg} target="_blank" rel="noopener">Discord</a>
+				<a href={alinks.discord} target="_blank" rel="noopener">Discord</a>
 				to join the server and discuss the project with other contributors. This is a good place for
 				everyone to collaborate on the project. Especially for <strong>artists</strong> and
 				<strong>designers</strong>.

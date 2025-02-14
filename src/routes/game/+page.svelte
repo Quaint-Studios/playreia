@@ -44,7 +44,7 @@
 			rel="noopener">releases page on GitHub</a
 		>. We're always looking for feedback and suggestions. If you have any, please feel free to
 		<a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discordMsg}>Discord</a>.
+		or chat with us on <a href={alinks.discord}>Discord</a>.
 	</p>
 </div>
 

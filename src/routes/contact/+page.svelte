@@ -90,7 +90,7 @@
 
 			<h2>Discord Server</h2>
 			<p>
-				Join our <a href={alinks.discordMsg} target="_blank" rel="noopener">Discord server</a> to chat
+				Join our <a href={alinks.discord} target="_blank" rel="noopener">Discord server</a> to chat
 				with us and other contributors. This is a great place to collaborate on the project.
 			</p>
 

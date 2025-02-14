@@ -443,11 +443,9 @@
 
 		<h3>Discord</h3>
 		<p class="blog">
-			The Discord server is invite-only for now but will be opened to the public soon! If you'd like
-			an invite then <a target="_blank" rel="noopener noreferer" href={alinks.discordMsg}
-				>send a message</a
-			>
-			to <code>makosai</code>. There are sections to allow you to collaborate with others and share
+			The Discord server is now open! If you'd like to join our community then here's a link to our <a target="_blank" rel="noopener noreferer" href={alinks.discord}
+				>Discord Server</a
+			>. There are sections to allow you to collaborate with others and share
 			your creativity with the community. We look forward to seeing what amazing things everyone
 			makes in the future.
 		</p>

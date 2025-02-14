@@ -1,7 +1,7 @@
 const alinks = {
 	calendly: 'https://calendly.com/playreia/30min',
 
-	discord: 'https://discord.gg/playreia',
+	discord: 'https://discord.playreia.com',
 	discordMsg: 'https://discord.com/users/83303489945468928',
 	youtube: 'https://youtube.com/@playreia',
 	tiktok: 'https://tiktok.com/@playreia',
