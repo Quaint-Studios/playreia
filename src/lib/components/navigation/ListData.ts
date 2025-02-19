@@ -9,6 +9,7 @@ export interface NavItem {
 export default [
 	{ name: 'Home', href: '/' },
 	{ name: 'Blog', href: '/blog' },
+	{ name: 'About Us', href: '/about' },
 	{
 		name: 'Learn',
 		href: '/learn',
@@ -75,15 +76,14 @@ export default [
 			}
 		]
 	},
-	{ name: 'About Us', href: '/about' },
 	{
 		name: 'Contribute',
 		href: '/contribute',
 		children: [
 			{ name: 'How to Help', href: '/contribute', icon: 'mdi:help-outline' },
 			{ name: 'Backers', href: '/contribute/backers', icon: 'icon-park-outline:funds' },
-			{ name: 'GitHub', href: 'https://github.com/Quaint-Studios/Reia', icon: 'fa-brands:github-alt' }
+			{ name: 'GitHub', href: 'https://github.com/Quaint-Studios/Reia', icon: 'fa-brands:github-alt' },
+			{ name: 'Jobs', href: '/jobs' }
 		]
 	},
-	{ name: 'Jobs', href: '/jobs' }
 ] as NavItem[];
