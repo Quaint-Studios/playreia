@@ -12,7 +12,7 @@
 @font-face {
 	font-family: 'Urbanist Variable';
 	font-style: normal;
-	font-display: optional;
+	font-display: block;
 	font-weight: 100 900;
 	src: url(@fontsource-variable/urbanist/files/urbanist-latin-wght-normal.woff2)
 		format('woff2-variations');
@@ -25,7 +25,7 @@
 @font-face {
 	font-family: 'Poppins';
 	font-style: normal;
-	font-display: optional;
+	font-display: block;
 	font-weight: 500;
 	src:
 		url(@fontsource/poppins/files/poppins-latin-500-normal.woff2) format('woff2'),
@@ -39,7 +39,7 @@
 @font-face {
 	font-family: 'Poppins';
 	font-style: normal;
-	font-display: optional;
+	font-display: block;
 	font-weight: 700;
 	src:
 		url(@fontsource/poppins/files/poppins-latin-700-normal.woff2) format('woff2'),
