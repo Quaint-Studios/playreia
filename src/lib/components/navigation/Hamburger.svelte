@@ -3,7 +3,6 @@
 	import Link from '$components/core/Link.svelte';
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
-	import colors from '$lib/constants/colors';
 	import { tick } from 'svelte';
 	import UserMenu from './UserMenu.svelte';
 	import NavBrand from './NavBrand.svelte';
@@ -41,7 +40,7 @@
 	aria-label="Open Navigation Drawer"
 	aria-expanded={drawerState}
 	onclick={drawerOpen}
-	class="absolute bottom-0 right-4 top-0 px-4 text-white hover:text-r-gold lg:static lg:hidden"
+	id="hamburger"
 >
 	<Icon icon="solar:hamburger-menu-linear" font-size="24px" class="hover:text-[inherit]" />
 </button>
@@ -57,11 +56,8 @@ Tips for Drawer modals:
 
 <Modal
 	bind:open={drawerState}
-	triggerBase="btn preset-tonal"
 	contentBase="pl-4 space-y-4 w-full h-dvh"
 	positionerJustify="justify-start"
-	positionerAlign=""
-	positionerPadding=""
 	transitionsPositionerIn={{ x: -480, duration: 200 }}
 	transitionsPositionerOut={{ x: -480, duration: 100 }}
 	transitionsBackdropIn={{ duration: 200 }}
@@ -71,16 +67,12 @@ Tips for Drawer modals:
 >
 	{#snippet content()}
 		<div class="content">
-			<header class="absolute left-0 z-10 flex w-full items-center justify-between px-6">
+			<header id="nav-header">
 				<NavBrand />
-				<div class="flex items-center justify-center gap-4">
+				<div id="nav-header-right">
 					<UserMenu />
-					<button aria-label="Close Navigation Drawer" onclick={drawerClose}>
-						<Icon
-							icon="solar:close-circle-bold"
-							font-size="48px"
-							class="text-[--light] hover:text-r-gold"
-						/>
+					<button aria-label="Close Navigation Drawer" onclick={drawerClose} id="nav-close">
+						<Icon icon="solar:close-circle-bold" font-size="48px" />
 					</button>
 				</div>
 			</header>
@@ -139,12 +131,25 @@ Tips for Drawer modals:
 </Modal>
 
 <style lang="postcss">
+	#hamburger {
+		@apply absolute bottom-0 right-4 top-0 px-4 text-white hover:text-r-gold lg:hidden;
+	}
+	#nav-close {
+		@apply text-r-light hover:text-r-gold;
+	}
 	.content {
 		@apply flex h-full flex-col;
 	}
+	#nav-header {
+		@apply absolute left-0 z-10 flex w-full items-center justify-between px-6;
+	}
+	#nav-header-right {
+		@apply flex items-center justify-center gap-4;
+	}
 	article {
 		@apply flex h-full min-h-[calc(100%-300px)] w-full flex-col overflow-y-auto pb-[165px] pt-[100px];
-		mask-image: linear-gradient(
+		mask-image:
+			linear-gradient(
 				to bottom,
 				transparent 75px,
 				black 100px,
@@ -165,7 +170,7 @@ Tips for Drawer modals:
 		@apply flex flex-wrap justify-center gap-3 py-4;
 	}
 	footer .socials * {
-		@apply rounded-lg2 bg-r-blue-highlight hover:bg-r-gold-2 p-2 opacity-100 shadow-lg hover:shadow-xl;
+		@apply rounded-lg2 bg-r-blue-highlight p-2 opacity-100 shadow-lg hover:bg-r-gold-2 hover:shadow-xl;
 		transition: all 0.1s ease-in-out;
 	}
 </style>
