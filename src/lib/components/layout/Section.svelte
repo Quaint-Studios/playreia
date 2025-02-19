@@ -46,7 +46,7 @@
 			<div class="icons gap-3">
 				<div class="icons">
 					{#each icons as icon}
-						<Icon {icon} {color} font-size={12} />
+						<Icon {icon} {color} font-size={12} class="w-3 h-3" />
 					{/each}
 				</div>
 				<p class="lead" class:alt class:lead style="color: {color}; text-align: {titlePosition}">
@@ -54,7 +54,7 @@
 				</p>
 				<div class="icons">
 					{#each icons.slice().reverse() as icon}
-						<Icon {icon} {color} font-size={12} />
+						<Icon {icon} {color} font-size={12} class="w-3 h-3" />
 					{/each}
 				</div>
 			</div>
