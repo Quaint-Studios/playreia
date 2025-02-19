@@ -1,0 +1,21 @@
+/* metropolis-latin-400-normal */
+@font-face {
+	font-family: 'Metropolis';
+	font-style: normal;
+	font-display: optional;
+	font-weight: 400;
+	src:
+		url(@fontsource/metropolis/files/metropolis-latin-400-normal.woff2) format('woff2'),
+		url(@fontsource/metropolis/files/metropolis-latin-400-normal.woff) format('woff');
+}
+
+/* metropolis-latin-700-normal */
+@font-face {
+	font-family: 'Metropolis';
+	font-style: normal;
+	font-display: optional;
+	font-weight: 700;
+	src:
+		url(@fontsource/metropolis/files/metropolis-latin-700-normal.woff2) format('woff2'),
+		url(@fontsource/metropolis/files/metropolis-latin-700-normal.woff) format('woff');
+}

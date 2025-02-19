@@ -3,7 +3,6 @@
 	import { quadIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import PlatformButton from '$components/core/PlatformButton.svelte';
-	import Link from '$components/core/Link.svelte';
 	import LinkedButton from '$components/layout/LinkedButton.svelte';
 
 	function progress(_node: HTMLSpanElement, { duration = 4000, easing = quadIn }) {

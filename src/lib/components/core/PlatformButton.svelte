@@ -1,6 +1,5 @@
 <script lang="ts">
-	import '@fontsource/metropolis/400.css';
-	import '@fontsource/metropolis/700.css';
+	import '$lib/fonts/metropolis.css';
 
 	import Icon from '@iconify/svelte';
 

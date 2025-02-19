@@ -443,11 +443,12 @@
 
 		<h3>Discord</h3>
 		<p class="blog">
-			The Discord server is now open! If you'd like to join our community then here's a link to our <a target="_blank" rel="noopener noreferer" href={alinks.discord}
-				>Discord Server</a
-			>. There are sections to allow you to collaborate with others and share
-			your creativity with the community. We look forward to seeing what amazing things everyone
-			makes in the future.
+			Reia's Discord community is now open! If you'd like to join our community then here's a link to our <a
+				target="_blank"
+				rel="noopener noreferer"
+				href={alinks.discord}>Discord server</a
+			>. There are sections to allow you to collaborate with others and share your creativity with
+			the community. We look forward to seeing what amazing things everyone makes in the future.
 		</p>
 
 		<h3>Collaboration and Contribution</h3>
