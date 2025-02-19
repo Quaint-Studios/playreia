@@ -26,41 +26,24 @@
 
 <div id="navbar" class:at-top={atTop} role="navigation">
 	<div class="nav-container">
-		<div class="flex flex-nowrap items-center justify-center">
+		<div class="nav-items">
 			<NavBrand />
 			<div role="menubar" class="hidden text-nowrap lg:flex">
 				{#each listData as { name, href, children }}
 					<div class="nav-link">
-						<Link
-							label="{name} Page"
-							role="menuitem"
-							{href}
-							tight
-							--color="var(--light)"
-							--hover-color="var(--gold)"
-						>
-							<div class="flex flex-nowrap items-center justify-center gap-1">
-								<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
-								{#if children}
-									<Icon icon="solar:alt-arrow-down-bold" />
-								{/if}
-							</div>
-						</Link>
+						<a aria-label="{name} Page" role="menuitem" {href}>
+							<span class="w-full drop-shadow-lg">{name.toUpperCase()}</span>
+							{#if children}
+								<Icon icon="solar:alt-arrow-down-bold" class="shrink-0" />
+							{/if}
+						</a>
 						{#if children}
 							<div class="nav-link-child glass">
 								{#each children as { name, href }}
 									<div class="nav-link">
-										<Link
-											label="{name} Page"
-											role="menuitem"
-											{href}
-											--color="var(--light)"
-											--hover-color="var(--gold)"
-										>
-											<div class="flex flex-nowrap items-center justify-center gap-1">
-												<span class="w-full drop-shadow-lg">{name}</span>
-											</div>
-										</Link>
+										<a aria-label="{name} Page" role="menuitem" {href}>
+											{name}
+										</a>
 									</div>
 								{/each}
 							</div>
@@ -98,7 +81,6 @@
 
 <style lang="postcss">
 	#navbar {
-		/* @apply shadow-md; */
 		@apply fixed z-50 w-full;
 		@apply py-4;
 		@apply transition-[padding__backdrop-filter__border-color] duration-[0.45s];
@@ -108,7 +90,7 @@
 	#navbar:not(.at-top) {
 		@apply py-0;
 		background-color: #00000020;
-		@apply border-b-[1px] border-[var(--borderHalf)] backdrop-blur-sm;
+		@apply border-b-[1px] border-r-border-0.5 backdrop-blur-sm;
 	}
 
 	.nav-container {
@@ -118,8 +100,23 @@
 		transition: max-width 0.1s ease-in-out;
 	}
 
+	.nav-items {
+		@apply flex flex-nowrap items-center justify-center;
+	}
+
 	.nav-link {
 		@apply relative;
+	}
+	.nav-link a {
+		@apply text-r-light hover:text-r-gold;
+		@apply flex flex-nowrap items-center justify-center gap-1;
+		@apply px-2.5 py-2 text-base;
+		@apply font-bold;
+		@apply no-underline;
+		@apply transition-transform active:scale-95 active:opacity-85;
+	}
+	.nav-link .nav-link a {
+		@apply px-5 justify-start;
 	}
 
 	.nav-link:hover .nav-link-child {
