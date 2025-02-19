@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Link from '$components/core/Link.svelte';
-	import colors from '$constants/colors';
 	import type { Snippet } from 'svelte';
-	import Lazy from 'svelte-lazy';
 	import type { HTMLAttributeAnchorTarget } from 'svelte/elements';
 
 	interface Props {
@@ -71,18 +69,16 @@
 	</div>
 
 	<div class="image">
-		<Lazy keep={true} height="285px">
-			<a aria-label={title} {target} rel={rel?.join(' ')} href={url}>
-				<enhanced:img
-					class="img"
-					{src}
-					{alt}
-					{sizes}
-					{loading}
-					style={objectPosition ? `object-position: ${objectPosition}` : undefined}
-				/>
-			</a>
-		</Lazy>
+		<a aria-label={title} {target} rel={rel?.join(' ')} href={url}>
+			<enhanced:img
+				class="img"
+				{src}
+				{alt}
+				{sizes}
+				{loading}
+				style={objectPosition ? `object-position: ${objectPosition}` : undefined}
+			/>
+		</a>
 	</div>
 </div>
 

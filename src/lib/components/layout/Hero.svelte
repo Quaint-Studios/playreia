@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Lazy from 'svelte-lazy';
-
 	import Link from '$components/core/Link.svelte';
 	import colors from '$constants/colors';
 	import Icon from '@iconify/svelte';
@@ -10,17 +8,15 @@
 
 <section class="hero">
 	<div class="image">
-		<Lazy keep={true} height="500px">
-			<enhanced:img
-				class="image"
-				src="$images/hero/hero_1.jpg?enhanced&w=3840;2048;1920;1280;1024"
-				alt="A forest, flower field, and path"
-				title="Flower Field and Path"
-				sizes="(min-width: 3840px) 3840px, (min-width: 2048px) 2048px, (min-width: 1536px): 1920px, (min-width: 1280px) 1280px"
-				loading="eager"
-				fetchpriority="high"
-			/>
-		</Lazy>
+		<enhanced:img
+			class="image"
+			src="$images/hero/hero_1.jpg?enhanced&w=3840;2048;1920;1280;1024"
+			alt="A forest, flower field, and path"
+			title="Flower Field and Path"
+			sizes="(min-width: 3840px) 3840px, (min-width: 2048px) 2048px, (min-width: 1536px): 1920px, (min-width: 1280px) 1280px"
+			loading="eager"
+			fetchpriority="high"
+		/>
 	</div>
 	<div class="gradient"></div>
 	<div class="section-gradient" class:alt={altGradient}>
@@ -31,9 +27,9 @@
 				altGradient = !altGradient;
 			}}
 		>
-		<div class="arrow">
-			<Icon icon="solar:alt-arrow-down-bold-duotone" font-size={72} />
-		</div>
+			<div class="arrow">
+				<Icon icon="solar:alt-arrow-down-bold-duotone" font-size={72} />
+			</div>
 		</button>
 	</div>
 	<div class="content poppins">
