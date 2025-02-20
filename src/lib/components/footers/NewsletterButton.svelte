@@ -21,19 +21,27 @@
 					if (res.ok) {
 						status = 'success';
 						email = '';
+						/* @ts-ignore */
+						plausible('newsletter subscribe valid');
 					} else {
 						reason = 'There was an error. Please try again.';
 						status = 'error';
+						/* @ts-ignore */
+						plausible('newsletter subscribe invalid');
 					}
 				})
 				.catch((error) => {
 					reason = 'There was an error. Please try again.';
 					console.error('Error:', error);
 					status = 'error';
+					/* @ts-ignore */
+					plausible('newsletter subscribe error');
 				});
 		} else {
 			reason = 'Enter a valid email.';
 			status = 'error';
+			/* @ts-ignore */
+			plausible('newsletter subscribe empty');
 		}
 	}
 
