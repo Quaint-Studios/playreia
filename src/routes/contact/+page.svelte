@@ -74,24 +74,20 @@
 
 			<h2>Physical Mail</h2>
 			<p>
-				We're also working accepting physical mail. <s
-					>You can send us mail at the following address:
-				</s>
+				You can send us mail at the following address:
 			</p>
 			<div class="mx-auto mt-4 max-w-screen-md font-bold">
-				<s
-					><address>
-						Reia<br />
-						1234 Main St.<br />
-						Anytown, USA 12345
-					</address></s
-				>
+				<address>
+					Quaint Studios<br />
+					5004 E Fowler Ave #C349<br />
+					Tampa, FL 33617
+				</address>
 			</div>
 
 			<h2>Discord Server</h2>
 			<p>
-				Join our <a href={alinks.discord} target="_blank" rel="noopener">Discord server</a> to chat
-				with us and other contributors. This is a great place to collaborate on the project.
+				Join our <a href={alinks.discord} target="_blank" rel="noopener">Discord server</a> to chat with
+				us and other contributors. This is a great place to collaborate on the project.
 			</p>
 
 			<h2>GitHub Repository</h2>
