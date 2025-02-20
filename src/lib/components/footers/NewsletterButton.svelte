@@ -21,8 +21,13 @@
 					if (res.ok) {
 						status = 'success';
 						email = '';
-						/* @ts-ignore */
-						plausible('newsletter subscribe valid');
+						if (password) {
+							/* @ts-ignore */
+							plausible('newsletter subscribe bot');
+						} else {
+							/* @ts-ignore */
+							plausible('newsletter subscribe valid');
+						}
 					} else {
 						reason = 'There was an error. Please try again.';
 						status = 'error';
