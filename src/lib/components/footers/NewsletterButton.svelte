@@ -45,8 +45,13 @@
 		} else {
 			reason = 'Enter a valid email.';
 			status = 'error';
-			/* @ts-ignore */
-			plausible('newsletter subscribe empty');
+			if(!email) {
+				/* @ts-ignore */
+				plausible('newsletter subscribe empty');
+			} else {
+				/* @ts-ignore */
+				plausible('newsletter subscribe malformed');
+			}
 		}
 	}
 
