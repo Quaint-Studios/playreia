@@ -58,6 +58,9 @@
 				reason = 'Uh oh! That email doesn\'t look right.';
 				/* @ts-ignore */
 				plausible('newsletter subscribe malformed');
+
+				/* @ts-ignore */
+				if(password) plausible('newsletter subscribe malformedbot');
 			}
 			status = 'error';
 			focus();
