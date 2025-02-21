@@ -34,7 +34,7 @@
 							plausible('newsletter subscribe valid');
 						}
 					} else {
-						reason = 'There was an error. Please try again.';
+						reason = 'Oh no! An error. Please try again.';
 						status = 'error';
 						/* @ts-ignore */
 						plausible('newsletter subscribe invalid');
@@ -50,15 +50,16 @@
 					focus();
 				});
 		} else {
-			reason = 'Enter a valid email.';
-			status = 'error';
 			if(!email) {
+				reason = 'Oops! Type your email below first.';
 				/* @ts-ignore */
 				plausible('newsletter subscribe empty');
 			} else {
+				reason = 'Uh oh! That email doesn\'t look right.';
 				/* @ts-ignore */
 				plausible('newsletter subscribe malformed');
 			}
+			status = 'error';
 			focus();
 		}
 	}
@@ -98,7 +99,7 @@
 			aria-label="Newsletter"
 			type="email"
 			id="newsletter-{id}email"
-			placeholder={status !== 'success' ? 'Enter your email...' : "We'll notify you.  :)"}
+			placeholder={status !== 'success' ? status === 'error' ? 'name@example.com' : 'Enter your email...' : "We'll notify you.  :)"}
 			bind:value={email}
 		/>
 		<input
@@ -140,7 +141,7 @@
 		@apply bg-r-midnight-300;
 	}
 	.container.alt input::placeholder {
-		@apply text-r-border-silver;
+		@apply text-r-border-silver text-opacity-50;
 	}
 	.container input.email.error {
 		@apply !border-[#ff4646] border-opacity-70;
