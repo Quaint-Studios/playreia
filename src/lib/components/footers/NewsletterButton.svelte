@@ -134,16 +134,16 @@
 		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
 	.container input {
-		@apply w-full bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white;
+		@apply w-full bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white !border-r-border-silver border-opacity-30;
 	}
 	.container.alt input {
 		@apply bg-r-midnight-300;
 	}
 	.container.alt input::placeholder {
-		@apply text-[--borderSilver];
+		@apply text-r-border-silver;
 	}
 	.container input.email.error {
-		@apply !border-solid !border-[#ff4646] border-opacity-70;
+		@apply !border-[#ff4646] border-opacity-70;
 	}
 	.container input.email:focus {
 		@apply border-solid border-transparent !bg-r-midnight-100;
