@@ -73,7 +73,7 @@
 
 <div class="container" class:alt>
 	{#if status === 'error'}
-		<div class="absolute -top-5 left-0 right-0 text-center text-sm text-[#ff4646]">
+		<div class="absolute -top-5 left-0 right-0 text-center text-base font-bold text-[#ff4646]">
 			<p>
 				{#if reason}
 					{reason}
@@ -90,7 +90,7 @@
 			aria-label="Newsletter"
 			type="email"
 			id="newsletter-{id}email"
-			placeholder={status !== 'success' ? 'Your email...' : "We'll notify you.  :)"}
+			placeholder={status !== 'success' ? 'Enter your email...' : "We'll notify you.  :)"}
 			bind:value={email}
 		/>
 		<input
@@ -106,7 +106,7 @@
 	</form>
 	<button onclick={subscribe} class="plausible-event-name=newsletter+subscribe">
 		{#if status === 'idle' || status === 'error'}
-			Subscribe
+			Submit
 		{:else if status === 'pending'}
 			<ProgressRing
 				size="size-6"
