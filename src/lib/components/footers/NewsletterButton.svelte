@@ -106,7 +106,7 @@
 	</form>
 	<button onclick={subscribe} class="plausible-event-name=newsletter+subscribe">
 		{#if status === 'idle' || status === 'error'}
-			Submit
+			Subscribe
 		{:else if status === 'pending'}
 			<ProgressRing
 				size="size-6"
