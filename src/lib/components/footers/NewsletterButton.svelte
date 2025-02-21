@@ -3,6 +3,11 @@
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
+	function focus() {
+		const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
+		emailInput.focus();
+	}
+
 	function subscribe() {
 		reason = '';
 		if (status !== 'idle' && status !== 'error') return;
@@ -33,6 +38,7 @@
 						status = 'error';
 						/* @ts-ignore */
 						plausible('newsletter subscribe invalid');
+						focus();
 					}
 				})
 				.catch((error) => {
@@ -41,6 +47,7 @@
 					status = 'error';
 					/* @ts-ignore */
 					plausible('newsletter subscribe error');
+					focus();
 				});
 		} else {
 			reason = 'Enter a valid email.';
@@ -52,6 +59,7 @@
 				/* @ts-ignore */
 				plausible('newsletter subscribe malformed');
 			}
+			focus();
 		}
 	}
 
