@@ -33,7 +33,11 @@
 							/* @ts-ignore */
 							plausible('newsletter subscribe valid');
 							/* @ts-ignore */
-							dataLayer.push({ event: 'newsletter_subscribe' });
+							gtag('event', 'conversion', {
+								send_to: 'AW-16572041585/wikkCPS35aEaEPGSld49',
+								value: 1.0,
+								currency: 'USD'
+							});
 						}
 					} else {
 						reason = 'Oh no! An error. Please try again.';
@@ -52,17 +56,17 @@
 					focus();
 				});
 		} else {
-			if(!email) {
+			if (!email) {
 				reason = 'Oops! Type your email below first.';
 				/* @ts-ignore */
 				plausible('newsletter subscribe empty');
 			} else {
-				reason = 'Uh oh! That email doesn\'t look right.';
+				reason = "Uh oh! That email doesn't look right.";
 				/* @ts-ignore */
 				plausible('newsletter subscribe malformed');
 
 				/* @ts-ignore */
-				if(password) plausible('newsletter subscribe malformedbot');
+				if (password) plausible('newsletter subscribe malformedbot');
 			}
 			status = 'error';
 			focus();
@@ -104,7 +108,11 @@
 			aria-label="Newsletter"
 			type="email"
 			id="newsletter-{id}email"
-			placeholder={status !== 'success' ? status === 'error' ? 'name@example.com' : 'Enter your email...' : "We'll notify you.  :)"}
+			placeholder={status !== 'success'
+				? status === 'error'
+					? 'name@example.com'
+					: 'Enter your email...'
+				: "We'll notify you.  :)"}
 			bind:value={email}
 		/>
 		<input
@@ -140,7 +148,7 @@
 		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
 	.container input {
-		@apply w-full bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white !border-r-border-silver border-opacity-30;
+		@apply w-full !border-r-border-silver border-opacity-30 bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white;
 	}
 	.container.alt input {
 		@apply bg-r-midnight-300;
