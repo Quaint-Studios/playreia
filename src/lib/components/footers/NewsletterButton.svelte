@@ -32,6 +32,8 @@
 						} else {
 							/* @ts-ignore */
 							plausible('newsletter subscribe valid');
+							/* @ts-ignore */
+							dataLayer.push({ event: 'newsletter_subscribe' });
 						}
 					} else {
 						reason = 'Oh no! An error. Please try again.';
