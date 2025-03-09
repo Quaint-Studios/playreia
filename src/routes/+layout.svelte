@@ -50,7 +50,7 @@
 	</script>
 
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16572041585"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16572041585"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
@@ -59,7 +59,7 @@
 		gtag('js', new Date());
 
 		gtag('config', 'AW-16572041585');
-	</script>
+	</script> -->
 </svelte:head>
 
 <Navbar />

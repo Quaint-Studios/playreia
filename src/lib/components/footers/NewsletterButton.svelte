@@ -32,12 +32,12 @@
 						} else {
 							/* @ts-ignore */
 							plausible('newsletter subscribe valid');
-							/* @ts-ignore */
-							gtag('event', 'conversion', {
-								send_to: 'AW-16572041585/wikkCPS35aEaEPGSld49',
-								value: 1.0,
-								currency: 'USD'
-							});
+							/* ts-ignore */
+							// gtag('event', 'conversion', {
+							// 	send_to: 'AW-16572041585/wikkCPS35aEaEPGSld49',
+							// 	value: 1.0,
+							// 	currency: 'USD'
+							// });
 						}
 					} else {
 						reason = 'Oh no! An error. Please try again.';
