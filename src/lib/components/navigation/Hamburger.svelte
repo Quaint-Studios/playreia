@@ -55,7 +55,7 @@ Tips for Drawer modals:
 -->
 
 <Modal
-	bind:open={drawerState}
+	open={drawerState}
 	contentBase="pl-4 space-y-4 w-full h-dvh"
 	positionerJustify="justify-start"
 	transitionsPositionerIn={{ x: -480, duration: 200 }}

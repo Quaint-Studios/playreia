@@ -143,7 +143,7 @@
 			</blockquote>
 
 			<Tabs
-				bind:value={group}
+				value={group}
 				listJustify="justify-center"
 				listBase="flex flex-wrap mt-12"
 				listClasses="border-none"
