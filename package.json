@@ -17,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.7",
+		"@eslint/js": "^9.22.0",
 		"@iconify/svelte": "^4.2.0",
 		"@playwright/test": "^1.51.0",
 		"@skeletonlabs/skeleton": "^3.1.0",
@@ -25,9 +26,7 @@
 		"@sveltejs/enhanced-img": "^0.4.4",
 		"@sveltejs/kit": "^2.19.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.10",
-		"@tailwindcss/postcss": "^4.0.14",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.0.14",
 		"@testing-library/jest-dom": "^6.6.3",

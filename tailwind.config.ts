@@ -1,6 +1,3 @@
-import containerQueries from '@tailwindcss/container-queries';
-import forms from '@tailwindcss/forms';
-import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -94,11 +91,5 @@ export default {
 				}
 			}
 		}
-	},
-
-	plugins: [
-		typography,
-		forms,
-		containerQueries,
-	]
+	}
 } satisfies Config;
