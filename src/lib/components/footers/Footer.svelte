@@ -15,7 +15,7 @@
     </div>
 
     <div class="copy">
-        <span>&copy; 2021-2025 Quaint Studios. All Rights Reserved</span>
+        <span>&copy; 2021-2025 Quaint Studios LLC. All Rights Reserved</span>
     </div>
 </footer>
 
