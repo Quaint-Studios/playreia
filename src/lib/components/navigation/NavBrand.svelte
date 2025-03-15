@@ -17,6 +17,8 @@
 </Link>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.brand-container {
 		@apply flex items-center justify-center;
 	}

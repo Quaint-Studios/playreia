@@ -69,6 +69,8 @@
 </form>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.drop-menu-container {
 		@apply relative pb-1.5;
 	}

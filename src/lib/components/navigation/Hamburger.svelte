@@ -131,6 +131,8 @@ Tips for Drawer modals:
 </Modal>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	#hamburger {
 		@apply absolute bottom-0 right-4 top-0 px-4 text-white hover:text-r-gold lg:hidden;
 	}

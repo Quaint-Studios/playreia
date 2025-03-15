@@ -80,6 +80,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	#navbar {
 		@apply fixed z-50 w-full;
 		@apply py-4;

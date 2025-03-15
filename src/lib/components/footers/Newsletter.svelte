@@ -13,6 +13,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.newsletter {
 		@apply flex w-full flex-col items-center justify-center bg-r-midnight-400 px-3 py-12 text-base;
 	}

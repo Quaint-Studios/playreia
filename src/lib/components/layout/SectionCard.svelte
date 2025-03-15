@@ -83,6 +83,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.section-card {
 		@apply relative flex max-w-[400px] flex-col;
 		@apply rounded-3xl bg-r-midnight-blue shadow-lg;

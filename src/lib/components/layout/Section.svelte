@@ -74,6 +74,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	section {
 		@apply mx-auto w-full px-4 py-14;
 		@apply relative flex max-w-(--breakpoint-xl) flex-col items-center justify-center space-y-4;

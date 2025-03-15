@@ -83,6 +83,8 @@
 </section>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	@keyframes bounce {
 		0%,
 		100% {

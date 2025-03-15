@@ -49,6 +49,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	h2 {
 		@apply mt-12;
 	}

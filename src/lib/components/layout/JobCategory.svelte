@@ -39,6 +39,8 @@
 </ul>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	h2 {
 		@apply mb-4 mt-12 px-0;
 	}

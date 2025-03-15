@@ -51,6 +51,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.announcements {
 		@apply mx-auto mt-10 w-full;
 		@apply flex flex-wrap justify-center gap-6 xl:grid xl:grid-cols-3;

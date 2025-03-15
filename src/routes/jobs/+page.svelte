@@ -261,6 +261,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	:global(.selected-job) {
 		@apply border-none bg-r-midnight-600 text-white;
 	}

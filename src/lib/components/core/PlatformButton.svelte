@@ -31,6 +31,8 @@
 </a>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.platform {
 		@apply text-2xl text-white;
 		@apply rounded-xl py-3 pl-4 pr-9;

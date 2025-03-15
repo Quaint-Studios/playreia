@@ -19,6 +19,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.socials {
 		@apply flex max-w-[385px] flex-wrap items-center justify-center gap-4 mx-auto;
 		@apply px-3 pt-12;

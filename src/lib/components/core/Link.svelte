@@ -102,6 +102,8 @@
 </a>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	a {
 		color: var(--color) !important;
 		background-color: var(--bg-color);

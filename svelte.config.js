@@ -29,6 +29,7 @@ const config = {
 			runtime: 'nodejs22.x'
 		}),
 		alias: {
+			$appcss: './src/app.css',
 			$constants: './src/lib/constants',
 			$components: './src/lib/components',
 			$stores: './src/lib/stores',

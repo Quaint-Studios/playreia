@@ -74,6 +74,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.nav-link-child {
 		@apply mx-6 hidden flex-col;
 	}

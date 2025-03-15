@@ -109,6 +109,8 @@
 </button>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.lb-button--selected {
 		@apply font-black;
 		color: var(--hover-color);

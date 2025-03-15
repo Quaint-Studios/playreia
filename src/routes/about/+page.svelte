@@ -102,6 +102,8 @@
 </Content>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	h1 {
 		@apply w-full text-center text-4xl sm:text-6xl;
 	}

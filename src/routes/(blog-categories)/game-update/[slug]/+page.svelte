@@ -32,6 +32,8 @@
 </Content>
 
 <style lang="postcss">
+	@reference '$appcss';
+
     time {
         @apply flex justify-center text-r-gold-2 text-sm;
     }

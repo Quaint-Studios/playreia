@@ -113,6 +113,8 @@
 </Content>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.lg-grid,
 	.md-grid {
 		@apply max-w-screen-xl;

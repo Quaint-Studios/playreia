@@ -10,6 +10,8 @@
 </a>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.blog-load-more {
 		@apply flex flex-col items-center justify-center gap-4 backdrop-blur-xs rounded-lg2 p-6;
 		@apply transition-[filter] border-[1px] border-[--borderQuarter];

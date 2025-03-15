@@ -19,6 +19,8 @@
 </a>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.linked-button {
 		@apply flex items-center justify-center gap-4 rounded-2xl pl-6 pr-2 py-2.5 backdrop-blur-sm;
 		@apply border-[1px] border-(--borderQuarter) transition-[filter];

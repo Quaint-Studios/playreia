@@ -20,6 +20,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	footer {
 		@apply bg-r-midnight-300 pb-16;
 	}

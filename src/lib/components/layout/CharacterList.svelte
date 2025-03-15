@@ -41,6 +41,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.character-list {
 		@apply relative mb-16 mt-10 w-full;
 	}

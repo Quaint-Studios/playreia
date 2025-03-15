@@ -44,6 +44,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	strong {
 		@apply text-r-gold;
 	}

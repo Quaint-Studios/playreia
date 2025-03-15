@@ -171,6 +171,8 @@
 
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.platforms {
 		@apply flex w-full justify-center mb-8;
 	}

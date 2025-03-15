@@ -76,6 +76,8 @@
 </article>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	article.large {
 		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-(--borderQuarter) bg-blue-950 bg-opacity-25 p-4;
 		background: hsla(233, 54%, 18%, 1);

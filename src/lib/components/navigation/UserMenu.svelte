@@ -44,6 +44,8 @@
 </button>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	button:hover {
 		@apply border-r-purple-deep;
 	}

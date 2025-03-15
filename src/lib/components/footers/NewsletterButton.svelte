@@ -144,6 +144,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '$appcss';
+
 	.container {
 		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
