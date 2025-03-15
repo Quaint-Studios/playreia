@@ -2,11 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('./css/buttons.css');
-@import url('./css/colors.css');
-@import url('./css/form.css');
-@import url('./css/layout.css');
-@import url('./css/typography.css');
+@import './css/buttons.css';
+@import './css/colors.css';
+@import './css/form.css';
+@import './css/layout.css';
+@import './css/typography.css';
 
 /* urbanist-latin-wght-normal */
 @font-face {
