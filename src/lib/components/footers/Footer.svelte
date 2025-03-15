@@ -38,6 +38,6 @@
     }
 
     .copy {
-        @apply flex justify-center items-center font-medium text-[--borderSilver] pt-4 px-3;
+        @apply flex justify-center items-center font-medium text-(--borderSilver) pt-4 px-3;
     }
 </style>

@@ -18,7 +18,7 @@ h3 {
 	@apply text-2xl font-black;
 }
 p.blog + h3 {
-	@apply !mt-12;
+	@apply mt-12!;
 }
 h4 {
 	@apply text-xl font-black;
@@ -28,7 +28,7 @@ h5 {
 }
 
 .legal {
-	@apply mx-auto max-w-screen-lg;
+	@apply mx-auto max-w-(--breakpoint-lg);
 
 	h1 + p {
 		@apply mb-4 mt-2 font-bold text-r-gold;
@@ -81,7 +81,7 @@ h1.alt strong {
 	@apply text-r-purple-deep;
 }
 h2.alt strong {
-	@apply !text-[--warning];
+	@apply text-(--warning)!;
 }
 
 a {
@@ -91,7 +91,7 @@ a:hover {
 	@apply text-r-blue-default;
 }
 a:active {
-	@apply scale-90 text-[--primary];
+	@apply scale-90 text-(--primary);
 }
 
 a.unset {
@@ -99,7 +99,7 @@ a.unset {
 }
 
 .info-paragraph {
-	@apply max-w-screen-md indent-6 text-lg font-medium;
+	@apply max-w-(--breakpoint-md) indent-6 text-lg font-medium;
 }
 
 code.gold {
@@ -107,7 +107,7 @@ code.gold {
 }
 
 .blog-container {
-	@apply mx-auto w-full max-w-screen-lg;
+	@apply mx-auto w-full max-w-(--breakpoint-lg);
 }
 p.blog {
 	@apply my-4;

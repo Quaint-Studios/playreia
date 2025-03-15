@@ -67,7 +67,7 @@
 	.bubble {
 		@apply absolute bottom-0 left-0 right-0 top-0 m-auto cursor-pointer pointer-events-auto;
 		/* // Translate along the edge of the circle */
-		@apply flex aspect-square w-[12%] items-center justify-center rounded-full border-[1px] border-[--borderSilver] md:border-[3px];
+		@apply flex aspect-square w-[12%] items-center justify-center rounded-full border-[1px] border-(--borderSilver) md:border-[3px];
 		background: linear-gradient(to bottom, var(--silverDark), var(--silverLight));
 	}
 
@@ -118,7 +118,7 @@
 
 	.bubble-container .big-bubble {
 		@apply absolute bottom-0 left-0 right-0 top-0 m-auto brightness-[0.6];
-		@apply aspect-square w-[40%] rounded-full border-[1.5px] border-[--borderSilver] sm:border-[4px];
+		@apply aspect-square w-[40%] rounded-full border-[1.5px] border-(--borderSilver) sm:border-[4px];
 		transform: translate(
 			calc(0px + (100% * (100 / 40 / 2)) * cos(130deg)),
 			calc(0px + (100% * (100 / 40 / 2)) * sin(130deg))

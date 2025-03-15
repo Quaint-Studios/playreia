@@ -21,7 +21,7 @@
 <style lang="postcss">
 	.linked-button {
 		@apply flex items-center justify-center gap-4 rounded-2xl pl-6 pr-2 py-2.5 backdrop-blur-sm;
-		@apply border-[1px] border-[--borderQuarter] transition-[filter];
+		@apply border-[1px] border-(--borderQuarter) transition-[filter];
 		background: hsla(209, 45%, 31%, 0.5);
 		background: linear-gradient(135deg, hsla(209, 45%, 31%, 0.5) 0%, hsla(233, 54%, 18%, 0.5) 100%);
 		background: -moz-linear-gradient(

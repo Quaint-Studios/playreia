@@ -76,7 +76,7 @@
 <style lang="postcss">
 	section {
 		@apply mx-auto w-full px-4 py-14;
-		@apply relative flex max-w-screen-xl flex-col items-center justify-center space-y-4;
+		@apply relative flex max-w-(--breakpoint-xl) flex-col items-center justify-center space-y-4;
 	}
 
 	.content {

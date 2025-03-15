@@ -15,7 +15,7 @@
 <Content>
 	<Section>
 		<article class="blog-post">
-			<time datetime={date} class="text-[--borderSilver]">{getDate()}</time>
+			<time datetime={date} class="text-(--borderSilver)">{getDate()}</time>
 			<h1>{title}</h1>
 			<div class="meta">
 				<address>
@@ -39,7 +39,7 @@
         @apply flex gap-4 justify-center mt-4 mb-8 text-lg;
     }
     .meta a {
-        @apply text-[--borderSilver] no-underline not-italic font-medium;
+        @apply text-(--borderSilver) no-underline not-italic font-medium;
     }
     .meta a:hover {
         @apply text-r-blue-light;

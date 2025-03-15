@@ -105,7 +105,7 @@
 	}
 
 	.item :global(svg) {
-		@apply flex-shrink-0 flex-grow opacity-75;
+		@apply shrink-0 grow opacity-75;
 	}
 	.selected.item :global(svg) {
 		@apply !text-r-gold;

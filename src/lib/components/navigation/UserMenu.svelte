@@ -67,7 +67,7 @@
 		transition: background-color 0.1s ease-in-out;
 	}
 	.menu-container {
-		@apply absolute z-[60] min-w-32;
+		@apply absolute z-60 min-w-32;
 		@apply right-0 top-full origin-top scale-0 pt-2;
 		transition: transform 0.125s ease-in-out;
 	}

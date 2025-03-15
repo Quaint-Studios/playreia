@@ -76,7 +76,7 @@
 			<p>
 				You can send us mail at the following address:
 			</p>
-			<div class="mx-auto mt-4 max-w-screen-md font-bold">
+			<div class="mx-auto mt-4 max-w-(--breakpoint-md) font-bold">
 				<address>
 					Quaint Studios<br />
 					5004 E Fowler Ave #C349<br />

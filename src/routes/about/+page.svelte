@@ -84,7 +84,7 @@
 							<h3>{name}</h3>
 							<span class="font-medium">@{handle}</span>
 						</div>
-						<span class="mb-2 text-[--borderSilver]">{role.join(' | ')}</span>
+						<span class="mb-2 text-(--borderSilver)">{role.join(' | ')}</span>
 						<p>{bio}</p>
 					</div>
 				</div>
@@ -135,7 +135,7 @@
 	}
 
 	.profile {
-		@apply mt-6 flex max-w-screen-sm gap-4 odd:text-right;
+		@apply mt-6 flex max-w-(--breakpoint-sm) gap-4 odd:text-right;
 		.img-container {
 			@apply aspect-square h-28 w-28;
 			.img {

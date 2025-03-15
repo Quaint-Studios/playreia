@@ -75,9 +75,9 @@
 		@apply text-xl font-medium text-[--borderSilver];
 	}
 	h1 {
-		@apply max-w-screen-md text-center text-4xl sm:text-5xl md:text-6xl;
+		@apply max-w-(--breakpoint-md) text-center text-4xl sm:text-5xl md:text-6xl;
 	}
 	p {
-		@apply mt-6 max-w-screen-md text-center text-lg font-medium text-[--borderSilver] sm:text-xl;
+		@apply mt-6 max-w-(--breakpoint-md) text-center text-lg font-medium text-(--borderSilver) sm:text-xl;
 	}
 </style>

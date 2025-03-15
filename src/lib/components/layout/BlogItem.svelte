@@ -52,7 +52,7 @@
 				<address>
 					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
 				</address>
-				<time datetime={date} class="text-[--borderSilver]">{getDate()}</time>
+				<time datetime={date} class="text-(--borderSilver)">{getDate()}</time>
 			</div>
 		{:else}
 			<div class="categories">
@@ -69,7 +69,7 @@
 				<address>
 					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
 				</address>
-				<time datetime={date} class="text-[--borderSilver]">{getDate()}</time>
+				<time datetime={date} class="text-(--borderSilver)">{getDate()}</time>
 			</div>
 		{/if}
 	</div>
@@ -77,7 +77,7 @@
 
 <style lang="postcss">
 	article.large {
-		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-[--borderQuarter] bg-blue-950 bg-opacity-25 p-4;
+		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-(--borderQuarter) bg-blue-950 bg-opacity-25 p-4;
 		background: hsla(233, 54%, 18%, 1);
 		background: linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
 		background: -moz-linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
@@ -98,10 +98,10 @@
 		@apply scale-[0.98];
 	}
 	.large .image .img {
-		@apply aspect-[16/9] md:aspect-[16/5];
+		@apply aspect-16/9 md:aspect-[16/5];
 	}
 	.image .img {
-		@apply aspect-[16/9] h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05];
+		@apply aspect-16/9 h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05];
 	}
 
 	address {

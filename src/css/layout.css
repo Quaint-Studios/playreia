@@ -17,7 +17,7 @@ body .readable p,
 body .readable ul,
 body .readable ol,
 body .readable blockquote {
-	@apply mx-auto max-w-screen-md;
+	@apply mx-auto max-w-(--breakpoint-md);
 }
 
 body article.readable, body .readable {
@@ -29,7 +29,7 @@ body .readable blockquote {
 }
 
 body .readable blockquote p {
-	@apply mx-0 text-[--borderSilver];
+	@apply mx-0 text-(--borderSilver);
 }
 
 body .newsletter + footer .newsletter {

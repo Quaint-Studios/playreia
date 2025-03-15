@@ -111,7 +111,7 @@
 
 	.hero .content {
 		@apply absolute left-0 top-0 max-w-[25rem] sm:max-w-[34rem];
-		@apply mx-4 h-full font-bold text-[--light] sm:ml-12;
+		@apply mx-4 h-full font-bold text-(--light) sm:ml-12;
 		@apply transition-[margin_max-width] duration-150 ease-in-out;
 		@apply flex flex-col justify-center;
 		@apply pointer-events-none;

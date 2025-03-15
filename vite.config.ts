@@ -1,15 +1,15 @@
 import { paraglide } from '@inlang/paraglide-sveltekit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
 	plugins: [
 		enhancedImages(),
 		sveltekit(),
-		purgeCss(),
+		tailwindcss(),
 		paraglide({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide'

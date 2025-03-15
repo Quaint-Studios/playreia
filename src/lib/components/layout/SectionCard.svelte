@@ -116,7 +116,7 @@
 		@apply text-3xl;
 	}
 	h3 {
-		@apply max-h-[90px] w-full overflow-hidden overflow-ellipsis text-xl text-white;
+		@apply max-h-[90px] w-full overflow-hidden text-ellipsis text-xl text-white;
 	}
 	h3 a {
 		@apply text-white no-underline;
