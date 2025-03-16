@@ -79,7 +79,7 @@
 	@reference '$appcss';
 
 	article.large {
-		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-(--borderQuarter) bg-blue-950 bg-opacity-25 p-4;
+		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-(--borderQuarter) bg-blue-950/25 p-4;
 		background: hsla(233, 54%, 18%, 1);
 		background: linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
 		background: -moz-linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);

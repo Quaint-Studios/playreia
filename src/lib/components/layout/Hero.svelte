@@ -126,7 +126,7 @@
 		@apply mb-4 text-4xl sm:text-5xl;
 	}
 	.hero .content h1 strong {
-		@apply font-bold text-[--tertiary];
+		@apply font-bold text-(--tertiary);
 	}
 	.hero .content p {
 		@apply mb-6 font-medium;

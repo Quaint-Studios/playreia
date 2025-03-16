@@ -91,7 +91,7 @@
 
 <div class="container" class:alt>
 	{#if status === 'error'}
-		<div class="absolute -top-5 left-0 right-0 text-center text-base font-bold text-(#ff4646)">
+		<div class="absolute -top-5 left-0 right-0 text-center text-base font-bold text-[#ff4646]">
 			<p>
 				{#if reason}
 					{reason}
@@ -147,10 +147,10 @@
 	@reference '$appcss';
 
 	.container {
-		@apply relative mt-5 flex h-min w-full max-w-(325px) items-center justify-center;
+		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
 	.container input {
-		@apply w-full !border-r-border-silver/30 bg-r-midnight-blue py-3.5 pl-3 pr-(135px) text-white;
+		@apply w-full !border-r-border-silver/30 bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white;
 	}
 	.container.alt input {
 		@apply bg-r-midnight-300;
@@ -159,7 +159,7 @@
 		@apply text-r-border-silver/50;
 	}
 	.container input.email.error {
-		@apply !border-(#ff4646)/70;
+		@apply !border-[#ff4646]/70;
 	}
 	.container input.email:focus {
 		@apply border-solid border-transparent !bg-r-midnight-100;
@@ -172,16 +172,16 @@
 	button {
 		width: 122px;
 		height: 40.8px;
-		@apply absolute right-(5px) my-auto flex justify-center rounded-lg2 font-bold;
+		@apply absolute right-[5px] my-auto flex justify-center rounded-lg2 font-bold;
 		@apply bg-r-midnight-600 py-2 text-white hover:bg-r-midnight-700;
 	}
 	.alt button {
 		@apply hover:bg-r-gold-2;
 	}
 	button:active {
-		@apply scale-(0.98);
+		@apply scale-[0.98];
 	}
 	.container .email {
-		@apply w-full rounded-xl !border-(1px) border-transparent !outline-none;
+		@apply w-full rounded-xl !border-[1px] border-transparent !outline-none;
 	}
 </style>

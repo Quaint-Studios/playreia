@@ -1,14 +1,12 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-/* @plugin '@tailwingcss/container-queries'; */
 
 @import './css/buttons.css' layer(utilities);
 @import './css/colors.css' layer(utilities);
 @import './css/form.css' layer(utilities);
 @import './css/layout.css' layer(utilities);
 @import './css/typography.css' layer(utilities);
-
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
@@ -17,6 +15,10 @@
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
 @config '../tailwind.config.ts';
+
+:root {
+	--text-scaling: 1;
+}
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -83,9 +85,14 @@ body {
 	@apply min-h-full;
 }
 
+html {
+	scrollbar-color: rgba(128, 128, 128, 0.5) rgba(0, 0, 0, 0.1);
+}
 body {
 	@apply bg-r-midnight-blue text-r-white sm:text-lg;
 	font-family: 'Urbanist Variable', sans-serif;
+	font-size: 18px;
+	line-height: 28px;
 }
 
 iconify-icon {
