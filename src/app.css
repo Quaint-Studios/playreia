@@ -91,8 +91,6 @@ html {
 body {
 	@apply bg-r-midnight-blue text-r-white sm:text-lg;
 	font-family: 'Urbanist Variable', sans-serif;
-	font-size: 18px;
-	line-height: 28px;
 }
 
 iconify-icon {
