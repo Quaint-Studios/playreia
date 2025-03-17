@@ -94,6 +94,6 @@
 	}
 
 	.icons {
-		@apply flex items-center justify-center;
+		@apply flex items-center justify-center mb-0;
 	}
 </style>
