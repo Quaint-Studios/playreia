@@ -2,11 +2,11 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@import './css/buttons.css' layer(utilities);
-@import './css/colors.css' layer(utilities);
-@import './css/form.css' layer(utilities);
-@import './css/layout.css' layer(utilities);
-@import './css/typography.css' layer(utilities);
+@import './css/buttons.css';
+@import './css/colors.css';
+@import './css/form.css';
+@import './css/layout.css';
+@import './css/typography.css';
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
