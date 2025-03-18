@@ -62,7 +62,7 @@
 </Section>
 
 <Section headerColor="var(--gold)" title="Blog Posts">
-	<div class="blog-container">
+	<div class="main-blog-container">
 		{#each blogs.slice(0, 5) as blog}
 			<BlogItem {...blog} />
 		{/each}
@@ -75,7 +75,7 @@
 <style lang="postcss">
 	@reference '$appcss';
 
-	.blog-container {
+	.main-blog-container {
 		@apply mx-auto mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3;
 	}
 </style>
