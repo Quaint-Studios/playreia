@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import BlogItem from '$components/layout/BlogItem.svelte';
 	import Content from '$components/layout/Content.svelte';
 	import Paginator from '$components/layout/Paginator.svelte';
@@ -7,7 +7,7 @@
 	import Meta from '$components/seo/Meta.svelte';
 	import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 
-	let currentPage = Number($page.url.searchParams.get('page')) || 1;
+	let currentPage = Number(page.url.searchParams.get('page')) || 1;
 
 	let { data } = $props();
 	const { posts, pages } = data;
