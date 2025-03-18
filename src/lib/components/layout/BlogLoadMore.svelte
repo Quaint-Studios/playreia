@@ -14,7 +14,7 @@
 
 	.blog-load-more {
 		@apply flex flex-col items-center justify-center gap-4 backdrop-blur-xs rounded-lg2 p-6;
-		@apply transition-[filter] border-[1px] border-[--borderQuarter];
+		@apply transition-[filter] border-[1px] border-(--borderQuarter);
 		background: hsla(209, 45%, 31%, 1);
 		background: linear-gradient(135deg, hsla(209, 45%, 31%, 1) 0%, hsla(233, 54%, 18%, 1) 100%);
 		background: -moz-linear-gradient(

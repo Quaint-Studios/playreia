@@ -126,7 +126,7 @@
 	}
 	.nav-link-child {
 		@apply absolute left-2 top-full flex-col;
-		@apply rounded-lg2 border-[1px] !border-[--borderHalf];
+		@apply rounded-lg2 border-[1px] !border-(--borderHalf);
 		@apply origin-top scale-0 transition-transform;
 	}
 

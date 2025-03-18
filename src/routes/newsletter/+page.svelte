@@ -62,7 +62,7 @@
 	}
 
 	span {
-		@apply text-xl font-medium text-[--borderSilver];
+		@apply text-xl font-medium text-(--borderSilver);
 	}
 	h1 {
 		@apply max-w-(--breakpoint-md) text-center text-4xl sm:text-5xl md:text-6xl;

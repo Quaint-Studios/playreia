@@ -107,7 +107,7 @@
 	.hero {
 		@apply bg-r-purple-highlight;
 		@apply h-[50rem] w-full transition-[height] sm:h-[60rem];
-		@apply text-[--light];
+		@apply text-(--light);
 		@apply relative;
 	}
 

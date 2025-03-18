@@ -127,7 +127,7 @@
 		@apply tracking-wide text-white no-underline;
 	}
 	h2 a:hover {
-		@apply text-[--blue];
+		@apply text-(--blue);
 	}
 	.large h2 {
 		@apply mt-4;
@@ -139,7 +139,7 @@
 	}
 
 	.meta {
-		@apply mb-4 mt-4 flex justify-start gap-4 text-[--borderSilver];
+		@apply mb-4 mt-4 flex justify-start gap-4 text-(--borderSilver);
 	}
 	.large .meta {
 		@apply my-0 text-sm md:text-base;
@@ -155,7 +155,7 @@
 		@apply font-bold uppercase text-white;
 	}
 	.categories a:hover {
-		@apply text-[--blue];
+		@apply text-(--blue);
 	}
 	.large .categories {
 		@apply mb-0 text-sm md:text-base;

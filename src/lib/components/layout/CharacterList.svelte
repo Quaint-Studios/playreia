@@ -59,7 +59,7 @@
 	}
 	.ring {
 		@apply pointer-events-none;
-		@apply aspect-square w-full rounded-full border-[3px] border-[--borderSilver];
+		@apply aspect-square w-full rounded-full border-[3px] border-(--borderSilver);
 		-webkit-mask-image: linear-gradient(-36deg, black 0%, transparent 50%);
 		mask-image: linear-gradient(-36deg, black 0%, transparent 50%);
 	}

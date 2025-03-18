@@ -86,14 +86,14 @@
 		@apply opacity-75;
 	}
 	.drop-menu:hover > .item {
-		@apply !text-[--borderHalf];
+		@apply !text-(--borderHalf);
 	}
 
 	.item {
 		@apply flex w-full items-center gap-2;
 	}
 	.selected.item {
-		@apply !bg-[--borderQuarter];
+		@apply !bg-(--borderQuarter);
 	}
 
 	.label {

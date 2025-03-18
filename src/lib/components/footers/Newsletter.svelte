@@ -20,12 +20,12 @@
 	}
 
 	span {
-		@apply font-medium text-[--borderSilver];
+		@apply font-medium text-(--borderSilver);
 	}
 	h2 {
 		@apply max-w-sm text-center text-3xl;
 	}
 	p {
-		@apply mt-2 max-w-sm text-center text-[--borderSilver];
+		@apply mt-2 max-w-sm text-center text-(--borderSilver);
 	}
 </style>

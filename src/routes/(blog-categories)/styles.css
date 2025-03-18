@@ -26,5 +26,5 @@ body .blog-post blockquote {
 }
 
 body .blog-post blockquote p {
-	@apply mx-0 text-[--borderSilver];
+	@apply mx-0 text-(--borderSilver);
 }
