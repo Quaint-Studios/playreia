@@ -1,3 +1,5 @@
+@reference '$appcss';
+
 body .blog-post h1 {
 	@apply text-center text-4xl sm:text-6xl;
 }
