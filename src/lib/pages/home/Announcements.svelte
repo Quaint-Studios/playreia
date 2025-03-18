@@ -14,7 +14,7 @@
 		url={alinks.discord}
 		target="_blank"
 		rel={['noopener', 'noreferrer']}
-		cta="Message"
+		cta="Join server"
 		src={DiscordImg}
 		alt="Discord Banner"
 		sizes="min(428px, 60vw)"

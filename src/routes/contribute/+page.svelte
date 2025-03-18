@@ -69,10 +69,10 @@
 
 			<h2>Discord Server</h2>
 			<p>
-				Message <code>makosai</code> on
-				<a href={alinks.discord} target="_blank" rel="noopener">Discord</a>
-				to join the server and discuss the project with other contributors. This is a good place for
-				everyone to collaborate on the project. Especially for <strong>artists</strong> and
+				We've finally opened up <a href={alinks.discord} target="_blank" rel="noopener"
+					>Reia's Discord server</a
+				>. Join to discuss the project with other contributors. This is a good place for everyone to
+				collaborate on the project. Especially for <strong>artists</strong> and
 				<strong>designers</strong>.
 			</p>
 
@@ -100,6 +100,6 @@
 		@apply text-r-gold;
 	}
 	blockquote {
-		@apply mb-6 mt-4;
+		@apply mt-4 mb-6;
 	}
 </style>
