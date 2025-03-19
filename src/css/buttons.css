@@ -121,7 +121,7 @@ body .lb-button--xlarge.lb-button--selected:after {
 }
 .lb-button:active {
 	opacity: 0.85;
-	transform: scale(0.95);
+	@apply scale-95;
 }
 .lb-button:disabled {
 	opacity: 0.5;

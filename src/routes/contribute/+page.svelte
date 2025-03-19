@@ -95,7 +95,6 @@
 	h1 {
 		@apply w-full text-center;
 	}
-	code,
 	strong {
 		@apply text-r-gold;
 	}
