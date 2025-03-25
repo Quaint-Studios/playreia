@@ -33,7 +33,7 @@ export async function GET() {
 		  page: '/',
 		  freq: freq.daily,
 		  priority: 1.0,
-		  lastmod: '2025-01-10'
+		  lastmod: '2025-03-24'
 		},
 		{
 		  page: '/dev-blog',
@@ -246,7 +246,7 @@ export async function GET() {
 		  page: '/newsletter',
 		  freq: freq.yearly,
 		  priority: 0.7,
-		  lastmod: '2025-01-10'
+		  lastmod: '2025-03-24'
 		},
 		{
 		  page: '/press-kit',
@@ -256,7 +256,8 @@ export async function GET() {
 		{
 		  page: '/privacy',
 		  freq: freq.yearly,
-		  priority: 0.3
+		  priority: 0.3,
+		  lastmod: '2025-03-14'
 		},
 		{
 		  page: '/register',
