@@ -1,64 +1,11 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
-
-	type FileNames =
-		| 'index.wasm'
-		| 'index.side.wasm'
-		| 'index.apple-touch-icon.png'
-		| 'index.audio.worklet.js'
-		| 'index.pck'
-		| 'index.png'
-		| 'index.audio.position.worklet.js'
-		| 'index.js'
-		| 'index.html'
-		| 'index.icon.png';
-
-	const uploadthing_url = 'https://nq0cnjludn.ufs.sh/f';
-	function getFile(name: FileNames, useJsdelivr = false): string {
-		switch (name) {
-			case 'index.wasm':
-				return `${uploadthing_url}/21j63lqspySPgWwCJlcVMuZfNHnsywBESQm6x7p34htrW0bP`;
-			case 'index.side.wasm':
-				return `${uploadthing_url}/21j63lqspySP9YBMT5sn8CyYQSXNwHo4B2RMueigqxFvkA7K`;
-			case 'index.apple-touch-icon.png':
-				return `${uploadthing_url}/21j63lqspySPnh9clnr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9`;
-			case 'index.audio.worklet.js':
-				if (useJsdelivr) {
-					return 'https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.worklet.js';
-				} else {
-					return `${uploadthing_url}/21j63lqspySP1FnDEw0oAdQ64rK37ejxaUXMCguLqWNE51Dy`;
-				}
-			case 'index.pck':
-				return `${uploadthing_url}/21j63lqspySPLixHgQ2RCvFcGQmix5uYhs1BWqt6Hfd8wTVn`;
-			case 'index.png':
-				return `${uploadthing_url}/21j63lqspySPqACmKUMdSRobDvyIUx6jH1BtNh4iwcePm5ZL`;
-			case 'index.audio.position.worklet.js':
-				if (useJsdelivr) {
-					return 'https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.position.worklet.js';
-				} else {
-					return `${uploadthing_url}/21j63lqspySPnzPTcHr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9`;
-				}
-			case 'index.js':
-				if (useJsdelivr) {
-					return 'https://cdn.jsdelivr.net/gh/playreia/reiajs/index.js';
-				} else {
-					return `${uploadthing_url}/21j63lqspySPJUUAqDSnKw6Jr8ufSNTR29PAFWChGgXvex4q`;
-				}
-			case 'index.html':
-				return `${uploadthing_url}/21j63lqspySPbrABJclMqh7tEvCoTmJWpVSnuriU1Y8eH2NZ`;
-			case 'index.icon.png':
-				return `${uploadthing_url}/21j63lqspySPMHmCSdnzNcqyCnZgGrBUOtv51ix79pVP8wa0`;
-			default:
-				throw new Error(`File not found: ${name}`);
-		}
-	}
 </script>
 
 <svelte:head>
-	<link id="-gd-engine-icon" rel="icon" type="image/png" href={getFile('index.icon.png')} />
-	<link rel="apple-touch-icon" href={getFile('index.apple-touch-icon.png')} />
-	<script async src={getFile('index.js', true)}></script>
+	<link id="-gd-engine-icon" rel="icon" type="image/png" href="/index.icon.png" />
+	<link rel="apple-touch-icon" href="/index.apple-touch-icon.png" />
+	<script async src="/index.js"></script>
 </svelte:head>
 
 <canvas id="canvas"> Your browser does not support the canvas tag. </canvas>
@@ -69,7 +16,7 @@
 	<img
 		id="status-splash"
 		class="show-image--true fullsize--true use-filter--true"
-		src={getFile('index.png')}
+		src="/index.png"
 		alt=""
 	/>
 	<progress id="status-progress"></progress>
@@ -85,8 +32,8 @@
 			executable: 'index',
 			experimentalVK: false,
 			fileSizes: {
-				'https://nq0cnjludn.ufs.sh/f/21j63lqspySPLixHgQ2RCvFcGQmix5uYhs1BWqt6Hfd8wTVn': 129472,
-				'https://nq0cnjludn.ufs.sh/f/21j63lqspySPgWwCJlcVMuZfNHnsywBESQm6x7p34htrW0bP': 1650612
+				'index.pck': 129472,
+				'index.wasm': 1650612
 			},
 			focusCanvas: true,
 			gdextensionLibs: []
