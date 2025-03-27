@@ -1,0 +1,49 @@
+{
+	"redirects": [
+		{
+			"source": "/index.wasm",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPgWwCJlcVMuZfNHnsywBESQm6x7p34htrW0bP",
+			"permanent": true
+		},
+		{
+			"source": "/index.side.wasm",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP9YBMT5sn8CyYQSXNwHo4B2RMueigqxFvkA7K",
+			"permanent": true
+		},
+		{
+			"source": "/index.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPqACmKUMdSRobDvyIUx6jH1BtNh4iwcePm5ZL",
+			"permanent": true
+		},
+		{
+			"source": "/index.pck",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPLixHgQ2RCvFcGQmix5uYhs1BWqt6Hfd8wTVn",
+			"permanent": true
+		},
+		{
+			"source": "/index.js",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPJUUAqDSnKw6Jr8ufSNTR29PAFWChGgXvex4q",
+			"permanent": true
+		},
+		{
+			"source": "/index.icon.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPMHmCSdnzNcqyCnZgGrBUOtv51ix79pVP8wa0",
+			"permanent": true
+		},
+		{
+			"source": "/index.audio.worklet.js",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP1FnDEw0oAdQ64rK37ejxaUXMCguLqWNE51Dy",
+			"permanent": true
+		},
+		{
+			"source": "/index.audio.position.worklet.js",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPnzPTcHr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9",
+			"permanent": true
+		},
+		{
+			"source": "/index.apple-touch-icon.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPnh9clnr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9",
+			"permanent": true
+		}
+	]
+}
