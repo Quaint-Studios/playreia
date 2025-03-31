@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { link } from '$lib/types';
 	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import alinks from '$constants/alinks';
@@ -6,7 +7,7 @@
 
 <Meta
 	titlePrefix=""
-	title="Reia - Play an Action Adventure RPG Game"
+	title="Reia - Play an action adventure RPG game"
 	titleSuffix=""
 	keywords={'reia, game, action, adventure, rpg, role-playing, role-playing game, action-adventure, action-adventure game, action rpg, adventure rpg, action-adventure rpg'}
 	description="Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console."
@@ -16,7 +17,7 @@
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Download or Play Reia Now",
+				"name": "Download or play Reia now",
 				"url": "https://www.playreia.com/game"
 			}
 		</script>
@@ -40,11 +41,10 @@
 	<p>
 		You can play the game right now by visiting the <a
 			href={alinks.github + '/releases'}
-			target="_blank"
-			rel="noopener">releases page on GitHub</a
+			{...link.external}>releases page on GitHub</a
 		>. We're always looking for feedback and suggestions. If you have any, please feel free to
 		<a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discord}>Discord</a>.
+		or chat with us on <a href={alinks.discord} {...link.external}>Discord</a>.
 	</p>
 </div>
 
