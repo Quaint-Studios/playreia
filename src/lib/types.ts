@@ -25,3 +25,21 @@ export enum BlogCategory {
 	GameUpdate = 'Game Update',
 	DevBlog = 'Dev Blog'
 }
+
+export const link = {
+	// Use when you want to open a link in a new tab but need to keep security
+	external: {
+		target: '_blank',
+		rel: 'noopener'
+	},
+	// Use on external links that are not to be followed by search engines
+	// such as comments by users.
+	externalnofol: {
+		target: '_blank',
+		rel: 'noopener noreferer nofollow'
+	},
+	externalnoref: {
+		target: '_blank',
+		rel: 'noopener noreferrer'
+	},
+};
