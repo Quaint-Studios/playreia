@@ -5,7 +5,7 @@
 <svelte:head>
 	<link id="-gd-engine-icon" rel="icon" type="image/png" href="/index.icon.png" />
 	<link rel="apple-touch-icon" href="/index.apple-touch-icon.png" />
-	<script async src="/index.js"></script>
+	<script src="/index.js"></script>
 </svelte:head>
 
 <canvas id="canvas"> Your browser does not support the canvas tag. </canvas>
@@ -24,7 +24,7 @@
 </div>
 
 {#if browser}
-	<script defer>
+	<script>
 		const GODOT_CONFIG = {
 			args: [],
 			canvasResizePolicy: 2,
@@ -163,6 +163,9 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
+		width: 100% !important;
+		height: 100% !important;
+		aspect-ratio: 16 / 9;
 	}
 
 	#canvas {
@@ -225,6 +228,13 @@
 		bottom: 10%;
 		width: 50%;
 		margin: 0 auto;
+		border-radius: 9999px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+	}
+	#status-progress::-webkit-progress-value, #status-progress::-moz-progress-bar {
+		background-color: #422BB3;
+		border-radius: 9999px;
+		box-shadow: 0 14px 12px rgba(0, 0, 0, 0.05);
 	}
 
 	#status-notice {
