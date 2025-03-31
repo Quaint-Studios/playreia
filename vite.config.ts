@@ -5,6 +5,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import type { ViteDevServer } from 'vite';
+import uploadthingFiles from './uploadthing.files.json';
 
 /** @type {import('vite').Plugin} */
 const viteServerConfig = () => ({
@@ -13,6 +14,9 @@ const viteServerConfig = () => ({
 		server.middlewares.use((req, res, next) => {
 			switch (req.url) {
 				case '/game':
+				case '/play':
+				case '/index.html':
+				case '/index.js':
 					res.setHeader('Access-Control-Allow-Origin', '*');
 					res.setHeader('Access-Control-Allow-Methods', 'GET');
 					res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
@@ -24,19 +28,22 @@ const viteServerConfig = () => ({
 	},
 	config: () => ({
 		server: {
-			proxy: {
-				"/index.wasm": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPgWwCJlcVMuZfNHnsywBESQm6x7p34htrW0bP",
-				"/index.side.wasm": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP9YBMT5sn8CyYQSXNwHo4B2RMueigqxFvkA7K",
-				"/index.png": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPqACmKUMdSRobDvyIUx6jH1BtNh4iwcePm5ZL",
-				"/index.pck": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPLixHgQ2RCvFcGQmix5uYhs1BWqt6Hfd8wTVn",
-				"/index.js": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.js",
-				"/index.icon.png": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPMHmCSdnzNcqyCnZgGrBUOtv51ix79pVP8wa0",
-				"/index.audio.worklet.js": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.worklet.js",
-				"/index.audio.position.worklet.js": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.position.worklet.js",
-				"/index.apple-touch-icon.png": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPnh9clnr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9"
-			  }
+			proxy: uploadthingFiles.reduce((all, file) => {
+				if (file.name.endsWith('.js') || file.name.endsWith('.html')) {
+					return { ...all, [`/${file.name}`]: 'https://cdn.jsdelivr.net/gh/playreia/reiajs/' };
+				} else {
+					return {
+						...all,
+						[`/${file.name}`]: {
+							target: file.url,
+							changeOrigin: true,
+							rewrite: (path: string) => path.replace(`/${file.name}`, '')
+						}
+					};
+				}
+			}, {})
 		}
-	}),
+	})
 });
 
 export default defineConfig({

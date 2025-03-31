@@ -3,58 +3,89 @@
 		{
 			"source": "/game",
 			"headers": [
-				{ "key": "Access-Control-Allow-Origin", "value": "*" },
-				{ "key": "Access-Control-Allow-Methods", "value": "GET" },
-				{ "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-				{ "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "*"
+				},
+				{
+					"key": "Access-Control-Allow-Methods",
+					"value": "GET"
+				},
+				{
+					"key": "Cross-Origin-Opener-Policy",
+					"value": "same-origin"
+				},
+				{
+					"key": "Cross-Origin-Embedder-Policy",
+					"value": "require-corp"
+				}
 			]
 		}
 	],
-	"redirects": [
+	"rewrites": [
 		{
-			"source": "/index.wasm",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPgWwCJlcVMuZfNHnsywBESQm6x7p34htrW0bP",
-			"permanent": true
-		},
-		{
-			"source": "/index.side.wasm",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP9YBMT5sn8CyYQSXNwHo4B2RMueigqxFvkA7K",
-			"permanent": true
-		},
-		{
-			"source": "/index.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPqACmKUMdSRobDvyIUx6jH1BtNh4iwcePm5ZL",
-			"permanent": true
-		},
-		{
-			"source": "/index.pck",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPLixHgQ2RCvFcGQmix5uYhs1BWqt6Hfd8wTVn",
-			"permanent": true
-		},
-		{
-			"source": "/index.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.js",
-			"permanent": true
+			"source": "/index.512x512.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPDvgYgAkAYnP9jiIHWML8s4ftJpCQzFOvr7S0"
 		},
 		{
 			"source": "/index.icon.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPMHmCSdnzNcqyCnZgGrBUOtv51ix79pVP8wa0",
-			"permanent": true
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPbmq9zxlMqh7tEvCoTmJWpVSnuriU1Y8eH2NZ"
 		},
 		{
 			"source": "/index.audio.worklet.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.worklet.js",
-			"permanent": true
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.worklet.js"
+		},
+		{
+			"source": "/index.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP90vlb9osn8CyYQSXNwHo4B2RMueigqxFvkA7"
 		},
 		{
 			"source": "/index.audio.position.worklet.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.position.worklet.js",
-			"permanent": true
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.position.worklet.js"
+		},
+		{
+			"source": "/index.manifest.json",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPhF3u6ypQp0dDxfrkbwVUGPaOSCc6JEXZM4Wu"
+		},
+		{
+			"source": "/index.pck",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPDCUP4cDkAYnP9jiIHWML8s4ftJpCQzFOvr7S"
 		},
 		{
 			"source": "/index.apple-touch-icon.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPnh9clnr7K4Y0RDi3ltTXQVBJdmrEuwFaN5S9",
-			"permanent": true
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPbCbGX2lMqh7tEvCoTmJWpVSnuriU1Y8eH2NZ"
+		},
+		{
+			"source": "/index.180x180.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPVqD5gwlLjfMzPOivtXuKYLmr5nGF147W3RgD"
+		},
+		{
+			"source": "/index.side.wasm",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPMyzGqoZnzNcqyCnZgGrBUOtv51ix79pVP8wa"
+		},
+		{
+			"source": "/index.offline.html",
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.offline.html"
+		},
+		{
+			"source": "/index.html",
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.html"
+		},
+		{
+			"source": "/index.144x144.png",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPBFnb7BvFntkfyQb3Ursi4VjexoHMguIAPDN7"
+		},
+		{
+			"source": "/index.js",
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.js"
+		},
+		{
+			"source": "/index.service.worker.js",
+			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.service.worker.js"
+		},
+		{
+			"source": "/index.wasm",
+			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPq1lzLqMdSRobDvyIUx6jH1BtNh4iwcePm5ZL"
 		}
 	]
 }
