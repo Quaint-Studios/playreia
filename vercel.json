@@ -22,7 +22,28 @@
 			]
 		},
 		{
-			"source": "/index.js",
+			"source": "https://nq0cnjludn.ufs.sh/f/:path*",
+			"headers": [
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "*"
+				},
+				{
+					"key": "Access-Control-Allow-Methods",
+					"value": "GET"
+				},
+				{
+					"key": "Cross-Origin-Opener-Policy",
+					"value": "same-origin"
+				},
+				{
+					"key": "Cross-Origin-Embedder-Policy",
+					"value": "require-corp"
+				}
+			]
+		},
+		{
+			"source": "https://cdn.jsdelivr.net/gh/playreia/reiajs/:path*",
 			"headers": [
 				{
 					"key": "Access-Control-Allow-Origin",
