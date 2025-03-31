@@ -56,7 +56,7 @@
 				{
 					"key": "Content-Type",
 					"value": "application/javascript"
-				}
+				},
 				{
 					"key": "Cross-Origin-Opener-Policy",
 					"value": "same-origin"
@@ -81,7 +81,7 @@
 				{
 					"key": "Content-Type",
 					"value": "text/html"
-				}
+				},
 				{
 					"key": "Cross-Origin-Opener-Policy",
 					"value": "same-origin"
