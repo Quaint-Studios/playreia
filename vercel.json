@@ -1,7 +1,7 @@
 {
 	"headers": [
 		{
-			"source": "/game",
+			"source": "/play",
 			"headers": [
 				{
 					"key": "Access-Control-Allow-Origin",
