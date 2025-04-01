@@ -20,6 +20,15 @@
 					"value": "require-corp"
 				}
 			]
+		},
+		{
+			"source": "/index.js",
+			"headers": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-javascript"
+				}
+			]
 		}
 	],
 	"redirects": [
