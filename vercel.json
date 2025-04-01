@@ -27,6 +27,10 @@
 				{
 					"key": "Content-Type",
 					"value": "application/x-javascript"
+				},
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
 				}
 			]
 		}
