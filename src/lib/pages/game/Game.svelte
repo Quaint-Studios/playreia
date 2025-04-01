@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { cdn } from '$lib/types';
 	import { browser } from '$app/environment';
 </script>
 
 <svelte:head>
-	<link id="-gd-engine-icon" rel="icon" type="image/png" href="/index.icon.png" />
-	<link rel="apple-touch-icon" href="/index.apple-touch-icon.png" />
-	<script src="/index.js"></script>
+	<link id="-gd-engine-icon" rel="icon" type="image/png" href="{cdn.site}/index.icon.png" />
+	<link rel="apple-touch-icon" href="{cdn.site}/index.apple-touch-icon.png" />
+	<script src="{cdn.site}/index.js"></script>
 </svelte:head>
 
 <canvas id="canvas"> Your browser does not support the canvas tag. </canvas>
@@ -16,7 +17,7 @@
 	<img
 		id="status-splash"
 		class="show-image--true fullsize--true use-filter--true"
-		src="/index.png"
+		src="{cdn.site}/index.png"
 		alt=""
 	/>
 	<progress id="status-progress"></progress>
@@ -27,17 +28,16 @@
 	<script>
 		const GODOT_CONFIG = {
 			args: [],
-			canvasResizePolicy: 2,
+			canvasResizePolicy: 1,
 			ensureCrossOriginIsolationHeaders: true,
 			executable: 'index',
 			experimentalVK: false,
-			fileSizes: {
-				'index.pck': 129472,
-				'index.wasm': 1650612
-			},
+			fileSizes: { [`${cdn.site}/index.pck`]: 6143936, [`${cdn.site}/index.wasm`]: 1650612 },
 			focusCanvas: true,
-			gdextensionLibs: []
+			gdextensionLibs: [],
+			serviceWorker: `${cdn.site}/index.service.worker.js`
 		};
+
 		const GODOT_THREADS_ENABLED = true;
 		const engine = new Engine(GODOT_CONFIG);
 
@@ -231,8 +231,9 @@
 		border-radius: 9999px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 	}
-	#status-progress::-webkit-progress-value, #status-progress::-moz-progress-bar {
-		background-color: #422BB3;
+	#status-progress::-webkit-progress-value,
+	#status-progress::-moz-progress-bar {
+		background-color: #422bb3;
 		border-radius: 9999px;
 		box-shadow: 0 14px 12px rgba(0, 0, 0, 0.05);
 	}

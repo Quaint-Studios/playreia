@@ -43,3 +43,7 @@ export const link = {
 		rel: 'noopener noreferrer'
 	},
 };
+
+export const cdn = {
+	site: 'https://site.cdn.playreia.com',
+}
