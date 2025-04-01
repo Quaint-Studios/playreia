@@ -6,6 +6,7 @@
 <svelte:head>
 	<link id="-gd-engine-icon" rel="icon" type="image/png" href="{cdn.site}/index.icon.png" />
 	<link rel="apple-touch-icon" href="{cdn.site}/index.apple-touch-icon.png" />
+	<link rel="manifest" href="{cdn.site}/index.manifest.json" />
 	<script src="{cdn.site}/index.js"></script>
 </svelte:head>
 
@@ -32,10 +33,13 @@
 			ensureCrossOriginIsolationHeaders: true,
 			executable: 'index',
 			experimentalVK: false,
-			fileSizes: { [`${cdn.site}/index.pck`]: 6143936, [`${cdn.site}/index.wasm`]: 1650612 },
+			fileSizes: {
+				'https://site.cdn.playreia.com/index.pck': 6143936,
+				'https://site.cdn.playreia.com/index.wasm': 1650612
+			},
 			focusCanvas: true,
 			gdextensionLibs: [],
-			serviceWorker: `${cdn.site}/index.service.worker.js`
+			serviceWorker: 'https://site.cdn.playreia.com/index.service.worker.js'
 		};
 
 		const GODOT_THREADS_ENABLED = true;
