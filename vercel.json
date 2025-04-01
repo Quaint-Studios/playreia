@@ -25,82 +25,82 @@
 	"redirects": [
 		{
 			"source": "/index.512x512.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPDvgYgAkAYnP9jiIHWML8s4ftJpCQzFOvr7S0",
+			"destination": "https://site.cdn.playreia.com/index.512x512.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.icon.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPbmq9zxlMqh7tEvCoTmJWpVSnuriU1Y8eH2NZ",
+			"destination": "https://site.cdn.playreia.com/index.icon.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.audio.worklet.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.worklet.js",
+			"destination": "https://site.cdn.playreia.com/index.audio.worklet.js",
 			"permanent": false
 		},
 		{
 			"source": "/index.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySP90vlb9osn8CyYQSXNwHo4B2RMueigqxFvkA7",
+			"destination": "https://site.cdn.playreia.com/index.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.audio.position.worklet.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.audio.position.worklet.js",
+			"destination": "https://site.cdn.playreia.com/index.audio.position.worklet.js",
 			"permanent": false
 		},
 		{
 			"source": "/index.manifest.json",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPhF3u6ypQp0dDxfrkbwVUGPaOSCc6JEXZM4Wu",
+			"destination": "https://site.cdn.playreia.com/index.manifest.json",
 			"permanent": false
 		},
 		{
 			"source": "/index.pck",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPDCUP4cDkAYnP9jiIHWML8s4ftJpCQzFOvr7S",
+			"destination": "https://site.cdn.playreia.com/index.pck",
 			"permanent": false
 		},
 		{
 			"source": "/index.apple-touch-icon.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPbCbGX2lMqh7tEvCoTmJWpVSnuriU1Y8eH2NZ",
+			"destination": "https://site.cdn.playreia.com/index.apple-touch-icon.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.180x180.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPVqD5gwlLjfMzPOivtXuKYLmr5nGF147W3RgD",
+			"destination": "https://site.cdn.playreia.com/index.180x180.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.side.wasm",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPMyzGqoZnzNcqyCnZgGrBUOtv51ix79pVP8wa",
+			"destination": "https://site.cdn.playreia.com/index.side.wasm",
 			"permanent": false
 		},
 		{
 			"source": "/index.offline.html",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.offline.html",
+			"destination": "https://site.cdn.playreia.com/index.offline.html",
 			"permanent": false
 		},
 		{
 			"source": "/index.html",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.html",
+			"destination": "https://site.cdn.playreia.com/index.html",
 			"permanent": false
 		},
 		{
 			"source": "/index.144x144.png",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPBFnb7BvFntkfyQb3Ursi4VjexoHMguIAPDN7",
+			"destination": "https://site.cdn.playreia.com/index.144x144.png",
 			"permanent": false
 		},
 		{
 			"source": "/index.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.js",
+			"destination": "https://site.cdn.playreia.com/index.js",
 			"permanent": false
 		},
 		{
 			"source": "/index.service.worker.js",
-			"destination": "https://cdn.jsdelivr.net/gh/playreia/reiajs/index.service.worker.js",
+			"destination": "https://site.cdn.playreia.com/index.service.worker.js",
 			"permanent": false
 		},
 		{
 			"source": "/index.wasm",
-			"destination": "https://nq0cnjludn.ufs.sh/f/21j63lqspySPq1lzLqMdSRobDvyIUx6jH1BtNh4iwcePm5ZL",
+			"destination": "https://site.cdn.playreia.com/index.wasm",
 			"permanent": false
 		}
 	]

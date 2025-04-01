@@ -29,18 +29,7 @@ const viteServerConfig = () => ({
 	config: () => ({
 		server: {
 			proxy: uploadthingFiles.reduce((all, file) => {
-				if (file.name.endsWith('.js') || file.name.endsWith('.html')) {
-					return { ...all, [`/${file.name}`]: 'https://cdn.jsdelivr.net/gh/playreia/reiajs/' };
-				} else {
-					return {
-						...all,
-						[`/${file.name}`]: {
-							target: file.url,
-							changeOrigin: true,
-							rewrite: (path: string) => path.replace(`/${file.name}`, '')
-						}
-					};
-				}
+				return { ...all, [`/${file.name}`]: 'https://site.cdn.playreia.com/' };
 			}, {})
 		}
 	})
