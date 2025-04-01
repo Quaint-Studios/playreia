@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Meta from '$components/seo/Meta.svelte';
 	import alinks from '$constants/alinks';
-	import Game from '$lib/pages/game/Game.svelte';
-	import { link } from '$lib/types';
+	import { cdn, link } from '$lib/types';
 </script>
 
 <Meta
@@ -43,13 +42,25 @@
 		> we apply. We're currently working on tweaking the settings to make it work perfectly on all browsers.
 	</p>
 
-	<div class="relative mt-16 aspect-video w-full max-w-5xl bg-black px-4">
-		<Game />
+	<div class="relative mt-16 aspect-video w-full max-w-5xl bg-black">
+		<iframe
+			title="Reia HTML5 Game"
+			src="{cdn.site}/index.html"
+			allow="autoplay; fullscreen; microphone; midi; clipboard-read; clipboard-write"
+			class="w-full h-full relative"
+			id="game-frame"
+		>
+			Your browser does not support the iframe tag.
+		</iframe>
 	</div>
 </div>
 
 <style lang="postcss">
 	@reference '$appcss';
+
+	#game-frame:focus-visible {
+		@apply outline-none;
+	}
 
 	strong {
 		@apply text-r-gold;
