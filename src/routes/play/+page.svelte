@@ -46,7 +46,7 @@
 		<iframe
 			title="Reia HTML5 Game"
 			src="{cdn.site}/index.html"
-			allow="autoplay; fullscreen; microphone; midi; clipboard-read; clipboard-write"
+			allow="cross-origin-isolated; autoplay; fullscreen; microphone; midi; clipboard-read; clipboard-write"
 			class="w-full h-full relative"
 			id="game-frame"
 		>
