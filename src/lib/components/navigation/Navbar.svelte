@@ -87,7 +87,7 @@
 		@apply py-4;
 		@apply transition-[padding__backdrop-filter__border-color] duration-[0.45s];
 		border-color: #ffffff00;
-		backdrop-filter: blur(10px);
+		backdrop-filter: blur(0px);
 	}
 	#navbar:not(.at-top) {
 		@apply py-0;
