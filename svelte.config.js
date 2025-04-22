@@ -12,8 +12,8 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			layout: {
-				home: join(dirname(), './src/lib/layouts/Home.layout.svelte'),
-				legal: join(dirname(), './src/routes/(legal)/legal.svelte')
+				home: './src/lib/layouts/Home.layout.svelte',
+				legal: './src/routes/(legal)/legal.svelte'
 			}
 		})
 	],
