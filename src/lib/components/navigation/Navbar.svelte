@@ -92,7 +92,7 @@
 	#navbar:not(.at-top) {
 		@apply py-0;
 		background-color: #00000020;
-		@apply border-b-[1px] border-r-border-0.5 backdrop-blur-sm;
+		@apply border-r-border-0.5 border-b-[1px] backdrop-blur-sm;
 	}
 
 	.nav-container {
@@ -118,14 +118,14 @@
 		@apply transition-transform active:scale-95 active:opacity-85;
 	}
 	.nav-link .nav-link a {
-		@apply px-5 justify-start;
+		@apply justify-start px-5;
 	}
 
 	.nav-link:hover .nav-link-child {
 		@apply flex scale-100;
 	}
 	.nav-link-child {
-		@apply absolute left-2 top-full flex-col;
+		@apply absolute top-full left-2 flex-col;
 		@apply rounded-lg2 border-[1px] !border-(--borderHalf);
 		@apply origin-top scale-0 transition-transform;
 	}
