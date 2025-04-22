@@ -2,7 +2,7 @@ import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 // import cspDirectives from './csp-directives.mjs';
-import { join } from 'path';
+import { join, dirname } from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,8 +12,8 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			layout: {
-				home: join(__dirname, './src/lib/layouts/Home.layout.svelte'),
-				legal: join(__dirname, './src/routes/(legal)/legal.svelte')
+				home: join(dirname(), './src/lib/layouts/Home.layout.svelte'),
+				legal: join(dirname(), './src/routes/(legal)/legal.svelte')
 			}
 		})
 	],
