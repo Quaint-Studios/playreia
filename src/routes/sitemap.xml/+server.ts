@@ -114,7 +114,7 @@ export async function GET() {
 		  page: '/game',
 		  freq: freq.monthly,
 		  priority: 0.9,
-		  lastmod: '2025-01-10'
+		  lastmod: '2025-03-31'
 		},
 		{
 		  page: '/game-design-document',

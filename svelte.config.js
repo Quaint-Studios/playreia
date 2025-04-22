@@ -2,6 +2,7 @@ import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 // import cspDirectives from './csp-directives.mjs';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,8 +12,8 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			layout: {
-				home: './src/lib/layouts/Home.layout.svelte',
-				legal: './src/routes/(legal)/legal.svelte'
+				home: path.join(process.cwd(), './src/lib/layouts/Home.layout.svelte'),
+				legal: path.join(process.cwd(), './src/routes/(legal)/legal.svelte')
 			}
 		})
 	],
@@ -35,7 +36,8 @@ const config = {
 			$stores: './src/lib/stores',
 			$utils: './src/lib/utils',
 			$images: './src/lib/images',
-			'$blog-categories': './src/routes/(blog-categories)'
+			'$blog-categories': './src/routes/(blog-categories)',
+			$routes: './src/routes',
 		}
 		// csp: {
 		// 	mode: 'hash',

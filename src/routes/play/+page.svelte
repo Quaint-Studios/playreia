@@ -1,13 +1,12 @@
 <script lang="ts">
-	import { link } from '$lib/types';
-	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import alinks from '$constants/alinks';
+	import { cdn, link } from '$lib/types';
 </script>
 
 <Meta
 	titlePrefix=""
-	title="Reia - Play an action adventure RPG game"
+	title="Reia - Play Reia in your Browser"
 	titleSuffix=""
 	keywords={'reia, game, action, adventure, rpg, role-playing, role-playing game, action-adventure, action-adventure game, action rpg, adventure rpg, action-adventure rpg'}
 	description="Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console."
@@ -17,7 +16,7 @@
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Download or play Reia now",
+				"name": "Download or Play Reia Now",
 				"url": "https://www.playreia.com/game"
 			}
 		</script>
@@ -26,34 +25,43 @@
 
 <div class="game newsletter">
 	<div class="bg"></div>
-	<span>Get notified</span>
-	<h1>Get <strong>Reia Newsletter</strong> for an Adventure</h1>
-	<NewsletterButton alt />
+	<span>v1.1.0-alpha</span>
+	<h1>Play Reia in your Browser</h1>
 	<p>
-		We'd love to include you in the <strong>game development of Reia</strong>. By subscribing to the
-		newsletter, you can keep up to date with all of the major development and tests we do here. This
-		also includes whenever we have special events. Newsletter members are also added to a waitlist
-		to <strong>play the game early</strong>. We'll also send you <strong>weekly updates</strong> on the
-		game's progress and notify you when we do tests and releases.
+		Congrats! You've found the secret web version of Reia. This is a test version of the game that
+		we're using to develop the game in a browser. This is a <strong>work in progress</strong> and is
+		not fully functional yet. Feel free to share any feedback or suggestions you have. If you have
+		any, please <a href="/contact">contact us</a>
+		or chat with us on <a href={alinks.discord}>Discord</a>.
+	</p>
+	<p>
+		If it fails to load, chances are it's an uncommon issue where a file or image gets blocked by
+		the browser because of the <a
+			href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crossOriginIsolated#cross-origin_isolating_a_document"
+			{...link.externalnoref}>strict security settings</a
+		> we apply. We're currently working on tweaking the settings to make it work perfectly on all browsers.
 	</p>
 
-	<h2>Play right now</h2>
-	<p>
-		You can play the game right now by visiting the <a
-			href={alinks.github + '/releases'}
-			{...link.external}>releases page on GitHub</a
-		>. We're always looking for feedback and suggestions. If you have any, please feel free to
-		<a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discord} {...link.external}>Discord</a>.
-	</p>
+	<div class="relative mt-16 aspect-video w-full max-w-5xl bg-black">
+		<iframe
+			title="Reia HTML5 Game"
+			src="{cdn.site}/index.html"
+			allow="cross-origin-isolated; autoplay; fullscreen; microphone; midi; clipboard-read; clipboard-write"
+			class="w-full h-full relative"
+			id="game-frame"
+		>
+			Your browser does not support the iframe tag.
+		</iframe>
+	</div>
 </div>
 
 <style lang="postcss">
 	@reference '$appcss';
 
-	h2 {
-		@apply mt-12;
+	#game-frame:focus-visible {
+		@apply outline-none;
 	}
+
 	strong {
 		@apply text-r-gold;
 	}

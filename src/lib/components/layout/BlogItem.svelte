@@ -52,7 +52,7 @@
 				<address>
 					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
 				</address>
-				<time datetime={date} class="text-(--borderSilver)">{getDate()}</time>
+				<time datetime={date} class="time">{getDate()}</time>
 			</div>
 		{:else}
 			<div class="categories">
@@ -69,7 +69,7 @@
 				<address>
 					<a rel="author" target="_blank" href="/users/{author.id}">{author.name}</a>
 				</address>
-				<time datetime={date} class="text-(--borderSilver)">{getDate()}</time>
+				<time datetime={date} class="time">{getDate()}</time>
 			</div>
 		{/if}
 	</div>
@@ -78,8 +78,12 @@
 <style lang="postcss">
 	@reference '$appcss';
 
+	.time {
+		@apply text-r-border-silver;
+	}
+
 	article.large {
-		@apply w-dvw max-w-full rounded-lg2 border-[1px] border-(--borderQuarter) bg-blue-950/25 p-4;
+		@apply w-dvw max-w-full rounded-lg2 border-1 border-r-border-0.25 bg-blue-950/25 p-4;
 		background: hsla(233, 54%, 18%, 1);
 		background: linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
 		background: -moz-linear-gradient(90deg, hsla(233, 54%, 18%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
@@ -100,7 +104,7 @@
 		@apply scale-[0.98];
 	}
 	.large .image .img {
-		@apply aspect-16/9 md:aspect-[16/5];
+		@apply aspect-16/9 md:aspect-16/5;
 	}
 	.image .img {
 		@apply aspect-16/9 h-full w-full object-cover transition-transform duration-300 hover:scale-[1.05];
@@ -127,7 +131,7 @@
 		@apply tracking-wide text-white no-underline;
 	}
 	h2 a:hover {
-		@apply text-(--blue);
+		@apply text-r-blue-default;
 	}
 	.large h2 {
 		@apply mt-4;
@@ -139,7 +143,7 @@
 	}
 
 	.meta {
-		@apply mb-4 mt-4 flex justify-start gap-4 text-(--borderSilver);
+		@apply mb-4 mt-4 flex justify-start gap-4 text-r-border-silver;
 	}
 	.large .meta {
 		@apply my-0 text-sm md:text-base;

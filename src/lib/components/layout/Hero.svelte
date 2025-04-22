@@ -175,9 +175,9 @@
 		.gradient {
 			background-image: linear-gradient(
 				to right,
-				rgba(0, 0, 0, 0.4),
-				rgba(0, 0, 0, 0) 50%,
-				rgba(0, 0, 0, 0)
+				rgba(0, 0, 0, 0.4) 0%,
+				rgba(0, 0, 0, 0) 51%,
+				rgba(0, 0, 0, 0) 100%
 			) !important;
 		}
 	}
