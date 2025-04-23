@@ -33,6 +33,14 @@ declare global {
 
 	type Platforms = 'Desktop' | 'Console' | 'Mobile';
 
+	interface BlogCategoryProps {
+		title: string;
+		date: string;
+		updated?: string;
+		author: Author;
+		category: BlogCategory;
+	}
+
 	interface BlogData {
 		href: string;
 		title: string;

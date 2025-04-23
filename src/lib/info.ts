@@ -29,7 +29,7 @@ export const blogs: BlogData[] = [
 		description:
 			"Reia is coming along nicely! I'm excited to see where this game goes. I hope you are too! This update is pretty big. It features a changelog, new main menu, vfx, new water shaders, more inventory updates, Discord SDK integration, and more.",
 		image: Wumpus,
-		date: '2024-1-1',
+		date: '2024-01-01',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 5
@@ -40,7 +40,7 @@ export const blogs: BlogData[] = [
 		description:
 			"It's almost time. We're getting closer. This update features health bars, a minimap, icons to identify entities on the minimap, inventory updates, and some fixes.",
 		image: Wumpus,
-		date: '2023-10-2',
+		date: '2023-10-02',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 4
@@ -51,7 +51,7 @@ export const blogs: BlogData[] = [
 		description:
 			"I don't believe anyone truly likes rigging and the time it consumes. Finally animated the character model. The character model has been changed.",
 		image: Wumpus,
-		date: '2023-10-1',
+		date: '2023-10-01',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 3
@@ -62,7 +62,7 @@ export const blogs: BlogData[] = [
 		description:
 			"Okay, we have a stick to fight with now. But... we can't use it? What the!?! This update includes music, improved lighting, a Sound Manager, updates to the UI, and many more. Check it out!",
 		image: Wumpus,
-		date: '2023-9-25',
+		date: '2023-09-25',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 4
@@ -73,7 +73,7 @@ export const blogs: BlogData[] = [
 		description:
 			"We're slowly getting there. Only if we had something to fight with other than our fists. The lighting is improved. But... it could be better! We now have... COMBAT! You can click things. And more.",
 		image: Wumpus,
-		date: '2023-9-22',
+		date: '2023-09-22',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 3
@@ -84,7 +84,7 @@ export const blogs: BlogData[] = [
 		description:
 			"It works! We've successfully migrated from Unity to Godot. A basic level was created to test some features of the project. All Unity-related assets have been removed.",
 		image: Wumpus,
-		date: '2023-9-21',
+		date: '2023-09-21',
 		author: { name: 'Kristopher Ali', id: '100000000' },
 		category: BlogCategory.PatchNotes,
 		readTime: 4
