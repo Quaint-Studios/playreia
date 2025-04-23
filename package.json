@@ -53,7 +53,7 @@
 		"@fontsource-variable/urbanist": "^5.2.5",
 		"@fontsource/metropolis": "^5.2.5",
 		"@fontsource/poppins": "^5.2.5",
-		"@inlang/paraglide-sveltekit": "^0.16.1",
+		"@inlang/paraglide-js": "^2.0.12",
 		"resend": "^4.3.0"
 	}
 }
