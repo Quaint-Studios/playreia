@@ -1,0 +1,334 @@
+{
+	"/": [
+		{
+			"values": [],
+			"changefreq": "daily",
+			"priority": "1.0",
+			"lastmod": "2025-04-23"
+		}
+	],
+	"/dev-blog": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/events": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/game-update": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/guide": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/news": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/patch-notes": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.8"
+		}
+	],
+	"/about": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.8",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/blog": [
+		{
+			"values": [],
+			"changefreq": "daily",
+			"priority": "0.7"
+		}
+	],
+	"/contact": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.7",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/contribute": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.7",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/contribute/backers": [
+		{
+			"values": [],
+			"changefreq": "weekly",
+			"priority": "0.7",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/download": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.9",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/faq": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.3"
+		}
+	],
+	"/foldingathome": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.6"
+		}
+	],
+	"/game": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.9",
+			"lastmod": "2025-03-31"
+		}
+	],
+	"/game-design-document": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.8"
+		}
+	],
+	"/jobs": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7",
+			"lastmod": "2025-01-10"
+		}
+	],
+	"/learn": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.8"
+		}
+	],
+	"/learn/characters": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/characters/bosses": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/characters/monsters": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/characters/npcs": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/characters/spirits": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/gameplay": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/guides": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/consumables": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/equipment": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/materials": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/quest-items": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/soulstones": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/items/weapons": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/locations": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/locations/cities": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/locations/dungeons": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/locations/infinite-city": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/lore": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/lore/ethereals": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/learn/skills": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.7"
+		}
+	],
+	"/login": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.6"
+		}
+	],
+	"/newsletter": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.7",
+			"lastmod": "2025-03-24"
+		}
+	],
+	"/press-kit": [
+		{
+			"values": [],
+			"changefreq": "monthly",
+			"priority": "0.8"
+		}
+	],
+	"/privacy": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.3",
+			"lastmod": "2025-03-14"
+		}
+	],
+	"/register": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.7"
+		}
+	],
+	"/terms": [
+		{
+			"values": [],
+			"changefreq": "yearly",
+			"priority": "0.3"
+		}
+	]
+}

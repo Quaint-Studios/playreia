@@ -1,12 +1,12 @@
 import * as sitemap from 'super-sitemap';
-import type { ParamValues } from 'super-sitemap';
+import type { ParamValues, ParamValue } from 'super-sitemap';
 
 import { website } from '$lib/info';
-import sitemapData from './sitemap-data.json' assert { type: 'json' };
+import sitemapData from '$lib/sitemap-data.json' assert { type: 'json' };
 
 import type { RequestHandler } from '@sveltejs/kit';
 import { BlogCategory } from '$lib/types';
-import { assert } from 'vitest';
+import { localizeHref } from '$lib/paraglide/runtime';
 
 export const prerender = true;
 
@@ -42,6 +42,7 @@ export const GET: RequestHandler = async () => {
 				.split('-')
 				.map((part) => part.padStart(2, '0'))
 				.join('-')
+				.replace(/T.*/, '')
 		};
 
 		const categorySlug = getCategory(category);
@@ -56,7 +57,7 @@ export const GET: RequestHandler = async () => {
 	const paramValues = Object.entries(posts).reduce((acc, [category, postList]) => {
 		acc[`/${category}/[slug]`] = postList.map((post) => ({
 			values: [post.slug],
-			lastmod: `${post.date}T00:00:00Z`,
+			lastmod: post.date,
 			changefreq: 'weekly',
 			priority: 0.5
 		}));
@@ -71,14 +72,41 @@ export const GET: RequestHandler = async () => {
 		}
 	}
 
-	const data: ParamValues = sitemapData;
+	const data: Record<string, ParamValue[]> = sitemapData as Record<string, ParamValue[]>;
+	const defaultLastmod = "2025-04-23";
+	Object.keys(data).forEach((key) => {
+		if (!data[key][0].lastmod) {
+			data[key][0].lastmod = defaultLastmod;
+		}
+	});
 
 	return await sitemap.response({
 		origin: website,
 		paramValues: {
 			...paramValues,
-			...data,
+			...data
 		},
-		excludeRoutePatterns: ['^/users/\\[id\\]', '^/demo(?:/.*)?', '^/logout']
+		excludeRoutePatterns: ['^.*/users/\\[id\\]', '^/demo(?:/.*)?', '^/logout', '^/play', '^/profile(?:/.*)?'],
+		defaultChangefreq: 'monthly',
+		defaultPriority: 0.5,
+		sort: 'alpha',
+		lang: {
+			default: 'en',
+			alternates: ['de', 'es', 'fr', 'ig']
+		},
+		processPaths: (paths) => {
+			return paths.map(({ path, ...rest }) => {
+				return {
+					...rest,
+					path: localizeHref(path, { locale: 'en' }),
+					alternates: [
+						{ lang: 'de', path: localizeHref(path, { locale: 'de' }) },
+						{ lang: 'es', path: localizeHref(path, { locale: 'es' }) },
+						{ lang: 'fr', path: localizeHref(path, { locale: 'fr' }) },
+						{ lang: 'ig', path: localizeHref(path, { locale: 'ig' }) }
+					]
+				}
+			});
+		}
 	});
 };
