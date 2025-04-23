@@ -1,242 +1,196 @@
-[
-	{
-		"page": "/",
+{
+	"/": {
 		"changefreq": "daily",
 		"priority": 1.0,
 		"lastmod": "2025-04-23"
 	},
-	{
-		"page": "/dev-blog",
+	"/dev-blog": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/events",
+	"/events": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/game-update",
+	"/game-update": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/guide",
+	"/guide": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/news",
+	"/news": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/patch-notes",
+	"/patch-notes": {
 		"changefreq": "weekly",
 		"priority": 0.8
 	},
-	{
-		"page": "/about",
+	"/about": {
 		"changefreq": "yearly",
 		"priority": 0.8,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/blog",
+	"/blog": {
 		"changefreq": "daily",
 		"priority": 0.7
 	},
-	{
-		"page": "/contact",
+	"/contact": {
 		"changefreq": "yearly",
 		"priority": 0.7,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/contribute",
+	"/contribute": {
 		"changefreq": "yearly",
 		"priority": 0.7,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/contribute/backers",
+	"/contribute/backers": {
 		"changefreq": "weekly",
 		"priority": 0.7,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/download",
+	"/download": {
 		"changefreq": "monthly",
 		"priority": 0.9,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/faq",
+	"/faq": {
 		"changefreq": "yearly",
 		"priority": 0.3
 	},
-	{
-		"page": "/foldingathome",
+	"/foldingathome": {
 		"changefreq": "yearly",
 		"priority": 0.6
 	},
-	{
-		"page": "/game",
+	"/game": {
 		"changefreq": "monthly",
 		"priority": 0.9,
 		"lastmod": "2025-03-31"
 	},
-	{
-		"page": "/game-design-document",
+	"/game-design-document": {
 		"changefreq": "yearly",
 		"priority": 0.8
 	},
-	{
-		"page": "/jobs",
+	"/jobs": {
 		"changefreq": "monthly",
 		"priority": 0.7,
 		"lastmod": "2025-01-10"
 	},
-	{
-		"page": "/learn",
+	"/learn": {
 		"changefreq": "yearly",
 		"priority": 0.8
 	},
-	{
-		"page": "/learn/characters",
+	"/learn/characters": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/characters/bosses",
+	"/learn/characters/bosses": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/characters/monsters",
+	"/learn/characters/monsters": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/characters/npcs",
+	"/learn/characters/npcs": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/characters/spirits",
+	"/learn/characters/spirits": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/gameplay",
+	"/learn/gameplay": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/guides",
+	"/learn/guides": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items",
+	"/learn/items": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/consumables",
+	"/learn/items/consumables": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/equipment",
+	"/learn/items/equipment": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/materials",
+	"/learn/items/materials": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/quest-items",
+	"/learn/items/quest-items": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/soulstones",
+	"/learn/items/soulstones": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/items/weapons",
+	"/learn/items/weapons": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/locations",
+	"/learn/locations": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/locations/cities",
+	"/learn/locations/cities": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/locations/dungeons",
+	"/learn/locations/dungeons": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/locations/infinite-city",
+	"/learn/locations/infinite-city": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/lore",
+	"/learn/lore": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/lore/ethereals",
+	"/learn/lore/ethereals": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/learn/skills",
+	"/learn/skills": {
 		"changefreq": "monthly",
 		"priority": 0.7
 	},
-	{
-		"page": "/login",
+	"/login": {
 		"changefreq": "yearly",
 		"priority": 0.6
 	},
-	{
-		"page": "/newsletter",
+	"/newsletter": {
 		"changefreq": "yearly",
 		"priority": 0.7,
 		"lastmod": "2025-03-24"
 	},
-	{
-		"page": "/press-kit",
+	"/press-kit": {
 		"changefreq": "monthly",
 		"priority": 0.8
 	},
-	{
-		"page": "/privacy",
+	"/privacy": {
 		"changefreq": "yearly",
 		"priority": 0.3,
 		"lastmod": "2025-03-14"
 	},
-	{
-		"page": "/register",
+	"/register": {
 		"changefreq": "yearly",
 		"priority": 0.7
 	},
-	{
-		"page": "/terms",
+	"/terms": {
 		"changefreq": "yearly",
 		"priority": 0.3
 	}
-]
+}
