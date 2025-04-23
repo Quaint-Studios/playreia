@@ -1,0 +1,242 @@
+[
+	{
+		"page": "/",
+		"changefreq": "daily",
+		"priority": 1.0,
+		"lastmod": "2025-04-23"
+	},
+	{
+		"page": "/dev-blog",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/events",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/game-update",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/guide",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/news",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/patch-notes",
+		"changefreq": "weekly",
+		"priority": 0.8
+	},
+	{
+		"page": "/about",
+		"changefreq": "yearly",
+		"priority": 0.8,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/blog",
+		"changefreq": "daily",
+		"priority": 0.7
+	},
+	{
+		"page": "/contact",
+		"changefreq": "yearly",
+		"priority": 0.7,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/contribute",
+		"changefreq": "yearly",
+		"priority": 0.7,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/contribute/backers",
+		"changefreq": "weekly",
+		"priority": 0.7,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/download",
+		"changefreq": "monthly",
+		"priority": 0.9,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/faq",
+		"changefreq": "yearly",
+		"priority": 0.3
+	},
+	{
+		"page": "/foldingathome",
+		"changefreq": "yearly",
+		"priority": 0.6
+	},
+	{
+		"page": "/game",
+		"changefreq": "monthly",
+		"priority": 0.9,
+		"lastmod": "2025-03-31"
+	},
+	{
+		"page": "/game-design-document",
+		"changefreq": "yearly",
+		"priority": 0.8
+	},
+	{
+		"page": "/jobs",
+		"changefreq": "monthly",
+		"priority": 0.7,
+		"lastmod": "2025-01-10"
+	},
+	{
+		"page": "/learn",
+		"changefreq": "yearly",
+		"priority": 0.8
+	},
+	{
+		"page": "/learn/characters",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/characters/bosses",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/characters/monsters",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/characters/npcs",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/characters/spirits",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/gameplay",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/guides",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/consumables",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/equipment",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/materials",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/quest-items",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/soulstones",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/items/weapons",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/locations",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/locations/cities",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/locations/dungeons",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/locations/infinite-city",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/lore",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/lore/ethereals",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/learn/skills",
+		"changefreq": "monthly",
+		"priority": 0.7
+	},
+	{
+		"page": "/login",
+		"changefreq": "yearly",
+		"priority": 0.6
+	},
+	{
+		"page": "/newsletter",
+		"changefreq": "yearly",
+		"priority": 0.7,
+		"lastmod": "2025-03-24"
+	},
+	{
+		"page": "/press-kit",
+		"changefreq": "monthly",
+		"priority": 0.8
+	},
+	{
+		"page": "/privacy",
+		"changefreq": "yearly",
+		"priority": 0.3,
+		"lastmod": "2025-03-14"
+	},
+	{
+		"page": "/register",
+		"changefreq": "yearly",
+		"priority": 0.7
+	},
+	{
+		"page": "/terms",
+		"changefreq": "yearly",
+		"priority": 0.3
+	}
+]
