@@ -30,7 +30,7 @@
 				<span>{name}</span>
 				{#if member}
 					<span>
-						[<i>{note}</i><a href={member.link} target="_blank" rel="noopener">{member.name}</a>]
+						| <i>{note}</i><a href={member.link} target="_blank" rel="noopener">{member.name}</a>
 					</span>
 				{/if}
 			</div>
@@ -42,7 +42,7 @@
 	@reference '$appcss';
 
 	h2 {
-		@apply mb-4 mt-12 px-0;
+		@apply mt-12 mb-4 px-0;
 	}
 
 	li {
@@ -51,5 +51,9 @@
 
 	li div {
 		@apply inline-flex items-center gap-2;
+	}
+
+	input:checked {
+		@apply bg-r-gold bg-none opacity-100;
 	}
 </style>

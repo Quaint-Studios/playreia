@@ -75,7 +75,7 @@
 				<UserMenu />
 			</div>
 			<div>
-			<a href="https://discord.playreia.com" target="_blank" rel="noopener" class="absolute h-full top-0 flex items-center right-20 lg:right-56">
+			<a href="https://discord.playreia.com" target="_blank" rel="noopener" class="discord-icon" aria-label="Discord">
 				<Icon icon="flowbite:discord-solid" class="text-r-light hover:text-r-gold" width="32" height="32" />
 			</a>
 			<Hamburger {listData} />
@@ -86,6 +86,10 @@
 
 <style lang="postcss">
 	@reference '$appcss';
+
+	.discord-icon {
+		@apply absolute h-full top-0 flex items-center right-20 lg:right-56;
+	}
 
 	#navbar {
 		@apply fixed z-50 w-full;

@@ -74,8 +74,8 @@
 			{ name: 'UI Design', value: false },
 			{
 				name: 'Game Design',
-				value: false,
-				note: 'partially filled by',
+				value: true,
+				note: 'partially filled by ',
 				member: { name: 'Kris (@Makosai)', link: 'https://github.com/Makosai' }
 			},
 			{ name: 'Web Design', value: false },
@@ -144,6 +144,7 @@
 
 			<Tabs
 				value={group}
+				onValueChange={(e) => (group = e.value)}
 				listJustify="justify-center"
 				listBase="flex flex-wrap mt-12"
 				listClasses="border-none"
@@ -185,9 +186,9 @@
 											<span>{name}</span>
 											{#if member}
 												<span>
-													[<i>{note}</i><a href={member.link} target="_blank" rel="noopener"
+													| <i>{note}</i><a href={member.link} target="_blank" rel="noopener"
 														>{member.name}</a
-													>]
+													>
 												</span>
 											{/if}
 										</div>
@@ -264,13 +265,13 @@
 	@reference '$appcss';
 
 	:global(.selected-job) {
-		@apply border-none bg-r-midnight-600 text-white;
+		@apply bg-r-midnight-600 border-none text-white;
 	}
 	h1 {
 		@apply mb-4 w-full text-center;
 	}
 	h2 {
-		@apply mb-4 mt-12 px-0;
+		@apply mt-12 mb-4 px-0;
 	}
 	h3 {
 		@apply mt-10;
@@ -290,5 +291,9 @@
 
 	li div {
 		@apply inline-flex items-center gap-2;
+	}
+
+	input:checked {
+		@apply bg-r-gold bg-none opacity-100;
 	}
 </style>
