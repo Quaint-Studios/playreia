@@ -11,7 +11,7 @@
 
 <Meta
 	titlePrefix=""
-	title="Reia Discord, Newsletter, BlueSky - Magical Adventures Awaits"
+	title="Join Reia Discord, Newsletter, BlueSky - Magical Adventures Awaits"
 	titleSuffix=""
 	keywords={'reia, newsletter, discord, bluesky, social media, game, development, tests, family, waitlist, play, early, early access, early-access, updates, weekly, progress, notify, tests, releases'}
 	description="Join Reia's newsletter, discord, and follow on on BlueSky to be a part of the community. Get notified of all the major development and tests we do here."
