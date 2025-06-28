@@ -4,7 +4,7 @@
 	import Section from '$components/layout/Section.svelte';
 	import Meta from '$components/seo/Meta.svelte';
 	import alinks from '$constants/alinks';
-	import { contactEmail } from '$lib/info';
+	import { CONTACT_EMAIL } from '$lib/info';
 </script>
 
 <Meta
@@ -55,7 +55,7 @@
 
 			<h2>Email</h2>
 			<p>
-				You can email us at <a href="mailto:{contactEmail}">{contactEmail}</a>. We'll get back to
+				You can email us at <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>. We'll get back to
 				you soon!
 			</p>
 

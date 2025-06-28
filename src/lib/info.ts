@@ -1,11 +1,23 @@
-export const siteName = 'Reia';
-export const website = 'https://www.playreia.com';
+import type { Locale } from './paraglide/runtime';
 
 import alinks from '$constants/alinks';
 import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 import { BlogCategory } from './types';
 
-export const contactEmail = 'contact@playreia.com';
+export const SITE_NAME = 'Reia';
+export const COMPANY_NAME = 'Quaint Studios LLC';
+export const CANONICAL_ORIGIN = 'https://www.playreia.com';
+export const CONTACT_EMAIL = 'contact@playreia.com';
+export const META_LOGO = '/reia-meta.png';
+
+export const LOCALES: { [l in Locale]: string } = Object.freeze({
+	en: 'English',
+	de: 'German',
+	es: 'Spanish',
+	zh: 'Chinese',
+	fr: 'French',
+	ig: 'Igbo'
+});
 
 export const socials = [
 	{ id: 'discord', icon: 'lineicons:discord', href: alinks.discord },
@@ -19,7 +31,7 @@ export const socials = [
 	{ id: 'linkedin', icon: 'lineicons:linkedin', href: alinks.linkedIn },
 	{ id: 'pinterest', icon: 'lineicons:pinterest', href: alinks.pinterest },
 	{ id: 'github', icon: 'lineicons:github', href: alinks.github },
-    { id: 'opencollective', icon: 'simple-icons:opencollective', href: alinks.open_collective }
+	{ id: 'opencollective', icon: 'simple-icons:opencollective', href: alinks.open_collective }
 ];
 
 export const blogs: BlogData[] = [
@@ -89,4 +101,117 @@ export const blogs: BlogData[] = [
 		category: BlogCategory.PatchNotes,
 		readTime: 4
 	}
+];
+
+export const KEYWORDS = [
+	'Play',
+	'Play the way you want',
+	'Story',
+	'Story-Focused Game',
+	'Story Game',
+	'Combat',
+	'Combat-Focused',
+	'Reia',
+	'riea',
+	'reia 2023',
+	'reia game',
+	'rhea game',
+	'rhea',
+	'reia video',
+	'reia godot',
+	'reia godot 4',
+	'reia godot4',
+	'reia Android',
+	'reia Apple',
+	'reia iOS',
+	'reia iPhone',
+	'reia mobile',
+	'reia PC',
+	'reia Desktop',
+	'reia Console',
+	'reia Playstation',
+	'reia PS4',
+	'reia PS5',
+	'reia Microsoft',
+	'reia XBOX',
+	'reia register',
+	'reia pre-register',
+	'reia beautiful',
+	'Reia indie',
+	'reia good',
+	'reia graphics',
+	'reia launch',
+	'play reia',
+	'playreia',
+	'reia test',
+	'reia release',
+	'reia registration',
+	'reia review',
+	'reia video',
+	'game',
+	'action',
+	'adventure',
+	'3d',
+	'open world',
+	'dungeons',
+	'story',
+	'magic',
+	'multiplayer',
+	'multi player',
+	'singleplayer',
+	'single player',
+	'online',
+	'offline',
+	'video-game',
+	'videogame',
+	'video game',
+	'indie',
+	'MMO',
+	'MMORPG',
+	'oRPG',
+	'godot',
+	'godot4',
+	'indie',
+	'windows',
+	'windows 10',
+	'mac',
+	'macos',
+	'macosx',
+	'linux',
+	'PC',
+	'Desktop',
+	'PS4',
+	'PS5',
+	'XBOX',
+	'Switch',
+	'Nintendo Switch',
+	'best mobile game',
+	'best pc game',
+	'MMO PlayStation',
+	'MMORPG PS4',
+	'Action RPG',
+	'MMO game',
+	'multiple platforms',
+	'multiplayer game',
+	'multiplayer mobile game',
+	'action role-playing game',
+	'indie game',
+	'indie company',
+	'small indie company',
+	'listen to feedback',
+	'community',
+	'open-source game',
+	'code',
+	'github',
+	'github game',
+	'character creator',
+	'open world exploration',
+	'action adventure',
+	'character creation',
+	'character creator',
+	'character customization',
+	'skill tree',
+	'passive',
+	'income',
+	'economy'
 ];

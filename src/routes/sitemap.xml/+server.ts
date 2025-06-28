@@ -1,7 +1,7 @@
 import * as sitemap from 'super-sitemap';
 import type { ParamValues, ParamValue } from 'super-sitemap';
 
-import { website } from '$lib/info';
+import { CANONICAL_ORIGIN } from '$lib/info';
 import sitemapData from '$lib/sitemap-data.json' assert { type: 'json' };
 
 import type { RequestHandler } from '@sveltejs/kit';
@@ -34,7 +34,8 @@ export const GET: RequestHandler = async () => {
 
 	const allBlogCategories = import.meta.glob(`$blog-categories/**/*.svx`, { eager: true });
 	Object.entries(allBlogCategories).forEach(([slug, post]: [string, unknown]) => {
-		const { updated, date, category }: BlogCategoryProps = (post as Record<string, unknown>).metadata as BlogCategoryProps;
+		const { updated, date, category }: BlogCategoryProps = (post as Record<string, unknown>)
+			.metadata as BlogCategoryProps;
 
 		const postData = {
 			slug: slug.slice(slug.lastIndexOf('/') + 1, slug.lastIndexOf('.svx')),
@@ -73,7 +74,7 @@ export const GET: RequestHandler = async () => {
 	}
 
 	const data: Record<string, ParamValue[]> = sitemapData as Record<string, ParamValue[]>;
-	const defaultLastmod = "2025-04-23";
+	const defaultLastmod = '2025-06-28';
 	Object.keys(data).forEach((key) => {
 		if (!data[key][0].lastmod) {
 			data[key][0].lastmod = defaultLastmod;
@@ -81,21 +82,41 @@ export const GET: RequestHandler = async () => {
 	});
 
 	return await sitemap.response({
-		origin: website,
+		origin: CANONICAL_ORIGIN,
 		paramValues: {
 			...paramValues,
 			...data
 		},
-		excludeRoutePatterns: ['^.*/users/\\[id\\]', '^/demo(?:/.*)?', '^/logout', '^/play', '^/profile(?:/.*)?'],
+		excludeRoutePatterns: [
+			'^.*/users/\\[id\\]',
+			'^/demo(?:/.*)?',
+			'^/logout',
+			'^/play',
+			'^/profile(?:/.*)?'
+		],
 		defaultChangefreq: 'monthly',
 		defaultPriority: 0.5,
 		sort: 'alpha',
 		lang: {
 			default: 'en',
-			alternates: ['de', 'es', 'fr', 'ig']
+			alternates: ['de', 'es', 'fr', 'ig', 'zh']
 		},
 		processPaths: (paths) => {
 			return paths.map(({ path, ...rest }) => {
+				if (path === '/') {
+					return {
+						...rest,
+						path: '/',
+						alternates: [
+							{ lang: 'de', path: '/de' },
+							{ lang: 'es', path: '/es' },
+							{ lang: 'fr', path: '/fr' },
+							{ lang: 'ig', path: '/ig' },
+							{ lang: 'zh', path: '/zh' }
+						]
+					};
+				}
+
 				return {
 					...rest,
 					path: localizeHref(path, { locale: 'en' }),
@@ -103,9 +124,10 @@ export const GET: RequestHandler = async () => {
 						{ lang: 'de', path: localizeHref(path, { locale: 'de' }) },
 						{ lang: 'es', path: localizeHref(path, { locale: 'es' }) },
 						{ lang: 'fr', path: localizeHref(path, { locale: 'fr' }) },
-						{ lang: 'ig', path: localizeHref(path, { locale: 'ig' }) }
+						{ lang: 'ig', path: localizeHref(path, { locale: 'ig' }) },
+						{ lang: 'zh', path: localizeHref(path, { locale: 'zh' }) }
 					]
-				}
+				};
 			});
 		}
 	});
