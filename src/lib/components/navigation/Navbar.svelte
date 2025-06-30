@@ -28,11 +28,11 @@
 	let isOpen = $state(false);
 </script>
 
-<div id="navbar" class:at-top={atTop} class:glass={!atTop} role="navigation">
+<div id="navbar" class:at-top={atTop && !isOpen} class:glass={!atTop || isOpen} role="navigation">
 	<NavBrand />
 	<NavItems {isOpen} />
 	<NavActions />
-	<button class="hamburger" aria-label="Toggle Mobile Menu" onclick={() => (isOpen = !isOpen)}>
+	<button class="hamburger" aria-label="Toggle Mobile Menu" onclick={() => (isOpen = !isOpen)} class:selected={isOpen}>
 		<Menu />
 	</button>
 </div>
@@ -168,18 +168,23 @@
 			@apply bg-r-midnight-blue/70 border-r-border-0.25 border-b-1 px-3;
 
 			.hamburger {
-				@apply flex items-center justify-center px-3.5 text-xl;
-				@apply ml-12 h-auto w-auto;
+				@apply flex mdlg:hidden items-center justify-center px-3.5 text-xl;
+				@apply  h-auto w-auto;
 				@apply hover:bg-blue-alt-600 my-0 rounded-none;
 			}
 		}
 
 		.hamburger {
 			@apply text-r-white/90 text-xl no-underline;
-			@apply mr-2 my-auto h-full rounded-2xl p-2.5;
+			@apply ml-2 my-auto h-full rounded-2xl p-2.5;
 			@apply hover:text-black-alt-600 hover:bg-r-white;
 			@apply transition-[color_background-color];
 			@apply hover:bg-blue-alt-600 hover:text-white;
+			@apply mdlg:hidden;
+
+			&.selected {
+				@apply bg-blue-alt-600;
+			}
 		}
 	}
 </style>
