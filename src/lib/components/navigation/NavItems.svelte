@@ -43,11 +43,18 @@
 	}
 
 	.nav-items-container {
-		@apply h-full items-center gap-5 px-8 pt-0.5;
-		@apply mdlg:flex hidden;
+		@apply mdlg:h-full h-0 items-center gap-5 px-8 pt-0.5;
+		@apply flex;
 
-		&.open {
-			@apply flex;
+		@media (width < 928px) {
+			@apply absolute top-full flex-col items-start overflow-hidden;
+			@apply transition-[height_background-color] duration-[0.45s];
+			@apply left-0 max-h-74 w-full bg-transparent;
+
+			&.open {
+				@apply h-dvh  p-4;
+				@apply bg-r-midnight-blue/99 backdrop-blur-lg border-r-border-0.25 border-y-1;
+			}
 		}
 	}
 

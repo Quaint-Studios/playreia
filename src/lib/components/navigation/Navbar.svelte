@@ -165,7 +165,7 @@
 		@apply border-r-border-0.5/0 transition-[padding_border-color] duration-[0.45s];
 
 		&:not(.at-top) {
-			@apply bg-r-midnight-blue/70 border-r-border-0.25 border-b-1 px-3;
+			@apply bg-r-midnight-blue/80 border-r-border-0.25 border-b-1 px-3;
 
 			.hamburger {
 				@apply flex mdlg:hidden items-center justify-center px-3.5 text-xl;
