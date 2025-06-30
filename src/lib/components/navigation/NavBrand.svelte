@@ -20,7 +20,7 @@
 
 	.brand-link {
 		@apply text-white no-underline font-bold;
-		@apply my-2;
+		@apply my-1.5 transition-[margin] duration-300;
 	}
 
 	:global(#navbar.at-top) .brand-link {
