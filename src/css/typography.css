@@ -91,9 +91,11 @@ a:hover {
 	@apply text-r-blue-default;
 }
 a:active {
-	@apply scale-90 text-(--primary) transition-[scale];
+	@apply text-(--primary);
 }
-
+a.scaly {
+	@apply scale-90 transition-[scale];
+}
 a.unset {
 	@apply text-[initial] no-underline;
 }

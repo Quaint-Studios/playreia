@@ -1,3 +1,5 @@
+import 'unplugin-icons/types/svelte';
+
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
 import type { BlogCategory } from "$lib/types";
@@ -10,7 +12,7 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
-	}
+}
 
 	type HTMLAttributeAnchorRel =
 		| 'alternate'

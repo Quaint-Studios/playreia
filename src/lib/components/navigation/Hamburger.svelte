@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { NavItem } from './ListData.ts';
 	import Link from '$components/core/Link.svelte';
 	import Icon, { loadIcons } from '@iconify/svelte';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
@@ -8,12 +7,6 @@
 	import NavBrand from './NavBrand.svelte';
 	import MobileDropDown from './MobileDropDown.svelte';
 	import { socials } from '$lib/info.js';
-
-	interface Props {
-		listData: NavItem[];
-	}
-
-	const { listData }: Props = $props();
 
 	let drawerState = $state(false);
 

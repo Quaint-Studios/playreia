@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Hamburger from './Hamburger.svelte';
+	import Menu from '~icons/solar/hamburger-menu-linear';
 	import UserMenu from './UserMenu.svelte';
 	import Link from '$components/core/Link.svelte';
 	import colors from '$lib/constants/colors';
@@ -8,6 +8,8 @@
 	import NavBrand from './NavBrand.svelte';
 
 	import { onMount } from 'svelte';
+	import NavItems from './NavItems.svelte';
+	import NavActions from './NavActions.svelte';
 
 	let atTop = $state(true);
 
@@ -22,9 +24,20 @@
 			}
 		});
 	});
+
+	let isOpen = $state(false);
 </script>
 
-<div id="navbar" class:at-top={atTop} role="navigation">
+<div id="navbar" class:at-top={atTop} class:glass={!atTop} role="navigation">
+	<NavBrand />
+	<NavItems {isOpen} />
+	<NavActions />
+	<button class="hamburger" aria-label="Toggle Mobile Menu" onclick={() => (isOpen = !isOpen)}>
+		<Menu />
+	</button>
+</div>
+
+<!-- <div id="navbar" class:at-top={atTop} role="navigation">
 	<div class="nav-container">
 		<div class="nav-items">
 			<NavBrand />
@@ -82,9 +95,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 	@reference '$appcss';
 
 	.discord-icon {
@@ -141,5 +154,32 @@
 
 	.nav-link-child .nav-link > :global(a) {
 		@apply w-full;
+	}
+</style> -->
+
+<style lang="postcss">
+	@reference '$appcss';
+
+	#navbar {
+		@apply fixed z-50 flex w-full px-2;
+		@apply border-r-border-0.5/0 transition-[padding_border-color] duration-[0.45s];
+
+		&:not(.at-top) {
+			@apply bg-r-midnight-blue/70 border-r-border-0.25 border-b-1 px-3;
+
+			.hamburger {
+				@apply flex items-center justify-center px-3.5 text-xl;
+				@apply ml-12 h-auto w-auto;
+				@apply hover:bg-blue-alt-600 my-0 rounded-none;
+			}
+		}
+
+		.hamburger {
+			@apply text-r-white/90 text-xl no-underline;
+			@apply mr-2 my-auto h-full rounded-2xl p-2.5;
+			@apply hover:text-black-alt-600 hover:bg-r-white;
+			@apply transition-[color_background-color];
+			@apply hover:bg-blue-alt-600 hover:text-white;
+		}
 	}
 </style>

@@ -1,5 +1,6 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
+import Icons from 'unplugin-icons/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
@@ -34,14 +35,15 @@ const viteServerConfig = () => ({
 
 export default defineConfig({
 	plugins: [
+		enhancedImages(),
 		tailwindcss(),
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',
-			disableAsyncLocalStorage: true
+			strategy: ['url', 'cookie', 'baseLocale']
 		}),
-		enhancedImages(),
+		Icons({ compiler: 'svelte' }),
 		viteServerConfig()
 	],
 

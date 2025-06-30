@@ -12,9 +12,32 @@
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/rose';
 
+
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@plugin 'flowbite/plugin';
+
+@source "../node_modules/flowbite-svelte/dist";
+@source "../node_modules/flowbite-svelte-icons/dist";
 
 @config '../tailwind.config.ts';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-black-alt-100: #a9cec2;
+	--color-black-alt-200: #87a8a8;
+	--color-black-alt-300: #6d8389;
+	--color-black-alt-400: #556067;
+	--color-black-alt-500: #3d3f43;
+	--color-black-alt-600: #222222;
+
+	--color-blue-alt-600: #0073e6;
+
+	--breakpoint-xs: 375px;
+	--breakpoint-mdlg: 928px;
+
+	--text-md: 1.063rem; /* 17px */
+}
 
 :root {
 	--text-scaling: 1;
@@ -29,13 +52,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
 }
 
 /* urbanist-latin-wght-normal */
@@ -78,7 +101,6 @@
 		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
 		U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 
 html,
 body {

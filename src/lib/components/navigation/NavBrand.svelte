@@ -1,36 +1,43 @@
 <script lang="ts">
-	import Link from '$components/core/Link.svelte';
+	import { SITE_NAME } from '$lib/info';
 </script>
 
-<Link label="Home" href="/">
+<a href="/" aria-label="Home" class="brand-link">
 	<div class="brand-container">
 		<enhanced:img
 			class="logo"
 			src="$images/logos/reia_logo_white_transparent.png?enhanced&w=184;168"
-			alt="Reia Logo White Transparent"
-			title="Reia"
+			alt="{SITE_NAME} Logo White Transparent"
+			title={SITE_NAME}
 			sizes="(min-width: 768px) 84px, 92px"
 		/>
-		<div class="brand-divider"></div>
-		<span class="brand-name">Reia</span>
+		<span class="brand-name">{SITE_NAME}</span>
 	</div>
-</Link>
+</a>
 
 <style lang="postcss">
 	@reference '$appcss';
 
+	.brand-link {
+		@apply text-white no-underline font-bold;
+		@apply my-2;
+	}
+
+	:global(#navbar.at-top) .brand-link {
+		@apply my-5;
+	}
+
 	.brand-container {
-		@apply flex items-center justify-center;
+		@apply flex items-center;
+
+		:global(picture) {
+			@apply shrink-0;
+		}
 	}
 	.logo {
-		@apply m-auto aspect-square h-16 w-16 shrink-0 grow lg:m-[unset];
+		@apply mr-2 h-14 w-14 shrink-0;
 	}
-
-	.brand-divider {
-		@apply mx-4 hidden h-11 border-r-2 border-solid md:block;
-	}
-
 	.brand-name {
-		@apply hidden text-2xl md:block;
+		@apply hidden text-2xl lg:block;
 	}
 </style>
