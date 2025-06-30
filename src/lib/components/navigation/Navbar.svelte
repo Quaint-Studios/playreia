@@ -29,12 +29,19 @@
 </script>
 
 <div id="navbar" class:at-top={atTop && !isOpen} class:glass={!atTop || isOpen} role="navigation">
-	<NavBrand />
-	<NavItems {isOpen} />
-	<NavActions />
-	<button class="hamburger" aria-label="Toggle Mobile Menu" onclick={() => (isOpen = !isOpen)} class:selected={isOpen}>
-		<Menu />
-	</button>
+	<div class="nav-container">
+		<NavBrand />
+		<NavItems {isOpen} />
+		<NavActions />
+		<button
+			class="hamburger"
+			aria-label="Toggle Mobile Menu"
+			onclick={() => (isOpen = !isOpen)}
+			class:selected={isOpen}
+		>
+			<Menu />
+		</button>
+	</div>
 </div>
 
 <!-- <div id="navbar" class:at-top={atTop} role="navigation">
@@ -160,23 +167,27 @@
 <style lang="postcss">
 	@reference '$appcss';
 
+	.nav-container {
+		@apply flex w-full max-w-[1920px];
+	}
+
 	#navbar {
-		@apply fixed z-50 flex w-full px-2;
-		@apply border-r-border-0.5/0 transition-[padding_border-color] duration-[0.45s];
+		@apply fixed z-50 flex w-full justify-center px-3;
+		@apply border-r-border-0.5/0 transition-[border-color] duration-[0.45s];
 
 		&:not(.at-top) {
-			@apply bg-r-midnight-blue/80 border-r-border-0.25 border-b-1 px-3;
+			@apply bg-r-midnight-blue/80 border-r-border-0.25 border-b-1;
 
 			.hamburger {
-				@apply flex mdlg:hidden items-center justify-center px-3.5 text-xl;
-				@apply  h-auto w-auto;
+				@apply mdlg:hidden flex items-center justify-center px-3.5 text-xl;
+				@apply w-auto;
 				@apply hover:bg-blue-alt-600 my-0 rounded-none;
 			}
 		}
 
 		.hamburger {
 			@apply text-r-white/90 text-xl no-underline;
-			@apply ml-2 my-auto h-full rounded-2xl p-2.5;
+			@apply my-auto ml-2 h-auto rounded-2xl p-2.5;
 			@apply hover:text-black-alt-600 hover:bg-r-white;
 			@apply transition-[color_background-color];
 			@apply hover:bg-blue-alt-600 hover:text-white;
