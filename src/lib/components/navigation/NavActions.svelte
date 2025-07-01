@@ -6,7 +6,8 @@
 </script>
 
 <div class="nav-actions">
-	<a href="/game" aria-label="Play game">
+	<a href="/game" aria-label="Play game" class="play">
+		<span class="text-lg">Play now</span>
 		<PlayFill />
 	</a>
 	<a href={alinks.discord} target="_blank" rel="noopener" aria-label="Join discord">
@@ -29,8 +30,17 @@
 		}
 	}
 
+	.play {
+		@apply flex items-center gap-1 border-2 border-white !p-2 font-black text-nowrap;
+	}
+
 	:global(#navbar:not(.at-top)) .nav-actions a,
 	:global(#navbar:not(.at-top) .nav-actions button) {
-		@apply hover:bg-blue-alt-600 hover:text-white;
+		@apply hover:bg-blue-alt-600 hover:text-white sm:mr-1;
+
+		&.play {
+			@apply border-none xs:mr-2 sm:mr-3;
+			@apply not-xs:hidden;
+		}
 	}
 </style>
