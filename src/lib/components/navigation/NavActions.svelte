@@ -30,8 +30,8 @@
 		}
 	}
 
-	.play {
-		@apply flex items-center gap-1 border-2 border-white !p-2 font-black text-nowrap;
+	.nav-actions .play {
+		@apply flex items-center gap-1 border-2 border-white px-2 py-2.5 font-black text-nowrap;
 	}
 
 	:global(#navbar:not(.at-top)) .nav-actions a,
