@@ -2,15 +2,8 @@
 	// Modules
 	import { onMount } from 'svelte';
 	import Menu from '~icons/solar/hamburger-menu-linear';
-	import Icon from '@iconify/svelte';
-	
-	// Data
-	import listData from './ListData';
-	
+
 	// Local
-	import colors from '$lib/constants/colors';
-	import UserMenu from './UserMenu.svelte';
-	import Link from '$components/core/Link.svelte';
 	import NavBrand from './NavBrand.svelte';
 	import NavItems from './NavItems.svelte';
 	import NavActions from './NavActions.svelte';
@@ -64,6 +57,8 @@
 		<button
 			class="hamburger"
 			aria-label="Toggle Mobile Menu"
+			aria-expanded={isOpen}
+			aria-controls="navbar"
 			onclick={toggleMenu}
 			class:selected={isOpen}
 		>

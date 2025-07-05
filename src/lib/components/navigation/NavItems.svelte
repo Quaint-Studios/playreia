@@ -10,7 +10,6 @@
 	let { isOpen, toggle }: Props = $props();
 	let hoverIndex = $state(-1);
 	function onHover(index: number) {
-		console.log('hovered');
 		hoverIndex = index;
 		highlightLink();
 	}
@@ -49,7 +48,7 @@
 			return;
 		}
 		// Set the highlighter position based on the hovered link
-		const id = `nav-link-${listData[hoverIndex]?.name}`;
+		const id = `nav-link-${hoverIndex}`;
 		const linkElement = document.getElementById(id);
 		if (linkElement) {
 			const highlighter = document.getElementById('nav-link-highlighter');
@@ -80,7 +79,7 @@
 		<div class="nav-items-inner"  onmouseleave={onLeave} role="menubar" tabindex="0">
 			<div id="nav-link-highlighter" style={'transition: none'}></div>
 			{#each listData as { name, href, children }, index}
-				<div class="nav-link" id="nav-link-{name}" class:selected={hoverIndex === index}>
+				<div class="nav-link" id="nav-link-{index}" class:selected={hoverIndex === index}>
 					<a
 						aria-label="{name} Page"
 						role="menuitem"
@@ -90,13 +89,13 @@
 						onfocus={() => onHover(index)}
 						onblur={onBlur}
 					>
-						<span class="w-full drop-shadow-lg">{name}</span>
+						<span class="nav-link-name">{name}</span>
 						{#if children}
-							<DownSmalllFill class="shrink-0 text-2xl" />
+							<DownSmalllFill class="nav-link-arrow" />
 						{/if}
 					</a>
 					{#if children}
-						<div class="nav-link-child">
+						<div class="nav-link-child" class:hide={hoverIndex !== index} role="menu">
 							<div class="nav-link-child-image">placeholder</div>
 							{#each children as { name, href, description }}
 								<div class="nav-link-child-item">
@@ -164,6 +163,14 @@
 
 	.nav-link {
 		@apply relative flex h-[40px] items-stretch;
+
+		.nav-link-name {
+			@apply w-full drop-shadow-lg;
+		}
+
+		:global(.nav-link-arrow) {
+			@apply shrink-0 text-2xl;
+		}
 	}
 
 	.nav-link a {
@@ -187,6 +194,10 @@
 		@apply shadow-float border-r-border-silver hidden border-1;
 		grid-template-columns: 10rem repeat(2, 2fr);
 		grid-auto-rows: repeat(3, auto);
+
+		&.hide {
+			@apply !hidden;
+		}
 
 		.nav-link-child-item {
 			@apply flex;
