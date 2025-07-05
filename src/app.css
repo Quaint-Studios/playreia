@@ -37,6 +37,8 @@
 	--breakpoint-mdlg: 928px;
 
 	--text-md: 1.063rem; /* 17px */
+
+	--shadow-float: 0px 0px 20px 16px rgba(17,17,26,0.08);
 }
 
 :root {

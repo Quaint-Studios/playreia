@@ -56,7 +56,7 @@
 			if (highlighter) {
 				highlighter.style.display = 'block';
 				highlighter.style.width = `${linkElement.offsetWidth + 24}px`;
-				highlighter.style.left = `${linkElement.offsetLeft - 6}px`;
+				highlighter.style.left = `${linkElement.offsetLeft - 5}px`;
 				setTimeout(() => {
 					highlighter.style.transition = '';
 				}, 0);
@@ -75,12 +75,12 @@
 	}
 </script>
 
-<div class="nav-items" onmouseleave={onLeave} role="menubar" tabindex="0">
+<div class="nav-items">
 	<div class="nav-items-outer" class:open={isOpen}>
-		<div class="nav-items-inner">
-			<div id="nav-link-highlighter" style={"transition: none"}></div>
+		<div class="nav-items-inner"  onmouseleave={onLeave} role="menubar" tabindex="0">
+			<div id="nav-link-highlighter" style={'transition: none'}></div>
 			{#each listData as { name, href, children }, index}
-				<div class="nav-link" id="nav-link-{name}">
+				<div class="nav-link" id="nav-link-{name}" class:selected={hoverIndex === index}>
 					<a
 						aria-label="{name} Page"
 						role="menuitem"
@@ -97,10 +97,12 @@
 					</a>
 					{#if children}
 						<div class="nav-link-child">
-							{#each children as { name, href }}
-								<div class="nav-link">
-									<a aria-label="{name} Page" role="menuitem" {href}>
+							<div class="nav-link-child-image">placeholder</div>
+							{#each children as { name, href, description }}
+								<div class="nav-link-child-item">
+									<a aria-label="{name} Page" role="menuitem" {href} onblur={onBlur}>
 										{name}
+										<span>{description}</span>
 									</a>
 								</div>
 							{/each}
@@ -116,8 +118,9 @@
 	@reference '$appcss';
 
 	#nav-link-highlighter {
-		@apply bg-white/20 rounded-full -ml-2 hidden h-8 px-2 transition-[width,left] duration-300;
-		@apply absolute top-1/2 left-0 -translate-y-1/2 pointer-events-none;
+		@apply -ml-2 hidden h-8 rounded-full bg-white/20 px-2 transition-[width,left] duration-300;
+		@apply pointer-events-none absolute top-1/2 left-0 -translate-y-1/2;
+		@apply not-mdlg:hidden;
 	}
 
 	.nav-items {
@@ -156,16 +159,16 @@
 		}
 
 		min-height: 0;
-		@apply relative;
+		@apply relative w-fit;
 	}
 
 	.nav-link {
-		@apply flex items-stretch h-[40px];
+		@apply relative flex h-[40px] items-stretch;
 	}
 
 	.nav-link a {
 		@apply text-base text-nowrap text-white no-underline;
-		@apply flex items-center;
+		@apply flex items-center rounded-full;
 		@apply not-mdlg:px-6 not-mdlg:py-3.5;
 
 		@apply hover:text-r-gold-2 not-mdlg:hover:bg-black/20;
@@ -174,7 +177,32 @@
 			@apply not-mdlg:w-fit;
 		}
 	}
+	.nav-link:hover .nav-link-child,
+	.nav-link.selected .nav-link-child,
+	.nav-link:focus .nav-link-child {
+		@apply grid;
+	}
 	.nav-link-child {
-		@apply hidden;
+		@apply absolute top-full -left-24 min-h-24 w-fit gap-2 rounded-xl bg-white p-4;
+		@apply shadow-float border-r-border-silver hidden border-1;
+		grid-template-columns: 10rem repeat(2, 2fr);
+		grid-auto-rows: repeat(3, auto);
+
+		.nav-link-child-item {
+			@apply flex;
+
+			a {
+				@apply flex flex-col items-start rounded-lg p-1;
+				@apply text-sm text-nowrap text-black/90 hover:text-blue-alt-600 no-underline;
+
+				span {
+					@apply text-xs font-normal text-inherit/75;
+				}
+			}
+		}
+
+		.nav-link-child-image {
+			@apply col-span-1 row-span-4 aspect-square rounded-xl bg-black/5;
+		}
 	}
 </style>
