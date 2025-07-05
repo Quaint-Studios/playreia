@@ -1,13 +1,17 @@
 <script lang="ts">
+	// Modules
+	import { onMount } from 'svelte';
 	import Menu from '~icons/solar/hamburger-menu-linear';
+	import Icon from '@iconify/svelte';
+	
+	// Data
+	import listData from './ListData';
+	
+	// Local
+	import colors from '$lib/constants/colors';
 	import UserMenu from './UserMenu.svelte';
 	import Link from '$components/core/Link.svelte';
-	import colors from '$lib/constants/colors';
-	import Icon from '@iconify/svelte';
-	import listData from './ListData';
 	import NavBrand from './NavBrand.svelte';
-
-	import { onMount } from 'svelte';
 	import NavItems from './NavItems.svelte';
 	import NavActions from './NavActions.svelte';
 
@@ -17,11 +21,7 @@
 		atTop = window.scrollY === 0;
 
 		let scrollListener = () => {
-			if (window.scrollY > 0) {
-				atTop = false;
-			} else {
-				atTop = true;
-			}
+			atTop = !(window.scrollY > 0);
 		};
 		window.addEventListener('scroll', scrollListener);
 
