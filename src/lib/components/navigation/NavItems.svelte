@@ -76,13 +76,12 @@
 
 <div class="nav-items">
 	<div class="nav-items-outer" class:open={isOpen}>
-		<div class="nav-items-inner"  onmouseleave={onLeave} role="menubar" tabindex="0">
+		<nav class="nav-items-inner" onmouseleave={onLeave}>
 			<div id="nav-link-highlighter" style={'transition: none'}></div>
 			{#each listData as { name, href, children }, index}
 				<div class="nav-link" id="nav-link-{index}" class:selected={hoverIndex === index}>
 					<a
 						aria-label="{name} Page"
-						role="menuitem"
 						{href}
 						onclick={toggle}
 						onmouseover={() => onHover(index)}
@@ -95,11 +94,11 @@
 						{/if}
 					</a>
 					{#if children}
-						<div class="nav-link-child" class:hide={hoverIndex !== index} role="menu">
+						<div class="nav-link-child" class:hide={hoverIndex !== index}>
 							<div class="nav-link-child-image">placeholder</div>
 							{#each children as { name, href, description }}
 								<div class="nav-link-child-item">
-									<a aria-label="{name} Page" role="menuitem" {href} onblur={onBlur}>
+									<a aria-label="{name} Sub Page" {href} onblur={onBlur}>
 										{name}
 										<span>{description}</span>
 									</a>
@@ -109,7 +108,7 @@
 					{/if}
 				</div>
 			{/each}
-		</div>
+		</nav>
 	</div>
 </div>
 
@@ -204,7 +203,7 @@
 
 			a {
 				@apply flex flex-col items-start rounded-lg p-1;
-				@apply text-sm text-nowrap text-black/90 hover:text-blue-alt-600 no-underline;
+				@apply hover:text-blue-alt-600 text-sm text-nowrap text-black/90 no-underline;
 
 				span {
 					@apply text-xs font-normal text-inherit/75;
