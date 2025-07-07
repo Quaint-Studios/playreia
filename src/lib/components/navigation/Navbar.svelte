@@ -83,8 +83,7 @@
 
 			.hamburger {
 				@apply mdlg:hidden flex items-center justify-center px-3.5 text-xl;
-				@apply w-auto;
-				@apply hover:bg-blue-alt-600 my-0 rounded-none;
+				@apply hover:bg-blue-alt-600 my-0 w-auto rounded-none;
 			}
 		}
 
@@ -93,8 +92,7 @@
 
 			.hamburger {
 				@apply mdlg:hidden flex items-center justify-center px-3.5 text-xl;
-				@apply w-auto;
-				@apply hover:bg-blue-alt-600 my-0 rounded-none;
+				@apply hover:bg-blue-alt-600 my-0 w-auto rounded-none;
 			}
 		}
 
