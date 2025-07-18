@@ -44,8 +44,8 @@
 
 	let isOpen = $state(false);
 
-	function toggleMenu() {
-		isOpen = !isOpen;
+	function toggleMenu(val?: boolean) {
+		isOpen = val !== undefined ? val : !isOpen;
 	}
 </script>
 
@@ -59,7 +59,7 @@
 			aria-label="Toggle Mobile Menu"
 			aria-expanded={isOpen}
 			aria-controls="navbar"
-			onclick={toggleMenu}
+			onclick={() => toggleMenu()}
 			class:selected={isOpen}
 		>
 			<Menu />

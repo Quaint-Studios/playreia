@@ -3,8 +3,8 @@
 	import DownSmalllFill from '~icons/mingcute/down-small-fill';
 
 	interface Props {
-		isOpen?: boolean;
-		toggle?: () => void;
+		isOpen: boolean;
+		toggle: (val?: boolean) => void;
 	}
 
 	let { isOpen, toggle }: Props = $props();
@@ -71,6 +71,7 @@
 			highlighter.style.left = '0';
 			highlighter.style.transition = 'none'; // Disable transition for immediate effect
 		}
+		toggle(false);
 	}
 </script>
 
@@ -83,10 +84,11 @@
 					<a
 						aria-label="{name} Page"
 						{href}
-						onclick={toggle}
+						onclick={() => toggle(false)}
 						onmouseover={() => onHover(index)}
 						onfocus={() => onHover(index)}
 						onblur={onBlur}
+						class:mobiletoo={!children}
 					>
 						<span class="nav-link-name">{name}</span>
 						{#if children}
@@ -94,6 +96,16 @@
 						{/if}
 					</a>
 					{#if children}
+						<button
+							class="mobile-link"
+							aria-label="{name} Page"
+							onclick={() => onHover(index)}
+							onfocus={() => onHover(index)}
+							onblur={onBlur}
+						>
+							<span class="nav-link-name">{name}</span>
+							<DownSmalllFill class="nav-link-arrow" />
+						</button>
 						<div class="nav-link-child" class:hide={hoverIndex !== index}>
 							<div class="nav-link-child-image">placeholder</div>
 							{#each children as { name, href, description }}
@@ -118,7 +130,7 @@
 	#nav-link-highlighter {
 		@apply -ml-2 hidden h-8 rounded-full bg-white/20 px-2 transition-[width,left] duration-300;
 		@apply pointer-events-none absolute top-1/2 left-0 -translate-y-1/2;
-		@apply not-mdlg:hidden;
+		@apply not-mdlg:!hidden;
 	}
 
 	.nav-items {
@@ -134,10 +146,8 @@
 			grid-template-rows: 0fr;
 			@apply border-r-border-0.25/0 transition-[grid-template-rows_background-color_border-color] duration-300;
 
-			/* @apply absolute top-full left-0 grid h-0 overflow-hidden py-0 px-4;
-			grid-template-rows: 0fr;
 			@apply transition-[height_background-color_grid-template-rows] duration-[0.45s];
-			@apply w-full border-y-1 border-transparent bg-transparent; */
+			@apply w-full border-y-1 border-transparent bg-transparent;
 
 			&.open {
 				grid-template-rows: 1fr;
@@ -153,7 +163,7 @@
 		}
 
 		@media (width < 928px) {
-			@apply flex flex-col py-4;
+			@apply flex flex-col py-4 w-full;
 		}
 
 		min-height: 0;
@@ -161,7 +171,7 @@
 	}
 
 	.nav-link {
-		@apply relative flex h-[40px] items-stretch;
+		@apply not-mdlg:h-[40px] relative flex items-stretch;
 
 		.nav-link-name {
 			@apply w-full drop-shadow-lg;
@@ -170,11 +180,20 @@
 		:global(.nav-link-arrow) {
 			@apply shrink-0 text-2xl;
 		}
+
+		> button.mobile-link {
+			@apply flex;
+		}
 	}
 
-	.nav-link a {
+	.nav-link a,
+	.nav-link .mobile-link {
+		&.mobiletoo {
+			@apply flex;
+		}
+
 		@apply text-base text-nowrap text-white no-underline;
-		@apply flex items-center rounded-full;
+		@apply not-mdlg:hidden flex items-center rounded-full;
 		@apply not-mdlg:px-6 not-mdlg:py-3.5;
 
 		@apply hover:text-r-gold-2 not-mdlg:hover:bg-black/20;
@@ -186,7 +205,7 @@
 	.nav-link:hover .nav-link-child,
 	.nav-link.selected .nav-link-child,
 	.nav-link:focus .nav-link-child {
-		@apply grid;
+		@apply not-mdlg:hidden grid;
 	}
 	.nav-link-child {
 		@apply absolute top-full -left-24 min-h-24 w-fit gap-2 rounded-xl bg-white p-4;
