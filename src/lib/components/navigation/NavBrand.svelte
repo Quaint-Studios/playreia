@@ -31,6 +31,10 @@
 		@apply my-5;
 	}
 
+	:global(#navbar.open) .brand-link {
+		@apply !my-1.5;
+	}
+
 	.logo {
 		@apply mr-2 h-14 w-14 shrink-0;
 	}

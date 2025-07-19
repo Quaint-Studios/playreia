@@ -163,7 +163,7 @@
 		}
 
 		@media (width < 928px) {
-			@apply flex flex-col py-4 w-full;
+			@apply flex w-full flex-col py-4;
 		}
 
 		min-height: 0;
@@ -180,20 +180,22 @@
 		:global(.nav-link-arrow) {
 			@apply shrink-0 text-2xl;
 		}
+	}
 
-		> button.mobile-link {
-			@apply flex;
-		}
+	.nav-link a {
+		@apply not-mdlg:hidden flex;
+	}
+	.nav-link .mobile-link {
+		@apply not-mdlg:flex hidden;
+	}
+	.nav-link .mobiletoo {
+		@apply !flex;
 	}
 
 	.nav-link a,
 	.nav-link .mobile-link {
-		&.mobiletoo {
-			@apply flex;
-		}
-
 		@apply text-base text-nowrap text-white no-underline;
-		@apply not-mdlg:hidden flex items-center rounded-full;
+		@apply items-center rounded-full;
 		@apply not-mdlg:px-6 not-mdlg:py-3.5;
 
 		@apply hover:text-r-gold-2 not-mdlg:hover:bg-black/20;

@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { getLocale } from '$lib/paraglide/runtime';
+	import { page } from '$app/state';
+	import { deLocalizeUrl, getLocale } from '$lib/paraglide/runtime';
 	import { onMount } from 'svelte';
 	import User3Fill from '~icons/mingcute/user-3-fill';
 
@@ -21,13 +22,18 @@
 		}
 	});
 	let isOpen = $state(false);
+	let isClicked = $state(false);
 	let localeOpen: boolean = $state(false);
 	let closing: ReturnType<typeof setTimeout> | undefined;
 
+	function onClick() {
+		isClicked = true;
+	}
 	function onHover() {
 		isOpen = true;
 	}
 	function onLeave() {
+		if (isClicked) return;
 		isOpen = false;
 		if (closing) {
 			clearTimeout(closing);
@@ -36,6 +42,12 @@
 			if (isOpen) return;
 			localeOpen = false;
 		}, 300);
+	}
+
+
+	let navAccount;
+	function onClickOutside() {
+		
 	}
 
 	function onBlur() {
@@ -80,17 +92,17 @@
 	class:open={isOpen}
 >
 	<User3Fill />
-	<div class="dropdown-container" class:open={isOpen}>
+	<div class="dropdown-container" class:open={isOpen} onclick={onClick}>
 		<div class="dropdown">
 			{#if account !== undefined}
-				<div class="menu-section !flex-row">
+				<div class="menu-section !flex-row" class:open={!localeOpen}>
 					<div class="profile-icon"></div>
 					<div class="account-info">
 						<span class="account-name">{account.name}</span>
 						<span class="account-id">@{account.id}</span>
 					</div>
 				</div>
-				<div class="menu-section">
+				<div class="menu-section" class:open={!localeOpen}>
 					<a href="/profile" role="menuitem" aria-label="View Profile" onblur={onBlur}>
 						View Profile
 					</a>
@@ -113,27 +125,31 @@
 					<a href="/register" role="menuitem" aria-label="Register">Register</a>
 				</div>
 			{/if}
-			<div class="menu-section">
+			<div class="menu-section" class:open={!localeOpen}>
 				<button role="menuitem" aria-label="Change Language" onclick={openLocale} onblur={onBlur}>
 					Change Language
 				</button>
 			</div>
 
-			{#if localeOpen}
-				<div class="locale-dropdown">
-					<ul>
-						<li>
-							<a href="?lang=en" class:selected={getLocale() === 'en'} onblur={onBlur}>English</a>
-						</li>
-						<li>
-							<a href="?lang=fr" class:selected={getLocale() === 'fr'} onblur={onBlur}>Français</a>
-						</li>
-						<li>
-							<a href="?lang=es" class:selected={getLocale() === 'es'} onblur={onBlur}>Español</a>
-						</li>
-					</ul>
-				</div>
-			{/if}
+			<div class="locale-dropdown" class:open={localeOpen}>
+				<ul>
+					<li>
+						<a
+							href="{deLocalizeUrl(page.url.pathname)}/en"
+							class:selected={getLocale() === 'en'}
+							onblur={onBlur}
+						>
+							English
+						</a>
+					</li>
+					<li>
+						<a href="/fr" class:selected={getLocale() === 'fr'} onblur={onBlur}>Français</a>
+					</li>
+					<li>
+						<a href="/es" class:selected={getLocale() === 'es'} onblur={onBlur}>Español</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
@@ -164,7 +180,7 @@
 		}
 
 		.dropdown-container .dropdown .menu-section {
-			@apply flex flex-col pb-2 !text-sm;
+			@apply flex-col pb-2 !text-sm;
 
 			+ .menu-section {
 				@apply border-r-border-silver/35 border-t-1 pt-2;
@@ -221,6 +237,14 @@
 			span {
 				@apply text-black-alt-600/80 text-sm;
 			}
+		}
+	}
+
+	.menu-section, .locale-dropdown {
+		@apply hidden;
+
+		&.open {
+			@apply flex;
 		}
 	}
 </style>

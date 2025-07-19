@@ -39,8 +39,15 @@
 		@apply hover:bg-blue-alt-600 hover:text-white sm:mr-1;
 
 		&.play {
-			@apply border-none xs:mr-2 sm:mr-3;
-			@apply not-xs:hidden;
+			@apply xs:mr-2 border-none sm:mr-3;
+		}
+	}
+
+	.play {
+		@apply xs:mr-2 border-none sm:mr-3;
+		@apply not-xs:hidden;
+		span {
+			@apply not-xs:hidden not-xs:border-none;
 		}
 	}
 </style>
