@@ -15,6 +15,8 @@
 	}
 
 	function onLeave() {
+		// If width is mobile, do nothing.
+		if (window.innerWidth < 768) return;
 		hoverIndex = -1;
 		cleanHighlighter();
 	}
