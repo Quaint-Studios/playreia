@@ -109,7 +109,7 @@
 							<DownSmalllFill class="nav-link-arrow" />
 						</button>
 						<div class="nav-link-child" class:hide={hoverIndex !== index}>
-							<div class="nav-link-child-image">placeholder</div>
+							<div class="nav-link-child-image"></div>
 							{#each children as { name, href, description }}
 								<div class="nav-link-child-item">
 									<a aria-label="{name} Sub Page" {href} onblur={onBlur}>
@@ -154,6 +154,10 @@
 			&.open {
 				grid-template-rows: 1fr;
 				@apply bg-r-midnight-blue/99 border-r-border-0.25 border-y-1 shadow-2xl backdrop-blur-lg;
+
+				.nav-items-inner {
+					@apply py-4;
+				}
 			}
 		}
 	}
@@ -165,7 +169,7 @@
 		}
 
 		@media (width < 928px) {
-			@apply flex w-full flex-col py-4;
+			@apply flex w-full flex-col py-0 transition-[padding] duration-500;
 		}
 
 		min-height: 0;
