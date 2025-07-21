@@ -1,5 +1,6 @@
 import type { BlogCategory } from '$lib/types';
 import type { Component } from 'svelte';
+export const prerender = false;
 
 interface Props {
 	slug: string;
