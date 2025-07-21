@@ -45,7 +45,7 @@
 
 	.play {
 		@apply xs:mr-2 border-none sm:mr-3;
-		@apply not-xs:hidden;
+		@apply not-xs:hidden not-xs:!px-2.5;
 		span {
 			@apply not-xs:hidden not-xs:border-none;
 		}

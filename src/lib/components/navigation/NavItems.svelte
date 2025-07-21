@@ -9,14 +9,22 @@
 
 	let { isOpen, toggle }: Props = $props();
 	let hoverIndex = $state(-1);
-	function onHover(index: number) {
+	function onHover(e: MouseEvent | FocusEvent, index: number, isMobile: boolean = false) {
+		e.stopPropagation();
+		console.log('hovered');
+		if (!isMobile && window.innerWidth < 928) return;
+		if(isMobile && hoverIndex == index) {
+			console.log('ba', hoverIndex);
+			hoverIndex = -1;
+			return;
+		}
+		console.log('bo', hoverIndex, index);
 		hoverIndex = index;
 		highlightLink();
 	}
 
 	function onLeave() {
-		// If width is mobile, do nothing.
-		if (window.innerWidth < 768) return;
+		if (window.innerWidth < 928) return;
 		hoverIndex = -1;
 		cleanHighlighter();
 	}
@@ -87,8 +95,8 @@
 						aria-label="{name} Page"
 						{href}
 						onclick={() => toggle(false)}
-						onmouseover={() => onHover(index)}
-						onfocus={() => onHover(index)}
+						onmouseover={(e) => onHover(e, index)}
+						onfocus={(e) => onHover(e, index)}
 						onblur={onBlur}
 						class:mobiletoo={!children}
 					>
@@ -101,9 +109,7 @@
 						<button
 							class="mobile-link"
 							aria-label="{name} Page"
-							onclick={() => onHover(index)}
-							onfocus={() => onHover(index)}
-							onblur={onBlur}
+							onclick={(e) => onHover(e, index, true)}
 						>
 							<span class="nav-link-name">{name}</span>
 							<DownSmalllFill class="nav-link-arrow" />
@@ -149,14 +155,14 @@
 			@apply border-r-border-0.25/0 transition-[grid-template-rows_background-color_border-color] duration-300;
 
 			@apply transition-[height_background-color_grid-template-rows] duration-[0.45s];
-			@apply w-full border-y-1 border-transparent bg-transparent;
+			@apply border-y-1 not-mdlg:border-none border-transparent bg-transparent;
 
 			&.open {
 				grid-template-rows: 1fr;
-				@apply bg-r-midnight-blue/99 border-r-border-0.25 border-y-1 shadow-2xl backdrop-blur-lg;
+				@apply bg-r-midnight-blue/99 border-r-border-0.25 not-mdlg:border-solid border-y-1 shadow-2xl backdrop-blur-lg;
 
 				.nav-items-inner {
-					@apply py-4;
+					@apply not-mdlg:w-full py-4;
 				}
 			}
 		}
@@ -177,7 +183,7 @@
 	}
 
 	.nav-link {
-		@apply not-mdlg:h-[40px] relative flex items-stretch;
+		@apply relative flex not-mdlg:flex-col mdlg:items-stretch;
 
 		.nav-link-name {
 			@apply w-full drop-shadow-lg;
@@ -192,10 +198,13 @@
 		@apply not-mdlg:hidden flex;
 	}
 	.nav-link .mobile-link {
-		@apply not-mdlg:flex hidden;
+		@apply not-mdlg:flex hidden w-fit;
+	}
+	.nav-link.selected .mobile-link {
+		@apply not-mdlg:text-r-gold-2;
 	}
 	.nav-link .mobiletoo {
-		@apply !flex;
+		@apply !flex w-fit;
 	}
 
 	.nav-link a,
@@ -204,7 +213,7 @@
 		@apply items-center rounded-full;
 		@apply not-mdlg:px-6 not-mdlg:py-3.5;
 
-		@apply hover:text-r-gold-2 not-mdlg:hover:bg-black/20;
+		@apply hover:text-r-gold-2;
 
 		span {
 			@apply not-mdlg:w-fit;
@@ -213,11 +222,11 @@
 	.nav-link:hover .nav-link-child,
 	.nav-link.selected .nav-link-child,
 	.nav-link:focus .nav-link-child {
-		@apply not-mdlg:hidden grid;
+		@apply grid not-mdlg:grid-cols-3 not-mdlg:w-full not-mdlg:border-none not-mdlg:min-h-fit not-mdlg:gap-y-0;
 	}
 	.nav-link-child {
-		@apply absolute top-full -left-24 min-h-24 w-fit gap-2 rounded-xl bg-white p-4;
-		@apply shadow-float border-r-border-silver hidden border-1;
+		@apply mdlg:absolute top-[calc(100%+15px)] -left-24 min-h-24 w-fit gap-2 mdlg:rounded-xl mdlg:bg-white p-4;
+		@apply shadow-float border-r-border-silver hidden border-1 not-mdlg:py-0;
 		grid-template-columns: 10rem repeat(2, 2fr);
 		grid-auto-rows: repeat(3, auto);
 
@@ -226,20 +235,21 @@
 		}
 
 		.nav-link-child-item {
-			@apply flex;
+			@apply flex w-fit;
 
 			a {
-				@apply flex flex-col items-start rounded-lg p-1;
-				@apply hover:text-blue-alt-600 text-sm text-nowrap text-black/90 no-underline;
+				@apply flex flex-col items-start rounded-lg p-1 not-mdlg:p-4;
+				@apply hover:text-blue-alt-600 not-mdlg:hover:text-r-gold-2 not-mdlg:text-white text-sm text-nowrap text-black/90 no-underline;
 
 				span {
-					@apply text-xs font-normal text-inherit/75;
+					@apply text-xs font-normal text-inherit/75 not-mdlg:hidden;
 				}
 			}
 		}
 
 		.nav-link-child-image {
 			@apply col-span-1 row-span-4 aspect-square rounded-xl bg-black/5;
+			@apply not-mdlg:hidden;
 		}
 	}
 </style>

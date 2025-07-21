@@ -1,26 +1,24 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import {
-		baseLocale,
-		deLocalizeHref,
-		deLocalizeUrl,
-		getLocale,
-		type Locale,
-		setLocale
-	} from '$lib/paraglide/runtime';
+	import { baseLocale, getLocale, type Locale, setLocale } from '$lib/paraglide/runtime';
 	import { onMount } from 'svelte';
 	import User3Fill from '~icons/mingcute/user-3-fill';
 	import Back from '~icons/mingcute/back-fill';
 	import { LOCALES } from '$lib/info';
 
 	interface Account {
-		id: string;
+		id: number;
+		username: string;
 		name: string;
 	}
 
 	type Screens = 'main' | 'language';
 
-	let account: Account | undefined = $state({ id: '100000000', name: 'Makosai' });
+	let account: Account | undefined = $state(undefined);
+	// {
+	// 	id: 100000000000000,
+	// 	username: 'username',
+	// 	name: 'Display Name'
+	// }
 	let closeInterval: NodeJS.Timeout | undefined = undefined;
 	let copyInterval: NodeJS.Timeout | undefined = $state(undefined);
 	let currentScreen: Screens = $state('main');
@@ -44,6 +42,8 @@
 
 	function closeMenu() {
 		isOpen = false;
+		document.removeEventListener('click', onClickOutside);
+		document.removeEventListener('keydown', onClickOutsideKeydown);
 		resetScreen();
 	}
 	function resetScreen() {
@@ -91,17 +91,22 @@
 		}, 0);
 	}
 
-	function handleCopyAccountId(event: MouseEvent | KeyboardEvent) {
+	function handleCopyUsername(event: MouseEvent | KeyboardEvent) {
 		event.stopPropagation();
 		if (copyInterval) {
 			clearTimeout(copyInterval);
 		}
-		navigator.clipboard.writeText(account!.id);
+		navigator.clipboard.writeText(account!.username);
 		const accountIdElement = event.currentTarget as HTMLElement;
 		accountIdElement.classList.add('copied');
 		copyInterval = setTimeout(() => {
 			accountIdElement.classList.remove('copied');
 		}, 2000);
+	}
+
+	function logout() {
+		account = undefined;
+		closeMenu();
 	}
 </script>
 
@@ -129,19 +134,19 @@
 								class="account-id"
 								tabindex="0"
 								role="button"
-								aria-label="Copy account ID"
+								aria-label="Copy username"
 								onclick={(e) => {
 									e.stopPropagation();
-									handleCopyAccountId(e);
+									handleCopyUsername(e);
 								}}
 								onkeydown={(e) => {
 									if (e.key === 'Enter' || e.key === ' ') {
 										e.preventDefault();
-										handleCopyAccountId(e);
+										handleCopyUsername(e);
 									}
 								}}
 							>
-								@{account.id}
+								@{account.username}
 							</span>
 						</div>
 					</div>
@@ -157,19 +162,14 @@
 						>
 							Account Settings
 						</a>
-						<a
-							href="/logout"
-							role="menuitem"
-							aria-label="Logout"
-							onclick={() => (account = undefined)}
-						>
+						<a href="/logout" role="menuitem" aria-label="Logout" class="mt-3" onclick={logout}>
 							Logout
 						</a>
 					</div>
 				{:else}
 					<div class="menu-section">
-						<a href="/login" role="menuitem" aria-label="Login">Login</a>
-						<a href="/register" role="menuitem" aria-label="Register">Register</a>
+						<a href="/login" role="menuitem" aria-label="Login" onclick={onClick}>Login</a>
+						<a href="/register" role="menuitem" aria-label="Register" onclick={onClick}>Register</a>
 					</div>
 				{/if}
 				<div class="menu-section">
@@ -200,81 +200,6 @@
 		</div>
 	</div>
 </div>
-
-<!-- <div
-	class="nav-account"
-	aria-label="Account and Settings"
-	role="menubar"
-	tabindex="0"
-	aria-controls="dropdown-container"
-	onmouseenter={onHover}
-	onmouseleave={onLeave}
-	onfocus={onHover}
-	onblur={onBlur}
-	class:open={isOpen}
->
-	<User3Fill />
-	<div class="dropdown-container" class:open={isOpen}>
-		<div class="dropdown">
-			{#if account !== undefined}
-				<div class="menu-section !flex-row" class:open={!localeOpen}>
-					<div class="profile-icon"></div>
-					<div class="account-info">
-						<span class="account-name">{account.name}</span>
-						<span class="account-id">@{account.id}</span>
-					</div>
-				</div>
-				<div class="menu-section" class:open={!localeOpen}>
-					<a href="/profile" role="menuitem" aria-label="View Profile" onblur={onBlur}>
-						View Profile
-					</a>
-					<a href="/profile/settings" role="menuitem" aria-label="Account Settings" onblur={onBlur}>
-						Account Settings
-					</a>
-					<a
-						href="/logout"
-						role="menuitem"
-						aria-label="Logout"
-						onblur={onBlur}
-						onclick={() => (account = undefined)}
-					>
-						Logout
-					</a>
-				</div>
-			{:else}
-				<div class="menu-section">
-					<a href="/login" role="menuitem" aria-label="Login">Login</a>
-					<a href="/register" role="menuitem" aria-label="Register">Register</a>
-				</div>
-			{/if}
-			<div class="menu-section" class:open={!localeOpen}>
-				<button role="menuitem" aria-label="Change Language" onclick={openLocale} onblur={onBlur}>
-					Change Language
-				</button>
-			</div>
-
-			<div class="locale-dropdown" class:open={localeOpen}>
-				<ul>
-					<li>
-						<a
-							href="{deLocalizeUrl(page.url.pathname)}/en"
-							class:selected={getLocale() === 'en'}
-							onblur={onBlur}
-						>
-							English
-						</a>
-					</li>
-					<li>
-						<a href="/fr" class:selected={getLocale() === 'fr'} onblur={onBlur}>Français</a>
-					</li>
-					<li>
-						<a href="/es" class:selected={getLocale() === 'es'} onblur={onBlur}>Español</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <style lang="postcss">
 	@reference '$appcss';
