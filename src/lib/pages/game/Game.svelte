@@ -7,7 +7,7 @@
 	<link id="-gd-engine-icon" rel="icon" type="image/png" href="{cdn.site}/index.icon.png" />
 	<link rel="apple-touch-icon" href="{cdn.site}/index.apple-touch-icon.png" />
 	<link rel="manifest" href="{cdn.site}/index.manifest.json" />
-	<script src="{cdn.site}/index2.js"></script>
+	<script src="{cdn.site}/index.js"></script>
 </svelte:head>
 
 <canvas id="canvas"> Your browser does not support the canvas tag. </canvas>
