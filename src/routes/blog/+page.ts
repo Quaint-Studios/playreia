@@ -39,11 +39,13 @@ export async function load({ url }) {
 
 	try {
 		return {
+			currentPage: page,
 			posts: page === 1 ? posts.slice(0, 7) : posts.slice((page - 1) * 6 + 1, page * 6 + 1),
 			pages: Math.ceil((posts.length - 1) / 6)
 		};
 	} catch {
 		return {
+			currentPage: page,
 			posts: [],
 			pages: 0
 		};

@@ -7,10 +7,8 @@
 	import Meta from '$components/seo/Meta.svelte';
 	import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 
-	let currentPage = Number(page.url.searchParams.get('page')) || 1;
-
 	let { data } = $props();
-	const { posts, pages } = data;
+	const { currentPage, posts, pages } = data;
 </script>
 
 <Meta
@@ -53,7 +51,7 @@
 </Meta>
 
 <Content>
-	<h1 class="page-title">The Reia Blog and Stories</h1>
+	<h1 class="page-title">Blogs and Stories</h1>
 	<Section>
 		{#if posts.length === 0}
 			<div class="flex min-h-[50dvh] w-full items-center justify-center">
