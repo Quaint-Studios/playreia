@@ -3,6 +3,7 @@ import { RESEND_API_KEY } from '$env/static/private';
 import { Resend } from 'resend';
 import { validateEmail } from '$utils';
 
+export const prerender = false;
 export const actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();

@@ -3,6 +3,8 @@ import { RESEND_API_KEY } from '$env/static/private';
 import { Resend } from 'resend';
 import { validateEmail } from '$utils';
 
+export const prerender = false; // Disable prerendering for this route
+
 export const actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();
