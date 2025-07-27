@@ -18,7 +18,7 @@
 			formData.append('email', email);
 			if (password) formData.append('password', password);
 
-			fetch(`/newsletter`, {
+			fetch(`/api/v1/newsletter`, {
 				method: 'POST',
 				body: formData
 			})
