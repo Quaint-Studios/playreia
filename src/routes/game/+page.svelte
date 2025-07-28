@@ -1,50 +1,62 @@
 <script lang="ts">
 	import { link } from '$lib/types';
 	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import alinks from '$constants/alinks';
+
+	let title = 'Play an action adventure RPG game';
+	let description =
+		'Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console.';
+	// prettier-ignore
+	const keywords = ['reia', 'game', 'action', 'adventure', 'rpg', 'role-playing', 'role-playing game', 'action-adventure', 'action-adventure game', 'action rpg', 'adventure rpg', 'action-adventure rpg'];
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Reia - Play an action adventure RPG game"
-	titleSuffix=""
-	keywords={'reia, game, action, adventure, rpg, role-playing, role-playing game, action-adventure, action-adventure game, action rpg, adventure rpg, action-adventure rpg'}
-	description="Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console."
->
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} {keywords} reverseDecoration={true} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Download or play Reia now",
-				"url": "https://www.playreia.com/game"
+				"url": "${data.url}",
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="game newsletter">
 	<div class="bg"></div>
 	<span>Get notified</span>
-	<h1>Get <strong>Reia Newsletter</strong> for an Adventure</h1>
+	<h1>
+		Get <strong>Reia Newsletter</strong>
+		 for an Adventure
+	</h1>
 	<NewsletterButton alt />
 	<p>
-		We'd love to include you in the <strong>game development of Reia</strong>. By subscribing to the
-		newsletter, you can keep up to date with all of the major development and tests we do here. This
-		also includes whenever we have special events. Newsletter members are also added to a waitlist
-		to <strong>play the game early</strong>. We'll also send you <strong>weekly updates</strong> on the
-		game's progress and notify you when we do tests and releases.
+		We'd love to include you in the <strong>game development of Reia</strong>
+		. By subscribing to the newsletter, you can keep up to date with all of the major development
+		and tests we do here. This also includes whenever we have special events. Newsletter members are
+		also added to a waitlist to
+		<strong>play the game early</strong>
+		. We'll also send you
+		<strong>weekly updates</strong>
+		 on the game's progress and notify you when we do tests and releases.
 	</p>
 
 	<h2>Play right now</h2>
 	<p>
 		You can play the game right now by visiting the <a
 			href={alinks.github + '/releases'}
-			{...link.external}>releases page on GitHub</a
-		>. We're always looking for feedback and suggestions. If you have any, please feel free to
+			{...link.external}
+		>
+			releases page on GitHub
+		</a>
+		. We're always looking for feedback and suggestions. If you have any, please feel free to
 		<a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discord} {...link.external}>Discord</a>.
+		or chat with us on
+		<a href={alinks.discord} {...link.external}>Discord</a>
+		.
 	</p>
 </div>
 
