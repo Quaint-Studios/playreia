@@ -8,14 +8,14 @@
 
 <Meta {title} {description}>
 	{#snippet structured()}
-		<script type="application/ld+json">
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Reia",
-				"url": `https://www.playreia.com/${slug}`
+				"url": "https://www.playreia.com/${slug}"
 			}
-		</script>
+		</script>`}
 	{/snippet}
 </Meta>
 
