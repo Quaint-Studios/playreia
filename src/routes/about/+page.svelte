@@ -39,7 +39,7 @@
 				"@type": "Project",
 				"name": "About Reia",
 				"url": "${data.url}",
-				"description": "Learn all about Reia, the team, and the development journey. Find out why this project was started, our process, what we've learned, and what we plan to do!",
+				"description": "${description}",
 				"logo": "https://www.playreia.com/reia_logo_meta.png",
 				"sameAs": [
 					"https://opencollective.playreia.com",
