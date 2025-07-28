@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PlatformButton from '$components/core/PlatformButton.svelte';
 	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import alinks from '$constants/alinks';
 
 	const desktopPlatforms = [
@@ -60,26 +60,28 @@
 			icon: 'mdi:google-play'
 		}
 	];
+
+	let title = 'Download the Game and Unlock your Magical Adventure';
+	let description =
+		'Download Reia, an action-adventure RPG game. Download the game for Windows, Linux, and Android. Coming soon to iOS, MacOS, and console. Get notified of updates and play the game early.';
+	// prettier-ignore
+	const keywords = ['reia', 'download', 'download reia', 'download the game', 'download reia game', 'download reia action-adventure rpg', 'download reia action-adventure rpg game', 'download reia action-adventure rpg game for windows', 'download reia action-adventure rpg game for linux', 'download reia action-adventure rpg game for android', 'download reia action-adventure rpg game for ios', 'download reia action-adventure rpg game for macos', 'download reia action-adventure rpg game for console', 'download reia action-adventure rpg game for windows', 'download reia action-adventure rpg game for linux', 'download reia action-adventure rpg game for android', 'download reia action-adventure rpg game for ios', 'download reia action-adventure rpg game for macos', 'download reia action-adventure rpg game for console'];
+
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Reia - Download the Game and Unlock your Magical Adventure"
-	titleSuffix=""
-	keywords={'reia, download, download reia, download the game, download reia game, download reia action-adventure rpg, download reia action-adventure rpg game, download reia action-adventure rpg game for windows, download reia action-adventure rpg game for linux, download reia action-adventure rpg game for android, download reia action-adventure rpg game for ios, download reia action-adventure rpg game for macos, download reia action-adventure rpg game for console, download reia action-adventure rpg game for windows, download reia action-adventure rpg game for linux, download reia action-adventure rpg game for android, download reia action-adventure rpg game for ios, download reia action-adventure rpg game for macos, download reia action-adventure rpg game for console'}
-	description="Download Reia, an action-adventure RPG game. Download the game for Windows, Linux, and Android. Coming soon to iOS, MacOS, and console. Get notified of updates and play the game early."
->
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} {keywords} reverseDecoration={true} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Download Reia",
-				"url": "https://www.playreia.com/download"
+				"url": "${data.url}",
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="game newsletter">
 	<div class="bg"></div>
