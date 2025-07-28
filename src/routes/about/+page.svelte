@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Section from '$components/layout/Section.svelte';
 	import Content from '$components/layout/Content.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 
 	import KristopherAli from '$images/team/kristopher_ali.png?enhanced';
 	import AbdishakurMohamed from '$images/team/abdishakur_mohamed.png?enhanced';
@@ -22,20 +22,23 @@
 			bio: 'Abdi is an environmental artist with a passion for creating beautiful worlds. He is responsible for creating the environments in Reia.'
 		}
 	];
+
+	let title = 'About Us';
+	let description =
+		"Learn all about Reia, the team, and the development journey. Find out why this project was started, our process, what we've learned, and what we plan to do!";
+
+	let { data } = $props();
 </script>
 
 <!-- <TODO> PAGE -->
-<Meta
-	title="About Us"
-	description="Learn all about Reia, the team, and the development journey. Find out why this project was started, our process, what we've learned, and what we plan to do!"
->
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "Project",
 				"name": "About Reia",
-				"url": "https://www.playreia.com/about",
+				"url": "${data.url}",
 				"description": "Learn all about Reia, the team, and the development journey. Find out why this project was started, our process, what we've learned, and what we plan to do!",
 				"logo": "https://www.playreia.com/reia_logo_meta.png",
 				"sameAs": [
@@ -54,9 +57,9 @@
 					"https://playreia.com"
 				]
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <Content>
 	<Section>
@@ -109,7 +112,7 @@
 	}
 
 	h2 {
-		@apply mb-4 mt-16 w-full text-center text-3xl text-r-gold sm:text-4xl;
+		@apply text-r-gold mt-16 mb-4 w-full text-center text-3xl sm:text-4xl;
 	}
 
 	h3 {
@@ -117,7 +120,7 @@
 	}
 
 	.quote {
-		@apply mb-6 mt-12 flex flex-col;
+		@apply mt-12 mb-6 flex flex-col;
 
 		.author {
 			@apply w-full text-end;
