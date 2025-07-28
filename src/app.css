@@ -107,6 +107,7 @@
 html,
 body {
 	@apply min-h-full;
+	scroll-padding-top: 96px;
 }
 
 html {
