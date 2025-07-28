@@ -2,20 +2,25 @@
 	import Socials from '$components/footers/Socials.svelte';
 	import Content from '$components/layout/Content.svelte';
 	import Section from '$components/layout/Section.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import alinks from '$constants/alinks';
 	import { CONTACT_EMAIL } from '$lib/info';
+
+	let title = 'Reia - Contact Us for Support, Feedback, and Contributions';
+	let description =
+		"Contact Reia to share feedback, suggestions, and contributors. If you're interested in contributing to the project, please let us know.";
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Reia - Contact Us for Support, Feedback, and Contributions"
-	titleSuffix=""
-	keywords={'reia, contact, contact us, contact reia, support, feedback, contribute, contribute to reia, open-source, open-source contributor, open-source contribution, open-source project, open-source development, open-source community, open-source software, open-source game, open-source game development, open-source game design, open-source game art, open-source game writing, open-source game programming, open-source game developer, open-source game designer, open-source game artist, open-source game writer, open-source game programmer, open-source game development community, open-source game design community, open-source game art community, open-source game writing community, open-source game programming community, open-source game developer community, open-source game designer community, open-source game artist community, open-source game writer community'}
-	description="Contact Reia to share feedback, suggestions, and contributors. If you're interested in contributing to the project, please let us know."
+<Seo
+	{title}
+	{description}
+	reverseDecoration={true}
+	locale={data.locale}
+	url={data.url}
 >
-	{#snippet structured()}
-		<script type="application/ld+json">
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "ContactPage",
@@ -35,9 +40,9 @@
 					"xPath": ["/html/head/title", "/html/head/meta[@name='description']/@content"]
 				}
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <Content>
 	<Section>
@@ -55,8 +60,8 @@
 
 			<h2>Email</h2>
 			<p>
-				You can email us at <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>. We'll get back to
-				you soon!
+				You can email us at <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>
+				. We'll get back to you soon!
 			</p>
 
 			<h2>Social Media</h2>
@@ -64,8 +69,10 @@
 				You can also reach out to us on social media. We're mostly active on <a
 					href={alinks.bluesky}
 					target="_blank"
-					rel="noopener">Bluesky</a
+					rel="noopener"
 				>
+					Bluesky
+				</a>
 				where we post updates and news about the project. You can also follow us on other social media
 				platforms below.
 
@@ -73,29 +80,30 @@
 			</p>
 
 			<h2>Physical Mail</h2>
-			<p>
-				You can send us mail at the following address:
-			</p>
+			<p>You can send us mail at the following address:</p>
 			<div class="mx-auto mt-4 max-w-(--breakpoint-md) font-bold">
 				<address>
-					Quaint Studios<br />
-					5004 E Fowler Ave #C349<br />
+					Quaint Studios
+					<br />
+					5004 E Fowler Ave #C349
+					<br />
 					Tampa, FL 33617
 				</address>
 			</div>
 
 			<h2>Discord Server</h2>
 			<p>
-				Join our <a href={alinks.discord} target="_blank" rel="noopener">Discord server</a> to chat with
-				us and other contributors. This is a great place to collaborate on the project.
+				Join our <a href={alinks.discord} target="_blank" rel="noopener">Discord server</a>
+				 to chat with us and other contributors. This is a great place to collaborate on the project.
 			</p>
 
 			<h2>GitHub Repository</h2>
 			<p>
-				Reia's source code is hosted on <a href={alinks.github} target="_blank" rel="noopener"
-					>GitHub</a
-				>. You can submitting bug reports, feature requests, or leave feedback. We appreciate all
-				the love and support you send.
+				Reia's source code is hosted on <a href={alinks.github} target="_blank" rel="noopener">
+					GitHub
+				</a>
+				. You can submitting bug reports, feature requests, or leave feedback. We appreciate all the
+				love and support you send.
 			</p>
 		</div>
 	</Section>
@@ -108,6 +116,6 @@
 		@apply w-full text-center;
 	}
 	blockquote {
-		@apply mb-6 mt-4;
+		@apply mt-4 mb-6;
 	}
 </style>
