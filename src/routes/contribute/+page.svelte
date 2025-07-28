@@ -19,7 +19,7 @@
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "How to Contribute to Reia",
-				"url": "https://www.playreia.com/contribute",
+				"url": "${data.url}",
 				"description": "Contribute to Reia's development. Whether you're a programmer, artist, designer, or writer, there's a place for you in the Reia community.",
 				"potentialAction": [
 					{

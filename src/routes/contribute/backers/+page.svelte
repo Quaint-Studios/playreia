@@ -19,7 +19,7 @@
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Reia Supporters and Financial Backers",
-				"url": "https://www.playreia.com/contribute/backers"
+				"url": "${data.url}"
 			}
 		</script>`}
 	{/snippet}
