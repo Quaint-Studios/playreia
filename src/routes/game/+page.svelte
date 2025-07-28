@@ -30,18 +30,18 @@
 	<span>Get notified</span>
 	<h1>
 		Get <strong>Reia Newsletter</strong>
-		 for an Adventure
+		for an Adventure
 	</h1>
 	<NewsletterButton alt />
 	<p>
 		We'd love to include you in the <strong>game development of Reia</strong>
-		. By subscribing to the newsletter, you can keep up to date with all of the major development
-		and tests we do here. This also includes whenever we have special events. Newsletter members are
-		also added to a waitlist to
+		. By subscribing to the newsletter, you can keep up to date with all of the major development and
+		tests we do here. This also includes whenever we have special events. Newsletter members are also
+		added to a waitlist to
 		<strong>play the game early</strong>
 		. We'll also send you
 		<strong>weekly updates</strong>
-		 on the game's progress and notify you when we do tests and releases.
+		on the game's progress and notify you when we do tests and releases.
 	</p>
 
 	<h2>Play right now</h2>

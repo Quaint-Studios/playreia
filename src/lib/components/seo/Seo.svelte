@@ -14,7 +14,7 @@
 	interface Props {
 		title: string;
 		description: string;
-		reverseDecoration?: boolean;
+		reverseDecoration?: boolean | null;
 		url: string;
 		locale?: string;
 
@@ -48,7 +48,8 @@
 			? decorate(title, reverseDecoration)
 			: title;
 
-	function decorate(title: string, reverseDecoration?: boolean): string {
+	function decorate(title: string, reverseDecoration?: boolean | null): string {
+		if (reverseDecoration === null) return title;
 		return reverseDecoration ? `${SITE_NAME} - ${title}` : `${title} - ${SITE_NAME}`;
 	}
 </script>

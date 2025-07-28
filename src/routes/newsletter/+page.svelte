@@ -1,19 +1,27 @@
 <script lang="ts">
 	import NewsletterButton from '$components/footers/NewsletterButton.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
+
+	let title="Reia Newsletter - Be a part of the Family and Adventure"
+	let description="Join the Reia newsletter and be a part of the family. Get notified of all the major development and tests we do here. Newsletter members are also added to a waitlist to play the game early."
+	// prettier-ignore
+	const keywords=['reia', 'newsletter', 'game', 'development', 'tests', 'family', 'waitlist', 'play', 'early', 'early access', 'early-access', 'updates', 'weekly', 'progress', 'notify', 'tests', 'releases'];
+
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Reia Newsletter - Be a part of the Family and Adventure"
-	titleSuffix=""
-	keywords={'reia, newsletter, game, development, tests, family, waitlist, play, early, early access, early-access, updates, weekly, progress, notify, tests, releases'}
-	description="Join the Reia newsletter and be a part of the family. Get notified of all the major development and tests we do here. Newsletter members are also added to a waitlist to play the game early."
+<Seo
+	{title}
+	{description}
+	{keywords}
+	reverseDecoration={null}
+	locale={data.locale}
+	url={data.url}
 >
-	{#snippet structured()}
-		<script type="application/ld+json">
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
@@ -25,9 +33,9 @@
 					"description": "Subscribe to the Reia RPG Newsletter for a regular email newsletter with news and updates."
 				}
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="newsletter">
 	<div class="bg"></div>

@@ -1,27 +1,29 @@
 <script lang="ts">
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import alinks from '$constants/alinks';
 	import { cdn, link } from '$lib/types';
+
+	let title = 'Play Reia in your Browser';
+	let description =
+		'Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console.';
+	// prettier-ignore
+	const keywords=['reia', 'game', 'action', 'adventure', 'rpg', 'role-playing', 'role-playing game', 'action-adventure', 'action-adventure game', 'action rpg', 'adventure rpg', 'action-adventure rpg']
+
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Reia - Play Reia in your Browser"
-	titleSuffix=""
-	keywords={'reia, game, action, adventure, rpg, role-playing, role-playing game, action-adventure, action-adventure game, action rpg, adventure rpg, action-adventure rpg'}
-	description="Play Reia, an action-adventure RPG game. Play in your browser or download on Windows, Mac, and Linux. Also available for iOS and Android. Coming soon to console."
->
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} {keywords} reverseDecoration={true} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Download or Play Reia Now",
-				"url": "https://www.playreia.com/game"
+				"name": "${title}",
+				"url": "${data.url}",
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="game newsletter">
 	<div class="bg"></div>
@@ -29,17 +31,23 @@
 	<h1>Play Reia in your Browser</h1>
 	<p>
 		Congrats! You've found the secret web version of Reia. This is a test version of the game that
-		we're using to develop the game in a browser. This is a <strong>work in progress</strong> and is
-		not fully functional yet. Feel free to share any feedback or suggestions you have. If you have
-		any, please <a href="/contact">contact us</a>
-		or chat with us on <a href={alinks.discord}>Discord</a>.
+		we're using to develop the game in a browser. This is a <strong>work in progress</strong>
+		and is not fully functional yet. Feel free to share any feedback or suggestions you have. If you
+		have any, please
+		<a href="/contact">contact us</a>
+		or chat with us on
+		<a href={alinks.discord}>Discord</a>
+		.
 	</p>
 	<p>
 		If it fails to load, chances are it's an uncommon issue where a file or image gets blocked by
 		the browser because of the <a
 			href="https://developer.mozilla.org/en-US/docs/Web/API/Window/crossOriginIsolated#cross-origin_isolating_a_document"
-			{...link.externalnoref}>strict security settings</a
-		> we apply. We're currently working on tweaking the settings to make it work perfectly on all browsers.
+			{...link.externalnoref}
+		>
+			strict security settings
+		</a>
+		we apply. We're currently working on tweaking the settings to make it work perfectly on all browsers.
 	</p>
 
 	<div class="relative mt-16 aspect-video w-full max-w-5xl bg-black">
@@ -47,7 +55,7 @@
 			title="Reia HTML5 Game"
 			src="{cdn.site}/index.html"
 			allow="cross-origin-isolated; autoplay; fullscreen; microphone; midi; clipboard-read; clipboard-write"
-			class="w-full h-full relative"
+			class="relative h-full w-full"
 			id="game-frame"
 		>
 			Your browser does not support the iframe tag.

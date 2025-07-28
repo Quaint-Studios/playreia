@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Tabs } from '@skeletonlabs/skeleton-svelte';
 
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 	import Section from '$components/layout/Section.svelte';
 	import Content from '$components/layout/Content.svelte';
 	import JobCategory from '$components/layout/JobCategory.svelte';
@@ -108,26 +108,28 @@
 	};
 
 	const allJobs: Category[] = [frontend, sound, art, modeling, design, programming, web, marketing];
+
+	let title = 'Join our Team - Jobs at Reia';
+	let description =
+		"Be a part of the Reia team and help us create the best action adventure RPG game. We're looking for frontend, sound, art, modeling, design, programming, and marketing positions.";
+	// prettier-ignore
+	const keywords = ['reia', 'game', 'action', 'adventure ', 'rpg', 'games', 'jobs', 'team', 'hiring', 'frontend', 'backend', 'sound', 'art', 'modeling', 'design', 'programming', 'marketing', 'positions', 'roles', 'join', 'team', 'create', 'best action', 'best adventure', 'best rpg', 'best game']
+
+	let { data } = $props();
 </script>
 
-<Meta
-	titlePrefix=""
-	title="Join our Team - Jobs at Reia"
-	titleSuffix=""
-	keywords={'reia, game, action, adventure , rpg, games, jobs, team, hiring, frontend, backend, sound, art, modeling, design, programming, marketing, positions, roles, join, team, create, best action, best adventure, best rpg, best game'}
-	description="Be a part of the Reia team and help us create the best action adventure RPG game. We're looking for frontend, sound, art, modeling, design, programming, and marketing positions."
->
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} {keywords} reverseDecoration={null} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Join our Team - Jobs at Reia",
+				"name": "${title}",
 				"url": "https://www.playreia.com/jobs"
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="readable">
 	<Content tight>
@@ -138,8 +140,8 @@
 				If you love action adventure RPG games like Reia then we're looking for people like you to
 				join the team. We're not actively hiring just yet. But feel free to browse some of the
 				position we'll be looking for in the future. If you're interested in any of the following
-				positions, please contact us at <a href="mailto:jobs@playreia.com">jobs@playreia.com</a> and
-				we'll be in touch.
+				positions, please contact us at <a href="mailto:jobs@playreia.com">jobs@playreia.com</a>
+				and we'll be in touch.
 			</blockquote>
 
 			<Tabs
@@ -165,9 +167,10 @@
 						<h2>All Jobs</h2>
 						<p>
 							This is a list of possible roles you can fulfill with a job here. Until they're
-							filled, <a href="https://github.com/Makosai" target="_blank" rel="noopener"
-								>Kris (@Makosai)</a
-							>, will fill all roles.
+							filled, <a href="https://github.com/Makosai" target="_blank" rel="noopener">
+								Kris (@Makosai)
+							</a>
+							, will fill all roles.
 						</p>
 
 						{#each allJobs as { name, jobs }}
@@ -186,9 +189,8 @@
 											<span>{name}</span>
 											{#if member}
 												<span>
-													| <i>{note}</i><a href={member.link} target="_blank" rel="noopener"
-														>{member.name}</a
-													>
+													| <i>{note}</i>
+													<a href={member.link} target="_blank" rel="noopener">{member.name}</a>
 												</span>
 											{/if}
 										</div>
@@ -221,9 +223,10 @@
 						<h3>Outreach</h3>
 						<blockquote>
 							<p>
-								The ideal candidate for the <strong>outreach position</strong> would be someone who has
-								experience sending well-written emails to a mass group of people and can keep in touch
-								with them all. This candidate would be responsible for upkeeping the relations with them.
+								The ideal candidate for the <strong>outreach position</strong>
+								would be someone who has experience sending well-written emails to a mass group of people
+								and can keep in touch with them all. This candidate would be responsible for upkeeping
+								the relations with them.
 							</p>
 						</blockquote>
 						<p>
