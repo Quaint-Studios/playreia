@@ -2,7 +2,7 @@
 title: 'Patch Notes 5: Health Bars, Minimap, and Inventory'
 description: "It's almost time. We're getting closer. This update features health bars, a minimap, icons to identify entities on the minimap, inventory updates, and some fixes."
 date: 2023-10-2
-author: { id: '100000000', name: 'Kristopher Ali' }
+author: { username: 'makosai', name: 'Kristopher Ali' }
 category: Patch Notes
 ---
 

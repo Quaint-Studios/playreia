@@ -2,7 +2,7 @@
 title: 'Patch Notes 1: Migrating from Unity to Godot'
 description: "It works! We've successfully migrated from Unity to Godot. A basic level was created to test some features of the project. All Unity-related assets have been removed."
 date: 2023-9-21
-author: { id: '100000000', name: 'Kristopher Ali' }
+author: { username: 'makosai', name: 'Kristopher Ali' }
 category: Patch Notes
 readTime: 1
 ---

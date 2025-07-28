@@ -1,9 +1,9 @@
 ---
-title: 'Example News'
-description: "This is an example of a news post."
-date: 2024-12-22
+title: 'Example Events'
+description: "This is an example of an event post."
+date: 2025-7-27
 author: { username: 'makosai', name: 'Kristopher Ali' }
-category: News
+category: Events
 ---
 
 > **Hello:**

@@ -61,7 +61,7 @@ declare global {
 	};
 
 	type Author = {
-		id: string;
+		username: string;
 		name: string;
 	};
 

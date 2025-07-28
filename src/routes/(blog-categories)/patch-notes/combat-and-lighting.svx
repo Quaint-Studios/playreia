@@ -2,7 +2,7 @@
 title: 'Patch Notes 2: Combat and Lighting Improvements'
 description: "We're slowly getting there. Only if we had something to fight with other than our fists. The lighting is improved. But... it could be better! We now have... COMBAT! You can click things. And more."
 date: 2023-9-22
-author: { id: '100000000', name: 'Kristopher Ali' }
+author: { username: 'makosai', name: 'Kristopher Ali' }
 category: Patch Notes
 ---
 
