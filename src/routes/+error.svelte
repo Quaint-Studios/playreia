@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Content from '$components/layout/Content.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 
 	const emojis: { [index: number]: string } = {
 		// TODO add the rest!
@@ -9,20 +9,25 @@
 		404: '🧐',
 		500: '💥'
 	};
+
+	const title = "Error... there's ether everywhere!";
+	const description = 'Uh oh, an error happened!';
+
+	let { data } = $props();
 </script>
 
-<Meta title="Error... there's ether everywhere!" description="Uh oh, an error happened!">
-	{#snippet structured()}
-		<script type="application/ld+json">
+<Seo {title} {description} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Reia",
-				"url": "https://www.playreia.com/error"
+				"name": "${title}",
+				"url": "${data.url}"
 			}
-		</script>
+		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <div class="flex h-dvh w-full flex-col items-center justify-center text-white">
 	<div>
