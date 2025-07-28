@@ -15,12 +15,16 @@
     </div>
 
     <div class="copy">
-        <span>&copy; 2021-2025 Quaint Studios LLC. All Rights Reserved</span>
+        <span><a href="https://quaintstudios.com">&copy; 2021-2025 Quaint Studios LLC. All Rights Reserved</a></span>
     </div>
 </footer>
 
 <style lang="postcss">
 	@reference '$appcss';
+    
+    .copy a {
+        @apply text-inherit no-underline;
+    }
 
 	footer {
 		@apply bg-r-midnight-300 pb-16;
