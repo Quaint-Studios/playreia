@@ -6,7 +6,7 @@
 	import alinks from '$constants/alinks';
 	import { CONTACT_EMAIL } from '$lib/info';
 
-	let title = 'Reia - Contact Us for Support, Feedback, and Contributions';
+	let title = 'Contact Us for Support, Feedback, and Contributions';
 	let description =
 		"Contact Reia to share feedback, suggestions, and contributors. If you're interested in contributing to the project, please let us know.";
 	let { data } = $props();
