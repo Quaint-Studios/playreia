@@ -49,7 +49,7 @@
 	}
 </script>
 
-<div id="navbar" class:at-top={atTop} class:open={isOpen} class:glass={!atTop} role="menubar">
+<div id="navbar" class:at-top={atTop} class:open={isOpen} class:glass={!atTop}>
 	<div class="nav-container">
 		<NavBrand />
 		<NavItems {isOpen} toggle={toggleMenu} />
