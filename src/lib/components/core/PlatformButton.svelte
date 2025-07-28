@@ -8,11 +8,10 @@
 		tag: string;
 		store: string;
 		icon: string;
+		href?: string;
 	}
 
-	let { lead, tag, store, icon }: Props = $props();
-
-	const href = `/download#${tag}`;
+	let { lead, tag, store, icon, href = `/download#${tag}` }: Props = $props();
 
 	// Eventually this will have an image in the .platforms sections with an id of "#platforms-image".
 	// The CSS to make magic happen is:
