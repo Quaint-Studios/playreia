@@ -1,23 +1,23 @@
 <script lang="ts">
 	import Content from '$components/layout/Content.svelte';
 	import Section from '$components/layout/Section.svelte';
-	import Meta from '$components/seo/Meta.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 
-	let { title, description, slug, children } = $props();
+	let { title, description, slug, children, data } = $props();
 </script>
 
-<Meta {title} {description}>
-	{#snippet structured()}
+<Seo {title} {description} locale={data.locale} url={data.url}>
+	{#snippet structured_data()}
 		{@html `<script type="application/ld+json">
 			{
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
-				"name": "Reia",
-				"url": "https://www.playreia.com/${slug}"
+				"name": "${title}",
+				"url": "${data.url}"
 			}
 		</script>`}
 	{/snippet}
-</Meta>
+</Seo>
 
 <Content>
 	<Section>
