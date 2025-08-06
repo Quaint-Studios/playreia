@@ -20,7 +20,7 @@
 				"@type": "WebSite",
 				"name": "How to Contribute to Reia",
 				"url": "${data.url}",
-				"description": "Contribute to Reia's development. Whether you're a programmer, artist, designer, or writer, there's a place for you in the Reia community.",
+				"description": "${description}",
 				"potentialAction": [
 					{
 						"@type": "JoinAction",
