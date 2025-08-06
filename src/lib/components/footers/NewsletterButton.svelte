@@ -33,11 +33,11 @@
 							/* @ts-ignore */
 							plausible('newsletter subscribe valid');
 							/* @ts-ignore */
-							// gtag('event', 'conversion', {
-							// 	send_to: 'AW-16572041585/wikkCPS35aEaEPGSld49',
-							// 	value: 1.0,
-							// 	currency: 'USD'
-							// });
+							gtag('event', 'conversion', {
+								send_to: 'AW-16572041585/wikkCPS35aEaEPGSld49',
+								value: 1.0,
+								currency: 'USD'
+							});
 						}
 					} else {
 						reason = 'Oh no! An error. Please try again.';
@@ -91,7 +91,7 @@
 
 <div class="container" class:alt>
 	{#if status === 'error'}
-		<div class="absolute -top-5 left-0 right-0 text-center text-base font-bold text-[#ff4646]">
+		<div class="absolute -top-5 right-0 left-0 text-center text-base font-bold text-[#ff4646]">
 			<p>
 				{#if reason}
 					{reason}
@@ -150,7 +150,7 @@
 		@apply relative mt-5 flex h-min w-full max-w-[325px] items-center justify-center;
 	}
 	.container input {
-		@apply w-full !border-r-border-silver/30 bg-r-midnight-blue py-3.5 pl-3 pr-[135px] text-white;
+		@apply !border-r-border-silver/30 bg-r-midnight-blue w-full py-3.5 pr-[135px] pl-3 text-white;
 	}
 	.container.alt input {
 		@apply bg-r-midnight-300;
@@ -162,7 +162,7 @@
 		@apply !border-[#ff4646]/70;
 	}
 	.container input.email:focus {
-		@apply border-solid border-transparent !bg-r-midnight-100;
+		@apply !bg-r-midnight-100 border-solid border-transparent;
 		box-shadow: 0 0 0 1px var(--midnight7);
 	}
 
@@ -172,8 +172,8 @@
 	button {
 		width: 122px;
 		height: 40.8px;
-		@apply absolute right-[5px] my-auto flex justify-center rounded-lg2 font-bold;
-		@apply bg-r-midnight-600 py-2 text-white hover:bg-r-midnight-700;
+		@apply rounded-lg2 absolute right-[5px] my-auto flex justify-center font-bold;
+		@apply bg-r-midnight-600 hover:bg-r-midnight-700 py-2 text-white;
 	}
 	.alt button {
 		@apply hover:bg-r-gold-2;
