@@ -13,10 +13,10 @@
 		plausible('github visit');
 		// Google Analytics event
 		/* @ts-ignore */
-		// gtag('event', 'conversion', {
-		// 	send_to: 'AW-16572041585/FD5mCMXU9NsaEPGSld49',
-		// 	value: 1.0,
-		// 	currency: 'USD'
-		// });
+		gtag('event', 'conversion', {
+			send_to: 'AW-16572041585/FD5mCMXU9NsaEPGSld49',
+			value: 1.0,
+			currency: 'USD'
+		});
 	}}
 />
