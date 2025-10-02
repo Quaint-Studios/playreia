@@ -194,10 +194,10 @@
 		curves and tapers off at the ends.
 		<br />
 		<br />
-		She wears wedges that lace up to her calves. The wedges have a slight heel for style but are still
-		practical. On the back of the wedges is her symbol along with some extra designs. The overall color
-		palette is white with a subtle mix of all of the elements (fire, water, earth, air, light, dark)
-		with an ombré design. And gold accents for jewelry.
+		She wears wedges that lace up just above her ankles with stockings up to her mid-thigh. The wedges
+		have a slight heel for style but are still practical. On the back of the wedges is her symbol along
+		with some extra designs. The overall color palette is white with a subtle mix of all of the elements
+		(fire, water, earth, air, light, dark) with an ombré design. And gold accents for jewelry.
 	</p>
 
 	<p>
