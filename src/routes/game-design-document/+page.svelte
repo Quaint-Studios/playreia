@@ -188,9 +188,11 @@
 		She has a pendant on her sash near her hip. Inside of it is a star representing her symbol. This
 		same symbol appears 3 times on her necklace and once at the end of her hair braid.
 		<br />
+		<br />
 		Her outfit is a mid-length dress with a high slit on one side for mobility. The dress is adorned
 		with gold clips on the sides and she has a light shawl draped over her shoulders. Her dress also
 		curves and tapers off at the ends.
+		<br />
 		<br />
 		She wears wedges that lace up to her calves. The wedges have a slight heel for style but are still
 		practical. On the back of the wedges is her symbol along with some extra designs. The overall color
