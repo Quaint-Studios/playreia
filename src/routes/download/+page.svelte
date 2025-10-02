@@ -77,7 +77,7 @@
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Download Reia",
-				"url": "${data.url}",
+				"url": "${data.url}"
 			}
 		</script>`}
 	{/snippet}

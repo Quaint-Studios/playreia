@@ -19,7 +19,7 @@
 				"@context": "https://schema.org/",
 				"@type": "WebSite",
 				"name": "Download or play Reia now",
-				"url": "${data.url}",
+				"url": "${data.url}"
 			}
 		</script>`}
 	{/snippet}
