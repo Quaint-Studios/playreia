@@ -1,5 +1,54 @@
 <script lang="ts">
+	import Seo from '$components/seo/Seo.svelte';
+
+	let title = 'Game Design Document for Reia';
+	let description =
+		"Detailed game design document for Reia, an open-source action adventure RPG. Explore the game's concept, mechanics, world, story, technical aspects, and production plan.";
+	let { data } = $props();
 </script>
+
+<Seo
+	{title}
+	reverseDecoration={null}
+	keywords={data.keywords}
+	{description}
+	locale={data.locale}
+	url={data.url}
+>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "CreativeWork",
+      "name": ${title},
+      "description": ${description},
+      "url": ${data.url},
+      "datePublished": "2025-10-01",
+      "keywords": "open-source, action adventure RPG, MMORPG, Godot Engine, crafting, open world",
+      "about": {
+        "@type": "VideoGame",
+        "name": "Reia",
+        "genre": "Action Adventure RPG (MMORPG)",
+        "operatingSystem": [
+          "Windows",
+          "Mac OS",
+          "Linux",
+          "iOS",
+          "Android",
+          "PlayStation 5",
+          "Xbox Series X",
+          "Nintendo Switch"
+        ],
+        "applicationCategory": "Game",
+        "creator": {
+          "@type": "Organization",
+          "name": "Quaint Studios LLC"
+        }
+      }
+    }
+		</script>`}
+	{/snippet}
+</Seo>
 
 <article>
 	<h1>Game Design Document for Reia</h1>
