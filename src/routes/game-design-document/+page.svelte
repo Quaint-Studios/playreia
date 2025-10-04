@@ -20,9 +20,9 @@
     {
       "@context": "https://schema.org/",
       "@type": "CreativeWork",
-      "name": ${title},
-      "description": ${description},
-      "url": ${data.url},
+      "name": "${title}",
+      "description": "${description}",
+      "url": "${data.url}",
       "datePublished": "2025-10-01",
       "keywords": "open-source, action adventure RPG, MMORPG, Godot Engine, crafting, open world",
       "about": {
