@@ -13,8 +13,8 @@ const config = {
 		mdsvex({
 			layout: {
 				home: path.join(process.cwd(), './src/lib/layouts/Home.layout.svelte'),
-				legal: path.join(process.cwd(), './src/routes/(legal)/legal.svelte')
-			}
+				legal: path.join(process.cwd(), './src/routes/(legal)/legal.svelte'),
+			},
 		})
 	],
 
