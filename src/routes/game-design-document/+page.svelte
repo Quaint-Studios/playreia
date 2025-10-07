@@ -171,7 +171,7 @@
 	<h4>Reia Character Design Notes</h4>
 
 	<p>
-		<i>Reia is the main character of the game. She's one of the four recently created Ethereals.</i>
+		<i>Reia is the main character of the game. She's one of the four recently created Ethereals. Read more about her on the lore page for <a href="/learn/lore/ethereals">Ethereals</a>.</i>
 	</p>
 
 	<p>

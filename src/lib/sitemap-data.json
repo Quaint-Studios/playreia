@@ -122,7 +122,8 @@
 		{
 			"values": [],
 			"changefreq": "yearly",
-			"priority": "0.8"
+			"priority": "0.8",
+			"lastmod": "2025-10-06"
 		}
 	],
 	"/jobs": [
@@ -270,14 +271,16 @@
 		{
 			"values": [],
 			"changefreq": "monthly",
-			"priority": "0.7"
+			"priority": "0.7",
+			"lastmod": "2025-10-06"
 		}
 	],
 	"/learn/lore/ethereals": [
 		{
 			"values": [],
 			"changefreq": "monthly",
-			"priority": "0.7"
+			"priority": "0.7",
+			"lastmod": "2025-10-06"
 		}
 	],
 	"/learn/skills": [
