@@ -1,15 +1,45 @@
 <script lang="ts">
 	import Content from '$components/layout/Content.svelte';
 	import Section from '$components/layout/Section.svelte';
+	import Seo from '$components/seo/Seo.svelte';
 
-	const date = '2025-10-06';
+	const datePublished = '2025-10-06';
+
+	const title = 'The Ethereals | Lore | Reia';
+	const description =
+		'Meet Reia and the Ethereals, the deities who shaped the world of Liora. Learn about their origins, abilities, and their role in the story of Reia.';
+
+	let { data } = $props();
+
+	const { url, keywords, locale } = data;
 
 	function getDate() {
-		const dateArr = new Date(date).toDateString().split(' ').slice(1);
+		const dateArr = new Date(datePublished).toDateString().split(' ').slice(1);
 		dateArr[1] += ', ';
 		return dateArr.join(' ');
 	}
 </script>
+
+<Seo {title} {description} {url} {keywords} {locale} reverseDecoration={null}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "${title}",
+        "description": "${description}",
+        "url": "${url}",
+        "datePublished": "${datePublished}",
+        "keywords": "${keywords}",
+        "author": {
+            "@type": "Organization",
+            "name": "Quaint Studios LLC"
+        },
+        "mainEntityOfPage": "${url}"
+    }
+    </script>`}
+	{/snippet}
+</Seo>
 
 <Content>
 	<Section>

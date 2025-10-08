@@ -5,15 +5,16 @@
 	let description =
 		"Detailed game design document for Reia, an open-source action adventure RPG. Explore the game's concept, mechanics, world, story, technical aspects, and production plan.";
 	let { data } = $props();
+	const { url, keywords, locale } = data;
 </script>
 
 <Seo
 	{title}
-	reverseDecoration={null}
-	keywords={data.keywords}
 	{description}
-	locale={data.locale}
-	url={data.url}
+	reverseDecoration={null}
+	{keywords}
+	{locale}
+	{url}
 >
 	{#snippet structured_data()}
 		{@html `<script type="application/ld+json">

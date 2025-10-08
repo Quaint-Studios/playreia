@@ -1,7 +1,81 @@
 <script lang="ts">
 	import Content from '$components/layout/Content.svelte';
 	import Section from '$components/layout/Section.svelte';
+	import Seo from '$components/seo/Seo.svelte';
+
+	const title = 'The Lore of Reia';
+	const description =
+		"Explore the deep lore of Reia. Learn about the Ethereals, the world's origins, myths, and more.";
+	const url = 'https://playreia.com/learn/lore';
+	const keywords = ['lore', 'reia', 'ethereals', 'world', 'history', 'myths', 'fantasy'];
+	const locale = 'en';
+
+	const pages = [
+		{
+			href: '/learn/lore/ethereals',
+			title: 'The Ethereals',
+			desc: 'Deities and creators of the world of Liora. Discover their origins, powers, and influence on the world.'
+		},
+		{
+			href: '',
+			title: 'The Origin of Liora',
+			desc: 'Uncover the creation story and the forces that shaped the land of Liora. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'The Invasion',
+			desc: 'Learn about the catastrophic event that changed the fate of Liora forever. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'Void',
+			desc: 'Delve into the mysterious realm of the Void and its impact on the world. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'Hollow Race',
+			desc: 'Explore the enigmatic Hollows and the secrets they conceal about the history of Liora. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'The Lost Cities',
+			desc: 'Discover the ancient cities lost to time and the legends that surround them. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'Legends & Myths',
+			desc: 'Read the tales and folklore passed down through generations in Liora. [Coming soon]'
+		},
+		{
+			href: '',
+			title: 'Artifacts & Relics',
+			desc: 'Learn about powerful artifacts and relics that shaped the fate of Liora. [Coming soon]'
+		}
+	];
 </script>
+
+<Seo {title} {description} {url} {keywords} {locale}>
+	{#snippet structured_data()}
+		{@html `<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "The Lore of Reia",
+        "description": "${description}",
+        "url": "${url}",
+        "itemListElement": ${JSON.stringify(
+					pages.map((page, i) => ({
+						'@type': 'ListItem',
+						position: i + 1,
+						name: page.title,
+						url: page.href ? `https://playreia.com${page.href}` : undefined,
+						description: page.desc
+					}))
+				)}
+    }
+    </script>`}
+	{/snippet}
+</Seo>
 
 <Content>
 	<Section>
