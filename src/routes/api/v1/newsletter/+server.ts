@@ -80,13 +80,14 @@ export const POST = async ({ request }) => {
 		console.error('Error verifying email with Plunk:', err);
 	}
 
-	// Save / Upsert Contact in Plunk
+	// Track event "newsletter.entry" in Plunk (automatically creates/upserts contact & triggers workflows)
 	const body = JSON.stringify({
 		email: cleanEmail,
-		subscribed: true
+		subscribed: true,
+		event: 'newsletter.entry'
 	});
 
-	const result = await fetch('https://next-api.useplunk.com/contacts', {
+	const result = await fetch('https://next-api.useplunk.com/v1/track', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -98,7 +99,7 @@ export const POST = async ({ request }) => {
 	const data = await result.json();
 
 	if (!result.ok) {
-		console.error('Plunk contact creation error:', data);
+		console.error('Plunk tracking error:', data);
 		error(500, 'An error occurred while subscribing to the newsletter');
 	}
 
