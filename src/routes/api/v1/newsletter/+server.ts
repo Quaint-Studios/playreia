@@ -1,5 +1,5 @@
 import { json, error } from '@sveltejs/kit';
-import { PLUNK_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { validateEmail } from '$utils';
 
 export interface PlunkVerifyResponse {
@@ -42,65 +42,89 @@ export const POST = async ({ request }) => {
 		error(400, 'Invalid email');
 	}
 
-	if (!PLUNK_API_KEY) {
-		console.warn('PLUNK_API_KEY is not configured. Falling back to development success.');
+	const plunkKey = env.PLUNK_API_KEY;
+	const trackingKey = env.PLUNK_TRACKING_KEY;
+
+	if (!plunkKey && !trackingKey) {
+		console.warn('Plunk API key is not configured. Falling back to development success.');
 		return json({ status: 'ok', dev: true }, { status: 201 });
 	}
 
 	// Plunk Email Verification
-	try {
-		const verifyResponse = await fetch('https://next-api.useplunk.com/v1/verify', {
+	if (plunkKey) {
+		try {
+			const verifyResponse = await fetch('https://next-api.useplunk.com/v1/verify', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${plunkKey}`
+				},
+				body: JSON.stringify({ email: cleanEmail })
+			});
+
+			if (verifyResponse.ok) {
+				const verifyResult = (await verifyResponse.json()) as PlunkVerifyResponse;
+
+				if (verifyResult.data) {
+					if (
+						!verifyResult.data.valid ||
+						verifyResult.data.isDisposable ||
+						!verifyResult.data.domainExists ||
+						!verifyResult.data.hasMxRecords
+					) {
+						const reason = verifyResult.data.reasons?.[0] || 'Invalid email address';
+						error(400, reason);
+					}
+				}
+			}
+		} catch (err) {
+			if (err && typeof err === 'object' && 'status' in err && 'body' in err) {
+				throw err;
+			}
+			console.error('Error verifying email with Plunk:', err);
+		}
+	}
+
+	// Track event "newsletter.entry" in Plunk or fallback to /contact
+	if (trackingKey) {
+		const trackResponse = await fetch('https://next-api.useplunk.com/v1/track', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${PLUNK_API_KEY}`
+				Authorization: `Bearer ${trackingKey}`
 			},
-			body: JSON.stringify({ email: cleanEmail })
+			body: JSON.stringify({
+				email: cleanEmail,
+				subscribed: true,
+				event: 'newsletter.entry'
+			})
 		});
 
-		if (verifyResponse.ok) {
-			const verifyResult = (await verifyResponse.json()) as PlunkVerifyResponse;
+		const trackData = await trackResponse.json();
 
-			if (verifyResult.data) {
-				if (
-					!verifyResult.data.valid ||
-					verifyResult.data.isDisposable ||
-					!verifyResult.data.domainExists ||
-					!verifyResult.data.hasMxRecords
-				) {
-					const reason = verifyResult.data.reasons?.[0] || 'Invalid email address';
-					error(400, reason);
-				}
-			}
+		if (!trackResponse.ok) {
+			console.error('Plunk tracking error:', trackData);
+			error(500, 'An error occurred while subscribing to the newsletter');
 		}
-	} catch (err) {
-		if (err && typeof err === 'object' && 'status' in err && 'body' in err) {
-			throw err;
+	} else if (plunkKey) {
+		const contactResponse = await fetch('https://next-api.useplunk.com/contacts', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${plunkKey}`
+			},
+			body: JSON.stringify({
+				email: cleanEmail,
+				subscribed: true
+			})
+		});
+
+		const contactData = await contactResponse.json();
+
+		if (!contactResponse.ok) {
+			console.error('Plunk contact creation error:', contactData);
+			error(500, 'An error occurred while subscribing to the newsletter');
 		}
-		console.error('Error verifying email with Plunk:', err);
-	}
-
-	// Track event "newsletter.entry" in Plunk (automatically creates/upserts contact & triggers workflows)
-	const body = JSON.stringify({
-		email: cleanEmail,
-		subscribed: true,
-		event: 'newsletter.entry'
-	});
-
-	const result = await fetch('https://next-api.useplunk.com/v1/track', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			Authorization: `Bearer ${PLUNK_API_KEY}`
-		},
-		body
-	});
-
-	const data = await result.json();
-
-	if (!result.ok) {
-		console.error('Plunk tracking error:', data);
-		error(500, 'An error occurred while subscribing to the newsletter');
 	}
 
 	return json(undefined, { status: 201 });
