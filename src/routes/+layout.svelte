@@ -6,6 +6,7 @@
 	import { loadIcons } from '@iconify/svelte';
 	import Navbar from '$components/navigation/Navbar.svelte';
 	import Footer from '$components/footers/Footer.svelte';
+	import { ADS } from '$lib/info';
 
 	let { children } = $props();
 
@@ -47,17 +48,19 @@
 			};
 	</script>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16572041585"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+	{#if ADS}
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16572041585"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-		gtag('config', 'AW-16572041585');
-	</script>
+			gtag('config', 'AW-16572041585');
+		</script>
+	{/if}
 </svelte:head>
 
 <Navbar />

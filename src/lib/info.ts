@@ -4,6 +4,8 @@ import alinks from '$constants/alinks';
 import Wumpus from '$images/banners/wumpus.png?enhanced&w=720;540;360';
 import { BlogCategory } from './types';
 
+export const ADS = false;
+
 export const SITE_NAME = 'Reia';
 export const COMPANY_NAME = 'Quaint Studios LLC';
 export const CANONICAL_ORIGIN = 'https://www.playreia.com';

@@ -47,7 +47,7 @@
 			<span>Lore</span>
 			<h1>The Ethereals</h1>
 			<div class="meta">
-				<time datetime={date}>Last updated: {getDate()}</time>
+				<time datetime={datePublished}>Last updated: {getDate()}</time>
 			</div>
 
 			<h2 id="reia-the-light">Reia, the Ethereal</h2>

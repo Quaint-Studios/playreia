@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ADS } from '$lib/info';
 	import BrandButton from './BrandButton.svelte';
 </script>
 
@@ -13,11 +14,12 @@
 		plausible('discord visit');
 
 		// Google Analytics event
-		/* @ts-ignore */
-		gtag('event', 'conversion', {
-			send_to: 'AW-16572041585/9bS0CMvF7NsaEPGSld49',
-			value: 1.0,
-			currency: 'USD'
-		});
+		if (ADS)
+			/* @ts-ignore */
+			gtag('event', 'conversion', {
+				send_to: 'AW-16572041585/9bS0CMvF7NsaEPGSld49',
+				value: 30.0,
+				currency: 'USD'
+			});
 	}}
 />

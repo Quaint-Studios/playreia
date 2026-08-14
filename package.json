@@ -14,7 +14,8 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:e2e": "playwright test",
-		"machine-translate": "inlang machine translate --project project.inlang"
+		"machine-translate": "inlang machine translate --project project.inlang",
+		"vercel-deploy": "vercel --prod --yes"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.3.1",
@@ -62,7 +63,6 @@
 		"@fontsource-variable/urbanist": "^5.2.6",
 		"@fontsource/metropolis": "^5.2.5",
 		"@fontsource/poppins": "^5.2.6",
-		"@inlang/paraglide-js": "^2.2.0",
-		"resend": "^4.7.0"
+		"@inlang/paraglide-js": "^2.2.0"
 	}
 }
