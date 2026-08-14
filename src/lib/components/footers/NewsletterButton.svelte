@@ -2,11 +2,11 @@
 	import { ADS } from '$lib/info';
 	import { validateEmail } from '$utils';
 	import { ProgressRing } from '@skeletonlabs/skeleton-svelte';
-	import { onMount } from 'svelte';
+
+	let emailInputRef: HTMLInputElement | undefined = $state(undefined);
 
 	function focus() {
-		const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
-		emailInput.focus();
+		emailInputRef?.focus();
 	}
 
 	function subscribe() {
@@ -23,7 +23,7 @@
 				method: 'POST',
 				body: formData
 			})
-				.then((res) => {
+				.then(async (res) => {
 					if (res.ok) {
 						status = 'success';
 						email = '';
@@ -41,11 +41,17 @@
 									currency: 'USD'
 								});
 						}
+					} else if (res.status === 400) {
+						reason = "Uh oh! That email doesn't look right.";
+						status = 'error';
+						/* @ts-ignore */
+						plausible('newsletter subscribe invalid');
+						focus();
 					} else {
 						reason = 'Oh no! An error. Please try again.';
 						status = 'error';
 						/* @ts-ignore */
-						plausible('newsletter subscribe invalid');
+						plausible('newsletter subscribe error');
 						focus();
 					}
 				})
@@ -75,13 +81,6 @@
 		}
 	}
 
-	onMount(() => {
-		const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
-		emailInput.addEventListener('keyup', (event) => {
-			if (event.key === 'Enter') subscribe();
-		});
-	});
-
 	type Status = 'idle' | 'pending' | 'success' | 'error';
 	let status: Status = $state('idle');
 	let reason = $state('');
@@ -103,8 +102,15 @@
 			</p>
 		</div>
 	{/if}
-	<form autocomplete="off">
+	<form
+		autocomplete="off"
+		onsubmit={(e) => {
+			e.preventDefault();
+			subscribe();
+		}}
+	>
 		<input
+			bind:this={emailInputRef}
 			class:error={status === 'error'}
 			class="email"
 			aria-label="Newsletter"
